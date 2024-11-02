@@ -46,3 +46,12 @@ export function generateFullHeroicons(
 
   return fullIcons;
 }
+
+export function omitKeys<T extends Record<string, unknown>, K extends keyof T>(
+  object: T,
+  keys: K[]
+): Omit<T, K> {
+  return Object.fromEntries(
+    Object.entries(object).filter(([key]) => !keys.includes(key as K))
+  ) as Omit<T, K>;
+}

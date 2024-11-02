@@ -18,3 +18,5 @@ export interface FullHeroicon {
   solid20: Heroicon;
   solid16: Heroicon;
 }
+
+export type HeroiconType = "outline24" | "solid24" | "solid20" | "solid16";

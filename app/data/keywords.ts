@@ -250,7 +250,7 @@ export const heroiconKeywords = {
   "table-cells": ["data", "grid", "spreadsheet"],
   tag: ["category", "group", "label", "version"],
   trash: ["bin", "delete", "garbage", "remove", "rubbish"],
-  truck: ["lorry", "vehicle"],
+  truck: ["lorry", "vehicle", "shipping"],
   user: ["account", "person", "profile"],
   "user-circle": ["account", "person", "profile"],
   "user-plus": ["account", "person", "profile", "user-add"],
