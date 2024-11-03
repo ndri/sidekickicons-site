@@ -4,7 +4,7 @@ import icons from "../icons/allicons";
 import { useState } from "react";
 import { matchSorter } from "match-sorter";
 import IconCard from "./IconCard";
-import { HeroiconType, IconsetSelection } from "../types";
+import { HeroiconType, IconSize, IconsetSelection } from "../types";
 import { iconTypeNames, iconTypes, iconsetSelections } from "../util/constants";
 import SearchInput from "./SearchInput";
 import ButtonSelect from "./ButtonSelect";
@@ -15,6 +15,7 @@ export default function IconSearch({}) {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedType, setSelectedType] = useState<HeroiconType>(iconTypes[0]);
   const [selectedIconSet, setSelectedIconSet] = useState<IconsetSelection>("All");
+  const [selectedSize, setSelectedSize] = useState<IconSize>("1x");
 
   const iconsetIcons = icons.filter(
     (icon) => icon.iconset === selectedIconSet || selectedIconSet === "All",
@@ -47,6 +48,13 @@ export default function IconSearch({}) {
             setSelectedValue={setSelectedIconSet}
             values={iconsetSelections}
           />
+          <VerticalRule />
+          <ButtonSelect<IconSize>
+            label="Size"
+            selectedValue={selectedSize}
+            setSelectedValue={setSelectedSize}
+            values={["1x", "1.5x", "2x"]}
+          />
         </div>
       </div>
       <div className="grid grid-cols-6 gap-4">
@@ -55,6 +63,7 @@ export default function IconSearch({}) {
             key={fullHeroicon.kebabName}
             type={selectedType}
             fullHeroicon={fullHeroicon}
+            size={selectedSize}
           />
         ))}
       </div>

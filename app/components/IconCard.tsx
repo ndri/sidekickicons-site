@@ -4,25 +4,23 @@ import {
   DocumentDuplicateIcon,
   InformationCircleIcon,
 } from "@heroicons/react/20/solid";
-import { FullHeroicon, HeroiconType } from "../types";
+import { FullHeroicon, HeroiconType, IconSize } from "../types";
 import { useState } from "react";
 import IconDetailsDialog from "./IconDetailsDialog";
+import { allIconSizeClasses } from "../util/constants";
 
 export default function IconCard({
   type,
   fullHeroicon,
+  size,
 }: {
   type: HeroiconType;
   fullHeroicon: FullHeroicon;
+  size: IconSize;
 }) {
   const [showDialog, setShowDialog] = useState(false);
 
-  const iconClasses = {
-    outline24: "w-6 h-6",
-    solid24: "w-6 h-6",
-    solid20: "w-5 h-5",
-    solid16: "w-4 h-4",
-  }[type];
+  const iconClasses = allIconSizeClasses[size][type];
   const Icon = fullHeroicon[type];
   const name = fullHeroicon.kebabName;
 
@@ -34,7 +32,7 @@ export default function IconCard({
           {name}
         </p>
       </div>
-      <div className="invisible z-10 col-start-1 col-end-2 row-start-1 row-end-2 flex flex-col gap-1 group-hover:visible">
+      <div className="invisible z-10 col-start-1 col-end-2 row-start-1 row-end-2 flex flex-col justify-center gap-1 group-hover:visible">
         <button className="flex justify-center gap-1 rounded bg-white px-2 py-1 text-sm font-semibold text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 hover:bg-slate-50">
           <DocumentDuplicateIcon className="h-5 w-5 text-slate-400" />
           Copy

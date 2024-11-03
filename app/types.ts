@@ -13,6 +13,8 @@ export type Iconset = "Heroicons" | "Sidekickicons";
 
 export type IconsetSelection = Iconset | "All";
 
+export type IconSize = "1x" | "1.5x" | "2x" | "4x";
+
 export interface FullHeroicon {
   kebabName: string;
   pascalName: string;
