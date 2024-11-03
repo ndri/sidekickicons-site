@@ -35,15 +35,15 @@ export default function IconCard({
         </p>
       </div>
       <div className="invisible z-10 col-start-1 col-end-2 row-start-1 row-end-2 flex flex-col gap-1 group-hover:visible">
-        <button className="flex justify-center gap-1 rounded bg-white px-2 py-1 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
-          <DocumentDuplicateIcon className="h-5 w-5 text-gray-400" />
+        <button className="flex justify-center gap-1 rounded bg-white px-2 py-1 text-sm font-semibold text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 hover:bg-slate-50">
+          <DocumentDuplicateIcon className="h-5 w-5 text-slate-400" />
           Copy
         </button>
         <button
-          className="flex justify-center gap-1 rounded bg-white px-2 py-1 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+          className="flex justify-center gap-1 rounded bg-white px-2 py-1 text-sm font-semibold text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 hover:bg-slate-50"
           onClick={() => setShowDialog(true)}
         >
-          <InformationCircleIcon className="h-5 w-5 text-gray-400" />
+          <InformationCircleIcon className="h-5 w-5 text-slate-400" />
           Info
         </button>
       </div>
