@@ -11,6 +11,8 @@ export type HeroiconType = "outline24" | "solid24" | "solid20" | "solid16";
 
 export type Iconset = "Heroicons" | "Sidekickicons";
 
+export type IconsetSelection = Iconset | "All";
+
 export interface FullHeroicon {
   kebabName: string;
   pascalName: string;
