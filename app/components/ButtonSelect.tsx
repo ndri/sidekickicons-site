@@ -24,7 +24,7 @@ export default function ButtonSelect<T extends string>({
         <Field key={value} className="cursor-pointer">
           <Radio
             value={value}
-            className="py-1 px-2 font-medium text-sm rounded-lg text-slate-600 data-[checked]:bg-indigo-50 data-[checked]:text-indigo-800 hover:text-slate-400"
+            className="rounded-lg px-2 py-1 text-sm font-medium text-slate-600 hover:text-slate-400 data-[checked]:bg-indigo-50 data-[checked]:text-indigo-800"
           >
             <Label className="cursor-pointer">{labels ? labels[value] : value}</Label>
           </Radio>

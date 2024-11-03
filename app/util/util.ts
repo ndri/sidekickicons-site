@@ -34,7 +34,7 @@ export function generateFullHeroicons(
     solid16: NamedHeroicons;
   },
   keywords: { [key: string]: readonly string[] },
-  iconset: FullHeroicon["iconset"]
+  iconset: FullHeroicon["iconset"],
 ) {
   const fullIcons = Object.keys(icons.outline24).map((componentName) => {
     const pascalName = removeEnd(componentName, "Icon");
@@ -57,9 +57,9 @@ export function generateFullHeroicons(
 
 export function omitKeys<T extends Record<string, unknown>, K extends keyof T>(
   object: T,
-  keys: readonly K[]
+  keys: readonly K[],
 ): Omit<T, K> {
   return Object.fromEntries(
-    Object.entries(object).filter(([key]) => !keys.includes(key as K))
+    Object.entries(object).filter(([key]) => !keys.includes(key as K)),
   ) as Omit<T, K>;
 }

@@ -17,7 +17,7 @@ export default function IconSearch({}) {
   const [selectedIconSet, setSelectedIconSet] = useState<IconsetSelection>("All");
 
   const iconsetIcons = icons.filter(
-    (icon) => icon.iconset === selectedIconSet || selectedIconSet === "All"
+    (icon) => icon.iconset === selectedIconSet || selectedIconSet === "All",
   );
 
   const filteredIcons = matchSorter(iconsetIcons, searchQuery, {

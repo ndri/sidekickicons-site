@@ -20,23 +20,20 @@ export default function IconCard({
     solid16: "w-4 h-4",
   }[type];
   return (
-    <div className="group bg-slate-50 p-4 rounded-md grid grid-rows-1 grid-cols-1">
-      <div className="flex flex-col items-center row-span-full col-span-full group-hover:opacity-25 justify-center">
+    <div className="group grid grid-cols-1 grid-rows-1 rounded-md bg-slate-50 p-4">
+      <div className="col-span-full row-span-full flex flex-col items-center justify-center group-hover:opacity-25">
         <Icon className={`${classes} text-slate-700`} />
-        <p
-          className="text-slate-500 text-xs mt-2 max-w-full truncate"
-          title={name}
-        >
+        <p className="mt-2 max-w-full truncate text-xs text-slate-500" title={name}>
           {name}
         </p>
       </div>
-      <div className="invisible col-start-1 col-end-2 row-start-1 row-end-2 group-hover:visible flex flex-col gap-1 z-10">
-        <button className="rounded bg-white px-2 py-1 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 flex justify-center gap-1">
-          <DocumentDuplicateIcon className="w-5 h-5 text-gray-400" />
+      <div className="invisible z-10 col-start-1 col-end-2 row-start-1 row-end-2 flex flex-col gap-1 group-hover:visible">
+        <button className="flex justify-center gap-1 rounded bg-white px-2 py-1 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+          <DocumentDuplicateIcon className="h-5 w-5 text-gray-400" />
           Copy
         </button>
-        <button className="rounded bg-white px-2 py-1 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 flex justify-center gap-1">
-          <InformationCircleIcon className="w-5 h-5 text-gray-400" />
+        <button className="flex justify-center gap-1 rounded bg-white px-2 py-1 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+          <InformationCircleIcon className="h-5 w-5 text-gray-400" />
           Info
         </button>
       </div>

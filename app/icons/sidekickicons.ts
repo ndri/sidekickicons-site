@@ -17,7 +17,7 @@ const sidekickicons = {
 const fullSidekickicons = generateFullHeroicons(
   sidekickicons,
   sidekickiconKeywords,
-  "Sidekickicons"
+  "Sidekickicons",
 );
 
 export default fullSidekickicons;
