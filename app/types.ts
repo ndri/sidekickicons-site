@@ -7,16 +7,18 @@ export type Heroicon = React.ForwardRefExoticComponent<
 
 export type NamedHeroicons = Record<string, Heroicon>;
 
+export type HeroiconType = "outline24" | "solid24" | "solid20" | "solid16";
+
+export type Iconset = "Heroicons" | "Sidekickicons";
+
 export interface FullHeroicon {
   kebabName: string;
   pascalName: string;
   componentName: string;
   keywords: string[];
-  iconset: "Heroicons" | "Sidekickicons";
+  iconset: Iconset;
   outline24: Heroicon;
   solid24: Heroicon;
   solid20: Heroicon;
   solid16: Heroicon;
 }
-
-export type HeroiconType = "outline24" | "solid24" | "solid20" | "solid16";

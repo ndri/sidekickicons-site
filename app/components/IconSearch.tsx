@@ -8,13 +8,14 @@ import { HeroiconType } from "../types";
 import { iconTypeNames, iconTypes } from "../util/constants";
 import SearchInput from "./SearchInput";
 import ButtonSelect from "./ButtonSelect";
+import { dashesToSpaces } from "../util/util";
 
 export default function IconSearch({}) {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedType, setSelectedType] = useState<HeroiconType>(iconTypes[0]);
 
   const filteredIcons = matchSorter(icons, searchQuery, {
-    keys: [(icon) => icon.kebabName.replace(/-/g, " "), "keywords"],
+    keys: [(icon) => dashesToSpaces(icon.kebabName), "keywords"],
   });
 
   return (
