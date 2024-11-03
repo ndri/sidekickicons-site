@@ -1,21 +1,22 @@
 "use client";
 
 import { InformationCircleIcon } from "@heroicons/react/20/solid";
-import { FullHeroicon, HeroiconType, IconSize } from "../types";
+import { FullHeroicon, HeroiconType, IconCodeType, IconSize } from "../types";
 import { useState } from "react";
 import IconDetailsDialog from "./IconDetailsDialog";
-import { allIconSizeClasses, iconSizeClasses } from "../util/constants";
+import { allIconSizeClasses, iconCodeFunctions } from "../util/constants";
 import CopyButton from "./CopyButton";
-import { iconSvgCode } from "../util/util";
 
 export default function IconCard({
   type,
   fullHeroicon,
   size,
+  codeType,
 }: {
   type: HeroiconType;
   fullHeroicon: FullHeroicon;
   size: IconSize;
+  codeType: IconCodeType;
 }) {
   const [showDialog, setShowDialog] = useState(false);
 
@@ -23,7 +24,7 @@ export default function IconCard({
   const Icon = fullHeroicon[type];
   const name = fullHeroicon.kebabName;
 
-  const codeToCopy = iconSvgCode(<Icon className={iconClasses} />);
+  const codeToCopy = iconCodeFunctions[codeType](fullHeroicon, type);
 
   return (
     <div className="group grid grid-cols-1 grid-rows-1 rounded-md bg-slate-50 p-4">

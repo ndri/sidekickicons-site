@@ -2,6 +2,7 @@ import { NamedHeroicons, FullHeroicon, HeroiconType } from "../types";
 import { iconDirectories, iconSizeClasses } from "./constants";
 import ReactDOMServer from "react-dom/server";
 import beautify from "js-beautify";
+import { createElement } from "react";
 
 export function toPascalCase(str: string) {
   return str
@@ -67,8 +68,10 @@ export function omitKeys<T extends Record<string, unknown>, K extends keyof T>(
   ) as Omit<T, K>;
 }
 
-export function iconSvgCode(icon: JSX.Element) {
-  const svgCode = ReactDOMServer.renderToStaticMarkup(icon);
+export function iconSvgCode(fullHeroicon: FullHeroicon, type: HeroiconType) {
+  const reactElement = fullHeroicon[type];
+  const jsxElement = createElement(reactElement, { className: iconSizeClasses[type] });
+  const svgCode = ReactDOMServer.renderToStaticMarkup(jsxElement);
   const prettySvgCode = beautify.html(svgCode, { indent_size: 2 });
   return prettySvgCode;
 }
@@ -86,6 +89,12 @@ export function iconSvgToJsx(svg: string) {
     .replace(/\bclip-rule=/g, "clipRule=");
 }
 
+export function iconJsxCode(fullHeroicon: FullHeroicon, type: HeroiconType) {
+  const svgCode = iconSvgCode(fullHeroicon, type);
+  const jsxCode = iconSvgToJsx(svgCode);
+  return jsxCode;
+}
+
 export function iconImportCode(
   fullHeroicon: FullHeroicon,
   type: HeroiconType,
@@ -96,13 +105,24 @@ export function iconImportCode(
 }
 
 export function iconReactCode(fullHeroicon: FullHeroicon, type: HeroiconType) {
+  return `<${fullHeroicon.componentName} className="${iconSizeClasses[type]} text-slate-500" />`;
+}
+
+export function iconReactPlusImportsCode(
+  fullHeroicon: FullHeroicon,
+  type: HeroiconType,
+) {
   const importCode = iconImportCode(fullHeroicon, type, "react");
-  const componentCode = `<${fullHeroicon.componentName} className="${iconSizeClasses[type]} text-slate-500" />`;
+  const componentCode = iconReactCode(fullHeroicon, type);
   return `${importCode}\n\n${componentCode}`;
 }
 
 export function iconVueCode(fullHeroicon: FullHeroicon, type: HeroiconType) {
+  return `<${fullHeroicon.componentName} class="${iconSizeClasses[type]} text-slate-500" />`;
+}
+
+export function iconVuePlusImportsCode(fullHeroicon: FullHeroicon, type: HeroiconType) {
   const importCode = iconImportCode(fullHeroicon, type, "vue");
-  const componentCode = `<${fullHeroicon.componentName} class="${iconSizeClasses[type]} text-slate-500" />`;
+  const componentCode = iconVueCode(fullHeroicon, type);
   return `${importCode}\n\n${componentCode}`;
 }

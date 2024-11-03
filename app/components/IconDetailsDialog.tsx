@@ -12,7 +12,7 @@ import {
 import { FullHeroicon, HeroiconType } from "../types";
 import DescriptionList from "./DescriptionList";
 import CodeBlock from "./CodeBlock";
-import { iconSizeClasses, iconSizeClasses4x } from "../util/constants";
+import { iconSizeClasses4x } from "../util/constants";
 import { iconReactCode, iconSvgCode, iconSvgToJsx, iconVueCode } from "../util/util";
 
 export default function IconDetailsDialog({
@@ -28,7 +28,7 @@ export default function IconDetailsDialog({
 }) {
   const Icon = fullHeroicon[type];
 
-  const prettySvgCode = iconSvgCode(<Icon className={iconSizeClasses[type]} />);
+  const prettySvgCode = iconSvgCode(fullHeroicon, type);
   const prettyJsxCode = iconSvgToJsx(prettySvgCode);
   const reactCode = iconReactCode(fullHeroicon, type);
   const vueCode = iconVueCode(fullHeroicon, type);

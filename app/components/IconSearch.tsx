@@ -4,7 +4,7 @@ import icons from "../icons/allicons";
 import { useState } from "react";
 import { matchSorter } from "match-sorter";
 import IconCard from "./IconCard";
-import { HeroiconType, IconSize, IconsetSelection } from "../types";
+import { HeroiconType, IconCodeType, IconSize, IconsetSelection } from "../types";
 import { iconTypeNames, iconTypes, iconsetSelections } from "../util/constants";
 import SearchInput from "./SearchInput";
 import ButtonSelect from "./ButtonSelect";
@@ -16,6 +16,7 @@ export default function IconSearch({}) {
   const [selectedType, setSelectedType] = useState<HeroiconType>(iconTypes[0]);
   const [selectedIconSet, setSelectedIconSet] = useState<IconsetSelection>("All");
   const [selectedSize, setSelectedSize] = useState<IconSize>("1x");
+  const [selectedCodeType, setSelectedCodeType] = useState<IconCodeType>("SVG");
 
   const iconsetIcons = icons.filter(
     (icon) => icon.iconset === selectedIconSet || selectedIconSet === "All",
@@ -55,6 +56,13 @@ export default function IconSearch({}) {
             setSelectedValue={setSelectedSize}
             values={["1x", "1.5x", "2x"]}
           />
+          <VerticalRule />
+          <ButtonSelect<IconCodeType>
+            label="Code type"
+            selectedValue={selectedCodeType}
+            setSelectedValue={setSelectedCodeType}
+            values={["SVG", "JSX", "React", "React + imports", "Vue", "Vue + imports"]}
+          />
         </div>
       </div>
       <div className="grid grid-cols-6 gap-4">
@@ -64,6 +72,7 @@ export default function IconSearch({}) {
             type={selectedType}
             fullHeroicon={fullHeroicon}
             size={selectedSize}
+            codeType={selectedCodeType}
           />
         ))}
       </div>

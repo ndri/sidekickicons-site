@@ -1,4 +1,19 @@
-import { HeroiconType, IconSize, Iconset, IconsetSelection } from "../types";
+import {
+  FullHeroicon,
+  HeroiconType,
+  IconCodeType,
+  IconSize,
+  Iconset,
+  IconsetSelection,
+} from "../types";
+import {
+  iconJsxCode,
+  iconReactCode,
+  iconReactPlusImportsCode,
+  iconSvgCode,
+  iconVueCode,
+  iconVuePlusImportsCode,
+} from "./util";
 
 export const iconTypes: HeroiconType[] = [
   "outline24",
@@ -65,3 +80,15 @@ export const iconDirectories: Record<HeroiconType, string> = {
   solid20: "20/solid",
   solid16: "16/solid",
 } as const;
+
+export const iconCodeFunctions: Record<
+  IconCodeType,
+  (fullHeroicon: FullHeroicon, type: HeroiconType) => string
+> = {
+  SVG: iconSvgCode,
+  JSX: iconJsxCode,
+  React: iconReactCode,
+  Vue: iconVueCode,
+  "React + imports": iconReactPlusImportsCode,
+  "Vue + imports": iconVuePlusImportsCode,
+};

@@ -15,6 +15,14 @@ export type IconsetSelection = Iconset | "All";
 
 export type IconSize = "1x" | "1.5x" | "2x" | "4x";
 
+export type IconCodeType =
+  | "SVG"
+  | "JSX"
+  | "React"
+  | "React + imports"
+  | "Vue"
+  | "Vue + imports";
+
 export interface FullHeroicon {
   kebabName: string;
   pascalName: string;
