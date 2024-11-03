@@ -18,13 +18,13 @@ export default function CopyButton({
 
   return (
     <button
-      className={`group flex justify-center gap-1 rounded bg-white px-2 py-1 text-xs font-semibold text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 hover:bg-slate-50 ${className}`}
+      className={`group/button flex justify-center gap-1 rounded bg-white px-2 py-1 text-xs font-semibold text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 hover:bg-slate-50 ${className}`}
       onClick={copyText}
     >
       {copied ? (
         <CheckIcon className="size-5 text-green-600" />
       ) : (
-        <DocumentDuplicateIcon className="size-5 text-slate-400 group-hover:text-slate-600" />
+        <DocumentDuplicateIcon className="size-5 text-slate-400 group-hover/button:text-slate-600" />
       )}
       <span className="text-sm font-medium">{copied ? "Copied!" : "Copy"}</span>
     </button>

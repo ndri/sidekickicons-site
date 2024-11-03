@@ -1,5 +1,7 @@
 import { NamedHeroicons, FullHeroicon, HeroiconType } from "../types";
 import { iconDirectories, iconSizeClasses } from "./constants";
+import ReactDOMServer from "react-dom/server";
+import beautify from "js-beautify";
 
 export function toPascalCase(str: string) {
   return str
@@ -65,7 +67,13 @@ export function omitKeys<T extends Record<string, unknown>, K extends keyof T>(
   ) as Omit<T, K>;
 }
 
-export function iconSVGtoJSX(svg: string) {
+export function iconSvgCode(icon: JSX.Element) {
+  const svgCode = ReactDOMServer.renderToStaticMarkup(icon);
+  const prettySvgCode = beautify.html(svgCode, { indent_size: 2 });
+  return prettySvgCode;
+}
+
+export function iconSvgToJsx(svg: string) {
   return svg
     .replace(/\bclass=/g, "className=")
     .replace(/\bxml:space=/g, "xmlSpace=")

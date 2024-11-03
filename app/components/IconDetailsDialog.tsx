@@ -10,12 +10,10 @@ import {
   TabPanels,
 } from "@headlessui/react";
 import { FullHeroicon, HeroiconType } from "../types";
-import ReactDOMServer from "react-dom/server";
 import DescriptionList from "./DescriptionList";
-import beautify from "js-beautify";
 import CodeBlock from "./CodeBlock";
 import { iconSizeClasses, iconSizeClasses4x } from "../util/constants";
-import { iconReactCode, iconSVGtoJSX, iconVueCode } from "../util/util";
+import { iconReactCode, iconSvgCode, iconSvgToJsx, iconVueCode } from "../util/util";
 
 export default function IconDetailsDialog({
   open,
@@ -29,13 +27,9 @@ export default function IconDetailsDialog({
   type: HeroiconType;
 }) {
   const Icon = fullHeroicon[type];
-  const svgCode = ReactDOMServer.renderToStaticMarkup(
-    <Icon className={iconSizeClasses[type]} />,
-  );
-  const prettySvgCode = beautify.html(svgCode, {
-    indent_size: 2,
-  });
-  const prettyJsxCode = iconSVGtoJSX(prettySvgCode);
+
+  const prettySvgCode = iconSvgCode(<Icon className={iconSizeClasses[type]} />);
+  const prettyJsxCode = iconSvgToJsx(prettySvgCode);
   const reactCode = iconReactCode(fullHeroicon, type);
   const vueCode = iconVueCode(fullHeroicon, type);
 
@@ -50,7 +44,7 @@ export default function IconDetailsDialog({
               <div className="flex h-36 w-36 items-center justify-center rounded-md border border-slate-200">
                 <Icon className={`${iconSizeClasses4x[type]} text-slate-700`} />
               </div>
-              <DialogTitle as="h3" className="text-lg font-semibold text-gray-900">
+              <DialogTitle as="h3" className="text-lg font-semibold text-slate-700">
                 {fullHeroicon.kebabName}
               </DialogTitle>
               <DescriptionList

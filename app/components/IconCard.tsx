@@ -1,13 +1,12 @@
 "use client";
 
-import {
-  DocumentDuplicateIcon,
-  InformationCircleIcon,
-} from "@heroicons/react/20/solid";
+import { InformationCircleIcon } from "@heroicons/react/20/solid";
 import { FullHeroicon, HeroiconType, IconSize } from "../types";
 import { useState } from "react";
 import IconDetailsDialog from "./IconDetailsDialog";
-import { allIconSizeClasses } from "../util/constants";
+import { allIconSizeClasses, iconSizeClasses } from "../util/constants";
+import CopyButton from "./CopyButton";
+import { iconSvgCode } from "../util/util";
 
 export default function IconCard({
   type,
@@ -24,6 +23,8 @@ export default function IconCard({
   const Icon = fullHeroicon[type];
   const name = fullHeroicon.kebabName;
 
+  const codeToCopy = iconSvgCode(<Icon className={iconClasses} />);
+
   return (
     <div className="group grid grid-cols-1 grid-rows-1 rounded-md bg-slate-50 p-4">
       <div className="col-span-full row-span-full flex flex-col items-center justify-center group-hover:opacity-25">
@@ -33,15 +34,12 @@ export default function IconCard({
         </p>
       </div>
       <div className="invisible z-10 col-start-1 col-end-2 row-start-1 row-end-2 flex flex-col justify-center gap-1 group-hover:visible">
-        <button className="flex justify-center gap-1 rounded bg-white px-2 py-1 text-sm font-semibold text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 hover:bg-slate-50">
-          <DocumentDuplicateIcon className="h-5 w-5 text-slate-400" />
-          Copy
-        </button>
+        <CopyButton textToCopy={codeToCopy} />
         <button
-          className="flex justify-center gap-1 rounded bg-white px-2 py-1 text-sm font-semibold text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 hover:bg-slate-50"
+          className="group/button flex justify-center gap-1 rounded bg-white px-2 py-1 text-sm font-semibold text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 hover:bg-slate-50"
           onClick={() => setShowDialog(true)}
         >
-          <InformationCircleIcon className="h-5 w-5 text-slate-400" />
+          <InformationCircleIcon className="h-5 w-5 text-slate-400 group-hover/button:text-slate-600" />
           Info
         </button>
       </div>
