@@ -25,7 +25,7 @@ export default function IconSearch({}) {
   });
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-6">
       <div className="flex flex-col gap-2">
         <SearchInput
           searchQuery={searchQuery}
@@ -53,9 +53,8 @@ export default function IconSearch({}) {
         {filteredIcons.map((fullHeroicon) => (
           <IconCard
             key={fullHeroicon.kebabName}
-            name={fullHeroicon.kebabName}
             type={selectedType}
-            Icon={fullHeroicon[selectedType]}
+            fullHeroicon={fullHeroicon}
           />
         ))}
       </div>

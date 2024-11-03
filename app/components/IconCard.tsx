@@ -2,16 +2,14 @@ import {
   DocumentDuplicateIcon,
   InformationCircleIcon,
 } from "@heroicons/react/20/solid";
-import { Heroicon, HeroiconType } from "../types";
+import { FullHeroicon, HeroiconType } from "../types";
 
 export default function IconCard({
-  name,
-  Icon,
   type,
+  fullHeroicon,
 }: {
-  name: string;
-  Icon: Heroicon;
   type: HeroiconType;
+  fullHeroicon: FullHeroicon;
 }) {
   const classes = {
     outline24: "w-6 h-6",
@@ -19,6 +17,9 @@ export default function IconCard({
     solid20: "w-5 h-5",
     solid16: "w-4 h-4",
   }[type];
+  const Icon = fullHeroicon[type];
+  const name = fullHeroicon.kebabName;
+
   return (
     <div className="group grid grid-cols-1 grid-rows-1 rounded-md bg-slate-50 p-4">
       <div className="col-span-full row-span-full flex flex-col items-center justify-center group-hover:opacity-25">

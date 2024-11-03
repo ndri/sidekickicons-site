@@ -17,7 +17,7 @@ export interface FullHeroicon {
   kebabName: string;
   pascalName: string;
   componentName: string;
-  keywords: string[];
+  keywords: readonly string[];
   iconset: Iconset;
   outline24: Heroicon;
   solid24: Heroicon;
