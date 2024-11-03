@@ -1,7 +1,6 @@
-import { CheckIcon, DocumentDuplicateIcon } from "@heroicons/react/24/outline";
-import { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneLight, oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import CopyButton from "./CopyButton";
 
 export default function CodeBlock({
   code,
@@ -12,36 +11,22 @@ export default function CodeBlock({
   language: string;
   style?: "light" | "dark";
 }) {
-  const [copied, setCopied] = useState(false);
-
-  function copyCode() {
-    navigator.clipboard.writeText(code);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 1337);
-  }
-
   return (
-    <div className="relative flex w-full flex-col">
+    <div className="relative flex w-full flex-col overflow-hidden rounded-md ring-1 ring-slate-200">
       <SyntaxHighlighter
         language={language}
         style={style === "dark" ? oneDark : oneLight}
-        customStyle={{ fontSize: "0.75rem" }}
+        customStyle={{
+          fontSize: "0.75rem",
+          margin: 0,
+          paddingTop: "0.75rem",
+          paddingBottom: "2rem",
+        }}
+        className="rounded-md"
       >
         {code}
       </SyntaxHighlighter>
-      <button
-        className="group absolute right-0 top-2 flex flex-row items-center gap-1 rounded-md px-2.5 py-1.5 ring-inset ring-slate-300 hover:border-slate-200 hover:bg-white hover:shadow-sm hover:ring-1"
-        onClick={copyCode}
-      >
-        <span className="hidden text-sm font-medium group-hover:block">
-          {copied ? "Copied!" : "Copy"}
-        </span>
-        {copied ? (
-          <CheckIcon className="size-6 text-green-500" />
-        ) : (
-          <DocumentDuplicateIcon className="size-6 text-slate-500 group-hover:text-slate-700" />
-        )}
-      </button>
+      <CopyButton textToCopy={code} className="absolute bottom-1 right-1" />
     </div>
   );
 }

@@ -14,7 +14,7 @@ import ReactDOMServer from "react-dom/server";
 import DescriptionList from "./DescriptionList";
 import beautify from "js-beautify";
 import CodeBlock from "./CodeBlock";
-import { iconDirectories, iconSizeClasses, iconSizeClasses4x } from "../util/constants";
+import { iconSizeClasses, iconSizeClasses4x } from "../util/constants";
 import { iconReactCode, iconSVGtoJSX, iconVueCode } from "../util/util";
 
 export default function IconDetailsDialog({
@@ -60,7 +60,7 @@ export default function IconDetailsDialog({
                   ["Keywords", fullHeroicon.keywords.join(", ")],
                 ]}
               />
-              <TabGroup className="w-full">
+              <TabGroup className="flex w-full flex-col gap-2">
                 <TabList className="flex flex-row gap-0.5">
                   {["SVG", "JSX", "React", "Vue"].map((tab) => (
                     <Tab
