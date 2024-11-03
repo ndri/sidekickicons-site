@@ -10,7 +10,7 @@ export function toPascalCase(str: string) {
 
 export function toKebabCase(str: string) {
   return str
-    .split(/(?=[A-Z])/)
+    .split(/(?=[A-Z])|(?<=[a-z])(?=[0-9])/)
     .map((part) => part.toLowerCase())
     .join("-");
 }
