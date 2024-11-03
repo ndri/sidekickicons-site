@@ -1,4 +1,5 @@
-import { NamedHeroicons, FullHeroicon } from "../types";
+import { NamedHeroicons, FullHeroicon, HeroiconType } from "../types";
+import { iconDirectories, iconSizeClasses } from "./constants";
 
 export function toPascalCase(str: string) {
   return str
@@ -62,4 +63,38 @@ export function omitKeys<T extends Record<string, unknown>, K extends keyof T>(
   return Object.fromEntries(
     Object.entries(object).filter(([key]) => !keys.includes(key as K)),
   ) as Omit<T, K>;
+}
+
+export function iconSVGtoJSX(svg: string) {
+  return svg
+    .replace(/\bclass=/g, "className=")
+    .replace(/\bxml:space=/g, "xmlSpace=")
+    .replace(/\bstroke-width="(.*?)"/g, "strokeWidth={$1}")
+    .replace(/\bstroke-linecap=/g, "strokeLinecap=")
+    .replace(/\bstroke-linejoin=/g, "strokeLinejoin=")
+    .replace(/\baria-hidden=/g, "ariaHidden=")
+    .replace(/\bdata-slot=/g, "dataSlot=")
+    .replace(/\bfill-rule=/g, "fillRule=")
+    .replace(/\bclip-rule=/g, "clipRule=");
+}
+
+export function iconImportCode(
+  fullHeroicon: FullHeroicon,
+  type: HeroiconType,
+  framework: string,
+) {
+  const importCode = `import { ${fullHeroicon.componentName} } from "@${fullHeroicon.iconset.toLowerCase()}/${framework}/${iconDirectories[type]}";`;
+  return importCode;
+}
+
+export function iconReactCode(fullHeroicon: FullHeroicon, type: HeroiconType) {
+  const importCode = iconImportCode(fullHeroicon, type, "react");
+  const componentCode = `<${fullHeroicon.componentName} className="${iconSizeClasses[type]} text-slate-500" />`;
+  return `${importCode}\n\n${componentCode}`;
+}
+
+export function iconVueCode(fullHeroicon: FullHeroicon, type: HeroiconType) {
+  const importCode = iconImportCode(fullHeroicon, type, "vue");
+  const componentCode = `<${fullHeroicon.componentName} class="${iconSizeClasses[type]} text-slate-500" />`;
+  return `${importCode}\n\n${componentCode}`;
 }

@@ -44,3 +44,10 @@ export const iconSizeClasses4x: Record<HeroiconType, string> = {
   solid20: "size-20",
   solid16: "size-16",
 } as const;
+
+export const iconDirectories: Record<HeroiconType, string> = {
+  outline24: "24/outline",
+  solid24: "24/solid",
+  solid20: "20/solid",
+  solid16: "16/solid",
+} as const;

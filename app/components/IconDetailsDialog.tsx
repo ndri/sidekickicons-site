@@ -1,10 +1,21 @@
-import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from "@headlessui/react";
+import {
+  Dialog,
+  DialogBackdrop,
+  DialogPanel,
+  DialogTitle,
+  Tab,
+  TabGroup,
+  TabList,
+  TabPanel,
+  TabPanels,
+} from "@headlessui/react";
 import { FullHeroicon, HeroiconType } from "../types";
 import ReactDOMServer from "react-dom/server";
 import DescriptionList from "./DescriptionList";
 import beautify from "js-beautify";
 import CodeBlock from "./CodeBlock";
-import { iconSizeClasses, iconSizeClasses4x } from "../util/constants";
+import { iconDirectories, iconSizeClasses, iconSizeClasses4x } from "../util/constants";
+import { iconReactCode, iconSVGtoJSX, iconVueCode } from "../util/util";
 
 export default function IconDetailsDialog({
   open,
@@ -24,6 +35,9 @@ export default function IconDetailsDialog({
   const prettySvgCode = beautify.html(svgCode, {
     indent_size: 2,
   });
+  const prettyJsxCode = iconSVGtoJSX(prettySvgCode);
+  const reactCode = iconReactCode(fullHeroicon, type);
+  const vueCode = iconVueCode(fullHeroicon, type);
 
   return (
     <Dialog open={open} onClose={() => setOpen(false)} className="relative z-50">
@@ -46,7 +60,32 @@ export default function IconDetailsDialog({
                   ["Keywords", fullHeroicon.keywords.join(", ")],
                 ]}
               />
-              <CodeBlock code={prettySvgCode} language="svg" />
+              <TabGroup className="w-full">
+                <TabList className="flex flex-row gap-0.5">
+                  {["SVG", "JSX", "React", "Vue"].map((tab) => (
+                    <Tab
+                      key={tab}
+                      className="rounded-lg px-2 py-1 text-sm font-medium text-slate-600 data-[selected]:bg-indigo-50 data-[hover]:text-slate-400 data-[selected]:text-indigo-800"
+                    >
+                      {tab}
+                    </Tab>
+                  ))}
+                </TabList>
+                <TabPanels>
+                  <TabPanel>
+                    <CodeBlock code={prettySvgCode} language="svg" />
+                  </TabPanel>
+                  <TabPanel>
+                    <CodeBlock code={prettyJsxCode} language="jsx" />
+                  </TabPanel>
+                  <TabPanel>
+                    <CodeBlock code={reactCode} language="jsx" />
+                  </TabPanel>
+                  <TabPanel>
+                    <CodeBlock code={vueCode} language="jsx" />
+                  </TabPanel>
+                </TabPanels>
+              </TabGroup>
             </div>
             <div className="mt-5 sm:mt-6 sm:grid sm:grid-flow-row-dense sm:grid-cols-1 sm:gap-3">
               <button
