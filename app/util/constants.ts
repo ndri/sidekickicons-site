@@ -108,7 +108,7 @@ export const codeTypes: IconCodeType[] = [
   "SVG",
   "JSX",
   "React",
-  "Vue",
   "React + import",
+  "Vue",
   "Vue + import",
 ] as const;

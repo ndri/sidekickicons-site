@@ -47,13 +47,15 @@ export default function IconCard({
           Info
         </button>
       </div>
-      <IconDetailsDialog
-        open={showDialog}
-        setOpen={setShowDialog}
-        fullHeroicon={fullHeroicon}
-        type={type}
-        defaultCodeType={codeType}
-      />
+      {showDialog && (
+        <IconDetailsDialog
+          open={showDialog}
+          setOpen={setShowDialog}
+          fullHeroicon={fullHeroicon}
+          defaultType={type}
+          defaultCodeType={codeType}
+        />
+      )}
     </div>
   );
 }
