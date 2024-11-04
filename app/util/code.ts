@@ -42,6 +42,10 @@ export function iconImportCode(
   return importCode;
 }
 
+export function iconsetInstallCode(iconset: string, framework: string) {
+  return `npm install @${iconset.toLowerCase()}/${framework}`;
+}
+
 export function iconReactCode(fullHeroicon: FullHeroicon, type: HeroiconType) {
   return `<${fullHeroicon.componentName} className="${iconSizeClasses[type]} text-slate-500" />`;
 }

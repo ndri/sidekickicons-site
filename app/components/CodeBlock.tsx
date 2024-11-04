@@ -12,21 +12,26 @@ export default function CodeBlock({
   style?: "light" | "dark";
 }) {
   return (
-    <div className="relative flex w-full flex-col overflow-hidden rounded-md ring-1 ring-slate-200">
+    <div
+      className="group/code relative w-full overflow-hidden rounded-md ring-1 ring-slate-200"
+      tabIndex={0}
+    >
       <SyntaxHighlighter
         language={language}
         style={style === "dark" ? oneDark : oneLight}
         customStyle={{
           fontSize: "0.75rem",
-          margin: 0,
+          margin: "0rem",
           paddingTop: "0.75rem",
-          paddingBottom: "2rem",
+          paddingBottom: "0.75rem",
         }}
-        className="rounded-md"
+        className="flex-grow rounded-md"
       >
         {code}
       </SyntaxHighlighter>
-      <CopyButton textToCopy={code} className="absolute bottom-1 right-1" />
+      <div className="invisible absolute bottom-1 right-1 top-1 flex flex-row items-start gap-1 group-focus-within/code:visible group-hover/code:visible group-focus/code:visible">
+        <CopyButton textToCopy={code} />
+      </div>
     </div>
   );
 }

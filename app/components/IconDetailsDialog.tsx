@@ -20,6 +20,7 @@ import {
   iconSvgToJsx,
   iconVueCode,
   iconVuePlusImportCode,
+  iconsetInstallCode,
 } from "../util/code";
 
 export default function IconDetailsDialog({
@@ -49,7 +50,7 @@ export default function IconDetailsDialog({
       <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
         <div className="flex min-h-full items-end justify-center p-4 sm:items-center sm:p-0">
           <DialogPanel className="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 shadow-xl transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in sm:my-8 sm:w-full sm:max-w-lg sm:p-6 data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95">
-            <div className="flex flex-col items-center gap-4">
+            <div className="flex flex-col items-center gap-6">
               <div className="flex h-36 w-36 items-center justify-center rounded-md border border-slate-200">
                 <Icon className={`${iconSizeClasses4x[type]} text-slate-700`} />
               </div>
@@ -58,7 +59,7 @@ export default function IconDetailsDialog({
               </DialogTitle>
               <DescriptionList
                 rows={[
-                  ["Component name", fullHeroicon.componentName],
+                  ["Component", fullHeroicon.componentName],
                   ["Iconset", fullHeroicon.iconset],
                   ["Keywords", fullHeroicon.keywords.join(", ")],
                 ]}
@@ -83,16 +84,32 @@ export default function IconDetailsDialog({
                   <TabPanel>
                     <CodeBlock code={prettyJsxCode} language="jsx" />
                   </TabPanel>
-                  <TabPanel>
+                  <TabPanel className="flex flex-col gap-2">
+                    <CodeBlock
+                      code={iconsetInstallCode(fullHeroicon.iconset, "react")}
+                      language="bash"
+                    />
                     <CodeBlock code={reactCode} language="jsx" />
                   </TabPanel>
-                  <TabPanel>
+                  <TabPanel className="flex flex-col gap-2">
+                    <CodeBlock
+                      code={iconsetInstallCode(fullHeroicon.iconset, "react")}
+                      language="bash"
+                    />
                     <CodeBlock code={reactPlusImportCode} language="jsx" />
                   </TabPanel>
-                  <TabPanel>
+                  <TabPanel className="flex flex-col gap-2">
+                    <CodeBlock
+                      code={iconsetInstallCode(fullHeroicon.iconset, "vue")}
+                      language="bash"
+                    />
                     <CodeBlock code={vueCode} language="jsx" />
                   </TabPanel>
-                  <TabPanel>
+                  <TabPanel className="flex flex-col gap-2">
+                    <CodeBlock
+                      code={iconsetInstallCode(fullHeroicon.iconset, "vue")}
+                      language="bash"
+                    />
                     <CodeBlock code={vuePlusImportCode} language="jsx" />
                   </TabPanel>
                 </TabPanels>
