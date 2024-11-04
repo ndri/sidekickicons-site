@@ -24,7 +24,7 @@ export default function SearchInput({
           type="text"
           autoComplete="off"
           placeholder={placeholder}
-          className="block w-full rounded-md border-0 py-1.5 pl-10 text-slate-900 ring-1 ring-inset ring-slate-300 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
+          className="dark:placeholder-text-slate-400 block w-full rounded-md border-0 py-1.5 pl-10 text-slate-900 ring-1 ring-inset ring-slate-300 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6 dark:bg-slate-800 dark:text-slate-100 dark:ring-slate-700"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />

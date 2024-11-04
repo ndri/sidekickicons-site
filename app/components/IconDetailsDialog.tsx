@@ -57,17 +57,17 @@ export default function IconDetailsDialog({
 
   return (
     <Dialog open={open} onClose={() => setOpen(false)} className="relative z-50">
-      <DialogBackdrop className="fixed inset-0 bg-slate-500 bg-opacity-75 transition-opacity data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in" />
+      <DialogBackdrop className="fixed inset-0 bg-slate-500 bg-opacity-75 transition-opacity data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in dark:bg-slate-900 dark:bg-opacity-75" />
 
       <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
         <div className="flex min-h-full items-end justify-center p-4 sm:items-center sm:p-0">
-          <DialogPanel className="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 shadow-xl transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in sm:my-8 sm:w-full sm:max-w-lg sm:p-6 data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95">
+          <DialogPanel className="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 shadow-xl transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in sm:my-8 sm:w-full sm:max-w-lg sm:p-6 data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95 dark:bg-slate-800">
             <div className="flex flex-col items-center gap-6">
-              <DialogTitle as="h3" className="text-lg font-semibold text-slate-700">
+              <DialogTitle as="h3" className="text-lg font-semibold">
                 {fullHeroicon.kebabName}
               </DialogTitle>
-              <div className="flex h-36 w-36 items-center justify-center rounded-md border border-slate-200">
-                <Icon className={`${iconSizeClasses4x[selectedType]} text-slate-700`} />
+              <div className="flex h-36 w-36 items-center justify-center rounded-md border border-slate-200 dark:border-slate-700">
+                <Icon className={iconSizeClasses4x[selectedType]} />
               </div>
               <ButtonSelect<HeroiconType>
                 label="Icon type"
@@ -93,7 +93,7 @@ export default function IconDetailsDialog({
                   {codeTypes.map((tab) => (
                     <Tab
                       key={tab}
-                      className="rounded-lg px-2 py-1 text-sm font-medium text-slate-600 data-[selected]:bg-indigo-50 data-[hover]:text-slate-400 data-[selected]:text-indigo-800"
+                      className="rounded-lg px-2 py-1 text-sm font-medium text-slate-600 data-[selected]:bg-indigo-50 data-[hover]:text-slate-400 data-[selected]:text-indigo-800 dark:text-slate-400 dark:hover:text-slate-500 dark:data-[selected]:bg-indigo-900 dark:data-[hover]:text-slate-500 dark:data-[selected]:text-slate-100"
                     >
                       {tab}
                     </Tab>
