@@ -15,6 +15,7 @@ import CodeBlock from "./CodeBlock";
 import {
   codeTypes,
   iconSizeClasses4x,
+  iconTypeExplanations,
   iconTypeNames,
   iconTypes,
 } from "../util/constants";
@@ -77,6 +78,7 @@ export default function IconDetailsDialog({
               <DescriptionList
                 rows={[
                   ["Component", fullHeroicon.componentName],
+                  ["Intended size", iconTypeExplanations[selectedType]],
                   ["Iconset", fullHeroicon.iconset],
                   ["Keywords", fullHeroicon.keywords.join(", ")],
                 ]}

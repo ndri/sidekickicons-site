@@ -29,6 +29,13 @@ export const iconTypeNames: Record<HeroiconType, string> = {
   solid16: "Micro",
 } as const;
 
+export const iconTypeExplanations: Record<HeroiconType, string> = {
+  outline24: "24×24 px, 1.5 px stroke",
+  solid24: "24×24 px, solid fill",
+  solid20: "20×20 px, solid fill",
+  solid16: "16×16 px, solid fill",
+} as const;
+
 export const iconsets: Iconset[] = ["Heroicons", "Sidekickicons"] as const;
 
 export const iconsetSelections: IconsetSelection[] = ["All", ...iconsets];
