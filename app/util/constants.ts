@@ -9,10 +9,10 @@ import {
 import {
   iconJsxCode,
   iconReactCode,
-  iconReactPlusImportsCode,
+  iconReactPlusImportCode,
   iconSvgCode,
   iconVueCode,
-  iconVuePlusImportsCode,
+  iconVuePlusImportCode,
 } from "./code";
 
 export const iconTypes: HeroiconType[] = [
@@ -89,8 +89,8 @@ export const iconCodeFunctions: Record<
   JSX: iconJsxCode,
   React: iconReactCode,
   Vue: iconVueCode,
-  "React + import": iconReactPlusImportsCode,
-  "Vue + import": iconVuePlusImportsCode,
+  "React + import": iconReactPlusImportCode,
+  "Vue + import": iconVuePlusImportCode,
 } as const;
 
 export const deprecatedHeroicons = [

@@ -6,7 +6,9 @@ import { createElement } from "react";
 
 export function iconSvgCode(fullHeroicon: FullHeroicon, type: HeroiconType) {
   const reactElement = fullHeroicon[type];
-  const jsxElement = createElement(reactElement, { className: iconSizeClasses[type] });
+  const jsxElement = createElement(reactElement, {
+    className: `${iconSizeClasses[type]} text-slate-500`,
+  });
   const svgCode = ReactDOMServer.renderToStaticMarkup(jsxElement);
   const prettySvgCode = beautify.html(svgCode, { indent_size: 2 });
   return prettySvgCode;
@@ -44,7 +46,7 @@ export function iconReactCode(fullHeroicon: FullHeroicon, type: HeroiconType) {
   return `<${fullHeroicon.componentName} className="${iconSizeClasses[type]} text-slate-500" />`;
 }
 
-export function iconReactPlusImportsCode(
+export function iconReactPlusImportCode(
   fullHeroicon: FullHeroicon,
   type: HeroiconType,
 ) {
@@ -57,7 +59,7 @@ export function iconVueCode(fullHeroicon: FullHeroicon, type: HeroiconType) {
   return `<${fullHeroicon.componentName} class="${iconSizeClasses[type]} text-slate-500" />`;
 }
 
-export function iconVuePlusImportsCode(fullHeroicon: FullHeroicon, type: HeroiconType) {
+export function iconVuePlusImportCode(fullHeroicon: FullHeroicon, type: HeroiconType) {
   const importCode = iconImportCode(fullHeroicon, type, "vue");
   const componentCode = iconVueCode(fullHeroicon, type);
   return `${importCode}\n\n${componentCode}`;

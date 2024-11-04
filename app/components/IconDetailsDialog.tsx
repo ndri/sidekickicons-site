@@ -13,7 +13,14 @@ import { FullHeroicon, HeroiconType } from "../types";
 import DescriptionList from "./DescriptionList";
 import CodeBlock from "./CodeBlock";
 import { iconSizeClasses4x } from "../util/constants";
-import { iconReactCode, iconSvgCode, iconSvgToJsx, iconVueCode } from "../util/code";
+import {
+  iconReactCode,
+  iconReactPlusImportCode,
+  iconSvgCode,
+  iconSvgToJsx,
+  iconVueCode,
+  iconVuePlusImportCode,
+} from "../util/code";
 
 export default function IconDetailsDialog({
   open,
@@ -31,7 +38,9 @@ export default function IconDetailsDialog({
   const prettySvgCode = iconSvgCode(fullHeroicon, type);
   const prettyJsxCode = iconSvgToJsx(prettySvgCode);
   const reactCode = iconReactCode(fullHeroicon, type);
+  const reactPlusImportCode = iconReactPlusImportCode(fullHeroicon, type);
   const vueCode = iconVueCode(fullHeroicon, type);
+  const vuePlusImportCode = iconVuePlusImportCode(fullHeroicon, type);
 
   return (
     <Dialog open={open} onClose={() => setOpen(false)} className="relative z-50">
@@ -56,14 +65,16 @@ export default function IconDetailsDialog({
               />
               <TabGroup className="flex w-full flex-col gap-2">
                 <TabList className="flex flex-row gap-0.5">
-                  {["SVG", "JSX", "React", "Vue"].map((tab) => (
-                    <Tab
-                      key={tab}
-                      className="rounded-lg px-2 py-1 text-sm font-medium text-slate-600 data-[selected]:bg-indigo-50 data-[hover]:text-slate-400 data-[selected]:text-indigo-800"
-                    >
-                      {tab}
-                    </Tab>
-                  ))}
+                  {["SVG", "JSX", "React", "React + import", "Vue", "Vue + import"].map(
+                    (tab) => (
+                      <Tab
+                        key={tab}
+                        className="rounded-lg px-2 py-1 text-sm font-medium text-slate-600 data-[selected]:bg-indigo-50 data-[hover]:text-slate-400 data-[selected]:text-indigo-800"
+                      >
+                        {tab}
+                      </Tab>
+                    ),
+                  )}
                 </TabList>
                 <TabPanels>
                   <TabPanel>
@@ -76,7 +87,13 @@ export default function IconDetailsDialog({
                     <CodeBlock code={reactCode} language="jsx" />
                   </TabPanel>
                   <TabPanel>
+                    <CodeBlock code={reactPlusImportCode} language="jsx" />
+                  </TabPanel>
+                  <TabPanel>
                     <CodeBlock code={vueCode} language="jsx" />
+                  </TabPanel>
+                  <TabPanel>
+                    <CodeBlock code={vuePlusImportCode} language="jsx" />
                   </TabPanel>
                 </TabPanels>
               </TabGroup>
