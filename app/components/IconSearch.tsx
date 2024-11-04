@@ -5,7 +5,12 @@ import { useState } from "react";
 import { matchSorter } from "match-sorter";
 import IconCard from "./IconCard";
 import { HeroiconType, IconCodeType, IconSize, IconsetSelection } from "../types";
-import { iconTypeNames, iconTypes, iconsetSelections } from "../util/constants";
+import {
+  codeTypes,
+  iconTypeNames,
+  iconTypes,
+  iconsetSelections,
+} from "../util/constants";
 import SearchInput from "./SearchInput";
 import ButtonSelect from "./ButtonSelect";
 import { dashesToSpaces } from "../util/util";
@@ -62,7 +67,7 @@ export default function IconSearch({}) {
             label="Code to copy"
             selectedValue={selectedCodeType}
             setSelectedValue={setSelectedCodeType}
-            values={["SVG", "JSX", "React", "React + import", "Vue", "Vue + import"]}
+            values={codeTypes}
           />
         </div>
       </div>

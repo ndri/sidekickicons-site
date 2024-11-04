@@ -103,3 +103,12 @@ export const deprecatedHeroicons = [
   "MinusSmallIcon",
   "PlusSmallIcon",
 ] as const;
+
+export const codeTypes: IconCodeType[] = [
+  "SVG",
+  "JSX",
+  "React",
+  "Vue",
+  "React + import",
+  "Vue + import",
+] as const;

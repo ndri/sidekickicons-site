@@ -52,6 +52,7 @@ export default function IconCard({
         setOpen={setShowDialog}
         fullHeroicon={fullHeroicon}
         type={type}
+        defaultCodeType={codeType}
       />
     </div>
   );

@@ -9,10 +9,10 @@ import {
   TabPanel,
   TabPanels,
 } from "@headlessui/react";
-import { FullHeroicon, HeroiconType } from "../types";
+import { FullHeroicon, HeroiconType, IconCodeType } from "../types";
 import DescriptionList from "./DescriptionList";
 import CodeBlock from "./CodeBlock";
-import { iconSizeClasses4x } from "../util/constants";
+import { codeTypes, iconSizeClasses4x } from "../util/constants";
 import {
   iconReactCode,
   iconReactPlusImportCode,
@@ -28,11 +28,13 @@ export default function IconDetailsDialog({
   setOpen,
   fullHeroicon,
   type,
+  defaultCodeType,
 }: {
   open: boolean;
   setOpen: (open: boolean) => void;
   fullHeroicon: FullHeroicon;
   type: HeroiconType;
+  defaultCodeType: IconCodeType;
 }) {
   const Icon = fullHeroicon[type];
 
@@ -64,18 +66,19 @@ export default function IconDetailsDialog({
                   ["Keywords", fullHeroicon.keywords.join(", ")],
                 ]}
               />
-              <TabGroup className="flex w-full flex-col gap-2">
+              <TabGroup
+                className="flex w-full flex-col gap-2"
+                defaultIndex={codeTypes.indexOf(defaultCodeType)}
+              >
                 <TabList className="flex flex-row flex-wrap gap-0.5">
-                  {["SVG", "JSX", "React", "React + import", "Vue", "Vue + import"].map(
-                    (tab) => (
-                      <Tab
-                        key={tab}
-                        className="rounded-lg px-2 py-1 text-sm font-medium text-slate-600 data-[selected]:bg-indigo-50 data-[hover]:text-slate-400 data-[selected]:text-indigo-800"
-                      >
-                        {tab}
-                      </Tab>
-                    ),
-                  )}
+                  {codeTypes.map((tab) => (
+                    <Tab
+                      key={tab}
+                      className="rounded-lg px-2 py-1 text-sm font-medium text-slate-600 data-[selected]:bg-indigo-50 data-[hover]:text-slate-400 data-[selected]:text-indigo-800"
+                    >
+                      {tab}
+                    </Tab>
+                  ))}
                 </TabList>
                 <TabPanels>
                   <TabPanel>
