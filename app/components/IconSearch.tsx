@@ -61,7 +61,7 @@ export default function IconSearch({}) {
             label="Code type"
             selectedValue={selectedCodeType}
             setSelectedValue={setSelectedCodeType}
-            values={["SVG", "JSX", "React", "React + imports", "Vue", "Vue + imports"]}
+            values={["SVG", "JSX", "React", "React + import", "Vue", "Vue + import"]}
           />
         </div>
       </div>

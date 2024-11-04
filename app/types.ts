@@ -19,9 +19,9 @@ export type IconCodeType =
   | "SVG"
   | "JSX"
   | "React"
-  | "React + imports"
+  | "React + import"
   | "Vue"
-  | "Vue + imports";
+  | "Vue + import";
 
 export interface FullHeroicon {
   kebabName: string;

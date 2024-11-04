@@ -89,6 +89,6 @@ export const iconCodeFunctions: Record<
   JSX: iconJsxCode,
   React: iconReactCode,
   Vue: iconVueCode,
-  "React + imports": iconReactPlusImportsCode,
-  "Vue + imports": iconVuePlusImportsCode,
+  "React + import": iconReactPlusImportsCode,
+  "Vue + import": iconVuePlusImportsCode,
 };
