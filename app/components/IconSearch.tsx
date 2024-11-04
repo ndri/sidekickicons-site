@@ -1,7 +1,7 @@
 "use client";
 
 import icons from "../icons/allicons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { matchSorter } from "match-sorter";
 import IconCard from "./IconCard";
 import { HeroiconType, IconCodeType, IconSize, IconsetSelection } from "../types";
@@ -19,10 +19,18 @@ import DropdownSelect from "./DropdownSelect";
 
 export default function IconSearch({}) {
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedType, setSelectedType] = useState<HeroiconType>(iconTypes[0]);
-  const [selectedIconSet, setSelectedIconSet] = useState<IconsetSelection>("All");
-  const [selectedSize, setSelectedSize] = useState<IconSize>("1x");
-  const [selectedCodeType, setSelectedCodeType] = useState<IconCodeType>("SVG");
+  const [selectedType, setSelectedType] = useState<HeroiconType>(
+    (localStorage.getItem("selectedType") as HeroiconType) || "outline24",
+  );
+  const [selectedIconSet, setSelectedIconSet] = useState<IconsetSelection>(
+    (localStorage.getItem("selectedIconSet") as IconsetSelection) || "All",
+  );
+  const [selectedSize, setSelectedSize] = useState<IconSize>(
+    (localStorage.getItem("selectedSize") as IconSize) || "1x",
+  );
+  const [selectedCodeType, setSelectedCodeType] = useState<IconCodeType>(
+    (localStorage.getItem("selectedCodeType") as IconCodeType) || "SVG",
+  );
 
   const iconsetIcons = icons.filter(
     (icon) => icon.iconset === selectedIconSet || selectedIconSet === "All",
@@ -32,6 +40,13 @@ export default function IconSearch({}) {
     keys: [(icon) => dashesToSpaces(icon.kebabName), "keywords"],
   });
 
+  useEffect(() => {
+    localStorage.setItem("selectedType", selectedType);
+    localStorage.setItem("selectedIconSet", selectedIconSet);
+    localStorage.setItem("selectedSize", selectedSize);
+    localStorage.setItem("selectedCodeType", selectedCodeType);
+  }, [selectedType, selectedIconSet, selectedSize, selectedCodeType]);
+
   return (
     <div className="flex flex-col gap-6">
       <div className="flex flex-col gap-2">
@@ -40,7 +55,7 @@ export default function IconSearch({}) {
           setSearchQuery={setSearchQuery}
           placeholder="Search all icons..."
         />
-        <div className="xs:flex-row xs:items-stretch flex flex-col flex-wrap items-center justify-center gap-2">
+        <div className="flex flex-col flex-wrap items-center justify-center gap-2 xs:flex-row xs:items-stretch">
           <ButtonSelect<HeroiconType>
             label="Icon type"
             selectedValue={selectedType}
