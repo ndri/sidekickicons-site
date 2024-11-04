@@ -13,7 +13,7 @@ import { FullHeroicon, HeroiconType } from "../types";
 import DescriptionList from "./DescriptionList";
 import CodeBlock from "./CodeBlock";
 import { iconSizeClasses4x } from "../util/constants";
-import { iconReactCode, iconSvgCode, iconSvgToJsx, iconVueCode } from "../util/util";
+import { iconReactCode, iconSvgCode, iconSvgToJsx, iconVueCode } from "../util/code";
 
 export default function IconDetailsDialog({
   open,

@@ -13,7 +13,7 @@ import {
   iconSvgCode,
   iconVueCode,
   iconVuePlusImportsCode,
-} from "./util";
+} from "./code";
 
 export const iconTypes: HeroiconType[] = [
   "outline24",
@@ -91,4 +91,15 @@ export const iconCodeFunctions: Record<
   Vue: iconVueCode,
   "React + import": iconReactPlusImportsCode,
   "Vue + import": iconVuePlusImportsCode,
-};
+} as const;
+
+export const deprecatedHeroicons = [
+  "ArrowLeftOnRectangleIcon",
+  "ArrowRightOnRectangleIcon",
+  "ArrowSmallDownIcon",
+  "ArrowSmallLeftIcon",
+  "ArrowSmallRightIcon",
+  "ArrowSmallUpIcon",
+  "MinusSmallIcon",
+  "PlusSmallIcon",
+] as const;

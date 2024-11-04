@@ -4,7 +4,7 @@ import * as sidekickiconsSolid24 from "@sidekickicons/react/24/solid";
 import * as sidekickiconsSolid20 from "@sidekickicons/react/20/solid";
 import * as sidekickiconsSolid16 from "@sidekickicons/react/16/solid";
 import { NamedHeroicons } from "../types";
-import { generateFullHeroicons } from "../util/util";
+import { generateFullHeroicons } from "../util/icons";
 import { sidekickiconKeywords } from "../data/keywords";
 
 const sidekickicons = {
