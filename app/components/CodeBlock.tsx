@@ -1,5 +1,5 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { oneLight, coldarkDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { oneLight, oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import CopyButton from "./CopyButton";
 
 export default function CodeBlock({
@@ -9,6 +9,10 @@ export default function CodeBlock({
   code: string;
   language: string;
 }) {
+  const theme = window.document.documentElement.classList.contains("dark")
+    ? oneDark
+    : oneLight;
+
   return (
     <div
       className="group/code relative w-full overflow-hidden rounded-md ring-1 ring-slate-200 dark:ring-slate-700"
@@ -16,7 +20,7 @@ export default function CodeBlock({
     >
       <SyntaxHighlighter
         language={language}
-        style={coldarkDark}
+        style={theme}
         customStyle={{
           fontSize: "0.75rem",
           margin: "0rem",
