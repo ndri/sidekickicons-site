@@ -10,6 +10,7 @@ import SearchInput from "./SearchInput";
 import ButtonSelect from "./ButtonSelect";
 import { dashesToSpaces } from "../util/util";
 import VerticalRule from "./VerticalRule";
+import DropdownSelect from "./DropdownSelect";
 
 export default function IconSearch({}) {
   const [searchQuery, setSearchQuery] = useState("");
@@ -57,8 +58,8 @@ export default function IconSearch({}) {
             values={["1x", "1.5x", "2x"]}
           />
           <VerticalRule />
-          <ButtonSelect<IconCodeType>
-            label="Code type"
+          <DropdownSelect<IconCodeType>
+            label="Code to copy"
             selectedValue={selectedCodeType}
             setSelectedValue={setSelectedCodeType}
             values={["SVG", "JSX", "React", "React + import", "Vue", "Vue + import"]}
