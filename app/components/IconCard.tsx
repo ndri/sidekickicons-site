@@ -6,6 +6,7 @@ import { useState } from "react";
 import IconDetailsDialog from "./IconDetailsDialog";
 import { allIconSizeClasses, iconCodeFunctions } from "../util/constants";
 import CopyButton from "./CopyButton";
+import Button from "./Button";
 
 export default function IconCard({
   type,
@@ -39,13 +40,12 @@ export default function IconCard({
       </div>
       <div className="invisible z-10 col-start-1 col-end-2 row-start-1 row-end-2 flex flex-col justify-center gap-1 group-focus-within:visible group-hover:visible">
         <CopyButton textToCopy={codeToCopy} />
-        <button
-          className="group/button flex justify-center gap-1 rounded bg-white px-2 py-1 text-sm font-semibold text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 hover:bg-slate-50"
+        <Button
+          text="Info"
+          Icon={InformationCircleIcon}
+          style="light"
           onClick={() => setShowDialog(true)}
-        >
-          <InformationCircleIcon className="h-5 w-5 text-slate-400 group-hover/button:text-slate-600" />
-          Info
-        </button>
+        />
       </div>
       {showDialog && (
         <IconDetailsDialog
