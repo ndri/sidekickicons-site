@@ -65,7 +65,7 @@ export default function IconDetailsDialog({
                 ]}
               />
               <TabGroup className="flex w-full flex-col gap-2">
-                <TabList className="flex flex-row gap-0.5">
+                <TabList className="flex flex-row flex-wrap gap-0.5">
                   {["SVG", "JSX", "React", "React + import", "Vue", "Vue + import"].map(
                     (tab) => (
                       <Tab

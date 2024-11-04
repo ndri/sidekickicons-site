@@ -35,7 +35,7 @@ export default function IconSearch({}) {
           setSearchQuery={setSearchQuery}
           placeholder="Search all icons..."
         />
-        <div className="flex gap-2">
+        <div className="xs:flex-row xs:items-stretch flex flex-col flex-wrap items-center gap-2">
           <ButtonSelect<HeroiconType>
             label="Icon type"
             selectedValue={selectedType}
@@ -66,7 +66,7 @@ export default function IconSearch({}) {
           />
         </div>
       </div>
-      <div className="grid grid-cols-6 gap-4">
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-6">
         {filteredIcons.map((fullHeroicon) => (
           <IconCard
             key={fullHeroicon.kebabName}
