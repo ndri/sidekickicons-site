@@ -28,10 +28,7 @@ export default function IconCard({
   const codeToCopy = iconCodeFunctions[codeType](fullHeroicon, type);
 
   return (
-    <div
-      className="group/iconcard grid grid-cols-1 grid-rows-1 rounded-lg bg-slate-50 p-4 focus-within:ring-2 focus-within:ring-indigo-600 focus:outline-none dark:bg-slate-800"
-      tabIndex={0}
-    >
+    <div className="group/iconcard grid grid-cols-1 grid-rows-1 rounded-lg bg-slate-50 p-4 dark:bg-slate-800">
       <div className="col-span-full row-span-full flex flex-col items-center justify-center group-focus-within/iconcard:opacity-25 group-hover/iconcard:opacity-25">
         <Icon className={`${iconClasses} text-slate-700 dark:text-slate-100`} />
         <p
@@ -41,7 +38,7 @@ export default function IconCard({
           {name}
         </p>
       </div>
-      <div className="invisible z-10 col-start-1 col-end-2 row-start-1 row-end-2 flex flex-col justify-center gap-1 group-focus-within/iconcard:visible group-hover/iconcard:visible">
+      <div className="z-10 col-start-1 col-end-2 row-start-1 row-end-2 flex flex-col justify-center gap-1 opacity-0 group-focus-within/iconcard:opacity-100 group-hover/iconcard:opacity-100">
         <CopyButton textToCopy={codeToCopy} />
         <Button
           text="Info"
