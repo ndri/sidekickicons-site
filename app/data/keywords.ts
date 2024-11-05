@@ -171,6 +171,8 @@ export const heroiconKeywords = {
   "clipboard-document-check": ["clipboard-tick"],
   "clipboard-document-list": ["copy", "cut", "paste"],
   clock: ["time", "watch"],
+  "code-bracket": ["text", "typography", "markup", "markdown"],
+  "code-bracket-square": ["text", "typography", "markup", "markdown"],
   cog: ["gear", "settings"],
   "cog-6-tooth": ["gear", "settings"],
   "cog-8-tooth": ["gear", "settings"],
