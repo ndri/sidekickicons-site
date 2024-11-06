@@ -1,6 +1,6 @@
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import IconSearch from "./components/IconSearch";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import IconSearch from "../components/IconSearch";
 
 export default function Home() {
   return (
