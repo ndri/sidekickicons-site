@@ -15,7 +15,7 @@ export default function RootLayout({
   const plausibleDomain = process.env.PLAUSIBLE_DOMAIN;
 
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       {plausibleDomain && (
         <head>
           <PlausibleProvider
