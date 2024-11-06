@@ -55,7 +55,7 @@ export default function IconSearch() {
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="sticky top-0 flex flex-col gap-2 bg-white py-2 dark:bg-slate-900">
+      <div className="sticky top-0 z-20 flex flex-col gap-2 bg-white py-2 dark:bg-slate-900">
         <SearchInput
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
