@@ -13,7 +13,7 @@ export type Iconset = "Heroicons" | "Sidekickicons";
 
 export type IconsetSelection = Iconset | "All";
 
-export type IconSize = "1x" | "1.5x" | "2x" | "4x";
+export type IconSize = "1×" | "1.5×" | "2×" | "4×";
 
 export type IconCodeType =
   | "SVG"

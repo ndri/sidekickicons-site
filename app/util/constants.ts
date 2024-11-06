@@ -75,10 +75,10 @@ export const iconSizeClasses4x: Record<HeroiconType, string> = {
 } as const;
 
 export const allIconSizeClasses: Record<IconSize, Record<HeroiconType, string>> = {
-  "1x": iconSizeClasses,
-  "1.5x": iconSizeClasses15x,
-  "2x": iconSizeClasses2x,
-  "4x": iconSizeClasses4x,
+  "1×": iconSizeClasses,
+  "1.5×": iconSizeClasses15x,
+  "2×": iconSizeClasses2x,
+  "4×": iconSizeClasses4x,
 } as const;
 
 export const iconDirectories: Record<HeroiconType, string> = {

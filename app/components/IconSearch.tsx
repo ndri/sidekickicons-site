@@ -30,7 +30,7 @@ export default function IconSearch() {
   );
   const [selectedSize, setSelectedSize] = useStoredState<IconSize>(
     "selectedSize",
-    "1x",
+    "1×",
   );
   const [selectedCodeType, setSelectedCodeType] = useStoredState<IconCodeType>(
     "selectedCodeType",
