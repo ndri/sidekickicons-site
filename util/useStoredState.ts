@@ -6,10 +6,10 @@ export default function useStoredState<T>(
   key: string,
   defaultValue: T,
 ): [T, (newValue: T) => void] {
-  // const [storedValue, setStoredValue] = useState<T>(defaultValue);
-  const [storedValue, setStoredValue] = useState<T>(
-    (window.localStorage.getItem(key) as T) || defaultValue,
-  );
+  const [storedValue, setStoredValue] = useState<T>(defaultValue);
+  // const [storedValue, setStoredValue] = useState<T>(
+  //   (window.localStorage.getItem(key) as T) || defaultValue,
+  // );
 
   useEffect(() => {
     try {
