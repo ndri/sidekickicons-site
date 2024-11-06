@@ -22,7 +22,7 @@ export default function RootLayout({
             domain={plausibleDomain}
             scriptProps={{
               src: "/js/script.js",
-              // @ts-ignore
+              // @ts-expect-error data-api is not a valid attribute, but it's used by Plausible
               "data-api": "/api/event",
             }}
           />
