@@ -1,10 +1,16 @@
 "use client";
 
 import icons from "../icons/allicons";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { matchSorter } from "match-sorter";
 import IconCard from "./IconCard";
-import { HeroiconType, IconCodeType, IconSize, IconsetSelection } from "../types";
+import {
+  FullHeroicon,
+  HeroiconType,
+  IconCodeType,
+  IconSize,
+  IconsetSelection,
+} from "../types";
 import {
   codeTypes,
   iconTypeNames,
@@ -17,6 +23,7 @@ import { dashesToSpaces } from "../util/util";
 import VerticalRule from "./VerticalRule";
 import DropdownSelect from "./DropdownSelect";
 import useStoredState from "../util/useStoredState";
+import IconDetailsDialog from "./IconDetailsDialog";
 
 export default function IconSearch() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -36,6 +43,8 @@ export default function IconSearch() {
     "selectedCodeType",
     "SVG",
   );
+
+  const [openIcon, setOpenIcon] = useState<FullHeroicon | null>(null);
 
   const iconsetIcons = icons.filter(
     (icon) => icon.iconset === selectedIconSet || selectedIconSet === "All",
@@ -72,7 +81,7 @@ export default function IconSearch() {
             label="Size"
             selectedValue={selectedSize}
             setSelectedValue={setSelectedSize}
-            values={["1x", "1.5x", "2x"]}
+            values={["1×", "1.5×", "2×"]}
           />
           <VerticalRule />
           <DropdownSelect<IconCodeType>
@@ -91,9 +100,18 @@ export default function IconSearch() {
             fullHeroicon={fullHeroicon}
             size={selectedSize}
             codeType={selectedCodeType}
+            openDialog={() => setOpenIcon(fullHeroicon)}
           />
         ))}
       </div>
+      {openIcon && (
+        <IconDetailsDialog
+          fullHeroicon={openIcon}
+          defaultType={selectedType}
+          defaultCodeType={selectedCodeType}
+          closeDialog={() => setOpenIcon(null)}
+        />
+      )}
     </div>
   );
 }

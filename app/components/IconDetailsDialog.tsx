@@ -1,14 +1,4 @@
-import {
-  Dialog,
-  DialogBackdrop,
-  DialogPanel,
-  DialogTitle,
-  Tab,
-  TabGroup,
-  TabList,
-  TabPanel,
-  TabPanels,
-} from "@headlessui/react";
+import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from "@headlessui/react";
 import { FullHeroicon, HeroiconType, IconCodeType } from "../types";
 import DescriptionList from "./DescriptionList";
 import CodeBlock from "./CodeBlock";
@@ -33,17 +23,15 @@ import ButtonSelect from "./ButtonSelect";
 import Button from "./Button";
 
 export default function IconDetailsDialog({
-  open,
-  setOpen,
   fullHeroicon,
   defaultType,
   defaultCodeType,
+  closeDialog,
 }: {
-  open: boolean;
-  setOpen: (open: boolean) => void;
   fullHeroicon: FullHeroicon;
   defaultType: HeroiconType;
   defaultCodeType: IconCodeType;
+  closeDialog: () => void;
 }) {
   const [selectedType, setSelectedType] = useState<HeroiconType>(defaultType);
   const [selectedCodeType, setSelectedCodeType] = useState(defaultCodeType);
@@ -57,7 +45,7 @@ export default function IconDetailsDialog({
   const vuePlusImportCode = iconVuePlusImportCode(fullHeroicon, selectedType);
 
   return (
-    <Dialog open={open} onClose={() => setOpen(false)} className="relative z-50">
+    <Dialog open={true} onClose={closeDialog} className="relative z-50">
       <DialogBackdrop className="fixed inset-0 bg-slate-500 bg-opacity-75 transition-opacity data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in dark:bg-slate-900 dark:bg-opacity-80" />
 
       <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
@@ -138,7 +126,7 @@ export default function IconDetailsDialog({
               </div>
             </div>
             <div className="mt-5 sm:mt-6 sm:grid sm:grid-flow-row-dense sm:grid-cols-1 sm:gap-3">
-              <Button text="Close" style="light" onClick={() => setOpen(false)} />
+              <Button text="Close" style="light" onClick={closeDialog} />
             </div>
           </DialogPanel>
         </div>
