@@ -19,14 +19,14 @@ export default function Header() {
         Browse{" "}
         <a
           href="https://github.com/tailwindlabs/heroicons"
-          className="rounded-sm text-indigo-700 hover:text-indigo-500 focus:outline-none focus-visible:outline-1 focus-visible:outline-indigo-600 dark:text-indigo-400"
+          className="rounded-sm text-indigo-700 hover:text-indigo-500 focus:outline-none focus-visible:outline-2 focus-visible:outline-indigo-600 dark:text-indigo-400"
         >
           your favourite icons
         </a>{" "}
         and{" "}
         <a
           href="https://github.com/ndri/sidekickicons/"
-          className="rounded-sm text-indigo-700 hover:text-indigo-500 focus:outline-none focus-visible:outline-1 focus-visible:outline-indigo-600 dark:text-indigo-400"
+          className="rounded-sm text-indigo-700 hover:text-indigo-500 focus:outline-none focus-visible:outline-2 focus-visible:outline-indigo-600 dark:text-indigo-400"
         >
           their fanmade companions
         </a>
