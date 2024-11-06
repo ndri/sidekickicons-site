@@ -46,7 +46,7 @@ export default function Button({
     <button
       type="button"
       className={clsx(
-        "group/button inline-flex items-center justify-center rounded-md font-semibold shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2",
+        "group/button inline-flex items-center justify-center rounded-md font-semibold shadow-sm focus-visible:outline focus-visible:outline-2",
         styleClasses[style],
         sizeClasses[size],
       )}
