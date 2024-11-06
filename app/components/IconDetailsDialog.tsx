@@ -46,6 +46,7 @@ export default function IconDetailsDialog({
   defaultCodeType: IconCodeType;
 }) {
   const [selectedType, setSelectedType] = useState<HeroiconType>(defaultType);
+  const [selectedCodeType, setSelectedCodeType] = useState(defaultCodeType);
   const Icon = fullHeroicon[selectedType];
 
   const prettySvgCode = iconSvgCode(fullHeroicon, selectedType);
@@ -85,57 +86,56 @@ export default function IconDetailsDialog({
                 ]}
               />
 
-              <TabGroup
-                className="flex w-full flex-col gap-2"
-                defaultIndex={codeTypes.indexOf(defaultCodeType)}
-              >
-                <TabList className="flex flex-row flex-wrap gap-0.5">
-                  {codeTypes.map((tab) => (
-                    <Tab
-                      key={tab}
-                      className="rounded-lg px-2 py-1 text-sm font-medium text-slate-600 data-[selected]:bg-indigo-50 data-[hover]:text-slate-400 data-[selected]:text-indigo-800 dark:text-slate-400 dark:hover:text-slate-500 dark:data-[selected]:bg-indigo-900 dark:data-[hover]:text-slate-500 dark:data-[selected]:text-slate-100"
-                    >
-                      {tab}
-                    </Tab>
-                  ))}
-                </TabList>
-                <TabPanels>
-                  <TabPanel>
-                    <CodeBlock code={prettySvgCode} language="svg" />
-                  </TabPanel>
-                  <TabPanel>
-                    <CodeBlock code={prettyJsxCode} language="jsx" />
-                  </TabPanel>
-                  <TabPanel className="flex flex-col gap-2">
+              <div className="flex w-full flex-col gap-2">
+                <ButtonSelect<IconCodeType>
+                  label="Code to copy"
+                  selectedValue={selectedCodeType}
+                  setSelectedValue={setSelectedCodeType}
+                  values={codeTypes}
+                />
+                {selectedCodeType === "SVG" && (
+                  <CodeBlock code={prettySvgCode} language="svg" />
+                )}
+                {selectedCodeType === "JSX" && (
+                  <CodeBlock code={prettyJsxCode} language="jsx" />
+                )}
+                {selectedCodeType === "React" && (
+                  <>
                     <CodeBlock
                       code={iconsetInstallCode(fullHeroicon.iconset, "react")}
                       language="bash"
                     />
                     <CodeBlock code={reactCode} language="jsx" />
-                  </TabPanel>
-                  <TabPanel className="flex flex-col gap-2">
+                  </>
+                )}
+                {selectedCodeType === "React + import" && (
+                  <>
                     <CodeBlock
                       code={iconsetInstallCode(fullHeroicon.iconset, "react")}
                       language="bash"
                     />
                     <CodeBlock code={reactPlusImportCode} language="jsx" />
-                  </TabPanel>
-                  <TabPanel className="flex flex-col gap-2">
+                  </>
+                )}
+                {selectedCodeType === "Vue" && (
+                  <>
                     <CodeBlock
                       code={iconsetInstallCode(fullHeroicon.iconset, "vue")}
                       language="bash"
                     />
                     <CodeBlock code={vueCode} language="jsx" />
-                  </TabPanel>
-                  <TabPanel className="flex flex-col gap-2">
+                  </>
+                )}
+                {selectedCodeType === "Vue + import" && (
+                  <>
                     <CodeBlock
                       code={iconsetInstallCode(fullHeroicon.iconset, "vue")}
                       language="bash"
                     />
                     <CodeBlock code={vuePlusImportCode} language="jsx" />
-                  </TabPanel>
-                </TabPanels>
-              </TabGroup>
+                  </>
+                )}
+              </div>
             </div>
             <div className="mt-5 sm:mt-6 sm:grid sm:grid-flow-row-dense sm:grid-cols-1 sm:gap-3">
               <Button text="Close" style="light" onClick={() => setOpen(false)} />
