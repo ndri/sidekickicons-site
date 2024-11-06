@@ -1,9 +1,13 @@
 import { MaskIcon } from "@sidekickicons/react/24/solid";
 import { ShieldIcon } from "@sidekickicons/react/24/outline";
+import ThemeSelector from "./ThemeSelector";
 
 export default function Header() {
   return (
-    <header className="flex w-full max-w-7xl flex-col items-center gap-4 px-4 pb-8 pt-8 sm:px-8 sm:pt-16">
+    <header className="flex w-full max-w-7xl flex-col items-center gap-4 px-4 pb-8 pt-8 sm:px-8">
+      <div className="flex w-full justify-end">
+        <ThemeSelector />
+      </div>
       <h1 className="flex items-center gap-3 text-lg font-bold sm:text-3xl">
         <div className="flex flex-col items-center gap-1 sm:flex-row sm:gap-3">
           <ShieldIcon className="size-24 text-indigo-600 sm:size-12" />
