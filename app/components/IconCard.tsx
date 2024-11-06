@@ -38,7 +38,7 @@ export default function IconCard({
           {name}
         </p>
       </div>
-      <div className="z-10 col-start-1 col-end-2 row-start-1 row-end-2 flex flex-col justify-center gap-1 opacity-0 group-focus-within/iconcard:opacity-100 group-hover/iconcard:opacity-100">
+      <div className="z-10 col-start-1 col-end-2 row-start-1 row-end-2 flex flex-col justify-center gap-1 opacity-0 group-hover/iconcard:opacity-100 [&:has(:focus-visible)]:opacity-100">
         <CopyButton textToCopy={codeToCopy} />
         <Button
           text="Info"
