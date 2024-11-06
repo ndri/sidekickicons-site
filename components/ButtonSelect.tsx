@@ -17,7 +17,7 @@ export default function ButtonSelect<T extends string>({
     <RadioGroup
       value={selectedValue}
       onChange={setSelectedValue}
-      className="flex flex-row gap-0.5"
+      className="flex flex-row flex-wrap gap-0.5"
       aria-label={label}
     >
       {values.map((value) => (
