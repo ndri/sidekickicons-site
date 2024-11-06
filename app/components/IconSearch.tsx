@@ -16,36 +16,33 @@ import ButtonSelect from "./ButtonSelect";
 import { dashesToSpaces } from "../util/util";
 import VerticalRule from "./VerticalRule";
 import DropdownSelect from "./DropdownSelect";
+import useStoredState from "../util/useStoredState";
 
-export default function IconSearch({}) {
+export default function IconSearch() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedType, setSelectedType] = useState<HeroiconType>(
-    (localStorage.getItem("selectedType") as HeroiconType) || "outline24",
+  const [selectedType, setSelectedType] = useStoredState<HeroiconType>(
+    "selectedType",
+    "outline24",
   );
-  const [selectedIconSet, setSelectedIconSet] = useState<IconsetSelection>(
-    (localStorage.getItem("selectedIconSet") as IconsetSelection) || "All",
+  const [selectedIconSet, setSelectedIconSet] = useStoredState<IconsetSelection>(
+    "selectedIconSet",
+    "All",
   );
-  const [selectedSize, setSelectedSize] = useState<IconSize>(
-    (localStorage.getItem("selectedSize") as IconSize) || "1x",
+  const [selectedSize, setSelectedSize] = useStoredState<IconSize>(
+    "selectedSize",
+    "1x",
   );
-  const [selectedCodeType, setSelectedCodeType] = useState<IconCodeType>(
-    (localStorage.getItem("selectedCodeType") as IconCodeType) || "SVG",
+  const [selectedCodeType, setSelectedCodeType] = useStoredState<IconCodeType>(
+    "selectedCodeType",
+    "SVG",
   );
 
   const iconsetIcons = icons.filter(
     (icon) => icon.iconset === selectedIconSet || selectedIconSet === "All",
   );
-
   const filteredIcons = matchSorter(iconsetIcons, searchQuery, {
     keys: [(icon) => dashesToSpaces(icon.kebabName), "keywords"],
   });
-
-  useEffect(() => {
-    localStorage.setItem("selectedType", selectedType);
-    localStorage.setItem("selectedIconSet", selectedIconSet);
-    localStorage.setItem("selectedSize", selectedSize);
-    localStorage.setItem("selectedCodeType", selectedCodeType);
-  }, [selectedType, selectedIconSet, selectedSize, selectedCodeType]);
 
   return (
     <div className="flex flex-col gap-6">
