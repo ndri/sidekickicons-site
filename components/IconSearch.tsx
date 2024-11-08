@@ -49,9 +49,11 @@ export default function IconSearch() {
   const iconsetIcons = icons.filter(
     (icon) => icon.iconset === selectedIconSet || selectedIconSet === "All",
   );
-  const filteredIcons = matchSorter(iconsetIcons, searchQuery, {
-    keys: [(icon) => dashesToSpaces(icon.kebabName), "keywords"],
-  });
+  const filteredIcons = searchQuery
+    ? matchSorter(iconsetIcons, searchQuery, {
+        keys: [(icon) => dashesToSpaces(icon.kebabName), "keywords"],
+      })
+    : iconsetIcons;
 
   return (
     <div className="flex flex-col gap-6">
