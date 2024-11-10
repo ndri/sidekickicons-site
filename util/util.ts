@@ -1,15 +1,18 @@
-export function toPascalCase(str: string) {
-  return str
-    .split("-")
-    .map((part) => part[0].toUpperCase() + part.slice(1))
-    .join("");
-}
-
-export function toKebabCase(str: string) {
-  return str
-    .split(/(?=[A-Z])|(?<=[a-z])(?=[0-9])/)
-    .map((part) => part.toLowerCase())
-    .join("-");
+export function toKebabCase(str: string): string {
+  return (
+    str
+      // First handle the 2X2 pattern by converting X to x
+      .replace(/(\d)[X](\d)/g, "$1x$2")
+      // Convert dimension suffixes (2D, 3D) to lowercase without space
+      .replace(/(\d)(D)$/g, "$1d")
+      // Add space before capital letters
+      .replace(/([A-Z])/g, " $1")
+      // Add space before numbers unless preceded by x
+      .replace(/(?<!x)(\d)/g, " $1")
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+  );
 }
 
 export function dashesToSpaces(str: string) {
