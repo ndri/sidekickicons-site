@@ -7,7 +7,7 @@ import { createElement } from "react";
 export function iconSvgCode(fullHeroicon: FullHeroicon, type: HeroiconType) {
   const reactElement = fullHeroicon[type];
   const jsxElement = createElement(reactElement, {
-    className: `${iconSizeClasses[type]} text-slate-500`,
+    className: iconSizeClasses[type],
   });
   const svgCode = ReactDOMServer.renderToStaticMarkup(jsxElement);
   const prettySvgCode = beautify.html(svgCode, { indent_size: 2 });
