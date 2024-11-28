@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import PlausibleProvider from "next-plausible";
+import "@fontsource-variable/inter";
 
 export const metadata: Metadata = {
   title: "Sidekickicons",

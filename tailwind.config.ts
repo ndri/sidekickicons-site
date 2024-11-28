@@ -9,6 +9,9 @@ const config: Config = {
     "./icons/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      sans: ["Inter Variable", "Helvetica", "Arial", "sans-serif"],
+    },
     extend: {
       screens: {
         xs: "475px",
