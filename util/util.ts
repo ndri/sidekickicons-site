@@ -5,10 +5,10 @@ export function toKebabCase(str: string): string {
       .replace(/(\d)[X](\d)/g, "$1x$2")
       // Convert dimension suffixes (2D, 3D) to lowercase without space
       .replace(/(\d)(D)$/g, "$1d")
-      // Add space before capital letters
-      .replace(/([A-Z])/g, " $1")
-      // Add space before numbers unless preceded by x
-      .replace(/(?<!x)(\d)/g, " $1")
+      // Add space before capital letters, except in heading tags
+      .replace(/(?!^H\d$)([A-Z])/g, " $1")
+      // Add space before numbers unless preceded by x or in heading tags
+      .replace(/(?<!x)(?<!^H)(\d)/g, " $1")
       .trim()
       .toLowerCase()
       .replace(/\s+/g, "-")

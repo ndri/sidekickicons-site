@@ -11,6 +11,7 @@ test("toKebabCase converts icon classes properly", () => {
     ["Bars3BottomLeft", "bars-3-bottom-left"],
     ["Squares2X2", "squares-2x2"],
     ["Square3Stack3D", "square-3-stack-3d"],
+    ["H1", "h1"],
   ].forEach(([input, output]) => {
     expect(toKebabCase(input)).toBe(output);
   });
