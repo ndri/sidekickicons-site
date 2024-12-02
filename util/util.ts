@@ -8,7 +8,8 @@ export function toKebabCase(str: string): string {
       // Add space before capital letters, except in heading tags
       .replace(/(?!^H\d$)([A-Z])/g, " $1")
       // Add space before numbers unless preceded by x or in heading tags
-      .replace(/(?<!x)(?<!^H)(\d)/g, " $1")
+      // or part of a number sequence
+      .replace(/(?<!x)(?<!^H)(?<![\d])(\d+)/g, " $1")
       .trim()
       .toLowerCase()
       .replace(/\s+/g, "-")
@@ -34,4 +35,9 @@ export function omitKeys<T extends Record<string, unknown>, K extends keyof T>(
   return Object.fromEntries(
     Object.entries(object).filter(([key]) => !keys.includes(key as K)),
   ) as Omit<T, K>;
+}
+
+export function createUrl(path: string, params: URLSearchParams) {
+  const queryString = params.toString();
+  return `${path}${queryString ? `?${queryString}` : ""}`;
 }
