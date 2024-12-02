@@ -29,14 +29,12 @@ export default function IconDetailsDialog({
   fullHeroicon: FullHeroicon;
   closeDialog: () => void;
 }) {
-  const [selectedType, setSelectedType] = useUrlState<HeroiconType>(
-    "type",
-    "outline24",
-  );
-  const [selectedCodeType, setSelectedCodeType] = useUrlState<IconCodeType>(
-    "code",
-    codeTypes[0],
-  );
+  const [selectedType, setSelectedType] = useUrlState<HeroiconType>("type", {
+    defaultValue: "outline24",
+  });
+  const [selectedCodeType, setSelectedCodeType] = useUrlState<IconCodeType>("code", {
+    defaultValue: codeTypes[0],
+  });
   const Icon = fullHeroicon[selectedType];
 
   const prettySvgCode = iconSvgCode(fullHeroicon, selectedType);

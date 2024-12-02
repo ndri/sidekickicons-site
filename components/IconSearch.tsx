@@ -21,22 +21,24 @@ import useUrlState from "@/util/useUrlState";
 
 export default function IconSearch() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedType, setSelectedType] = useUrlState<HeroiconType>(
-    "type",
-    "outline24",
-  );
+  const [selectedType, setSelectedType] = useUrlState<HeroiconType>("type", {
+    defaultValue: "outline24",
+  });
   const [selectedIconSet, setSelectedIconSet] = useUrlState<IconsetSelection>(
     "iconset",
-    "All",
+    { defaultValue: "All" },
   );
-  const [selectedSize, setSelectedSize] = useUrlState<IconSize>("size", "1×");
-  const [selectedCodeType, setSelectedCodeType] = useUrlState<IconCodeType>(
-    "code",
-    codeTypes[0],
-  );
+  const [selectedSize, setSelectedSize] = useUrlState<IconSize>("size", {
+    defaultValue: "1×",
+  });
+  const [selectedCodeType, setSelectedCodeType] = useUrlState<IconCodeType>("code", {
+    defaultValue: codeTypes[0],
+  });
 
   type IconKey = (typeof icons)[number]["kebabName"];
-  const [openIconKey, setOpenIconKey] = useUrlState<IconKey | "">("icon");
+  const [openIconKey, setOpenIconKey] = useUrlState<IconKey | "">("icon", {
+    historyEntry: true,
+  });
   const openIcon = openIconKey
     ? icons.find((icon) => icon.kebabName === openIconKey)
     : null;

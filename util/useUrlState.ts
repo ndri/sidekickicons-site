@@ -1,13 +1,18 @@
 import { createUrl } from "./util";
-import { useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 
 export default function useUrlState<T extends string>(
   key: string,
-  defaultValue = "" as T,
-  path = "/",
+  {
+    defaultValue = "" as T,
+    historyEntry = false,
+  }: {
+    defaultValue?: T;
+    historyEntry?: boolean;
+  } = {},
 ): [T, (newValue: T) => void] {
-  const router = useRouter();
   const searchParams = useSearchParams();
+  const pathname = usePathname();
 
   const value = (searchParams.get(key) ?? defaultValue) as T;
 
@@ -18,7 +23,11 @@ export default function useUrlState<T extends string>(
     } else {
       newParams.set(key, String(newValue));
     }
-    router.replace(createUrl(path, newParams));
+
+    const updateState = historyEntry
+      ? window.history.pushState
+      : window.history.replaceState;
+    updateState(null, "", createUrl(pathname, newParams));
   };
 
   return [value, setValue];
