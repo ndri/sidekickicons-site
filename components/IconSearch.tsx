@@ -4,13 +4,7 @@ import icons from "../icons/allicons";
 import { useState } from "react";
 import { matchSorter } from "match-sorter";
 import IconCard from "./IconCard";
-import {
-  FullHeroicon,
-  HeroiconType,
-  IconCodeType,
-  IconSize,
-  IconsetSelection,
-} from "../types";
+import { HeroiconType, IconCodeType, IconSize, IconsetSelection } from "../types";
 import {
   codeTypes,
   iconTypeNames,
@@ -22,29 +16,30 @@ import ButtonSelect from "./ButtonSelect";
 import { dashesToSpaces } from "../util/util";
 import VerticalRule from "./VerticalRule";
 import DropdownSelect from "./DropdownSelect";
-import useStoredState from "../util/useStoredState";
 import IconDetailsDialog from "./IconDetailsDialog";
+import useUrlState from "@/util/useUrlState";
 
 export default function IconSearch() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedType, setSelectedType] = useStoredState<HeroiconType>(
-    "selectedType",
+  const [selectedType, setSelectedType] = useUrlState<HeroiconType>(
+    "type",
     "outline24",
   );
-  const [selectedIconSet, setSelectedIconSet] = useStoredState<IconsetSelection>(
-    "selectedIconSet",
+  const [selectedIconSet, setSelectedIconSet] = useUrlState<IconsetSelection>(
+    "iconset",
     "All",
   );
-  const [selectedSize, setSelectedSize] = useStoredState<IconSize>(
-    "selectedSize",
-    "1×",
-  );
-  const [selectedCodeType, setSelectedCodeType] = useStoredState<IconCodeType>(
-    "selectedCodeType",
-    "SVG",
+  const [selectedSize, setSelectedSize] = useUrlState<IconSize>("size", "1×");
+  const [selectedCodeType, setSelectedCodeType] = useUrlState<IconCodeType>(
+    "code",
+    codeTypes[0],
   );
 
-  const [openIcon, setOpenIcon] = useState<FullHeroicon | null>(null);
+  type IconKey = (typeof icons)[number]["kebabName"];
+  const [openIconKey, setOpenIconKey] = useUrlState<IconKey | "">("icon");
+  const openIcon = openIconKey
+    ? icons.find((icon) => icon.kebabName === openIconKey)
+    : null;
 
   const iconsetIcons = icons.filter(
     (icon) => icon.iconset === selectedIconSet || selectedIconSet === "All",
@@ -102,16 +97,14 @@ export default function IconSearch() {
             fullHeroicon={fullHeroicon}
             size={selectedSize}
             codeType={selectedCodeType}
-            openDialog={() => setOpenIcon(fullHeroicon)}
+            openDialog={() => setOpenIconKey(fullHeroicon.kebabName)}
           />
         ))}
       </div>
       {openIcon && (
         <IconDetailsDialog
           fullHeroicon={openIcon}
-          defaultType={selectedType}
-          defaultCodeType={selectedCodeType}
-          closeDialog={() => setOpenIcon(null)}
+          closeDialog={() => setOpenIconKey("")}
         />
       )}
     </div>

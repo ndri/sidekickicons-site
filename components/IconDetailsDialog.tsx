@@ -18,23 +18,25 @@ import {
   iconVuePlusImportCode,
   iconsetInstallCode,
 } from "../util/code";
-import { useState } from "react";
 import ButtonSelect from "./ButtonSelect";
 import Button from "./Button";
+import useUrlState from "@/util/useUrlState";
 
 export default function IconDetailsDialog({
   fullHeroicon,
-  defaultType,
-  defaultCodeType,
   closeDialog,
 }: {
   fullHeroicon: FullHeroicon;
-  defaultType: HeroiconType;
-  defaultCodeType: IconCodeType;
   closeDialog: () => void;
 }) {
-  const [selectedType, setSelectedType] = useState<HeroiconType>(defaultType);
-  const [selectedCodeType, setSelectedCodeType] = useState(defaultCodeType);
+  const [selectedType, setSelectedType] = useUrlState<HeroiconType>(
+    "type",
+    "outline24",
+  );
+  const [selectedCodeType, setSelectedCodeType] = useUrlState<IconCodeType>(
+    "code",
+    codeTypes[0],
+  );
   const Icon = fullHeroicon[selectedType];
 
   const prettySvgCode = iconSvgCode(fullHeroicon, selectedType);
