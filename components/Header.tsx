@@ -1,6 +1,7 @@
 import { MaskIcon } from "@sidekickicons/react/24/solid";
 import { ShieldIcon } from "@sidekickicons/react/24/outline";
 import ThemeSelector from "./ThemeSelector";
+import Link from "./Link";
 
 export default function Header() {
   return (
@@ -21,19 +22,13 @@ export default function Header() {
       </h1>
       <p className="text-center text-slate-500 dark:text-slate-400">
         Browse{" "}
-        <a
-          href="https://github.com/tailwindlabs/heroicons"
-          className="rounded-sm text-indigo-700 hover:text-indigo-500 focus:outline-none focus-visible:outline-2 focus-visible:outline-indigo-600 dark:text-indigo-400"
-        >
+        <Link href="https://github.com/tailwindlabs/heroicons" newTab>
           your favourite icons
-        </a>{" "}
+        </Link>{" "}
         and{" "}
-        <a
-          href="https://github.com/ndri/sidekickicons/"
-          className="rounded-sm text-indigo-700 hover:text-indigo-500 focus:outline-none focus-visible:outline-2 focus-visible:outline-indigo-600 dark:text-indigo-400"
-        >
+        <Link href="https://github.com/ndri/sidekickicons" newTab>
           their fanmade companions
-        </a>
+        </Link>
         .
       </p>
     </header>
