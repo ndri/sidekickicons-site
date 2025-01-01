@@ -52,7 +52,7 @@ export default function IconSearch() {
     (icon) => icon.iconset === selectedIconSet || selectedIconSet === "All",
   );
   const filteredIcons = searchQuery
-    ? matchSorter(iconsetIcons, searchQuery, {
+    ? matchSorter(iconsetIcons, dashesToSpaces(searchQuery), {
         keys: [(icon) => dashesToSpaces(icon.kebabName), "keywords"],
       })
     : iconsetIcons;
