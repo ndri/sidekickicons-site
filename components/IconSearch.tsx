@@ -18,6 +18,7 @@ import VerticalRule from "./VerticalRule";
 import DropdownSelect from "./DropdownSelect";
 import IconDetailsDialog from "./IconDetailsDialog";
 import useUrlState from "@/util/useUrlState";
+import EmptyState from "./EmptyState";
 
 export default function IconSearch() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -92,16 +93,20 @@ export default function IconSearch() {
         </div>
       </div>
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-        {filteredIcons.map((fullHeroicon) => (
-          <IconCard
-            key={fullHeroicon.kebabName}
-            type={selectedType}
-            fullHeroicon={fullHeroicon}
-            size={selectedSize}
-            codeType={selectedCodeType}
-            openDialog={() => setOpenIconKey(fullHeroicon.kebabName)}
-          />
-        ))}
+        {filteredIcons.length ? (
+          filteredIcons.map((fullHeroicon) => (
+            <IconCard
+              key={fullHeroicon.kebabName}
+              type={selectedType}
+              fullHeroicon={fullHeroicon}
+              size={selectedSize}
+              codeType={selectedCodeType}
+              openDialog={() => setOpenIconKey(fullHeroicon.kebabName)}
+            />
+          ))
+        ) : (
+          <EmptyState searchQuery={searchQuery} />
+        )}
       </div>
       {openIcon && (
         <IconDetailsDialog
