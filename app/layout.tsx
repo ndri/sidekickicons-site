@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import PlausibleProvider from "next-plausible";
 import "@fontsource-variable/inter";
+import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
   title: "Sidekickicons",
@@ -16,7 +17,7 @@ export default function RootLayout({
   const plausibleDomain = process.env.PLAUSIBLE_DOMAIN;
 
   return (
-    <html lang="en" className="dark">
+    <html lang="en" suppressHydrationWarning>
       {plausibleDomain && (
         <head>
           <PlausibleProvider
@@ -30,7 +31,7 @@ export default function RootLayout({
         </head>
       )}
       <body className="text-slate-800 dark:bg-slate-900 dark:text-slate-100">
-        {children}
+        <ThemeProvider attribute="class">{children}</ThemeProvider>
       </body>
     </html>
   );
