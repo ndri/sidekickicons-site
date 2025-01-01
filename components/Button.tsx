@@ -6,6 +6,7 @@ export interface ButtonProps {
   Icon?: Heroicon;
   style?: ButtonStyle;
   size?: ButtonSize;
+  className?: string;
   onClick?: () => void;
 }
 
@@ -17,6 +18,7 @@ export default function Button({
   Icon,
   style = "primary",
   size = "md",
+  className = "",
   onClick = () => {},
 }: ButtonProps) {
   const styleClasses = {
@@ -49,6 +51,7 @@ export default function Button({
         "group/button inline-flex items-center justify-center rounded-md font-semibold shadow-sm focus-visible:outline focus-visible:outline-2",
         styleClasses[style],
         sizeClasses[size],
+        className,
       )}
       onClick={onClick}
     >

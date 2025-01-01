@@ -19,9 +19,13 @@ import DropdownSelect from "./DropdownSelect";
 import IconDetailsDialog from "./IconDetailsDialog";
 import useUrlState from "@/util/useUrlState";
 import EmptyState from "./EmptyState";
+import Button from "./Button";
+
+const DEFAULT_SLICE_SIZE = 36;
 
 export default function IconSearch() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [showAll, setShowAll] = useState(false);
   const [selectedType, setSelectedType] = useUrlState<HeroiconType>("type", {
     defaultValue: "outline24",
   });
@@ -52,6 +56,11 @@ export default function IconSearch() {
         keys: [(icon) => dashesToSpaces(icon.kebabName), "keywords"],
       })
     : iconsetIcons;
+
+  const slicedIcons = showAll
+    ? filteredIcons
+    : filteredIcons.slice(0, DEFAULT_SLICE_SIZE);
+  const showShowAllButton = filteredIcons.length > DEFAULT_SLICE_SIZE && !showAll;
 
   return (
     <div className="flex flex-col gap-6">
@@ -93,8 +102,8 @@ export default function IconSearch() {
         </div>
       </div>
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-        {filteredIcons.length ? (
-          filteredIcons.map((fullHeroicon) => (
+        {slicedIcons.length ? (
+          slicedIcons.map((fullHeroicon) => (
             <IconCard
               key={fullHeroicon.kebabName}
               type={selectedType}
@@ -106,6 +115,16 @@ export default function IconSearch() {
           ))
         ) : (
           <EmptyState searchQuery={searchQuery} />
+        )}
+      </div>
+      <div className="flex justify-center">
+        {showShowAllButton && (
+          <Button
+            text={`Show all ${filteredIcons.length} icons`}
+            style="light"
+            size="lg"
+            onClick={() => setShowAll(true)}
+          />
         )}
       </div>
       {openIcon && (
