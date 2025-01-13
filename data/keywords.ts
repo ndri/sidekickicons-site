@@ -1,6 +1,7 @@
 export const sidekickiconKeywords = {
   "arc-third": ["loading", "spinner"],
   "arrow-path-clock": ["history"],
+  badge: ["shape"],
   "bars-3-bottom-center": ["align", "justify", "text", "typography"],
   blockquote: ["text", "typography", "markup", "markdown"],
   checklist: ["text", "typography", "markup", "markdown", "todo", "tasks"],
@@ -9,6 +10,7 @@ export const sidekickiconKeywords = {
   "chevron-down-up": ["collapse", "shrink"],
   "chevron-left-right": ["expand", "drag", "grow"],
   "chevron-right-left": ["collapse", "shrink"],
+  circle: ["shape"],
   compass: ["explore"],
   "computer-laptop": ["macbook", "pc", "windows", "device", "linux"],
   cookie: ["consent", "gdpr", "privacy", "notice", "biscuit", "food", "tracking"],
@@ -28,7 +30,7 @@ export const sidekickiconKeywords = {
   "lock-semi-open": ["security", "unlock"],
   mask: ["privacy", "private", "secret", "sidekick"],
   "microphone-slash": ["mute", "quiet", "silent", "audio", "podcast", "record", "call"],
-  outdent: ["text", "typography", "markup", "markdown", "list"],
+  outdent: ["text", "typography", "markup", "markdown", "list", "dedent", "unindent"],
   password: ["login", "security", "authentication"],
   "password-pencil": ["login", "security", "authentication", "edit", "fill", "change"],
   "photo-plus": ["add", "attach", "upload", "image", "picture"],
@@ -39,6 +41,8 @@ export const sidekickiconKeywords = {
   shield: ["secure", "security", "protection"],
   "sidebar-left": ["sidebar", "menu"],
   "sidebar-right": ["sidebar", "menu"],
+  square: ["shape"],
+  triangle: ["shape"],
   "view-split": ["layout", "display"],
 };
 
