@@ -52,7 +52,7 @@ export default function IconDetailsDialog({
         <div className="flex min-h-full items-end justify-center p-4 sm:items-center sm:p-0">
           <DialogPanel className="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 shadow-xl transition-all data-[closed]:translate-y-4 data-[closed]:opacity-0 data-[enter]:duration-300 data-[leave]:duration-200 data-[enter]:ease-out data-[leave]:ease-in sm:my-8 sm:w-full sm:max-w-lg sm:p-6 data-[closed]:sm:translate-y-0 data-[closed]:sm:scale-95 dark:bg-slate-800">
             <div className="flex flex-col items-center gap-6">
-              <DialogTitle as="h3" className="text-lg font-semibold">
+              <DialogTitle as="h3" className="text-center text-lg font-semibold">
                 {fullHeroicon.kebabName}
               </DialogTitle>
               <div className="flex h-36 w-36 items-center justify-center rounded-md border border-slate-200 dark:border-slate-700">

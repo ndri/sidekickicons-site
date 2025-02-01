@@ -16,7 +16,7 @@ export const sidekickiconKeywords = {
   "computer-laptop": ["macbook", "pc", "windows", "device", "linux"],
   cookie: ["consent", "gdpr", "privacy", "notice", "biscuit", "food", "tracking"],
   crown: ["upgrade", "pro", "premium", "subscribe", "vip"],
-  dice: ["game", "random", "roll"],
+  dice: ["game", "random", "roll", "die", "d6"],
   "face-smile-plus": ["emoji", "reaction"],
   "floppy-disk": ["save"],
   "dots-2x3": ["drag", "grip", "handle", "reorder"],
