@@ -6,6 +6,16 @@ import useStoredState from "../util/useStoredState";
 
 type Theme = "Light" | "Dark" | "System";
 
+function setDarkTheme(root: HTMLElement) {
+  root.classList.add("dark");
+  root.style.colorScheme = "dark";
+}
+
+function setLightTheme(root: HTMLElement) {
+  root.classList.remove("dark");
+  root.style.colorScheme = "light";
+}
+
 export default function ThemeSelector() {
   const [theme, setTheme] = useStoredState<Theme>("theme", "System");
 
@@ -13,15 +23,19 @@ export default function ThemeSelector() {
     const root = window.document.documentElement;
 
     if (theme === "Light") {
-      root.classList.remove("dark");
+      setLightTheme(root);
     } else if (theme === "Dark") {
-      root.classList.add("dark");
+      setDarkTheme(root);
     } else {
       root.classList.remove("dark");
       const systemPrefersDark = window.matchMedia(
         "(prefers-color-scheme: dark)",
       ).matches;
-      if (systemPrefersDark) root.classList.add("dark");
+      if (systemPrefersDark) {
+        setDarkTheme(root);
+      } else {
+        setLightTheme(root);
+      }
     }
   }, [theme]);
 
