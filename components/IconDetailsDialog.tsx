@@ -12,6 +12,8 @@ import {
 import {
   iconReactCode,
   iconReactPlusImportCode,
+  iconSvelteCode,
+  iconSveltePlusImportCode,
   iconSvgCode,
   iconSvgToJsx,
   iconVueCode,
@@ -43,6 +45,8 @@ export default function IconDetailsDialog({
   const reactPlusImportCode = iconReactPlusImportCode(fullHeroicon, selectedType);
   const vueCode = iconVueCode(fullHeroicon, selectedType);
   const vuePlusImportCode = iconVuePlusImportCode(fullHeroicon, selectedType);
+  const svelteCode = iconSvelteCode(fullHeroicon, selectedType);
+  const sveltePlusImportCode = iconSveltePlusImportCode(fullHeroicon, selectedType);
 
   return (
     <Dialog open={true} onClose={closeDialog} className="relative z-50">
@@ -121,6 +125,38 @@ export default function IconDetailsDialog({
                       language="bash"
                     />
                     <CodeBlock code={vuePlusImportCode} language="jsx" />
+                  </>
+                )}
+                {selectedCodeType === "Svelte" && (
+                  <>
+                    <div className="text-xs text-slate-700 dark:text-slate-300">
+                      There is no official Svelte package for Heroicons, so the
+                      Sidekickicons package includes them too.
+                    </div>
+                    <CodeBlock
+                      code={iconsetInstallCode(fullHeroicon.iconset, "svelte")}
+                      language="bash"
+                    />
+                    <div className="text-xs text-slate-700 dark:text-slate-300">
+                      The Svelte components already include the size class.
+                    </div>
+                    <CodeBlock code={svelteCode} language="jsx" />
+                  </>
+                )}
+                {selectedCodeType === "Svelte + import" && (
+                  <>
+                    <div className="text-xs text-slate-700 dark:text-slate-300">
+                      There is no official Svelte package for Heroicons, so the
+                      Sidekickicons package includes them too.
+                    </div>
+                    <CodeBlock
+                      code={iconsetInstallCode(fullHeroicon.iconset, "svelte")}
+                      language="bash"
+                    />
+                    <div className="text-xs text-slate-700 dark:text-slate-300">
+                      The Svelte components already include the size class by default.
+                    </div>
+                    <CodeBlock code={sveltePlusImportCode} language="jsx" />
                   </>
                 )}
               </div>

@@ -1,5 +1,5 @@
 import ReactDOMServer from "react-dom/server";
-import { FullHeroicon, HeroiconType } from "../types";
+import { Framework, FullHeroicon, HeroiconType } from "../types";
 import { iconSizeClasses, iconDirectories } from "./constants";
 import beautify from "js-beautify";
 import { createElement } from "react";
@@ -33,17 +33,26 @@ export function iconJsxCode(fullHeroicon: FullHeroicon, type: HeroiconType) {
   return jsxCode;
 }
 
+export function npmPackageName(iconset: string, framework: Framework) {
+  if (framework === "svelte") return `@sidekickicons/svelte`;
+
+  return `@${iconset.toLowerCase()}/${framework}`;
+}
+
 export function iconImportCode(
   fullHeroicon: FullHeroicon,
   type: HeroiconType,
-  framework: string,
+  framework: Framework,
 ) {
-  const importCode = `import { ${fullHeroicon.componentName} } from "@${fullHeroicon.iconset.toLowerCase()}/${framework}/${iconDirectories[type]}";`;
-  return importCode;
+  const importPart = `import { ${fullHeroicon.componentName} } from `;
+  const npmPackage = npmPackageName(fullHeroicon.iconset, framework);
+  const packagePart = `"${npmPackage}/${iconDirectories[type]}"`;
+
+  return `${importPart} ${packagePart};`;
 }
 
-export function iconsetInstallCode(iconset: string, framework: string) {
-  return `npm install @${iconset.toLowerCase()}/${framework}`;
+export function iconsetInstallCode(iconset: string, framework: Framework) {
+  return `npm install ${npmPackageName(iconset, framework)}`;
 }
 
 export function iconReactCode(fullHeroicon: FullHeroicon, type: HeroiconType) {
@@ -66,5 +75,18 @@ export function iconVueCode(fullHeroicon: FullHeroicon, type: HeroiconType) {
 export function iconVuePlusImportCode(fullHeroicon: FullHeroicon, type: HeroiconType) {
   const importCode = iconImportCode(fullHeroicon, type, "vue");
   const componentCode = iconVueCode(fullHeroicon, type);
+  return `${importCode}\n\n${componentCode}`;
+}
+
+export function iconSvelteCode(fullHeroicon: FullHeroicon, type: HeroiconType) {
+  return `<${fullHeroicon.componentName} class="text-slate-500" />`;
+}
+
+export function iconSveltePlusImportCode(
+  fullHeroicon: FullHeroicon,
+  type: HeroiconType,
+) {
+  const importCode = iconImportCode(fullHeroicon, type, "svelte");
+  const componentCode = iconSvelteCode(fullHeroicon, type);
   return `${importCode}\n\n${componentCode}`;
 }
