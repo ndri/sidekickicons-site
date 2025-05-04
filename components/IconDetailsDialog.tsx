@@ -154,7 +154,7 @@ export default function IconDetailsDialog({
                       language="bash"
                     />
                     <div className="text-xs text-slate-700 dark:text-slate-300">
-                      The Svelte components already include the size class by default.
+                      The Svelte components already include the size class.
                     </div>
                     <CodeBlock code={sveltePlusImportCode} language="jsx" />
                   </>
