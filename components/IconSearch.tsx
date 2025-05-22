@@ -1,7 +1,6 @@
 "use client";
 
 import icons from "../icons/allicons";
-import { useState } from "react";
 import { matchSorter } from "match-sorter";
 import IconCard from "./IconCard";
 import { HeroiconType, IconCodeType, IconSize, IconsetSelection } from "../types";
@@ -17,33 +16,44 @@ import { dashesToSpaces } from "../util/util";
 import VerticalRule from "./VerticalRule";
 import DropdownSelect from "./DropdownSelect";
 import IconDetailsDialog from "./IconDetailsDialog";
-import useUrlState from "@/util/useUrlState";
 import EmptyState from "./EmptyState";
 import Button from "./Button";
 
-const DEFAULT_SLICE_SIZE = 36;
+const DEFAULT_ICON_COUNT = 36;
 
-export default function IconSearch() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [showAll, setShowAll] = useState(false);
-  const [selectedType, setSelectedType] = useUrlState<HeroiconType>("type", {
-    defaultValue: "outline24",
-  });
-  const [selectedIconSet, setSelectedIconSet] = useUrlState<IconsetSelection>(
-    "iconset",
-    { defaultValue: "All" },
-  );
-  const [selectedSize, setSelectedSize] = useUrlState<IconSize>("size", {
-    defaultValue: "1×",
-  });
-  const [selectedCodeType, setSelectedCodeType] = useUrlState<IconCodeType>("code", {
-    defaultValue: codeTypes[0],
-  });
+export interface IconSearchProps {
+  searchQuery?: string;
+  setSearchQuery?: (query: string) => void;
+  showAll?: boolean;
+  setShowAll?: (showAll: boolean) => void;
+  selectedType?: HeroiconType;
+  setSelectedType?: (type: HeroiconType) => void;
+  selectedIconSet?: IconsetSelection;
+  setSelectedIconSet?: (iconset: IconsetSelection) => void;
+  selectedSize?: IconSize;
+  setSelectedSize?: (size: IconSize) => void;
+  selectedCodeType?: IconCodeType;
+  setSelectedCodeType?: (codeType: IconCodeType) => void;
+  openIconKey?: string;
+  setOpenIconKey?: (key: string) => void;
+}
 
-  type IconKey = (typeof icons)[number]["kebabName"];
-  const [openIconKey, setOpenIconKey] = useUrlState<IconKey | "">("icon", {
-    historyEntry: true,
-  });
+export default function IconSearch({
+  searchQuery = "",
+  setSearchQuery = () => {},
+  showAll = false,
+  setShowAll = () => {},
+  selectedType = "outline24",
+  setSelectedType = () => {},
+  selectedIconSet = "All",
+  setSelectedIconSet = () => {},
+  selectedSize = "1×",
+  setSelectedSize = () => {},
+  selectedCodeType = codeTypes[0],
+  setSelectedCodeType = () => {},
+  openIconKey = "",
+  setOpenIconKey = () => {},
+}: IconSearchProps = {}) {
   const openIcon = openIconKey
     ? icons.find((icon) => icon.kebabName === openIconKey)
     : null;
@@ -59,8 +69,8 @@ export default function IconSearch() {
 
   const slicedIcons = showAll
     ? filteredIcons
-    : filteredIcons.slice(0, DEFAULT_SLICE_SIZE);
-  const showShowAllButton = filteredIcons.length > DEFAULT_SLICE_SIZE && !showAll;
+    : filteredIcons.slice(0, DEFAULT_ICON_COUNT);
+  const showShowAllButton = filteredIcons.length > DEFAULT_ICON_COUNT && !showAll;
 
   return (
     <div className="flex flex-col gap-6">
