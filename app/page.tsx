@@ -2,7 +2,6 @@ import { Suspense } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import IconSearch from "../components/IconSearch";
-import Spinner from "@/components/Spinner";
 import IconSearchWithState from "@/components/IconSearchWithState";
 
 export default function Home() {
