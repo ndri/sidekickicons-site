@@ -7,7 +7,7 @@ import useUrlState from "@/util/useUrlState";
 import IconSearch, { IconSearchProps } from "./IconSearch";
 
 export default function IconSearchWithState() {
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useUrlState("q");
   const [showAll, setShowAll] = useState(false);
   const [selectedType, setSelectedType] = useUrlState<HeroiconType>("type", {
     defaultValue: "outline24",
