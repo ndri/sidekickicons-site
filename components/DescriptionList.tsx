@@ -1,4 +1,4 @@
-export default function DescriptionList({ rows }: { rows: [string, string][] }) {
+export default function DescriptionList({ rows }: { rows: [string, React.ReactNode][] }) {
   return (
     <dl className="w-full divide-y divide-slate-100 dark:divide-slate-700">
       {rows.map(([dt, dd]) => (

@@ -22,7 +22,9 @@ import {
 } from "../util/code";
 import ButtonSelect from "./ButtonSelect";
 import Button from "./Button";
+import Link from "./Link";
 import useUrlState from "@/util/useUrlState";
+import authorsData from "../data/authors.json";
 
 export default function IconDetailsDialog({
   fullHeroicon,
@@ -38,6 +40,11 @@ export default function IconDetailsDialog({
     defaultValue: codeTypes[0],
   });
   const Icon = fullHeroicon[selectedType];
+
+  // Get author data if available
+  const authorInfo = (
+    authorsData as Record<string, { author: string; authorLink: string; pr: string }>
+  )[fullHeroicon.kebabName];
 
   const prettySvgCode = iconSvgCode(fullHeroicon, selectedType);
   const prettyJsxCode = iconSvgToJsx(prettySvgCode);
@@ -75,6 +82,23 @@ export default function IconDetailsDialog({
                   ["Intended size", iconTypeExplanations[selectedType]],
                   ["Iconset", fullHeroicon.iconset],
                   ["Keywords", fullHeroicon.keywords.join(", ")],
+                  ...(authorInfo
+                    ? [
+                        [
+                          "Author",
+                          <>
+                            <Link href={authorInfo.authorLink} newTab>
+                              {authorInfo.author}
+                            </Link>
+                            {" ("}
+                            <Link href={authorInfo.pr} newTab>
+                              PR
+                            </Link>
+                            {")"}
+                          </>,
+                        ] as [string, React.ReactNode],
+                      ]
+                    : []),
                 ]}
               />
 
