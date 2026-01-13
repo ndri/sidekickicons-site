@@ -1,6 +1,7 @@
 export const sidekickiconKeywords = {
   "arc-third": ["loading", "loader", "spinner"],
   "archive-box-arrow-up": ["restore", "backup", "upload", "store"],
+  "arrow-bottom-left-on-square": ["collapse"],
   "arrow-path-clock": ["history"],
   "arrow-path-single-clockwise": [
     "refresh",
@@ -37,6 +38,7 @@ export const sidekickiconKeywords = {
   cookie: ["consent", "gdpr", "privacy", "notice", "biscuit", "food", "tracking"],
   crown: ["upgrade", "pro", "premium", "subscribe", "vip"],
   dice: ["game", "random", "roll", "die", "d6"],
+  "face-meh": ["emoji", "neutral"],
   "face-smile-plus": ["emoji", "reaction"],
   "floppy-disk": ["save", "data", "file"],
   "dots-2x2": ["drag", "grip", "handle", "reorder"],
@@ -107,7 +109,7 @@ export const heroiconKeywords = {
   "arrow-path": ["refresh", "reload", "restart", "update"],
   "arrow-right": ["forward", "next"],
   "arrow-right-on-rectangle": ["login", "sign-in"],
-  "arrow-top-right-on-square": ["external"],
+  "arrow-top-right-on-square": ["external", "expand"],
   "arrow-trending-down": ["analytics", "decrease"],
   "arrow-trending-up": ["analytics", "increase"],
   "arrow-up-on-square": ["upload"],
