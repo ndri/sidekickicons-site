@@ -10,7 +10,7 @@ export interface ButtonProps {
   onClick?: () => void;
 }
 
-export type ButtonStyle = "primary" | "light" | "black";
+export type ButtonStyle = "primary" | "light" | "black" | "amber";
 export type ButtonSize = "lg" | "md" | "sm";
 
 export default function Button({
@@ -27,6 +27,7 @@ export default function Button({
     light:
       "bg-white text-slate-900 hover:bg-slate-100 focus-visible:outline-indigo-600 ring-1 ring-inset ring-slate-300 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700 dark:ring-slate-700",
     black: "bg-black text-white hover:bg-slate-700 focus-visible:outline-black",
+    amber: "bg-amber-700 text-white hover:bg-amber-600 focus-visible:outline-amber-700",
   };
   const sizeClasses = {
     lg: "px-3 py-2 gap-x-2 text-sm",
@@ -38,6 +39,7 @@ export default function Button({
     light:
       "text-slate-400 group-hover/button:text-slate-500 dark:text-slate-500 dark:group-hover/button:text-slate-400",
     black: "text-white",
+    amber: "text-white",
   };
   const iconSizeClasses = {
     lg: "size-6",

@@ -5,7 +5,7 @@ import Link from "./Link";
 
 export default function Header() {
   return (
-    <header className="flex w-full max-w-7xl flex-col items-center gap-4 px-4 pb-8 pt-8 sm:px-8">
+    <header className="flex w-full max-w-7xl flex-col items-center gap-4 px-4 pt-8 sm:px-8">
       <div className="flex w-full justify-end">
         <ThemeSelector />
       </div>
