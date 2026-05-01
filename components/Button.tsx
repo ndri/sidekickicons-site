@@ -8,6 +8,7 @@ export interface ButtonProps {
   size?: ButtonSize;
   className?: string;
   onClick?: () => void;
+  href?: string;
 }
 
 export type ButtonStyle = "primary" | "light" | "black" | "amber";
@@ -20,6 +21,7 @@ export default function Button({
   size = "md",
   className = "",
   onClick = () => {},
+  href,
 }: ButtonProps) {
   const styleClasses = {
     primary:
@@ -46,17 +48,14 @@ export default function Button({
     md: "size-5",
     sm: "size-4",
   };
-  return (
-    <button
-      type="button"
-      className={clsx(
-        "group/button inline-flex items-center justify-center rounded-md font-semibold shadow-sm focus-visible:outline focus-visible:outline-2",
-        styleClasses[style],
-        sizeClasses[size],
-        className,
-      )}
-      onClick={onClick}
-    >
+  const sharedClass = clsx(
+    "group/button inline-flex items-center justify-center rounded-md font-semibold shadow-sm focus-visible:outline focus-visible:outline-2",
+    styleClasses[style],
+    sizeClasses[size],
+    className,
+  );
+  const children = (
+    <>
       {Icon && (
         <Icon
           className={clsx(iconSizeClasses[size], iconStyleClasses[style], "shrink-0")}
@@ -64,6 +63,20 @@ export default function Button({
         />
       )}
       {text}
+    </>
+  );
+
+  if (href) {
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer" className={sharedClass}>
+        {children}
+      </a>
+    );
+  }
+
+  return (
+    <button type="button" className={sharedClass} onClick={onClick}>
+      {children}
     </button>
   );
 }

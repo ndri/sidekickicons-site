@@ -7,12 +7,12 @@ const variants = {
   a: {
     headline: "Stop waiting weeks for user feedback",
     body: "Iterate faster than ever before by unleashing agentic AI personas on your product. Get brutally honest UX feedback in minutes with ClankerView.",
-    ref: "sidekickicons-a",
+    campaign: "variant-a",
   },
   b: {
     headline: "Ship with confidence, not guesswork",
     body: "ClankerView sends AI users through your product and tells you exactly what's broken before your real users find it.",
-    ref: "sidekickicons-b",
+    campaign: "variant-b",
   },
 };
 
@@ -53,12 +53,7 @@ export default function Ad() {
             text="Try ClankerView"
             style="amber"
             size="lg"
-            onClick={() =>
-              window.open(
-                `https://clankerview.com?ref=${variant?.ref ?? "sidekickicons"}`,
-                "_blank",
-              )
-            }
+            href={`https://clankerview.com?utm_source=sidekickicons&utm_campaign=${variant?.campaign ?? "unknown"}`}
             className="whitespace-nowrap"
           />
           <Button
