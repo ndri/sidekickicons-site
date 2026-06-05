@@ -1,30 +1,10 @@
 "use client";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Button from "./Button";
-
-const variants = {
-  a: {
-    headline: "Stop waiting weeks for user feedback",
-    body: "Iterate faster than ever before by unleashing agentic AI personas on your product. Get brutally honest UX feedback in minutes with ClankerView.",
-    campaign: "variant-a",
-  },
-  b: {
-    headline: "Ship with confidence, not guesswork",
-    body: "ClankerView sends AI users through your product and tells you exactly what's broken before your real users find it.",
-    campaign: "variant-b",
-  },
-};
 
 export default function Ad() {
   const [dismissed, setDismissed] = useState(false);
-  const [variant, setVariant] = useState<
-    (typeof variants)[keyof typeof variants] | null
-  >(null);
-
-  useEffect(() => {
-    setVariant(Math.random() < 0.5 ? variants.a : variants.b);
-  }, []);
 
   if (dismissed) return null;
 
@@ -36,24 +16,18 @@ export default function Ad() {
           <p className="text-xs text-amber-700 dark:text-amber-500">
             From the developer of Sidekickicons
           </p>
-          {variant ? (
-            <>
-              <h2 className="font-semibold">{variant.headline}</h2>
-              <p className="text-sm">{variant.body}</p>
-            </>
-          ) : (
-            <>
-              <div className="h-6 w-64 animate-pulse rounded bg-amber-100 dark:bg-amber-900" />
-              <div className="h-5 w-full animate-pulse rounded bg-amber-100 dark:bg-amber-900" />
-            </>
-          )}
+          <h2 className="font-semibold">Stop waiting weeks for user feedback</h2>
+          <p className="text-sm">
+            Iterate faster than ever before by unleashing agentic AI personas on your
+            product. Get brutally honest UX feedback in minutes with ClankerView.
+          </p>
         </div>
         <div className="flex flex-col gap-2">
           <Button
             text="Try ClankerView"
             style="amber"
             size="lg"
-            href={`https://clankerview.com?utm_source=sidekickicons&utm_campaign=${variant?.campaign ?? "unknown"}`}
+            href="https://clankerview.com?utm_source=sidekickicons&utm_campaign=variant-a"
             className="whitespace-nowrap"
           />
           <Button
