@@ -1,15 +1,15 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
 import Button from "./Button";
+import useStoredState from "../util/useStoredState";
 
 export default function Ad() {
-  const [dismissed, setDismissed] = useState(false);
+  const [dismissed, setDismissed] = useStoredState("clankerViewDismissed", "false");
 
-  if (dismissed) return null;
+  if (dismissed === "true") return null;
 
   return (
-    <div className="flex items-center gap-4 rounded-xl border border-amber-200 bg-amber-50 p-3 text-amber-900 dark:border-amber-900 dark:bg-amber-950 dark:text-amber-100">
+    <div className="flex items-center gap-4 rounded-xl border border-amber-200 bg-amber-50 p-3 text-amber-900 dark:border-amber-900 dark:bg-amber-950 dark:text-amber-100 [[data-clanker-view-dismissed]_&]:hidden">
       <Image src="/clankerview.svg" alt="ClankerView logo" width={64} height={64} />
       <div className="flex grow flex-col gap-4 sm:flex-row sm:items-center">
         <div className="flex grow flex-col gap-1">
@@ -27,14 +27,14 @@ export default function Ad() {
             text="Try ClankerView"
             style="amber"
             size="lg"
-            href="https://clankerview.com?utm_source=sidekickicons&utm_campaign=variant-a"
+            href="https://clankerview.com?utm_source=sidekickicons"
             className="whitespace-nowrap"
           />
           <Button
             text="Dismiss"
             style="light"
             size="sm"
-            onClick={() => setDismissed(true)}
+            onClick={() => setDismissed("true")}
             className="whitespace-nowrap"
           />
         </div>

@@ -18,8 +18,14 @@ export default function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
-      {plausibleDomain && (
-        <head>
+      <head>
+        {/* Hides a dismissed ClankerView banner (components/Ad.tsx) before first paint */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{if(localStorage.getItem("clankerViewDismissed")==="true")document.documentElement.dataset.clankerViewDismissed=""}catch(e){}`,
+          }}
+        />
+        {plausibleDomain && (
           <PlausibleProvider
             domain={plausibleDomain}
             scriptProps={{
@@ -28,8 +34,8 @@ export default function RootLayout({
               "data-api": "/api/event",
             }}
           />
-        </head>
-      )}
+        )}
+      </head>
       <body className="text-slate-800 dark:bg-slate-900 dark:text-slate-100">
         <ThemeProvider attribute="class">{children}</ThemeProvider>
       </body>
