@@ -2,49 +2,45 @@
   "name": "sidekickicons-site",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "prepare": "svelte-kit sync || echo ''",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "test": "vitest"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.1.0",
-    "@headlessui/react": "^2.2.0",
-    "@heroicons/react": "^2.2.0",
-    "@sidekickicons/react": "^0.16.0",
-    "@tailwindcss/forms": "^0.5.9",
-    "clsx": "^2.1.1",
     "js-beautify": "^1.15.1",
     "match-sorter": "^6.3.4",
-    "next": "15.0.7",
-    "next-plausible": "^3.12.4",
-    "next-themes": "^0.4.4",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-syntax-highlighter": "^15.6.1"
+    "prismjs": "^1.30.0"
   },
   "devDependencies": {
-    "@types/jest": "^29.5.14",
+    "@sidekickicons/svelte": "^0.16.0",
+    "@sveltejs/adapter-vercel": "^6.3.4",
+    "@sveltejs/kit": "^2.70.3",
+    "@sveltejs/vite-plugin-svelte": "^6.2.4",
+    "@tailwindcss/forms": "^0.5.9",
     "@types/js-beautify": "^1.14.3",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "@types/react-syntax-highlighter": "^15.5.13",
-    "eslint": "^8",
-    "eslint-config-next": "15.0.2",
+    "@types/node": "^24.19.2",
+    "@types/prismjs": "^1.26.6",
+    "heroicons": "^2.2.0",
     "postcss": "^8",
     "prettier": "^3.3.3",
+    "prettier-plugin-svelte": "^3.5.2",
     "prettier-plugin-tailwindcss": "^0.6.8",
+    "svelte": "^5.57.2",
+    "svelte-check": "^4.7.7",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5",
-    "vitest": "^2.1.4"
+    "typescript": "^5.9.3",
+    "vite": "^7.3.7",
+    "vitest": "^3.2.7"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
-      "esbuild",
-      "sharp"
+      "esbuild"
     ]
   }
 }

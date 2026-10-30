@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      href="%sveltekit.assets%/favicon.ico"
+      type="image/x-icon"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      href="%sveltekit.assets%/icon.svg"
+      type="image/svg+xml"
+      sizes="any"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="%sveltekit.assets%/apple-icon.png"
+      type="image/png"
+      sizes="180x180"
+    />
+    <link rel="manifest" href="%sveltekit.assets%/manifest.webmanifest" />
+    <script>
+      // Applies the theme chosen in components/ThemeSelector.svelte before first paint
+      try {
+        const theme = localStorage.getItem("theme");
+        const dark =
+          theme === "Dark" ||
+          (theme !== "Light" && matchMedia("(prefers-color-scheme: dark)").matches);
+        document.documentElement.classList.toggle("dark", dark);
+        document.documentElement.style.colorScheme = dark ? "dark" : "light";
+      } catch (e) {}
+      // Hides a dismissed ClankerView banner (components/Ad.svelte) before first paint
+      try {
+        if (localStorage.getItem("clankerViewDismissed") === "true")
+          document.documentElement.dataset.clankerViewDismissed = "";
+      } catch (e) {}
+    </script>
+    %sveltekit.head%
+  </head>
+  <body
+    data-sveltekit-preload-data="hover"
+    class="text-slate-800 dark:bg-slate-900 dark:text-slate-100"
+  >
+    <div style="display: contents">%sveltekit.body%</div>
+  </body>
+</html>
