@@ -1,0 +1,598 @@
+/* Prism themes from prism-themes 1.9.0 (MIT), scoped to the site's light and dark mode:
+   One Light (https://github.com/PrismJS/prism-themes/blob/master/themes/prism-one-light.css)
+   Coldark Dark (https://github.com/PrismJS/prism-themes/blob/master/themes/prism-coldark-dark.css)
+   Every selector is prefixed with the theme it belongs to. */
+
+html:not(.dark) code[class*="language-"],
+html:not(.dark) pre[class*="language-"] {
+  background: hsl(230, 1%, 98%);
+  color: hsl(230, 8%, 24%);
+  font-family: "Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+html:not(.dark) code[class*="language-"]::-moz-selection,
+html:not(.dark) code[class*="language-"] *::-moz-selection,
+html:not(.dark) pre[class*="language-"] *::-moz-selection {
+  background: hsl(230, 1%, 90%);
+  color: inherit;
+}
+html:not(.dark) code[class*="language-"]::selection,
+html:not(.dark) code[class*="language-"] *::selection,
+html:not(.dark) pre[class*="language-"] *::selection {
+  background: hsl(230, 1%, 90%);
+  color: inherit;
+}
+html:not(.dark) pre[class*="language-"] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  border-radius: 0.3em;
+}
+html:not(.dark) :not(pre) > code[class*="language-"] {
+  padding: 0.2em 0.3em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+html:not(.dark) .token.comment,
+html:not(.dark) .token.prolog,
+html:not(.dark) .token.cdata {
+  color: hsl(230, 4%, 64%);
+}
+html:not(.dark) .token.doctype,
+html:not(.dark) .token.punctuation,
+html:not(.dark) .token.entity {
+  color: hsl(230, 8%, 24%);
+}
+html:not(.dark) .token.attr-name,
+html:not(.dark) .token.class-name,
+html:not(.dark) .token.boolean,
+html:not(.dark) .token.constant,
+html:not(.dark) .token.number,
+html:not(.dark) .token.atrule {
+  color: hsl(35, 99%, 36%);
+}
+html:not(.dark) .token.keyword {
+  color: hsl(301, 63%, 40%);
+}
+html:not(.dark) .token.property,
+html:not(.dark) .token.tag,
+html:not(.dark) .token.symbol,
+html:not(.dark) .token.deleted,
+html:not(.dark) .token.important {
+  color: hsl(5, 74%, 59%);
+}
+html:not(.dark) .token.selector,
+html:not(.dark) .token.string,
+html:not(.dark) .token.char,
+html:not(.dark) .token.builtin,
+html:not(.dark) .token.inserted,
+html:not(.dark) .token.regex,
+html:not(.dark) .token.attr-value,
+html:not(.dark) .token.attr-value > .token.punctuation {
+  color: hsl(119, 34%, 47%);
+}
+html:not(.dark) .token.variable,
+html:not(.dark) .token.operator,
+html:not(.dark) .token.function {
+  color: hsl(221, 87%, 60%);
+}
+html:not(.dark) .token.url {
+  color: hsl(198, 99%, 37%);
+}
+html:not(.dark) .token.attr-value > .token.punctuation.attr-equals,
+html:not(.dark) .token.special-attr > .token.attr-value > .token.value.css {
+  color: hsl(230, 8%, 24%);
+}
+html:not(.dark) .language-css .token.selector {
+  color: hsl(5, 74%, 59%);
+}
+html:not(.dark) .language-css .token.property {
+  color: hsl(230, 8%, 24%);
+}
+html:not(.dark) .language-css .token.function,
+html:not(.dark) .language-css .token.url > .token.function {
+  color: hsl(198, 99%, 37%);
+}
+html:not(.dark) .language-css .token.url > .token.string.url {
+  color: hsl(119, 34%, 47%);
+}
+html:not(.dark) .language-css .token.important,
+html:not(.dark) .language-css .token.atrule .token.rule {
+  color: hsl(301, 63%, 40%);
+}
+html:not(.dark) .language-javascript .token.operator {
+  color: hsl(301, 63%, 40%);
+}
+html:not(.dark)
+  .language-javascript
+  .token.template-string
+  > .token.interpolation
+  > .token.interpolation-punctuation.punctuation {
+  color: hsl(344, 84%, 43%);
+}
+html:not(.dark) .language-json .token.operator {
+  color: hsl(230, 8%, 24%);
+}
+html:not(.dark) .language-json .token.null.keyword {
+  color: hsl(35, 99%, 36%);
+}
+html:not(.dark) .language-markdown .token.url,
+html:not(.dark) .language-markdown .token.url > .token.operator,
+html:not(.dark) .language-markdown .token.url-reference.url > .token.string {
+  color: hsl(230, 8%, 24%);
+}
+html:not(.dark) .language-markdown .token.url > .token.content {
+  color: hsl(221, 87%, 60%);
+}
+html:not(.dark) .language-markdown .token.url > .token.url,
+html:not(.dark) .language-markdown .token.url-reference.url {
+  color: hsl(198, 99%, 37%);
+}
+html:not(.dark) .language-markdown .token.blockquote.punctuation,
+html:not(.dark) .language-markdown .token.hr.punctuation {
+  color: hsl(230, 4%, 64%);
+  font-style: italic;
+}
+html:not(.dark) .language-markdown .token.code-snippet {
+  color: hsl(119, 34%, 47%);
+}
+html:not(.dark) .language-markdown .token.bold .token.content {
+  color: hsl(35, 99%, 36%);
+}
+html:not(.dark) .language-markdown .token.italic .token.content {
+  color: hsl(301, 63%, 40%);
+}
+html:not(.dark) .language-markdown .token.strike .token.content,
+html:not(.dark) .language-markdown .token.strike .token.punctuation,
+html:not(.dark) .language-markdown .token.list.punctuation,
+html:not(.dark) .language-markdown .token.title.important > .token.punctuation {
+  color: hsl(5, 74%, 59%);
+}
+html:not(.dark) .token.bold {
+  font-weight: bold;
+}
+html:not(.dark) .token.comment,
+html:not(.dark) .token.italic {
+  font-style: italic;
+}
+html:not(.dark) .token.entity {
+  cursor: help;
+}
+html:not(.dark) .token.namespace {
+  opacity: 0.8;
+}
+html:not(.dark) .token.token.tab:not(:empty):before,
+html:not(.dark) .token.token.cr:before,
+html:not(.dark) .token.token.lf:before,
+html:not(.dark) .token.token.space:before {
+  color: hsla(230, 8%, 24%, 0.2);
+}
+html:not(.dark) div.code-toolbar > .toolbar.toolbar > .toolbar-item {
+  margin-right: 0.4em;
+}
+html:not(.dark) div.code-toolbar > .toolbar.toolbar > .toolbar-item > button,
+html:not(.dark) div.code-toolbar > .toolbar.toolbar > .toolbar-item > a,
+html:not(.dark) div.code-toolbar > .toolbar.toolbar > .toolbar-item > span {
+  background: hsl(230, 1%, 90%);
+  color: hsl(230, 6%, 44%);
+  padding: 0.1em 0.4em;
+  border-radius: 0.3em;
+}
+html:not(.dark) div.code-toolbar > .toolbar.toolbar > .toolbar-item > button:hover,
+html:not(.dark) div.code-toolbar > .toolbar.toolbar > .toolbar-item > button:focus,
+html:not(.dark) div.code-toolbar > .toolbar.toolbar > .toolbar-item > a:hover,
+html:not(.dark) div.code-toolbar > .toolbar.toolbar > .toolbar-item > a:focus,
+html:not(.dark) div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:hover,
+html:not(.dark) div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:focus {
+  background: hsl(230, 1%, 78%);
+  color: hsl(230, 8%, 24%);
+}
+html:not(.dark) .line-highlight.line-highlight {
+  background: hsla(230, 8%, 24%, 0.05);
+}
+html:not(.dark) .line-highlight.line-highlight:before,
+html:not(.dark) .line-highlight.line-highlight[data-end]:after {
+  background: hsl(230, 1%, 90%);
+  color: hsl(230, 8%, 24%);
+  padding: 0.1em 0.6em;
+  border-radius: 0.3em;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2);
+}
+html:not(.dark)
+  pre[id].linkable-line-numbers.linkable-line-numbers
+  span.line-numbers-rows
+  > span:hover:before {
+  background-color: hsla(230, 8%, 24%, 0.05);
+}
+html:not(.dark) .line-numbers.line-numbers .line-numbers-rows,
+html:not(.dark) .command-line .command-line-prompt {
+  border-right-color: hsla(230, 8%, 24%, 0.2);
+}
+html:not(.dark) .line-numbers .line-numbers-rows > span:before,
+html:not(.dark) .command-line .command-line-prompt > span:before {
+  color: hsl(230, 1%, 62%);
+}
+html:not(.dark) .rainbow-braces .token.token.punctuation.brace-level-1,
+html:not(.dark) .rainbow-braces .token.token.punctuation.brace-level-5,
+html:not(.dark) .rainbow-braces .token.token.punctuation.brace-level-9 {
+  color: hsl(5, 74%, 59%);
+}
+html:not(.dark) .rainbow-braces .token.token.punctuation.brace-level-2,
+html:not(.dark) .rainbow-braces .token.token.punctuation.brace-level-6,
+html:not(.dark) .rainbow-braces .token.token.punctuation.brace-level-10 {
+  color: hsl(119, 34%, 47%);
+}
+html:not(.dark) .rainbow-braces .token.token.punctuation.brace-level-3,
+html:not(.dark) .rainbow-braces .token.token.punctuation.brace-level-7,
+html:not(.dark) .rainbow-braces .token.token.punctuation.brace-level-11 {
+  color: hsl(221, 87%, 60%);
+}
+html:not(.dark) .rainbow-braces .token.token.punctuation.brace-level-4,
+html:not(.dark) .rainbow-braces .token.token.punctuation.brace-level-8,
+html:not(.dark) .rainbow-braces .token.token.punctuation.brace-level-12 {
+  color: hsl(301, 63%, 40%);
+}
+html:not(.dark) pre.diff-highlight > code .token.token.deleted:not(.prefix),
+html:not(.dark) pre > code.diff-highlight .token.token.deleted:not(.prefix) {
+  background-color: hsla(353, 100%, 66%, 0.15);
+}
+html:not(.dark)
+  pre.diff-highlight
+  > code
+  .token.token.deleted:not(.prefix)::-moz-selection,
+html:not(.dark)
+  pre.diff-highlight
+  > code
+  .token.token.deleted:not(.prefix)
+  *::-moz-selection,
+html:not(.dark)
+  pre
+  > code.diff-highlight
+  .token.token.deleted:not(.prefix)::-moz-selection,
+html:not(.dark)
+  pre
+  > code.diff-highlight
+  .token.token.deleted:not(.prefix)
+  *::-moz-selection {
+  background-color: hsla(353, 95%, 66%, 0.25);
+}
+html:not(.dark) pre.diff-highlight > code .token.token.deleted:not(.prefix)::selection,
+html:not(.dark)
+  pre.diff-highlight
+  > code
+  .token.token.deleted:not(.prefix)
+  *::selection,
+html:not(.dark) pre > code.diff-highlight .token.token.deleted:not(.prefix)::selection,
+html:not(.dark)
+  pre
+  > code.diff-highlight
+  .token.token.deleted:not(.prefix)
+  *::selection {
+  background-color: hsla(353, 95%, 66%, 0.25);
+}
+html:not(.dark) pre.diff-highlight > code .token.token.inserted:not(.prefix),
+html:not(.dark) pre > code.diff-highlight .token.token.inserted:not(.prefix) {
+  background-color: hsla(137, 100%, 55%, 0.15);
+}
+html:not(.dark)
+  pre.diff-highlight
+  > code
+  .token.token.inserted:not(.prefix)::-moz-selection,
+html:not(.dark)
+  pre.diff-highlight
+  > code
+  .token.token.inserted:not(.prefix)
+  *::-moz-selection,
+html:not(.dark)
+  pre
+  > code.diff-highlight
+  .token.token.inserted:not(.prefix)::-moz-selection,
+html:not(.dark)
+  pre
+  > code.diff-highlight
+  .token.token.inserted:not(.prefix)
+  *::-moz-selection {
+  background-color: hsla(135, 73%, 55%, 0.25);
+}
+html:not(.dark) pre.diff-highlight > code .token.token.inserted:not(.prefix)::selection,
+html:not(.dark)
+  pre.diff-highlight
+  > code
+  .token.token.inserted:not(.prefix)
+  *::selection,
+html:not(.dark) pre > code.diff-highlight .token.token.inserted:not(.prefix)::selection,
+html:not(.dark)
+  pre
+  > code.diff-highlight
+  .token.token.inserted:not(.prefix)
+  *::selection {
+  background-color: hsla(135, 73%, 55%, 0.25);
+}
+html:not(.dark) .prism-previewer.prism-previewer:before,
+html:not(.dark) .prism-previewer-gradient.prism-previewer-gradient div {
+  border-color: hsl(0, 0, 95%);
+}
+html:not(.dark) .prism-previewer-color.prism-previewer-color:before,
+html:not(.dark) .prism-previewer-gradient.prism-previewer-gradient div,
+html:not(.dark) .prism-previewer-easing.prism-previewer-easing:before {
+  border-radius: 0.3em;
+}
+html:not(.dark) .prism-previewer.prism-previewer:after {
+  border-top-color: hsl(0, 0, 95%);
+}
+html:not(.dark) .prism-previewer-flipped.prism-previewer-flipped.after {
+  border-bottom-color: hsl(0, 0, 95%);
+}
+html:not(.dark) .prism-previewer-angle.prism-previewer-angle:before,
+html:not(.dark) .prism-previewer-time.prism-previewer-time:before,
+html:not(.dark) .prism-previewer-easing.prism-previewer-easing {
+  background: hsl(0, 0%, 100%);
+}
+html:not(.dark) .prism-previewer-angle.prism-previewer-angle circle,
+html:not(.dark) .prism-previewer-time.prism-previewer-time circle {
+  stroke: hsl(230, 8%, 24%);
+  stroke-opacity: 1;
+}
+html:not(.dark) .prism-previewer-easing.prism-previewer-easing circle,
+html:not(.dark) .prism-previewer-easing.prism-previewer-easing path,
+html:not(.dark) .prism-previewer-easing.prism-previewer-easing line {
+  stroke: hsl(230, 8%, 24%);
+}
+html:not(.dark) .prism-previewer-easing.prism-previewer-easing circle {
+  fill: transparent;
+}
+
+html.dark code[class*="language-"],
+html.dark pre[class*="language-"] {
+  color: #e3eaf2;
+  background: none;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+html.dark pre[class*="language-"]::-moz-selection,
+html.dark pre[class*="language-"] ::-moz-selection,
+html.dark code[class*="language-"]::-moz-selection,
+html.dark code[class*="language-"] ::-moz-selection {
+  background: #3c526d;
+}
+html.dark pre[class*="language-"]::selection,
+html.dark pre[class*="language-"] ::selection,
+html.dark code[class*="language-"]::selection,
+html.dark code[class*="language-"] ::selection {
+  background: #3c526d;
+}
+html.dark pre[class*="language-"] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+}
+html.dark :not(pre) > code[class*="language-"],
+html.dark pre[class*="language-"] {
+  background: #111b27;
+}
+html.dark :not(pre) > code[class*="language-"] {
+  padding: 0.1em 0.3em;
+  border-radius: 0.3em;
+  white-space: normal;
+}
+html.dark .token.comment,
+html.dark .token.prolog,
+html.dark .token.doctype,
+html.dark .token.cdata {
+  color: #8da1b9;
+}
+html.dark .token.punctuation {
+  color: #e3eaf2;
+}
+html.dark .token.delimiter.important,
+html.dark .token.selector .parent,
+html.dark .token.tag,
+html.dark .token.tag .token.punctuation {
+  color: #66cccc;
+}
+html.dark .token.attr-name,
+html.dark .token.boolean,
+html.dark .token.boolean.important,
+html.dark .token.number,
+html.dark .token.constant,
+html.dark .token.selector .token.attribute {
+  color: #e6d37a;
+}
+html.dark .token.class-name,
+html.dark .token.key,
+html.dark .token.parameter,
+html.dark .token.property,
+html.dark .token.property-access,
+html.dark .token.variable {
+  color: #6cb8e6;
+}
+html.dark .token.attr-value,
+html.dark .token.inserted,
+html.dark .token.color,
+html.dark .token.selector .token.value,
+html.dark .token.string,
+html.dark .token.string .token.url-link {
+  color: #91d076;
+}
+html.dark .token.builtin,
+html.dark .token.keyword-array,
+html.dark .token.package,
+html.dark .token.regex {
+  color: #f4adf4;
+}
+html.dark .token.function,
+html.dark .token.selector .token.class,
+html.dark .token.selector .token.id {
+  color: #c699e3;
+}
+html.dark .token.atrule .token.rule,
+html.dark .token.combinator,
+html.dark .token.keyword,
+html.dark .token.operator,
+html.dark .token.pseudo-class,
+html.dark .token.pseudo-element,
+html.dark .token.selector,
+html.dark .token.unit {
+  color: #e9ae7e;
+}
+html.dark .token.deleted,
+html.dark .token.important {
+  color: #cd6660;
+}
+html.dark .token.keyword-this,
+html.dark .token.this {
+  color: #6cb8e6;
+}
+html.dark .token.important,
+html.dark .token.keyword-this,
+html.dark .token.this,
+html.dark .token.bold {
+  font-weight: bold;
+}
+html.dark .token.delimiter.important {
+  font-weight: inherit;
+}
+html.dark .token.italic {
+  font-style: italic;
+}
+html.dark .token.entity {
+  cursor: help;
+}
+html.dark .language-markdown .token.title,
+html.dark .language-markdown .token.title .token.punctuation {
+  color: #6cb8e6;
+  font-weight: bold;
+}
+html.dark .language-markdown .token.blockquote.punctuation {
+  color: #f4adf4;
+}
+html.dark .language-markdown .token.code {
+  color: #66cccc;
+}
+html.dark .language-markdown .token.hr.punctuation {
+  color: #6cb8e6;
+}
+html.dark .language-markdown .token.url .token.content {
+  color: #91d076;
+}
+html.dark .language-markdown .token.url-link {
+  color: #e6d37a;
+}
+html.dark .language-markdown .token.list.punctuation {
+  color: #f4adf4;
+}
+html.dark .language-markdown .token.table-header {
+  color: #e3eaf2;
+}
+html.dark .language-json .token.operator {
+  color: #e3eaf2;
+}
+html.dark .language-scss .token.variable {
+  color: #66cccc;
+}
+html.dark .token.token.tab:not(:empty):before,
+html.dark .token.token.cr:before,
+html.dark .token.token.lf:before,
+html.dark .token.token.space:before {
+  color: #8da1b9;
+}
+html.dark div.code-toolbar > .toolbar.toolbar > .toolbar-item > a,
+html.dark div.code-toolbar > .toolbar.toolbar > .toolbar-item > button {
+  color: #111b27;
+  background: #6cb8e6;
+}
+html.dark div.code-toolbar > .toolbar.toolbar > .toolbar-item > a:hover,
+html.dark div.code-toolbar > .toolbar.toolbar > .toolbar-item > a:focus,
+html.dark div.code-toolbar > .toolbar.toolbar > .toolbar-item > button:hover,
+html.dark div.code-toolbar > .toolbar.toolbar > .toolbar-item > button:focus {
+  color: #111b27;
+  background: #6cb8e6da;
+  text-decoration: none;
+}
+html.dark div.code-toolbar > .toolbar.toolbar > .toolbar-item > span,
+html.dark div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:hover,
+html.dark div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:focus {
+  color: #111b27;
+  background: #8da1b9;
+}
+html.dark .line-highlight.line-highlight {
+  background: #3c526d5f;
+  background: linear-gradient(to right, #3c526d5f 70%, #3c526d55);
+}
+html.dark .line-highlight.line-highlight:before,
+html.dark .line-highlight.line-highlight[data-end]:after {
+  background-color: #8da1b9;
+  color: #111b27;
+  box-shadow: 0 1px #3c526d;
+}
+html.dark
+  pre[id].linkable-line-numbers.linkable-line-numbers
+  span.line-numbers-rows
+  > span:hover:before {
+  background-color: #8da1b918;
+}
+html.dark .line-numbers.line-numbers .line-numbers-rows {
+  border-right: 1px solid #0b121b;
+  background: #0b121b7a;
+}
+html.dark .line-numbers .line-numbers-rows > span:before {
+  color: #8da1b9da;
+}
+html.dark .rainbow-braces .token.token.punctuation.brace-level-1,
+html.dark .rainbow-braces .token.token.punctuation.brace-level-5,
+html.dark .rainbow-braces .token.token.punctuation.brace-level-9 {
+  color: #e6d37a;
+}
+html.dark .rainbow-braces .token.token.punctuation.brace-level-2,
+html.dark .rainbow-braces .token.token.punctuation.brace-level-6,
+html.dark .rainbow-braces .token.token.punctuation.brace-level-10 {
+  color: #f4adf4;
+}
+html.dark .rainbow-braces .token.token.punctuation.brace-level-3,
+html.dark .rainbow-braces .token.token.punctuation.brace-level-7,
+html.dark .rainbow-braces .token.token.punctuation.brace-level-11 {
+  color: #6cb8e6;
+}
+html.dark .rainbow-braces .token.token.punctuation.brace-level-4,
+html.dark .rainbow-braces .token.token.punctuation.brace-level-8,
+html.dark .rainbow-braces .token.token.punctuation.brace-level-12 {
+  color: #c699e3;
+}
+html.dark pre.diff-highlight > code .token.token.deleted:not(.prefix),
+html.dark pre > code.diff-highlight .token.token.deleted:not(.prefix) {
+  background-color: #cd66601f;
+}
+html.dark pre.diff-highlight > code .token.token.inserted:not(.prefix),
+html.dark pre > code.diff-highlight .token.token.inserted:not(.prefix) {
+  background-color: #91d0761f;
+}
+html.dark .command-line .command-line-prompt {
+  border-right: 1px solid #0b121b;
+}
+html.dark .command-line .command-line-prompt > span:before {
+  color: #8da1b9da;
+}
