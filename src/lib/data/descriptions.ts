@@ -25,6 +25,14 @@ export const sidekickiconDescriptions: Record<string, { description: string }> =
     description:
       "A single counterclockwise circular arrow, for undo, reset or rotating something to the left.",
   },
+  "arrow-uturn-down-right": {
+    description:
+      "A U-turn arrow curving down to the right, for redo in text editors. It pairs with arrow-uturn-up-left for undo.",
+  },
+  "arrow-uturn-up-left": {
+    description:
+      "A U-turn arrow curving up to the left, for undo, going back or returning to a previous step.",
+  },
   "arrows-crossing": {
     description:
       "Two crossing arrows, the familiar shuffle symbol for media players and random ordering.",
@@ -40,6 +48,10 @@ export const sidekickiconDescriptions: Record<string, { description: string }> =
   blockquote: {
     description:
       "A quote block for rich text editors and Markdown toolbars, showing a vertical bar next to lines of text.",
+  },
+  "camera-rotate": {
+    description:
+      "A camera with circular arrows, for switching between the front and back camera in photo and video call apps.",
   },
   checklist: {
     description:
@@ -145,6 +157,13 @@ export const sidekickiconDescriptions: Record<string, { description: string }> =
   indent: {
     description: "Increase indent, for list and paragraph formatting in text editors.",
   },
+  "italic-slash": {
+    description:
+      "A crossed-out italic, for removing italic formatting in rich text editors.",
+  },
+  keyboard: {
+    description: "A keyboard, for keyboard shortcuts, typing and input settings.",
+  },
   "lettered-list": {
     description:
       "A list with letters, for alphabetically ordered lists in rich text editors.",
@@ -163,6 +182,10 @@ export const sidekickiconDescriptions: Record<string, { description: string }> =
   },
   outdent: {
     description: "Decrease indent, for list and paragraph formatting in text editors.",
+  },
+  "paint-brush-slash": {
+    description:
+      "A crossed-out paint brush, for clearing formatting in text editors or removing styles in design tools.",
   },
   password: {
     description:
@@ -214,8 +237,28 @@ export const sidekickiconDescriptions: Record<string, { description: string }> =
     description:
       "A plain square, for shape tools, checkbox-style markers and stop buttons.",
   },
+  "table-cells-merge": {
+    description:
+      "Arrows pointing in towards a table divider, for merging table cells, rows or columns.",
+  },
+  "table-cells-split": {
+    description:
+      "Arrows pointing away from a table divider, for splitting merged table cells.",
+  },
   triangle: {
     description: "A plain triangle, for shape tools and diagrams.",
+  },
+  "video-camera-arrow-down-left": {
+    description:
+      "A video camera with an incoming arrow, for incoming and received video calls. It matches Heroicons' phone-arrow-down-left.",
+  },
+  "video-camera-arrow-up-right": {
+    description:
+      "A video camera with an outgoing arrow, for outgoing video calls. It matches Heroicons' phone-arrow-up-right.",
+  },
+  "video-camera-x-mark": {
+    description:
+      "A video camera with an X, for missed, declined or ended video calls. It matches Heroicons' phone-x-mark.",
   },
   "view-split": {
     description:
