@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { onMount } from "svelte";
   import icons from "../icons/allicons";
   import { matchSorter } from "match-sorter";
   import IconCard from "./IconCard.svelte";
@@ -18,7 +17,7 @@
   import SearchInput from "./SearchInput.svelte";
   import ButtonSelect from "./ButtonSelect.svelte";
   import { dashesToSpaces } from "../util/util";
-  import { syncUrlState, urlState } from "../util/urlState.svelte";
+  import { urlState } from "../util/urlState.svelte";
   import VerticalRule from "./VerticalRule.svelte";
   import DropdownSelect from "./DropdownSelect.svelte";
   import IconDetailsDialog from "./IconDetailsDialog.svelte";
@@ -38,8 +37,6 @@
     defaultValue: codeTypes[0],
   });
   const openIconKey = urlState<string>("icon", { historyEntry: true });
-
-  onMount(syncUrlState);
 
   const openIcon = $derived(
     openIconKey.value
@@ -68,8 +65,6 @@
     filteredIcons.length > DEFAULT_ICON_COUNT && !showAll,
   );
 </script>
-
-<svelte:window onpopstate={syncUrlState} />
 
 <div class="flex flex-col gap-6">
   <div class="sticky top-0 z-20 flex flex-col gap-2 bg-white py-2 dark:bg-slate-900">

@@ -7,6 +7,9 @@
   class="text flex w-full max-w-7xl flex-col gap-2 p-4 text-center text-sm text-slate-500 sm:p-8 dark:text-slate-400"
 >
   <p>
+    <Link href="/icons">Browse all icons</Link>
+  </p>
+  <p>
     <Link href="https://github.com/tailwindlabs/heroicons" newTab>Heroicons</Link>
     are created by
     <Link href="https://www.steveschoger.com/" newTab>Steve Schoger</Link>
