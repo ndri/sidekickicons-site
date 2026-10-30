@@ -1,7 +1,12 @@
 import { expect, test } from "vitest";
 import icons from "./allicons";
 import { iconTypes } from "../util/constants";
-import { iconSvgCode, svgWithClass } from "../util/code";
+import {
+  iconReactNativePlusImportCode,
+  iconSvgCode,
+  iconsetInstallCode,
+  svgWithClass,
+} from "../util/code";
 
 test("every icon has SVG markup for every type", () => {
   expect(icons.some((icon) => icon.iconset === "Heroicons")).toBe(true);
@@ -26,4 +31,15 @@ test("svgWithClass adds the class to the svg element only", () => {
 test("SVG code includes the size class", () => {
   const crown = icons.find((icon) => icon.kebabName === "crown")!;
   expect(iconSvgCode(crown, "solid16")).toContain('class="size-4"');
+});
+
+test("React Native code uses the package that includes Heroicons", () => {
+  const academicCap = icons.find((icon) => icon.kebabName === "academic-cap")!;
+  expect(iconReactNativePlusImportCode(academicCap, "solid20")).toBe(
+    'import { AcademicCapIcon } from "@sidekickicons/react-native/20/solid";\n\n<AcademicCapIcon color="#64748b" />',
+  );
+  expect(iconsetInstallCode("Heroicons", "react-native")).toBe(
+    "npm install @sidekickicons/react-native react-native-svg",
+  );
+  expect(iconsetInstallCode("Heroicons", "react")).toBe("npm install @heroicons/react");
 });

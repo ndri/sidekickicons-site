@@ -10,7 +10,7 @@
 </script>
 
 <PageMeta
-  title="All icons – Heroicons and Sidekickicons"
+  title="All icons · Heroicons and Sidekickicons"
   description="Every Sidekickicons and Heroicons icon, with code for React, Vue, Svelte and SVG."
   path="/icons"
 />

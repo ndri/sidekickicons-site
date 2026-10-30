@@ -4,11 +4,16 @@
   import IconSearch from "$lib/components/IconSearch.svelte";
   import Ad from "$lib/components/Ad.svelte";
   import PageMeta from "$lib/components/PageMeta.svelte";
+  import icons from "$lib/icons/allicons";
+
+  const sidekickiconCount = icons.filter(
+    (icon) => icon.iconset === "Sidekickicons",
+  ).length;
 </script>
 
 <PageMeta
-  title="Sidekickicons"
-  description="Fanmade icons to complement Heroicons"
+  title="Sidekickicons · {sidekickiconCount} icons Heroicons is missing, for React, Vue & Svelte"
+  description="Browse Heroicons and Sidekickicons, {sidekickiconCount} fanmade icons in the Heroicons style for the icons Heroicons doesn't have. Copy SVG, React, Vue, Svelte or React Native code."
   path="/"
 />
 

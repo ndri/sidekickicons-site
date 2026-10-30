@@ -19,9 +19,11 @@ export type IconCodeType =
   | "Vue"
   | "Vue + import"
   | "Svelte"
-  | "Svelte + import";
+  | "Svelte + import"
+  | "React Native"
+  | "React Native + import";
 
-export type Framework = "react" | "vue" | "svelte";
+export type Framework = "react" | "vue" | "svelte" | "react-native";
 
 export interface FullHeroicon {
   kebabName: string;

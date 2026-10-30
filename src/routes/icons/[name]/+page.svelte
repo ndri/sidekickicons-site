@@ -29,6 +29,7 @@
     iconTitle,
   } from "$lib/util/iconPages";
   import { urlState } from "$lib/util/urlState.svelte";
+  import { heroiconsDiscussionUrl } from "$lib/data/missingHeroicons";
 
   let { data } = $props();
 
@@ -60,7 +61,7 @@
 {/snippet}
 
 <PageMeta
-  title="{title} icon – {icon.iconset} for React, Vue & Svelte"
+  title="{title} icon · {icon.iconset} for React, Vue & Svelte"
   description={iconMetaDescription(icon)}
   path={iconPagePath(icon.kebabName)}
 />
@@ -88,6 +89,18 @@
             {icon.kebabName}
           </p>
           <p>{iconDescription(icon)}</p>
+          {#if data.heroiconsRequest}
+            <p class="text-sm text-slate-500 dark:text-slate-400">
+              Missing from Heroicons, where it was requested with
+              {data.heroiconsRequest.votes} votes in
+              {#each data.heroiconsRequest.discussions as discussion, i (discussion)}
+                {#if i > 0}{" and "}{/if}
+                <Link href={heroiconsDiscussionUrl(discussion)} newTab
+                  >#{discussion}</Link
+                >
+              {/each}.
+            </p>
+          {/if}
         </div>
 
         <div class="lg:col-start-1">

@@ -32,7 +32,10 @@ export function iconJsxCode(fullHeroicon: FullHeroicon, type: HeroiconType) {
 }
 
 export function npmPackageName(iconset: string, framework: Framework) {
-  if (framework === "svelte") return `@sidekickicons/svelte`;
+  // Heroicons has no official Svelte or React Native package, so ours include them
+  if (framework === "svelte" || framework === "react-native") {
+    return `@sidekickicons/${framework}`;
+  }
 
   return `@${iconset.toLowerCase()}/${framework}`;
 }
@@ -46,11 +49,12 @@ export function iconImportCode(
   const npmPackage = npmPackageName(fullHeroicon.iconset, framework);
   const packagePart = `"${npmPackage}/${iconDirectories[type]}"`;
 
-  return `${importPart} ${packagePart};`;
+  return `${importPart}${packagePart};`;
 }
 
 export function iconsetInstallCode(iconset: string, framework: Framework) {
-  return `npm install ${npmPackageName(iconset, framework)}`;
+  const peerDependencies = framework === "react-native" ? " react-native-svg" : "";
+  return `npm install ${npmPackageName(iconset, framework)}${peerDependencies}`;
 }
 
 export function iconReactCode(fullHeroicon: FullHeroicon, type: HeroiconType) {
@@ -86,5 +90,18 @@ export function iconSveltePlusImportCode(
 ) {
   const importCode = iconImportCode(fullHeroicon, type, "svelte");
   const componentCode = iconSvelteCode(fullHeroicon, type);
+  return `${importCode}\n\n${componentCode}`;
+}
+
+export function iconReactNativeCode(fullHeroicon: FullHeroicon, type: HeroiconType) {
+  return `<${fullHeroicon.componentName} color="#64748b" />`;
+}
+
+export function iconReactNativePlusImportCode(
+  fullHeroicon: FullHeroicon,
+  type: HeroiconType,
+) {
+  const importCode = iconImportCode(fullHeroicon, type, "react-native");
+  const componentCode = iconReactNativeCode(fullHeroicon, type);
   return `${importCode}\n\n${componentCode}`;
 }

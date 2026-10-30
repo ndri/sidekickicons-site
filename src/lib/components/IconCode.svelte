@@ -3,6 +3,8 @@
   import { codeTypes } from "../util/constants";
   import {
     iconReactCode,
+    iconReactNativeCode,
+    iconReactNativePlusImportCode,
     iconReactPlusImportCode,
     iconSvelteCode,
     iconSveltePlusImportCode,
@@ -35,6 +37,10 @@
   const vuePlusImportCode = $derived(iconVuePlusImportCode(fullHeroicon, type));
   const svelteCode = $derived(iconSvelteCode(fullHeroicon, type));
   const sveltePlusImportCode = $derived(iconSveltePlusImportCode(fullHeroicon, type));
+  const reactNativeCode = $derived(iconReactNativeCode(fullHeroicon, type));
+  const reactNativePlusImportCode = $derived(
+    iconReactNativePlusImportCode(fullHeroicon, type),
+  );
 </script>
 
 {#snippet installCode(framework: Framework)}
@@ -52,6 +58,20 @@
   {@render installCode("svelte")}
   <div class="text-xs text-slate-700 dark:text-slate-300">
     The Svelte components already include the size class.
+  </div>
+  <CodeBlock {code} language="jsx" />
+{/snippet}
+
+{#snippet reactNativeNotes(code: string)}
+  <div class="text-xs text-slate-700 dark:text-slate-300">
+    There is no official React Native package for Heroicons, so the Sidekickicons
+    package includes them too. It draws icons with react-native-svg.
+  </div>
+  {@render installCode("react-native")}
+  <div class="text-xs text-slate-700 dark:text-slate-300">
+    In an Expo app, install react-native-svg with
+    <code>npx expo install react-native-svg</code> instead. Icons take
+    <code>size</code> and <code>color</code> props.
   </div>
   <CodeBlock {code} language="jsx" />
 {/snippet}
@@ -83,5 +103,9 @@
     {@render svelteNotes(svelteCode)}
   {:else if codeType === "Svelte + import"}
     {@render svelteNotes(sveltePlusImportCode)}
+  {:else if codeType === "React Native"}
+    {@render reactNativeNotes(reactNativeCode)}
+  {:else if codeType === "React Native + import"}
+    {@render reactNativeNotes(reactNativePlusImportCode)}
   {/if}
 </div>

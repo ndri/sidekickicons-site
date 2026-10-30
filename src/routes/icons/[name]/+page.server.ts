@@ -1,6 +1,7 @@
 import { error } from "@sveltejs/kit";
 import icons from "$lib/icons/allicons";
 import { relatedIcons } from "$lib/util/iconPages";
+import { heroiconsRequests } from "$lib/data/missingHeroicons";
 import type { FullHeroicon } from "$lib/types";
 import type { EntryGenerator, PageServerLoad } from "./$types";
 
@@ -25,6 +26,7 @@ export const load: PageServerLoad = ({ params }) => {
     // Neighbours in alphabetical order, the same order as the homepage grid
     previous: index > 0 ? link(icons[index - 1]) : null,
     next: index < icons.length - 1 ? link(icons[index + 1]) : null,
+    heroiconsRequest: heroiconsRequests[icon.kebabName] ?? null,
     related: related.map(link),
     // Sidekickicons often have no close match in Heroicons, so their pages also link
     // to every other Sidekickicon

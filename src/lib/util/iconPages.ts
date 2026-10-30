@@ -48,8 +48,8 @@ export function iconMetaDescription(icon: FullHeroicon) {
   const packages =
     icon.iconset === "Sidekickicons"
       ? "a fanmade companion to Heroicons"
-      : "with an unofficial Svelte package";
-  return `${iconTitle(icon.kebabName)} icon (${icon.componentName}) for React, Vue, Svelte and SVG, ${packages}. ${iconDescription(icon)}`;
+      : "with unofficial Svelte and React Native packages";
+  return `${iconTitle(icon.kebabName)} icon (${icon.componentName}) for React, Vue, Svelte, React Native and SVG, ${packages}. ${iconDescription(icon)}`;
 }
 
 // Icons that share keywords or name parts with the given icon, best matches first

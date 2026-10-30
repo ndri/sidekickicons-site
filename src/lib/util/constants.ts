@@ -9,6 +9,8 @@ import type {
 import {
   iconJsxCode,
   iconReactCode,
+  iconReactNativeCode,
+  iconReactNativePlusImportCode,
   iconReactPlusImportCode,
   iconSvelteCode,
   iconSveltePlusImportCode,
@@ -102,6 +104,8 @@ export const iconCodeFunctions: Record<
   "React + import": iconReactPlusImportCode,
   "Vue + import": iconVuePlusImportCode,
   "Svelte + import": iconSveltePlusImportCode,
+  "React Native": iconReactNativeCode,
+  "React Native + import": iconReactNativePlusImportCode,
 } as const;
 
 export const deprecatedHeroicons = [
@@ -124,4 +128,6 @@ export const codeTypes: IconCodeType[] = [
   "Vue + import",
   "Svelte",
   "Svelte + import",
+  "React Native",
+  "React Native + import",
 ] as const;
