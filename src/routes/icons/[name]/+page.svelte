@@ -1,4 +1,9 @@
 <script lang="ts">
+  import {
+    ArrowLeftIcon,
+    ChevronLeftIcon,
+    ChevronRightIcon,
+  } from "@sidekickicons/svelte/16/solid";
   import Footer from "$lib/components/Footer.svelte";
   import Header from "$lib/components/Header.svelte";
   import PageMeta from "$lib/components/PageMeta.svelte";
@@ -18,7 +23,7 @@
   import { svgWithClass } from "$lib/util/code";
   import {
     iconDescription,
-    iconLabel,
+    iconExampleText,
     iconMetaDescription,
     iconPagePath,
     iconTitle,
@@ -36,6 +41,24 @@
   });
 </script>
 
+{#snippet neighbour(link: { kebabName: string; svg: string }, rel: "prev" | "next")}
+  <a
+    href={iconPagePath(link.kebabName)}
+    {rel}
+    class="group inline-flex items-center gap-x-1.5 rounded-md bg-white px-2 py-1 font-medium text-slate-700 shadow-sm ring-1 ring-inset ring-slate-300 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-600 dark:bg-slate-800 dark:text-slate-200 dark:ring-slate-700 dark:hover:bg-slate-700"
+    aria-label="{rel === 'prev' ? 'Previous' : 'Next'} icon: {link.kebabName}"
+  >
+    {#if rel === "prev"}
+      <ChevronLeftIcon class="text-slate-400 group-hover:text-slate-500" />
+    {/if}
+    {@html svgWithClass(link.svg, "size-5 shrink-0")}
+    <span class="max-w-28 truncate sm:max-w-56">{link.kebabName}</span>
+    {#if rel === "next"}
+      <ChevronRightIcon class="text-slate-400 group-hover:text-slate-500" />
+    {/if}
+  </a>
+{/snippet}
+
 <PageMeta
   title="{title} icon – {icon.iconset} for React, Vue & Svelte"
   description={iconMetaDescription(icon)}
@@ -46,15 +69,23 @@
   <Header compact />
   <main class="flex w-full max-w-7xl flex-col gap-12 p-4 sm:p-8">
     <div class="flex flex-col gap-6">
-      <p class="text-sm"><Link href="/icons">← All icons</Link></p>
+      <div class="flex flex-wrap items-center justify-between gap-x-4 gap-y-3 text-sm">
+        <Link href="/icons"><ArrowLeftIcon class="mr-0.5" />All icons</Link>
+        <nav class="flex gap-2" aria-label="Previous and next icon">
+          {#if data.previous}
+            {@render neighbour(data.previous, "prev")}
+          {/if}
+          {#if data.next}
+            {@render neighbour(data.next, "next")}
+          {/if}
+        </nav>
+      </div>
 
       <div class="grid grid-cols-1 gap-x-8 gap-y-6 lg:grid-cols-2">
         <div class="flex flex-col gap-3">
           <h1 class="text-2xl font-bold sm:text-3xl">{title} icon</h1>
-          <p class="text-slate-500 dark:text-slate-400">
-            <span class="font-mono text-sm">{icon.kebabName}</span>
-            ·
-            {icon.iconset}
+          <p class="font-mono text-sm text-slate-500 dark:text-slate-400">
+            {icon.kebabName}
           </p>
           <p>{iconDescription(icon)}</p>
         </div>
@@ -113,7 +144,7 @@
 
     <section class="flex flex-col gap-4">
       <h2 class="text-lg font-semibold">{title} icon in UI elements</h2>
-      <IconExamples fullHeroicon={icon} label={iconLabel(icon)} />
+      <IconExamples fullHeroicon={icon} text={iconExampleText(icon)} />
     </section>
 
     {#if data.related.length}

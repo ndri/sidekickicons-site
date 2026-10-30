@@ -1,5 +1,6 @@
 import type { FullHeroicon } from "../types";
 import { sidekickiconDescriptions } from "../data/descriptions";
+import { exampleText } from "../data/exampleText";
 import { dashesToSpaces } from "./util";
 
 export const siteUrl = "https://sidekickicons.com";
@@ -32,8 +33,15 @@ export function iconDescription(icon: FullHeroicon) {
   return `The ${name} icon from ${icon.iconset}, in outline, solid, mini and micro styles.${uses}`;
 }
 
-export function iconLabel(icon: FullHeroicon) {
-  return sidekickiconDescriptions[icon.kebabName]?.label ?? iconTitle(icon.kebabName);
+export function iconExampleText(icon: FullHeroicon) {
+  const title = iconTitle(icon.kebabName);
+  const [button, input, badge, nav] = exampleText[icon.kebabName] ?? [
+    title,
+    title,
+    title,
+    title,
+  ];
+  return { button, input, badge, nav };
 }
 
 export function iconMetaDescription(icon: FullHeroicon) {

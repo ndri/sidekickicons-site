@@ -2,6 +2,7 @@ import { expect, test } from "vitest";
 import icons from "../icons/allicons";
 import { iconDescription, iconTitle, relatedIcons } from "./iconPages";
 import { sidekickiconDescriptions } from "../data/descriptions";
+import { exampleText } from "../data/exampleText";
 
 const icon = (name: string) => icons.find((icon) => icon.kebabName === name)!;
 
@@ -31,4 +32,10 @@ test("related icons share keywords or name parts", () => {
   expect(related[0]).toBe("pin-slash");
   expect(related).not.toContain("pin");
   expect(relatedIcons(icon("arrow-down"), icons).length).toBe(12);
+});
+
+test("every icon has example text, and every example text belongs to an icon", () => {
+  const names = new Set(icons.map((icon) => icon.kebabName));
+  for (const name of Object.keys(exampleText)) expect(names.has(name), name).toBe(true);
+  for (const name of names) expect(exampleText[name], name).toBeDefined();
 });

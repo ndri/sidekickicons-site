@@ -18,8 +18,13 @@ export const load: PageServerLoad = ({ params }) => {
     svg: icon.outline24,
   });
 
+  const index = icons.indexOf(icon);
+
   return {
     icon,
+    // Neighbours in alphabetical order, the same order as the homepage grid
+    previous: index > 0 ? link(icons[index - 1]) : null,
+    next: index < icons.length - 1 ? link(icons[index + 1]) : null,
     related: related.map(link),
     // Sidekickicons often have no close match in Heroicons, so their pages also link
     // to every other Sidekickicon

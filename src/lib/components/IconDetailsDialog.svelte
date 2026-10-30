@@ -13,7 +13,6 @@
   import { urlState } from "../util/urlState.svelte";
   import ButtonSelect from "./ButtonSelect.svelte";
   import Button from "./Button.svelte";
-  import Link from "./Link.svelte";
   import IconInfoList from "./IconInfoList.svelte";
   import IconCode from "./IconCode.svelte";
 
@@ -65,7 +64,6 @@
         <h3 id="icon-details-title" class="text-center text-lg font-semibold">
           {fullHeroicon.kebabName}
         </h3>
-        <Link href={iconPagePath(fullHeroicon.kebabName)}>View icon page</Link>
         <div
           class="flex h-36 w-36 items-center justify-center rounded-md border border-slate-200 dark:border-slate-700"
         >
@@ -89,8 +87,18 @@
           setCodeType={(value) => (selectedCodeType.value = value)}
         />
       </div>
-      <div class="mt-5 sm:mt-6 sm:grid sm:grid-flow-row-dense sm:grid-cols-1 sm:gap-3">
-        <Button text="Close" style="light" onclick={closeDialog} />
+      <div class="mt-5 sm:mt-6 sm:grid sm:grid-flow-row-dense sm:grid-cols-2 sm:gap-3">
+        <Button
+          text="View icon page"
+          href={iconPagePath(fullHeroicon.kebabName)}
+          class="w-full sm:col-start-2"
+        />
+        <Button
+          text="Close"
+          style="light"
+          onclick={closeDialog}
+          class="mt-3 w-full sm:col-start-1 sm:mt-0"
+        />
       </div>
     </div>
   </div>
