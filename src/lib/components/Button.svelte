@@ -15,6 +15,7 @@
     class: className = "",
     onclick = () => {},
     href,
+    newTab = false,
   }: {
     text: string;
     Icon?: Component<{ class?: ClassValue }>;
@@ -23,6 +24,7 @@
     class?: string;
     onclick?: () => void;
     href?: string;
+    newTab?: boolean;
   } = $props();
 
   const styleClasses = {
@@ -66,7 +68,12 @@
 {/snippet}
 
 {#if href}
-  <a {href} target="_blank" rel="noopener noreferrer" class={sharedClass}>
+  <a
+    {href}
+    target={newTab ? "_blank" : "_self"}
+    rel={newTab ? "noopener noreferrer" : ""}
+    class={sharedClass}
+  >
     {@render children()}
   </a>
 {:else}

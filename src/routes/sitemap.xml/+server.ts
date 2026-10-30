@@ -1,14 +1,23 @@
+import icons from "$lib/icons/allicons";
+import { iconPagePath, siteUrl } from "$lib/util/iconPages";
+
 export const prerender = true;
 
 const pages = [
-  { url: "https://sidekickicons.com", changeFrequency: "monthly", priority: 1 },
+  { path: "", changeFrequency: "monthly", priority: 1 },
+  { path: "/icons", changeFrequency: "monthly", priority: 0.8 },
+  ...icons.map((icon) => ({
+    path: iconPagePath(icon.kebabName),
+    changeFrequency: "monthly",
+    priority: icon.iconset === "Sidekickicons" ? 0.7 : 0.5,
+  })),
 ];
 
 export function GET() {
   const lastModified = new Date().toISOString();
   const urls = pages.map(
     (page) => `<url>
-<loc>${page.url}</loc>
+<loc>${siteUrl}${page.path}</loc>
 <lastmod>${lastModified}</lastmod>
 <changefreq>${page.changeFrequency}</changefreq>
 <priority>${page.priority}</priority>

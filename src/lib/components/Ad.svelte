@@ -27,6 +27,7 @@
           style="amber"
           size="lg"
           href="https://clankerview.com?utm_source=sidekickicons"
+          newTab
           class="whitespace-nowrap"
         />
         <Button

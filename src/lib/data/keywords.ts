@@ -12,7 +12,7 @@ export const sidekickiconKeywords = {
     "spin",
     "right",
   ],
-  "arrow-path-single-counter-clockwise": [
+  "arrow-path-single-counterclockwise": [
     "refresh",
     "reload",
     "restart",

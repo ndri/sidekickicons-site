@@ -2,7 +2,7 @@ import { pushState, replaceState } from "$app/navigation";
 import { createUrl } from "./util";
 
 // SvelteKit's shallow routing doesn't update page.url, so the query string is tracked
-// here instead. Call syncUrlState on mount and on popstate.
+// here instead. The root layout calls syncUrlState after navigation and on popstate.
 let search = $state("");
 
 export function syncUrlState() {

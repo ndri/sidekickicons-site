@@ -2,33 +2,19 @@
   import { onMount } from "svelte";
   import { fade, fly } from "svelte/transition";
   import type { FullHeroicon, HeroiconType, IconCodeType } from "../types";
-  import DescriptionList from "./DescriptionList.svelte";
-  import CodeBlock from "./CodeBlock.svelte";
   import {
     codeTypes,
     iconSizeClasses4x,
-    iconTypeExplanations,
     iconTypeNames,
     iconTypes,
   } from "../util/constants";
-  import {
-    iconReactCode,
-    iconReactPlusImportCode,
-    iconSvelteCode,
-    iconSveltePlusImportCode,
-    iconSvgCode,
-    iconSvgToJsx,
-    iconVueCode,
-    iconVuePlusImportCode,
-    iconsetInstallCode,
-    svgWithClass,
-  } from "../util/code";
-  import type { Framework } from "../types";
+  import { svgWithClass } from "../util/code";
+  import { iconPagePath } from "../util/iconPages";
   import { urlState } from "../util/urlState.svelte";
   import ButtonSelect from "./ButtonSelect.svelte";
   import Button from "./Button.svelte";
-  import Link from "./Link.svelte";
-  import authorsData from "../data/authors.json";
+  import IconInfoList from "./IconInfoList.svelte";
+  import IconCode from "./IconCode.svelte";
 
   let {
     fullHeroicon,
@@ -51,53 +37,7 @@
     // showModal focuses the first radio button, which shows a focus ring
     panel.focus();
   });
-
-  // Get author data if available
-  const authorInfo = $derived(
-    (authorsData as Record<string, { author: string; authorLink: string; pr: string }>)[
-      fullHeroicon.kebabName
-    ],
-  );
-
-  const prettySvgCode = $derived(iconSvgCode(fullHeroicon, selectedType.value));
-  const prettyJsxCode = $derived(iconSvgToJsx(prettySvgCode));
-  const reactCode = $derived(iconReactCode(fullHeroicon, selectedType.value));
-  const reactPlusImportCode = $derived(
-    iconReactPlusImportCode(fullHeroicon, selectedType.value),
-  );
-  const vueCode = $derived(iconVueCode(fullHeroicon, selectedType.value));
-  const vuePlusImportCode = $derived(
-    iconVuePlusImportCode(fullHeroicon, selectedType.value),
-  );
-  const svelteCode = $derived(iconSvelteCode(fullHeroicon, selectedType.value));
-  const sveltePlusImportCode = $derived(
-    iconSveltePlusImportCode(fullHeroicon, selectedType.value),
-  );
 </script>
-
-{#snippet author()}
-  <Link href={authorInfo.authorLink} newTab>{authorInfo.author}</Link>
-  (<Link href={authorInfo.pr} newTab>PR</Link>)
-{/snippet}
-
-{#snippet installCode(framework: Framework)}
-  <CodeBlock
-    code={iconsetInstallCode(fullHeroicon.iconset, framework)}
-    language="bash"
-  />
-{/snippet}
-
-{#snippet svelteNotes(code: string)}
-  <div class="text-xs text-slate-700 dark:text-slate-300">
-    There is no official Svelte package for Heroicons, so the Sidekickicons package
-    includes them too.
-  </div>
-  {@render installCode("svelte")}
-  <div class="text-xs text-slate-700 dark:text-slate-300">
-    The Svelte components already include the size class.
-  </div>
-  <CodeBlock {code} language="jsx" />
-{/snippet}
 
 <!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_noninteractive_element_interactions -->
 <dialog
@@ -139,48 +79,26 @@
           values={iconTypes}
           labels={iconTypeNames}
         />
-        <DescriptionList
-          rows={[
-            ["Component", fullHeroicon.componentName],
-            ["Intended size", iconTypeExplanations[selectedType.value]],
-            ["Iconset", fullHeroicon.iconset],
-            ["Keywords", fullHeroicon.keywords.join(", ")],
-            ...(authorInfo ? [["Author", author] as [string, typeof author]] : []),
-          ]}
+        <IconInfoList {fullHeroicon} type={selectedType.value} />
+        <IconCode
+          {fullHeroicon}
+          type={selectedType.value}
+          codeType={selectedCodeType.value}
+          setCodeType={(value) => (selectedCodeType.value = value)}
         />
-
-        <div class="flex w-full flex-col gap-2">
-          <ButtonSelect
-            label="Code to copy"
-            selectedValue={selectedCodeType.value}
-            setSelectedValue={(value) => (selectedCodeType.value = value)}
-            values={codeTypes}
-          />
-          {#if selectedCodeType.value === "SVG"}
-            <CodeBlock code={prettySvgCode} language="svg" />
-          {:else if selectedCodeType.value === "JSX"}
-            <CodeBlock code={prettyJsxCode} language="jsx" />
-          {:else if selectedCodeType.value === "React"}
-            {@render installCode("react")}
-            <CodeBlock code={reactCode} language="jsx" />
-          {:else if selectedCodeType.value === "React + import"}
-            {@render installCode("react")}
-            <CodeBlock code={reactPlusImportCode} language="jsx" />
-          {:else if selectedCodeType.value === "Vue"}
-            {@render installCode("vue")}
-            <CodeBlock code={vueCode} language="jsx" />
-          {:else if selectedCodeType.value === "Vue + import"}
-            {@render installCode("vue")}
-            <CodeBlock code={vuePlusImportCode} language="jsx" />
-          {:else if selectedCodeType.value === "Svelte"}
-            {@render svelteNotes(svelteCode)}
-          {:else if selectedCodeType.value === "Svelte + import"}
-            {@render svelteNotes(sveltePlusImportCode)}
-          {/if}
-        </div>
       </div>
-      <div class="mt-5 sm:mt-6 sm:grid sm:grid-flow-row-dense sm:grid-cols-1 sm:gap-3">
-        <Button text="Close" style="light" onclick={closeDialog} />
+      <div class="mt-5 sm:mt-6 sm:grid sm:grid-flow-row-dense sm:grid-cols-2 sm:gap-3">
+        <Button
+          text="View icon page"
+          href={iconPagePath(fullHeroicon.kebabName)}
+          class="w-full sm:col-start-2"
+        />
+        <Button
+          text="Close"
+          style="light"
+          onclick={closeDialog}
+          class="mt-3 w-full sm:col-start-1 sm:mt-0"
+        />
       </div>
     </div>
   </div>
