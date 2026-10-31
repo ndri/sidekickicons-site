@@ -50,12 +50,22 @@
         icon.iconset === selectedIconSet.value || selectedIconSet.value === "All",
     ),
   );
+  const search = (list: typeof icons, query: string) =>
+    matchSorter(list, dashesToSpaces(query), {
+      keys: [(icon) => dashesToSpaces(icon.kebabName), "keywords"],
+    });
+
+  const iconsetMatches = $derived(
+    searchQuery.value ? search(iconsetIcons, searchQuery.value) : iconsetIcons,
+  );
+
+  // When a search in one iconset finds nothing, show matches from all icons instead,
+  // with a note above them. The iconset filter itself stays as it is.
+  const showingAllIconsets = $derived(
+    !iconsetMatches.length && !!searchQuery.value && selectedIconSet.value !== "All",
+  );
   const filteredIcons = $derived(
-    searchQuery.value
-      ? matchSorter(iconsetIcons, dashesToSpaces(searchQuery.value), {
-          keys: [(icon) => dashesToSpaces(icon.kebabName), "keywords"],
-        })
-      : iconsetIcons,
+    showingAllIconsets ? search(icons, searchQuery.value) : iconsetMatches,
   );
 
   const slicedIcons = $derived(
@@ -106,6 +116,14 @@
       />
     </div>
   </div>
+  {#if showingAllIconsets && filteredIcons.length}
+    <p class="-mb-2 text-center text-sm text-slate-500 dark:text-slate-400">
+      No {selectedIconSet.value} match
+      <span class="font-semibold text-slate-700 dark:text-slate-200"
+        >{searchQuery.value}</span
+      >, so these are results from all icons.
+    </p>
+  {/if}
   <div
     class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
   >
