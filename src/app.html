@@ -38,6 +38,15 @@
           document.documentElement.dataset.clankerViewDismissed = "";
       } catch (e) {}
     </script>
+    <!-- Analytics on the site's own domain, proxied by Caddy (~/Projects/vps-agent, services.md):
+         Plausible next to Umami until Andri decides on plausible.io in January 2027 -->
+    <script
+      defer
+      data-domain="sidekickicons.com"
+      data-api="/api/event"
+      src="/js/script.js"
+    ></script>
+    <script defer src="/u/s.js" data-website-id="UMAMI_WEBSITE_ID"></script>
     %sveltekit.head%
   </head>
   <body
