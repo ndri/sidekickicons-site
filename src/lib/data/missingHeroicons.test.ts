@@ -1,6 +1,7 @@
 import { expect, test } from "vitest";
 import icons from "../icons/allicons";
 import {
+  comingNext,
   heroiconsPairings,
   heroiconsRequests,
   sidekickiconGroups,
@@ -22,4 +23,9 @@ test("pairing notes and Heroicons requests are for Sidekickicons", () => {
   ]) {
     expect(sidekickicons, name).toContain(name);
   }
+});
+
+test("icons listed as coming next don't exist yet", () => {
+  const names = icons.map((icon) => icon.kebabName);
+  for (const { name } of comingNext) expect(names, name).not.toContain(name);
 });

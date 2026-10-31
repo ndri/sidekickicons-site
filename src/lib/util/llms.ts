@@ -120,6 +120,7 @@ export function llmsTxt(icons: FullHeroicon[], version: string) {
 - [icons.json](${siteUrl}/icons.json): the same as machine-readable JSON, with links to each icon's SVG files
 - [All icons](${siteUrl}/icons): a page for every icon, with code and examples
 - [Icons missing from Heroicons](${siteUrl}/missing-heroicons): every Sidekickicon, grouped by use
+- [Heroicons for React Native](${siteUrl}/react-native): install, usage, props and switching from react-native-heroicons
 
 ## Optional
 

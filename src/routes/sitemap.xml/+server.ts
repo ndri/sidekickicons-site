@@ -7,6 +7,7 @@ const pages = [
   { path: "", changeFrequency: "monthly", priority: 1 },
   { path: "/icons", changeFrequency: "monthly", priority: 0.8 },
   { path: "/missing-heroicons", changeFrequency: "monthly", priority: 0.9 },
+  { path: "/react-native", changeFrequency: "monthly", priority: 0.9 },
   ...icons.map((icon) => ({
     path: iconPagePath(icon.kebabName),
     changeFrequency: "monthly",
