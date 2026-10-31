@@ -17,6 +17,7 @@ test("every icon has SVG markup for every type", () => {
         /^<svg [^>]*>[\s\S]*<\/svg>$/,
       );
       expect(icon[type]).not.toContain("class=");
+      expect(icon[type]).not.toMatch(/^<svg[^>]* (width|height)=/);
     }
   }
 });
