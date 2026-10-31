@@ -21,7 +21,11 @@ const svelteDirectories: Record<HeroiconType, string> = {
 function svgMarkup(svelteSource: string) {
   const svg = svelteSource.match(/<svg[\s\S]*<\/svg>/)?.[0];
   if (!svg) throw new Error("No <svg> element found");
-  return svg.replace(/ class=\{[^}]*\}/, "");
+  // The package sets a default size with a class or with width and height attributes,
+  // depending on its version. Neither belongs in the copyable SVG
+  return svg.replace(/^<svg[^>]*>/, (openingTag) =>
+    openingTag.replace(/ class=\{[^}]*\}/, "").replace(/ width="\d+" height="\d+"/, ""),
+  );
 }
 
 function heroiconNames() {
