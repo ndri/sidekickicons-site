@@ -78,7 +78,7 @@ import { CrownIcon } from "@sidekickicons/vue/24/outline";
 
 ### Svelte
 
-Heroicons has no official Svelte package, so \`@sidekickicons/svelte\` includes both Heroicons and Sidekickicons. It needs Svelte 5.19 or later. The components already have their default size.
+Heroicons has no official Svelte package, so \`@sidekickicons/svelte\` includes both Heroicons and Sidekickicons. It needs Svelte 5.19 or later. Icons are 24, 20 or 16 px by default, and any size class like \`size-10\` overrides that.
 
 \`\`\`bash
 npm install @sidekickicons/svelte
@@ -120,6 +120,7 @@ export function llmsTxt(icons: FullHeroicon[], version: string) {
 - [icons.json](${siteUrl}/icons.json): the same as machine-readable JSON, with links to each icon's SVG files
 - [All icons](${siteUrl}/icons): a page for every icon, with code and examples
 - [Icons missing from Heroicons](${siteUrl}/missing-heroicons): every Sidekickicon, grouped by use
+- [Heroicons for Svelte](${siteUrl}/svelte): install, usage, sizing and single-icon imports
 - [Heroicons for React Native](${siteUrl}/react-native): install, usage, props and switching from react-native-heroicons
 
 ## Optional

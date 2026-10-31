@@ -10,17 +10,16 @@
 
 {#snippet logo()}
   <div class="flex flex-col items-center gap-1 sm:flex-row sm:gap-3">
-    <ShieldIcon class="h-24 w-24 text-indigo-600 sm:size-12" />
+    <ShieldIcon class="size-24 text-indigo-600 sm:size-12" />
     <span>heroicons</span>
   </div>
   <span class="text-3xl">+</span>
   <div class="flex flex-col items-center gap-1 sm:flex-row sm:gap-3">
-    <MaskIcon class="h-24 w-24 text-indigo-600 sm:size-12" />
+    <MaskIcon class="size-24 text-indigo-600 sm:size-12" />
     <span>sidekickicons</span>
   </div>
 {/snippet}
 
-<!-- h-24 w-24 rather than size-24, which loses to the icons' built-in size-6 -->
 {#if compact}
   <header
     class="flex w-full max-w-7xl flex-wrap-reverse items-center justify-between gap-4 px-4 pt-8 sm:px-8"

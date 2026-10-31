@@ -53,6 +53,10 @@ export const sidekickiconDescriptions: Record<string, { description: string }> =
     description:
       "A camera with circular arrows, for switching between the front and back camera in photo and video call apps.",
   },
+  "check-square": {
+    description:
+      "A check mark in a square, for checked checkboxes, completed tasks and selecting items.",
+  },
   checklist: {
     description:
       "A list with check marks, for to-do lists, task lists and checklist formatting in text editors.",
@@ -85,6 +89,10 @@ export const sidekickiconDescriptions: Record<string, { description: string }> =
     description:
       "A dashed circle, for empty or not-started states, placeholders and new items.",
   },
+  coffee: {
+    description:
+      "A mug of coffee with steam, for cafes, breaks, drinks and buy me a coffee links.",
+  },
   compass: {
     description:
       "A compass, for explore and discovery pages, navigation and directions.",
@@ -102,6 +110,10 @@ export const sidekickiconDescriptions: Record<string, { description: string }> =
   },
   dice: {
     description: "A die, for games, random choices and rolling dice.",
+  },
+  eraser: {
+    description:
+      "An eraser, for erasing in drawing tools and removing formatting in text editors.",
   },
   "face-meh": {
     description:
@@ -154,8 +166,15 @@ export const sidekickiconDescriptions: Record<string, { description: string }> =
     description:
       "Crossed-out headphones, for deafening yourself in voice chat or muting all audio.",
   },
+  "inbox-arrow-up": {
+    description: "An inbox with an outgoing arrow, for outboxes and sent mail.",
+  },
   indent: {
     description: "Increase indent, for list and paragraph formatting in text editors.",
+  },
+  infinity: {
+    description:
+      "An infinity sign, for unlimited plans, things that never expire and endless loops.",
   },
   "italic-slash": {
     description:
@@ -195,6 +214,9 @@ export const sidekickiconDescriptions: Record<string, { description: string }> =
     description:
       "A password field with a pencil, for changing a password or editing login details.",
   },
+  percent: {
+    description: "A percent sign, for percentages, discounts and rates.",
+  },
   "photo-plus": {
     description:
       "A photo with a plus sign, for adding, attaching or uploading an image.",
@@ -233,9 +255,16 @@ export const sidekickiconDescriptions: Record<string, { description: string }> =
     description:
       "A window with a sidebar on the right, for toggling an inspector or details panel.",
   },
+  snowflake: {
+    description:
+      "A snowflake, for winter, cold weather, freezing and air conditioning.",
+  },
   square: {
     description:
       "A plain square, for shape tools, checkbox-style markers and stop buttons.",
+  },
+  "star-half": {
+    description: "The left half of a star, for half-star ratings.",
   },
   "table-cells-merge": {
     description:
@@ -244,6 +273,10 @@ export const sidekickiconDescriptions: Record<string, { description: string }> =
   "table-cells-split": {
     description:
       "Arrows pointing away from a table divider, for splitting merged table cells.",
+  },
+  target: {
+    description:
+      "A target of circles around a dot, for goals, objectives and focusing on something.",
   },
   triangle: {
     description: "A plain triangle, for shape tools and diagrams.",

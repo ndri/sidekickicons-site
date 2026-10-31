@@ -4,8 +4,7 @@
   import Header from "$lib/components/Header.svelte";
   import PageMeta from "$lib/components/PageMeta.svelte";
   import Link from "$lib/components/Link.svelte";
-  import { svgWithClass } from "$lib/util/code";
-  import { iconPagePath } from "$lib/util/iconPages";
+  import IconTiles from "$lib/components/IconTiles.svelte";
   import { comingNext, roadmapUrl, suggestIconUrl } from "$lib/data/missingHeroicons";
 
   let { data } = $props();
@@ -54,38 +53,14 @@
     {#each data.groups as group (group.title)}
       <section class="flex flex-col gap-4">
         <h2 class="text-lg font-semibold">{group.title}</h2>
-        <div
-          class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
-        >
-          {#each group.icons as icon (icon.kebabName)}
-            <a
-              href={iconPagePath(icon.kebabName)}
-              class="flex min-h-28 flex-col items-center justify-center gap-2 rounded-lg bg-slate-50 p-4 text-center hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-600 dark:bg-slate-800 dark:hover:bg-slate-700"
-            >
-              {@html svgWithClass(
-                icon.svg,
-                "size-6 text-slate-700 dark:text-slate-100",
-              )}
-              <span
-                class="max-w-full truncate text-xs text-slate-700 dark:text-slate-200"
-              >
-                {icon.kebabName}
-              </span>
-              {#if icon.note}
-                <span class="text-xs text-slate-500 dark:text-slate-400"
-                  >{icon.note}</span
-                >
-              {/if}
-            </a>
-          {/each}
-        </div>
+        <IconTiles icons={group.icons} />
       </section>
     {/each}
 
     <section class="flex max-w-3xl flex-col gap-4">
       <h2 class="text-lg font-semibold">Coming next</h2>
       <p>
-        These are the most requested icons that neither set has yet, by votes on
+        These are some of the most requested icons that neither set has yet, by votes on
         Heroicons' GitHub discussions:
       </p>
       <ul class="flex flex-wrap gap-2">

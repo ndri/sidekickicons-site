@@ -57,7 +57,8 @@
   </div>
   {@render installCode("svelte")}
   <div class="text-xs text-slate-700 dark:text-slate-300">
-    The Svelte components already include the size class.
+    The Svelte components have a default size, so you only need a size class to change
+    it.
   </div>
   <CodeBlock {code} language="jsx" />
 {/snippet}

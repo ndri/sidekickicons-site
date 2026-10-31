@@ -9,6 +9,7 @@ export const sidekickiconGroups: { title: string; icons: string[] }[] = [
       "blockquote",
       "checklist",
       "checklist-boxes",
+      "eraser",
       "h4",
       "h5",
       "h6",
@@ -51,11 +52,18 @@ export const sidekickiconGroups: { title: string; icons: string[] }[] = [
       "chevron-down-up",
       "chevron-left-right",
       "chevron-right-left",
+      "inbox-arrow-up",
     ],
   },
   {
     title: "Loading and status",
-    icons: ["arc-third", "check-double", "circle-dashed", "radial-rays"],
+    icons: [
+      "arc-third",
+      "check-double",
+      "check-square",
+      "circle-dashed",
+      "radial-rays",
+    ],
   },
   {
     title: "Layout",
@@ -85,8 +93,13 @@ export const sidekickiconGroups: { title: string; icons: string[] }[] = [
     icons: ["badge", "circle", "square", "triangle"],
   },
   {
+    title: "Numbers and ratings",
+    icons: ["infinity", "percent", "star-half"],
+  },
+  {
     title: "Everyday objects",
     icons: [
+      "coffee",
       "compass",
       "computer-laptop",
       "crown",
@@ -99,12 +112,18 @@ export const sidekickiconGroups: { title: string; icons: string[] }[] = [
       "pin",
       "pin-slash",
       "robot",
+      "snowflake",
+      "target",
     ],
   },
 ];
 
 // How a Sidekickicon relates to the Heroicons it complements
 export const heroiconsPairings: Record<string, string> = {
+  percent: "Goes with Heroicons' divide, equals and slash",
+  "inbox-arrow-up": "Goes with Heroicons' inbox-arrow-down",
+  "check-square": "Goes with Heroicons' check-circle",
+  "star-half": "Pairs with Heroicons' star for half-star ratings",
   "bars-3-bottom-center": "Heroicons has left and right aligned bars",
   h4: "Heroicons has H1 to H3",
   h5: "Heroicons has H1 to H3",
@@ -133,17 +152,26 @@ export const heroiconsRequests: Record<
   string,
   { votes: number; discussions: number[] }
 > = {
+  target: { votes: 19, discussions: [364, 344, 1006] },
+  coffee: { votes: 19, discussions: [864, 437] },
+  "star-half": { votes: 18, discussions: [1090, 424, 1081] },
+  snowflake: { votes: 18, discussions: [999, 352, 1065] },
+  eraser: { votes: 17, discussions: [635, 354] },
+  "check-square": { votes: 14, discussions: [459] },
+  "inbox-arrow-up": { votes: 9, discussions: [1018] },
+  percent: { votes: 8, discussions: [420, 684] },
+  infinity: { votes: 7, discussions: [435, 1308] },
   keyboard: { votes: 31, discussions: [418, 525] },
 };
 
 // The top of the Sidekickicons roadmap
 export const comingNext: { name: string; votes: number }[] = [
-  { name: "target", votes: 19 },
-  { name: "coffee", votes: 19 },
-  { name: "star-half", votes: 18 },
-  { name: "snowflake", votes: 18 },
-  { name: "eraser", votes: 17 },
-  { name: "check-square", votes: 14 },
+  { name: "leaf", votes: 16 },
+  { name: "gauge", votes: 14 },
+  { name: "git-branch", votes: 12 },
+  { name: "hourglass", votes: 6 },
+  { name: "crop", votes: 6 },
+  { name: "pill", votes: 5 },
 ];
 
 export const heroiconsDiscussionUrl = (number: number) =>

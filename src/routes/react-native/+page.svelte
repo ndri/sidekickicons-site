@@ -6,7 +6,8 @@
   import Link from "$lib/components/Link.svelte";
   import Button from "$lib/components/Button.svelte";
   import CodeBlock from "$lib/components/CodeBlock.svelte";
-  import { svgWithClass } from "$lib/util/code";
+  import DocsTable from "$lib/components/DocsTable.svelte";
+  import IconTiles from "$lib/components/IconTiles.svelte";
   import { iconPagePath } from "$lib/util/iconPages";
 
   let { data } = $props();
@@ -61,36 +62,6 @@ import { SparklesIcon } from "@sidekickicons/react-native/24/outline";`;
   path="/react-native"
 />
 
-{#snippet table(head: string[], rows: string[][], mono: number[])}
-  <div class="overflow-x-auto rounded-md ring-1 ring-slate-200 dark:ring-slate-700">
-    <table class="w-full text-left text-sm">
-      <thead class="bg-slate-50 dark:bg-slate-800">
-        <tr>
-          {#each head as cell (cell)}
-            <th class="px-3 py-2 font-semibold">{cell}</th>
-          {/each}
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-slate-100 dark:divide-slate-700">
-        {#each rows as row (row[0])}
-          <tr>
-            {#each row as cell, i (i)}
-              <td
-                class={[
-                  "px-3 py-2 text-slate-600 dark:text-slate-300",
-                  mono.includes(i) && "font-mono whitespace-nowrap text-xs",
-                ]}
-              >
-                {cell}
-              </td>
-            {/each}
-          </tr>
-        {/each}
-      </tbody>
-    </table>
-  </div>
-{/snippet}
-
 <div class="flex flex-col items-center">
   <Header compact />
   <main class="flex w-full max-w-7xl flex-col gap-12 p-4 sm:p-8">
@@ -136,7 +107,11 @@ import { SparklesIcon } from "@sidekickicons/react-native/24/outline";`;
         Sidekickicons come from the same package, so you can mix them freely.
       </p>
       <CodeBlock code={usageCode} language="jsx" />
-      {@render table(["Style", "Import from", "Design", "Default size"], styles, [1])}
+      <DocsTable
+        head={["Style", "Import from", "Design", "Default size"]}
+        rows={styles}
+        monoColumns={[1]}
+      />
       <p>
         Component names are the icon name in PascalCase followed by <code
           class="font-mono text-sm">Icon</code
@@ -194,11 +169,11 @@ import { SparklesIcon } from "@sidekickicons/react-native/24/outline";`;
         <code class="font-mono text-sm">color</code> props work the same way here, so usually
         only the imports change:
       </p>
-      {@render table(
-        ["react-native-heroicons", "@sidekickicons/react-native"],
-        migration,
-        [0, 1],
-      )}
+      <DocsTable
+        head={["react-native-heroicons", "@sidekickicons/react-native"]}
+        rows={migration}
+        monoColumns={[0, 1]}
+      />
       <CodeBlock code={migrationCode} language="jsx" />
     </section>
 
@@ -210,23 +185,7 @@ import { SparklesIcon } from "@sidekickicons/react-native/24/outline";`;
           >Icons missing from Heroicons</Link
         >.
       </p>
-      <div
-        class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
-      >
-        {#each data.featured as icon (icon.kebabName)}
-          <a
-            href={iconPagePath(icon.kebabName)}
-            class="flex min-h-28 flex-col items-center justify-center rounded-lg bg-slate-50 p-4 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-600 dark:bg-slate-800 dark:hover:bg-slate-700"
-          >
-            {@html svgWithClass(icon.svg, "size-6 text-slate-700 dark:text-slate-100")}
-            <span
-              class="mt-2 max-w-full truncate text-xs text-slate-500 dark:text-slate-400"
-            >
-              {icon.kebabName}
-            </span>
-          </a>
-        {/each}
-      </div>
+      <IconTiles icons={data.featured} />
     </section>
   </main>
   <Footer />
