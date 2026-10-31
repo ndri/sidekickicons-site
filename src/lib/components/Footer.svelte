@@ -36,6 +36,7 @@
           href: "https://github.com/ndri/sidekickicons/blob/main/CHANGELOG.md",
         },
         { text: "Suggest an icon", href: suggestIconUrl },
+        { text: "llms.txt", href: "/llms.txt" },
         { text: "Website source", href: "https://github.com/ndri/sidekickicons-site" },
       ],
     },
