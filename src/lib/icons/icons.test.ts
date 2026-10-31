@@ -1,12 +1,19 @@
 import { expect, test } from "vitest";
 import icons from "./allicons";
 import { iconTypes } from "../util/constants";
+import keywords from "../data/keywords";
 import {
   iconReactNativePlusImportCode,
   iconSvgCode,
   iconsetInstallCode,
   svgWithClass,
 } from "../util/code";
+
+test("every icon has keywords, and every keyword entry is for an icon", () => {
+  for (const icon of icons) expect(icon.keywords, icon.kebabName).not.toHaveLength(0);
+  const names = icons.map((icon) => icon.kebabName);
+  for (const name of Object.keys(keywords)) expect(names, name).toContain(name);
+});
 
 test("every icon has SVG markup for every type", () => {
   expect(icons.some((icon) => icon.iconset === "Heroicons")).toBe(true);
