@@ -1,6 +1,12 @@
 import { expect, test } from "vitest";
 import icons from "../icons/allicons";
-import { iconDescription, iconTitle, relatedIcons } from "./iconPages";
+import {
+  iconDescription,
+  iconStructuredData,
+  iconTitle,
+  jsonForScript,
+  relatedIcons,
+} from "./iconPages";
 import { sidekickiconDescriptions } from "../data/descriptions";
 import { exampleText } from "../data/exampleText";
 
@@ -38,4 +44,17 @@ test("every icon has example text, and every example text belongs to an icon", (
   const names = new Set(icons.map((icon) => icon.kebabName));
   for (const name of Object.keys(exampleText)) expect(names.has(name), name).toBe(true);
   for (const name of names) expect(exampleText[name], name).toBeDefined();
+});
+
+test("structured data credits the right creator and escapes the JSON for a script", () => {
+  const creator = (name: string) => {
+    const [image] = iconStructuredData(icon(name), "https://example.com/x.svg")[
+      "@graph"
+    ];
+    return image && "creator" in image ? image.creator?.name : undefined;
+  };
+  expect(creator("academic-cap")).toBe("Tailwind Labs");
+  expect(creator("face-meh")).toBe("schoberg");
+  expect(creator("crown")).toBe("Andri Soone");
+  expect(jsonForScript({ text: "</script>" })).not.toContain("</");
 });

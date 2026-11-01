@@ -1,4 +1,5 @@
 import type { FullHeroicon } from "../types";
+import authors from "../data/authors.json";
 import { sidekickiconDescriptions } from "../data/descriptions";
 import { exampleText } from "../data/exampleText";
 import { dashesToSpaces } from "./util";
@@ -80,3 +81,62 @@ export function relatedIcons(icon: FullHeroicon, icons: FullHeroicon[], count = 
     .slice(0, count)
     .map(({ other }) => other);
 }
+
+const iconAuthors = authors as Record<string, { author: string; authorLink: string }>;
+
+// schema.org data for an icon page: the icon as an image with its license and creator,
+// and the page's place in the site
+export function iconStructuredData(icon: FullHeroicon, svgUrl: string) {
+  const pageUrl = siteUrl + iconPagePath(icon.kebabName);
+  const author = iconAuthors[icon.kebabName];
+  const creator =
+    icon.iconset === "Heroicons"
+      ? {
+          "@type": "Organization",
+          name: "Tailwind Labs",
+          url: "https://tailwindcss.com",
+        }
+      : author
+        ? { "@type": "Person", name: author.author, url: author.authorLink }
+        : { "@type": "Person", name: "Andri Soone", url: "https://andri.io" };
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ImageObject",
+        name: `${iconTitle(icon.kebabName)} icon`,
+        description: iconDescription(icon),
+        contentUrl: svgUrl,
+        thumbnailUrl: siteUrl + iconShareImagePath(icon.kebabName),
+        encodingFormat: "image/svg+xml",
+        license: "https://opensource.org/licenses/MIT",
+        acquireLicensePage: pageUrl,
+        creditText: icon.iconset,
+        creator,
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Icons", item: siteUrl },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "All icons",
+            item: `${siteUrl}/icons`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: `${iconTitle(icon.kebabName)} icon`,
+            item: pageUrl,
+          },
+        ],
+      },
+    ],
+  };
+}
+
+// JSON for a <script type="application/ld+json">: "<" can't end the script element early
+export const jsonForScript = (data: unknown) =>
+  JSON.stringify(data).replaceAll("<", "\\u003c");

@@ -4,6 +4,8 @@
     ChevronLeftIcon,
     ChevronRightIcon,
   } from "@sidekickicons/svelte/16/solid";
+  import { ArrowDownTrayIcon } from "@sidekickicons/svelte/20/solid";
+  import Button from "$lib/components/Button.svelte";
   import Footer from "$lib/components/Footer.svelte";
   import Header from "$lib/components/Header.svelte";
   import PageMeta from "$lib/components/PageMeta.svelte";
@@ -28,8 +30,13 @@
     iconMetaDescription,
     iconPagePath,
     iconShareImagePath,
+    iconStructuredData,
     iconTitle,
+    jsonForScript,
+    siteUrl,
   } from "$lib/util/iconPages";
+  import { svgPath } from "$lib/util/llms";
+  import { track } from "$lib/util/analytics";
   import { urlState } from "$lib/util/urlState.svelte";
   import { heroiconsDiscussionUrl } from "$lib/data/missingHeroicons";
 
@@ -71,6 +78,12 @@
     alt: `The ${title} icon from ${icon.iconset} in outline, solid, mini and micro styles`,
   }}
 />
+
+<svelte:head>
+  {@html `<script type="application/ld+json">${jsonForScript(
+    iconStructuredData(icon, siteUrl + svgPath(icon.kebabName, "outline24")),
+  )}</script>`}
+</svelte:head>
 
 <div class="flex flex-col items-center">
   <Header compact />
@@ -152,7 +165,27 @@
     </div>
 
     <section class="flex flex-col gap-4">
-      <h2 class="text-lg font-semibold">Code</h2>
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        <h2 class="text-lg font-semibold">Code</h2>
+        <Button
+          text="Download {iconTypeNames[selectedType.value].toLowerCase()} SVG"
+          Icon={ArrowDownTrayIcon}
+          style="light"
+          href={svgPath(icon.kebabName, selectedType.value)}
+          download="{icon.kebabName}-{iconTypeNames[
+            selectedType.value
+          ].toLowerCase()}.svg"
+          onclick={() =>
+            track({
+              name: "download",
+              data: {
+                icon: icon.kebabName,
+                iconset: icon.iconset,
+                style: iconTypeNames[selectedType.value],
+              },
+            })}
+        />
+      </div>
       <IconCode
         fullHeroicon={icon}
         type={selectedType.value}

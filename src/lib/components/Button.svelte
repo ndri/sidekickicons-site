@@ -16,6 +16,7 @@
     onclick = () => {},
     href,
     newTab = false,
+    download,
   }: {
     text: string;
     Icon?: Component<{ class?: ClassValue }>;
@@ -25,6 +26,8 @@
     onclick?: () => void;
     href?: string;
     newTab?: boolean;
+    // With href: save the file under this name instead of opening it
+    download?: string;
   } = $props();
 
   const styleClasses = {
@@ -72,7 +75,9 @@
     {href}
     target={newTab ? "_blank" : "_self"}
     rel={newTab ? "noopener noreferrer" : ""}
+    {download}
     class={sharedClass}
+    {onclick}
   >
     {@render children()}
   </a>
