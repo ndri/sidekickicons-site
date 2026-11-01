@@ -21,6 +21,7 @@ export const sidekickiconGroups: { title: string; icons: string[] }[] = [
       "paint-brush-slash",
       "pilcrow",
       "quotation-mark",
+      "section-sign",
       "table-cells-merge",
       "table-cells-split",
     ],
@@ -30,6 +31,7 @@ export const sidekickiconGroups: { title: string; icons: string[] }[] = [
     icons: [
       "arrows-crossing",
       "camera-rotate",
+      "crop",
       "headphones",
       "headphones-slash",
       "microphone-slash",
@@ -44,6 +46,14 @@ export const sidekickiconGroups: { title: string; icons: string[] }[] = [
     icons: [
       "archive-box-arrow-up",
       "arrow-bottom-left-on-square",
+      "arrow-curve-down-left",
+      "arrow-curve-down-right",
+      "arrow-curve-left-down",
+      "arrow-curve-left-up",
+      "arrow-curve-right-down",
+      "arrow-curve-right-up",
+      "arrow-curve-up-left",
+      "arrow-curve-up-right",
       "arrow-path-clock",
       "arrow-path-single-clockwise",
       "arrow-path-single-counterclockwise",
@@ -59,15 +69,20 @@ export const sidekickiconGroups: { title: string; icons: string[] }[] = [
     title: "Loading and status",
     icons: [
       "arc-third",
+      "battery-25",
+      "battery-75",
       "check-double",
       "check-square",
       "circle-dashed",
+      "hourglass",
       "radial-rays",
     ],
   },
   {
     title: "Layout",
     icons: [
+      "corners-pointing-in",
+      "corners-pointing-out",
       "dots-2x2",
       "dots-2x3",
       "dots-3x2",
@@ -90,11 +105,15 @@ export const sidekickiconGroups: { title: string; icons: string[] }[] = [
   },
   {
     title: "Shapes",
-    icons: ["badge", "circle", "square", "triangle"],
+    icons: ["badge", "circle", "circle-half-full", "square", "triangle"],
   },
   {
     title: "Numbers and ratings",
     icons: ["infinity", "percent", "star-half"],
+  },
+  {
+    title: "Gender symbols",
+    icons: ["gender-ambiguous", "gender-female", "gender-male", "gender-trans"],
   },
   {
     title: "Everyday objects",
@@ -102,6 +121,7 @@ export const sidekickiconGroups: { title: string; icons: string[] }[] = [
       "coffee",
       "compass",
       "computer-laptop",
+      "crosshair",
       "crown",
       "dice",
       "face-meh",
@@ -144,6 +164,18 @@ export const heroiconsPairings: Record<string, string> = {
   shield: "Heroicons only has shields with a symbol inside",
   "computer-laptop": "Goes with Heroicons' computer-desktop",
   "face-meh": "Between Heroicons' face-smile and face-frown",
+  "arrow-curve-up-left": "A curved version of Heroicons' arrow-turn-up-left",
+  "arrow-curve-up-right": "A curved version of Heroicons' arrow-turn-up-right",
+  "arrow-curve-down-left": "A curved version of Heroicons' arrow-turn-down-left",
+  "arrow-curve-down-right": "A curved version of Heroicons' arrow-turn-down-right",
+  "arrow-curve-left-up": "A curved version of Heroicons' arrow-turn-left-up",
+  "arrow-curve-left-down": "A curved version of Heroicons' arrow-turn-left-down",
+  "arrow-curve-right-up": "A curved version of Heroicons' arrow-turn-right-up",
+  "arrow-curve-right-down": "A curved version of Heroicons' arrow-turn-right-down",
+  "corners-pointing-out": "Goes with Heroicons' arrows-pointing-out",
+  "corners-pointing-in": "Goes with Heroicons' arrows-pointing-in",
+  "battery-25": "Between Heroicons' battery-0 and battery-50",
+  "battery-75": "Between Heroicons' battery-50 and battery-100",
 };
 
 // Votes on Heroicons' own GitHub discussions asking for the icon, from the Sidekickicons
@@ -162,6 +194,15 @@ export const heroiconsRequests: Record<
   percent: { votes: 8, discussions: [420, 684] },
   infinity: { votes: 7, discussions: [435, 1308] },
   keyboard: { votes: 31, discussions: [418, 525] },
+  "gender-male": { votes: 17, discussions: [724, 1402] },
+  "gender-female": { votes: 17, discussions: [724, 1402] },
+  "gender-trans": { votes: 17, discussions: [724, 1402] },
+  "gender-ambiguous": { votes: 17, discussions: [724, 1402] },
+  "corners-pointing-out": { votes: 10, discussions: [448, 633] },
+  "corners-pointing-in": { votes: 10, discussions: [448, 633] },
+  crosshair: { votes: 7, discussions: [344] },
+  hourglass: { votes: 6, discussions: [408] },
+  crop: { votes: 6, discussions: [990] },
 };
 
 // The top of the Sidekickicons roadmap
@@ -169,8 +210,6 @@ export const comingNext: { name: string; votes: number }[] = [
   { name: "leaf", votes: 16 },
   { name: "gauge", votes: 14 },
   { name: "git-branch", votes: 12 },
-  { name: "hourglass", votes: 6 },
-  { name: "crop", votes: 6 },
   { name: "pill", votes: 5 },
 ];
 

@@ -297,4 +297,88 @@ export const sidekickiconDescriptions: Record<string, { description: string }> =
     description:
       "A window split into two panes, for split view, side-by-side layouts and comparisons.",
   },
+  "arrow-curve-up-left": {
+    description:
+      "An arrow that goes up and curves round to point left, like Heroicons 1's reply icon. For replying, going back or undo.",
+  },
+  "arrow-curve-up-right": {
+    description:
+      "An arrow that goes up and curves round to point right, for forwarding a message, sharing or redo.",
+  },
+  "arrow-curve-down-left": {
+    description:
+      "An arrow that goes down and curves round to point left, like the Enter key. For submitting, line breaks and keyboard shortcuts.",
+  },
+  "arrow-curve-down-right": {
+    description:
+      "An arrow that goes down and curves round to point right, for nested replies, sub-items and indented threads.",
+  },
+  "arrow-curve-left-up": {
+    description:
+      "An arrow that goes left and curves round to point up, for going up to a parent folder or level.",
+  },
+  "arrow-curve-left-down": {
+    description:
+      "An arrow that goes left and curves round to point down, for turn-by-turn directions and routes.",
+  },
+  "arrow-curve-right-up": {
+    description:
+      "An arrow that goes right and curves round to point up, for promoting an item, moving it up a level or rising values.",
+  },
+  "arrow-curve-right-down": {
+    description:
+      "An arrow that goes right and curves round to point down, for continuing to the next step or moving an item down.",
+  },
+  "section-sign": {
+    description:
+      "The section sign, for numbered sections in legal text, terms and regulations. Goes with the pilcrow.",
+  },
+  crosshair: {
+    description:
+      'A ring with four ticks, for "use my location", centering a map and precise selection.',
+  },
+  "gender-male": {
+    description:
+      "The male symbol, a circle with an arrow, for gender fields, filters and profiles.",
+  },
+  "gender-female": {
+    description:
+      "The female symbol, a circle with a cross, for gender fields, filters and profiles.",
+  },
+  "gender-trans": {
+    description:
+      "The transgender symbol, a circle with the male arrow, the female cross and a struck-through arrow, for gender fields and LGBTQ+ topics.",
+  },
+  "gender-ambiguous": {
+    description:
+      "A circle with both the male arrow and the female cross, for non-binary, androgynous or unspecified gender.",
+  },
+  "corners-pointing-out": {
+    description:
+      "Four corners pointing outwards, for entering full screen or expanding a video or image.",
+  },
+  "corners-pointing-in": {
+    description:
+      "Four corners pointing inwards, for exiting full screen or collapsing a view.",
+  },
+  hourglass: {
+    description:
+      "An hourglass with sand running down, for waiting, time left and timers.",
+  },
+  crop: {
+    description:
+      "Two crossing corners that frame an image, for cropping photos and setting an aspect ratio.",
+  },
+  "circle-half-full": {
+    description:
+      "A circle with its right half filled, for an automatic light or dark theme, contrast and brightness settings.",
+  },
+  "battery-25": {
+    description:
+      "A battery a quarter full, for low battery warnings and charge levels between empty and half.",
+  },
+  "battery-75": {
+    description:
+      "A battery three quarters full, for charge levels between half and full.",
+  },
 };
