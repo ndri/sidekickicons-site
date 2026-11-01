@@ -122,6 +122,7 @@ export function llmsTxt(icons: FullHeroicon[], version: string) {
 - [Icons missing from Heroicons](${siteUrl}/missing-heroicons): every Sidekickicon, grouped by use
 - [Heroicons for Svelte](${siteUrl}/svelte): install, usage, sizing and single-icon imports
 - [Heroicons for React Native](${siteUrl}/react-native): install, usage, props and switching from react-native-heroicons
+- [What's new](${siteUrl}/whats-new): new and redrawn icons in every release, also as an [Atom feed](${siteUrl}/whats-new.xml)
 
 ## Optional
 

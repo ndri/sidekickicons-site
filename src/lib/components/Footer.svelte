@@ -14,6 +14,7 @@
         { text: "Missing from Heroicons", href: "/missing-heroicons" },
         { text: "Heroicons for Svelte", href: "/svelte" },
         { text: "Heroicons for React Native", href: "/react-native" },
+        { text: "What's new", href: "/whats-new" },
       ],
     },
     {

@@ -10,6 +10,7 @@
   import Link from "$lib/components/Link.svelte";
   import IconInfoList from "$lib/components/IconInfoList.svelte";
   import IconCode from "$lib/components/IconCode.svelte";
+  import IconHistory from "$lib/components/IconHistory.svelte";
   import IconExamples from "$lib/components/IconExamples.svelte";
   import IconLinkList from "$lib/components/IconLinkList.svelte";
   import type { HeroiconType, IconCodeType } from "$lib/types";
@@ -164,6 +165,11 @@
     <section class="flex flex-col gap-4">
       <h2 class="text-lg font-semibold">{title} icon in UI elements</h2>
       <IconExamples fullHeroicon={icon} text={iconExampleText(icon)} />
+    </section>
+
+    <section class="flex flex-col gap-4">
+      <h2 class="text-lg font-semibold">History</h2>
+      <IconHistory events={data.history} />
     </section>
 
     {#if data.related.length}

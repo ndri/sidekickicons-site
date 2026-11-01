@@ -158,7 +158,11 @@ export async function iconShareImage(fullHeroicon: FullHeroicon) {
 
   // satori's element type expects React nodes; plain objects with type and props work
   const svg = await satori(element as never, { ...shareImageSize, fonts });
-  return new Resvg(svg, { fitTo: { mode: "width", value: shareImageSize.width } })
+  // satori has turned the text into paths, so resvg needs no fonts
+  return new Resvg(svg, {
+    fitTo: { mode: "width", value: shareImageSize.width },
+    font: { loadSystemFonts: false },
+  })
     .render()
     .asPng();
 }

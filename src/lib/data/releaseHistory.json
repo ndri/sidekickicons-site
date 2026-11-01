@@ -1,0 +1,2340 @@
+{
+  "releases": [
+    {
+      "iconset": "Sidekickicons",
+      "version": "0.19.0",
+      "date": "2026-11-01",
+      "url": "https://github.com/ndri/sidekickicons/blob/main/CHANGELOG.md#0190---2026-11-01",
+      "first": false,
+      "notes": [
+        {
+          "section": "Added",
+          "text": "Add new icons (`arrow-curve-up-left`, `arrow-curve-up-right`, `arrow-curve-down-left`, `arrow-curve-down-right`, `arrow-curve-left-up`, `arrow-curve-left-down`, `arrow-curve-right-up`, `arrow-curve-right-down`, `section-sign`, `crosshair`, `gender-male`, `gender-female`, `gender-trans`, `gender-ambiguous`, `corners-pointing-out`, `corners-pointing-in`, `hourglass`, `crop`, `circle-half-full`, `battery-25`, `battery-75`)",
+          "nested": false
+        }
+      ],
+      "added": [
+        "arrow-curve-down-left",
+        "arrow-curve-down-right",
+        "arrow-curve-left-down",
+        "arrow-curve-left-up",
+        "arrow-curve-right-down",
+        "arrow-curve-right-up",
+        "arrow-curve-up-left",
+        "arrow-curve-up-right",
+        "battery-25",
+        "battery-75",
+        "circle-half-full",
+        "corners-pointing-in",
+        "corners-pointing-out",
+        "crop",
+        "crosshair",
+        "gender-ambiguous",
+        "gender-female",
+        "gender-male",
+        "gender-trans",
+        "hourglass",
+        "section-sign"
+      ],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": []
+    },
+    {
+      "iconset": "Sidekickicons",
+      "version": "0.18.0",
+      "date": "2026-10-31",
+      "url": "https://github.com/ndri/sidekickicons/blob/main/CHANGELOG.md#0180---2026-10-31",
+      "first": false,
+      "notes": [
+        {
+          "section": "Added",
+          "text": "Add new icons (`target`, `coffee`, `star-half`, `snowflake`, `eraser`, `check-square`, `inbox-arrow-up`, `percent`, `infinity`)",
+          "nested": false
+        }
+      ],
+      "added": [
+        "check-square",
+        "coffee",
+        "eraser",
+        "inbox-arrow-up",
+        "infinity",
+        "percent",
+        "snowflake",
+        "star-half",
+        "target"
+      ],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": []
+    },
+    {
+      "iconset": "Sidekickicons",
+      "version": "0.17.0",
+      "date": "2026-10-30",
+      "url": "https://github.com/ndri/sidekickicons/blob/main/CHANGELOG.md#0170---2026-10-30",
+      "first": false,
+      "notes": [
+        {
+          "section": "Added",
+          "text": "Add new icons (`keyboard`, `italic-slash`, `paint-brush-slash`, `arrow-uturn-down-right`, `arrow-uturn-up-left`, `table-cells-merge`, `table-cells-split`, `video-camera-arrow-down-left`, `video-camera-arrow-up-right`, `video-camera-x-mark`, `camera-rotate`)",
+          "nested": false
+        },
+        {
+          "section": "Changed",
+          "text": "Make the gap beside the slash in the outline `pin-slash` icon a full pen wide, like in the other slashed icons",
+          "nested": false
+        }
+      ],
+      "added": [
+        "arrow-uturn-down-right",
+        "arrow-uturn-up-left",
+        "camera-rotate",
+        "italic-slash",
+        "keyboard",
+        "paint-brush-slash",
+        "table-cells-merge",
+        "table-cells-split",
+        "video-camera-arrow-down-left",
+        "video-camera-arrow-up-right",
+        "video-camera-x-mark"
+      ],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": [
+        {
+          "name": "pin-slash",
+          "types": ["outline24"],
+          "visible": false,
+          "notes": [
+            "Make the gap beside the slash in the outline `pin-slash` icon a full pen wide, like in the other slashed icons"
+          ],
+          "before": {}
+        }
+      ]
+    },
+    {
+      "iconset": "Sidekickicons",
+      "version": "0.16.0",
+      "date": "2026-10-29",
+      "url": "https://github.com/ndri/sidekickicons/blob/main/CHANGELOG.md#0160---2026-10-29",
+      "first": false,
+      "notes": [
+        {
+          "section": "Changed",
+          "text": "Generate every icon from a code definition instead of drawing it by hand. Icons look the same except:",
+          "nested": false
+        },
+        {
+          "section": "Changed",
+          "text": "Redesign the micro `dice` icon as a flat die showing five, and round the corners of the other `dice` icons",
+          "nested": true
+        },
+        {
+          "section": "Changed",
+          "text": "Show two letters instead of three in the micro `lettered-list` icon, so they stay legible",
+          "nested": true
+        },
+        {
+          "section": "Changed",
+          "text": "Make strokes and cut-outs in mini and micro icons consistently 1.5 wide, like Heroicons (slightly bolder mini `lettered-list` letters, slightly wider gaps in a few others)",
+          "nested": true
+        },
+        {
+          "section": "Changed",
+          "text": "Fix the solid `chevron-down-up`, `chevron-left-right` and `chevron-right-left` icons being slightly off the pixel grid",
+          "nested": true
+        }
+      ],
+      "added": [],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": [
+        {
+          "name": "chevron-down-up",
+          "types": ["outline24", "solid24", "solid20", "solid16"],
+          "visible": false,
+          "notes": [
+            "Fix the solid `chevron-down-up`, `chevron-left-right` and `chevron-right-left` icons being slightly off the pixel grid"
+          ],
+          "before": {}
+        },
+        {
+          "name": "chevron-left-right",
+          "types": ["outline24", "solid24", "solid20", "solid16"],
+          "visible": false,
+          "notes": [
+            "Fix the solid `chevron-down-up`, `chevron-left-right` and `chevron-right-left` icons being slightly off the pixel grid"
+          ],
+          "before": {}
+        },
+        {
+          "name": "chevron-right-left",
+          "types": ["outline24", "solid24", "solid20", "solid16"],
+          "visible": false,
+          "notes": [
+            "Fix the solid `chevron-down-up`, `chevron-left-right` and `chevron-right-left` icons being slightly off the pixel grid"
+          ],
+          "before": {}
+        },
+        {
+          "name": "compass",
+          "types": ["solid20", "solid16"],
+          "visible": true,
+          "notes": [
+            "Make strokes and cut-outs in mini and micro icons consistently 1.5 wide, like Heroicons (slightly bolder mini `lettered-list` letters, slightly wider gaps in a few others)"
+          ],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\" data-slot=\"icon\">\n  <path d=\"M11 10a1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1zm-1-8a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm3.713 3.691a.615.615 0 0 1 .498.947L11.34 11.15a.618.618 0 0 1-.19.19L6.64 14.21c-.555.353-1.202-.294-.85-.849L8.66 8.85a.618.618 0 0 1 .19-.19l4.511-2.87a.619.619 0 0 1 .352-.099z\"/>\n</svg>\n",
+            "solid16": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\" aria-hidden=\"true\" data-slot=\"icon\">\n  <path d=\"M8.75 8a.75.75 0 0 1-.75.75.75.75 0 0 1-.75-.75.75.75 0 0 1 .75-.75.75.75 0 0 1 .75.75ZM8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1Zm3.248 3.23c.054.002.11.014.16.032a.537.537 0 0 1 .278.797L9.172 9.006a.542.542 0 0 1-.166.166l-3.947 2.514c-.486.308-1.05-.259-.743-.745l2.512-3.947a.542.542 0 0 1 .166-.166l3.947-2.512a.539.539 0 0 1 .307-.086z\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "dice",
+          "types": ["outline24", "solid24", "solid20", "solid16"],
+          "visible": true,
+          "notes": [
+            "Redesign the micro `dice` icon as a flat die showing five, and round the corners of the other `dice` icons"
+          ],
+          "before": {
+            "outline24": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" aria-hidden=\"true\" data-slot=\"icon\" fill=\"none\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M14.5 14.5c.12.069.384-.166.592-.525.207-.358.278-.705.158-.774-.12-.07-.384.166-.592.524-.207.36-.278.706-.158.775Zm3.25 1.5c.12.069.384-.166.592-.525.207-.358.278-.705.158-.774-.12-.07-.384.166-.592.524-.207.36-.278.706-.158.775ZM9.5 14.5c-.12.069-.384-.166-.592-.525-.207-.358-.278-.705-.158-.774.12-.07.384.166.592.524.207.36.278.706.158.775Zm0 3.25c-.12.069-.384-.166-.592-.525-.207-.358-.278-.705-.158-.774.12-.07.384.166.592.524.207.36.278.706.158.775ZM6.25 16c-.12.069-.384-.166-.592-.525-.207-.358-.278-.705-.158-.774.12-.07.384.166.592.524.207.36.278.706.158.775Zm0-3.201c-.12.07-.384-.166-.592-.524-.207-.36-.278-.706-.158-.775.12-.069.384.166.592.525.207.358.278.705.158.774Zm6.5-5.549a.75.25 0 0 1-.75.25.75.25 0 0 1-.75-.25A.75.25 0 0 1 12 7a.75.25 0 0 1 .75.25ZM21 7.5l-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9\"/>\n</svg>\n",
+            "solid24": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\" data-slot=\"icon\">\n  <path d=\"M2.578 8.174a.327.327 0 0 0-.328.326v8c0 .267.143.514.373.648l8.04 4.69a.391.391 0 0 0 .587-.338v-7.75a.991.991 0 0 0-.492-.855L2.742 8.217a.327.327 0 0 0-.164-.043Zm2.176 2.972a.964.964 0 0 1 .389.067c.168.067.27.149.367.234.192.171.343.372.48.61.138.238.236.466.287.718.026.127.046.259.02.438a.89.89 0 0 1-.422.642.89.89 0 0 1-.768.045 1.172 1.172 0 0 1-.367-.236 2.368 2.368 0 0 1-.48-.607 2.377 2.377 0 0 1-.287-.721 1.183 1.183 0 0 1-.02-.438.89.89 0 0 1 .422-.642.818.818 0 0 1 .379-.11Zm3.25 1.702a.956.956 0 0 1 .389.064c.168.067.27.151.367.236.192.171.343.37.48.608.138.238.236.468.287.72.026.127.046.259.02.438a.89.89 0 0 1-.422.643c-.293.169-.6.11-.768.043a1.17 1.17 0 0 1-.367-.235 2.378 2.378 0 0 1-.48-.61 2.366 2.366 0 0 1-.287-.718 1.183 1.183 0 0 1-.02-.437.89.89 0 0 1 .422-.643.823.823 0 0 1 .379-.11Zm-3.25 1.5a.956.956 0 0 1 .389.064c.168.067.27.151.367.236.192.171.343.37.48.608.138.238.236.468.287.72.026.127.046.259.02.438a.89.89 0 0 1-.422.643c-.293.169-.6.11-.768.043a1.17 1.17 0 0 1-.367-.235 2.378 2.378 0 0 1-.48-.61 2.366 2.366 0 0 1-.287-.718 1.183 1.183 0 0 1-.02-.437.89.89 0 0 1 .422-.643.823.823 0 0 1 .379-.11Zm3.25 1.75a.956.956 0 0 1 .389.064c.168.067.27.151.367.236.192.171.343.37.48.608.138.238.236.468.287.72.026.127.046.259.02.438a.89.89 0 0 1-.422.643c-.293.169-.6.11-.768.043a1.17 1.17 0 0 1-.367-.235 2.378 2.378 0 0 1-.48-.61 2.366 2.366 0 0 1-.287-.718 1.183 1.183 0 0 1-.02-.437.89.89 0 0 1 .422-.643.823.823 0 0 1 .379-.11Zm13.443-7.924a.327.327 0 0 0-.19.043l-8.015 4.678a.991.991 0 0 0-.492.855v7.799a.363.363 0 0 0 .547.312l8.08-4.713a.752.752 0 0 0 .373-.648v-8a.327.327 0 0 0-.303-.326Zm-5.502 4.707a.83.83 0 0 1 .43.111.89.89 0 0 1 .422.643c.026.179.006.311-.02.437-.051.253-.15.481-.287.719a2.378 2.378 0 0 1-.48.61 1.17 1.17 0 0 1-.367.234.889.889 0 0 1-.768-.043.89.89 0 0 1-.422-.643 1.183 1.183 0 0 1 .02-.437c.051-.253.15-.483.287-.721.137-.238.288-.437.48-.607.097-.086.2-.17.367-.237a.96.96 0 0 1 .338-.066zm3.25 1.5a.83.83 0 0 1 .43.111.89.89 0 0 1 .422.643c.026.179.006.311-.02.437-.051.253-.15.481-.287.719a2.378 2.378 0 0 1-.48.61 1.17 1.17 0 0 1-.367.234.889.889 0 0 1-.768-.043.89.89 0 0 1-.422-.643 1.183 1.183 0 0 1 .02-.437c.051-.253.15-.483.287-.721.137-.238.288-.437.48-.607.097-.086.2-.17.367-.237a.96.96 0 0 1 .338-.066zM12 1.5c-.13 0-.26.033-.377.102L3.533 6.32a.36.36 0 0 0 0 .623l7.74 4.516a1.44 1.44 0 0 0 1.454 0l7.765-4.531a.343.343 0 0 0 0-.592l-8.115-4.734A.745.745 0 0 0 12 1.5Zm-.094 4.078h.102c.274 0 .523.03.767.111.123.041.247.091.39.204a.886.886 0 0 1 .343.685.886.886 0 0 1-.344.686 1.19 1.19 0 0 1-.389.203 2.376 2.376 0 0 1-.767.111c-.275 0-.523-.03-.768-.111a1.19 1.19 0 0 1-.388-.203.886.886 0 0 1-.344-.686c0-.338.201-.573.344-.685a1.19 1.19 0 0 1 .388-.204 2.28 2.28 0 0 1 .666-.11z\"/>\n</svg>\n",
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\" data-slot=\"icon\">\n  <path d=\"M2 6.443v7.807c0 .273.148.524.387.656l6.863 3.787v-8.25zM3.799 8.9c.378-.015.814.264 1.084.73.345.599.286 1.279-.133 1.52-.419.242-1.038-.046-1.383-.644s-.286-1.28.133-1.522a.646.646 0 0 1 .299-.084Zm3 1.75c.378-.015.814.264 1.084.73.345.599.286 1.279-.133 1.52-.419.242-1.038-.046-1.383-.644s-.286-1.28.133-1.522a.646.646 0 0 1 .299-.084Zm-3 1.5c.378-.015.814.264 1.084.73.345.599.286 1.279-.133 1.52-.419.242-1.038-.046-1.383-.644s-.286-1.28.133-1.522a.646.646 0 0 1 .299-.084Zm3 1.75c.378-.015.814.264 1.084.73.345.599.286 1.279-.133 1.52-.419.242-1.038-.046-1.383-.644s-.286-1.28.133-1.522a.646.646 0 0 1 .299-.084ZM18 6.443l-7.25 4v8.25l6.861-3.787A.75.75 0 0 0 18 14.25Zm-4.844 4.207a.652.652 0 0 1 .344.084c.419.242.478.924.133 1.522s-.964.886-1.383.644c-.419-.241-.478-.921-.133-1.52.26-.448.672-.722 1.04-.73zm3 1.5a.652.652 0 0 1 .344.084c.419.242.478.924.133 1.522s-.964.886-1.383.644c-.419-.241-.478-.921-.133-1.52.26-.448.672-.722 1.04-.73zM10 1a.754.754 0 0 0-.363.094L2.523 5.018 10 9.143l7.477-4.125-7.116-3.924A.746.746 0 0 0 10 1Zm0 3.197a1.25.875 0 0 1 1.25.875 1.25.875 0 0 1-1.25.875 1.25.875 0 0 1-1.25-.875A1.25.875 0 0 1 10 4.197z\"/>\n</svg>\n",
+            "solid16": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\" aria-hidden=\"true\" data-slot=\"icon\">\n  <path d=\"M2 5.357V11c0 .27.143.517.377.65l4.873 2.786V8.43Zm1.184 1.735c.283-.018.633.219.857.607.276.479.258 1.007-.041 1.18-.299.172-.765-.076-1.041-.555-.276-.478-.258-1.005.041-1.178a.416.416 0 0 1 .184-.054zm2.25 1.267c.283-.017.633.22.857.608.276.478.258 1.007-.041 1.18-.299.172-.765-.077-1.041-.555-.276-.478-.258-1.005.041-1.178a.416.416 0 0 1 .184-.055zm-2.25 1.233c.283-.018.633.219.857.607.276.479.258 1.007-.041 1.18-.299.172-.765-.076-1.041-.555-.276-.478-.258-1.005.041-1.178a.416.416 0 0 1 .184-.054zm2.25 1.267c.283-.017.633.22.857.608.276.478.258 1.007-.041 1.18-.299.172-.765-.077-1.041-.555-.276-.478-.258-1.005.041-1.178a.416.416 0 0 1 .184-.055zM14 5.357 8.75 8.43v6.006l4.873-2.786A.748.748 0 0 0 14 11ZM10.5 8.36a.432.432 0 0 1 .25.055c.299.173.317.7.041 1.178s-.742.727-1.041.554c-.299-.172-.317-.7-.041-1.18.207-.358.52-.587.791-.607Zm2.25 1.233a.432.432 0 0 1 .25.054c.299.173.317.7.041 1.178-.276.479-.742.727-1.041.555-.299-.173-.317-.701-.041-1.18.207-.359.52-.588.791-.607ZM8 1.25a.754.754 0 0 0-.373.1L2.818 4.098 8 7.13l5.182-3.033L8.373 1.35A.754.754 0 0 0 8 1.25Zm0 2.125A1 .625 0 0 1 9 4a1 .625 0 0 1-1 .625A1 .625 0 0 1 7 4a1 .625 0 0 1 1-.625Z\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "lettered-list",
+          "types": ["solid20", "solid16"],
+          "visible": true,
+          "notes": [
+            "Show two letters instead of three in the micro `lettered-list` icon, so they stay legible",
+            "Make strokes and cut-outs in mini and micro icons consistently 1.5 wide, like Heroicons (slightly bolder mini `lettered-list` letters, slightly wider gaps in a few others)"
+          ],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\" data-slot=\"icon\">\n  <path d=\"M2.625 7.5A.625.625 0 0 0 2 8.125v3.75a.625.625 0 0 0 .625.625H4c.821 0 1.5-.679 1.5-1.5v-.125c0-.34-.171-.622-.365-.875.194-.253.365-.536.365-.875V9c0-.821-.679-1.5-1.5-1.5Zm.625 1.25H4c.145 0 .25.105.25.25v.125c0 .145-.105.25-.25.25h-.75Zm0 1.875H4c.145 0 .25.105.25.25V11c0 .145-.105.25-.25.25h-.75Zm.5-9.375C2.792 1.25 2 2.042 2 3v2.5a.75.75 0 0 0 .75.75.75.75 0 0 0 .75-.75v-.375H4V5.5a.75.75 0 0 0 .75.75.75.75 0 0 0 .75-.75V3c0-.958-.792-1.75-1.75-1.75Zm0 1.5A.24.24 0 0 1 4 3v.625h-.5V3a.24.24 0 0 1 .25-.25Zm.125 11A1.886 1.886 0 0 0 2 15.625v1.25c0 1.027.848 1.875 1.875 1.875h.875A.75.75 0 0 0 5.5 18a.75.75 0 0 0-.75-.75h-.875a.364.364 0 0 1-.375-.375v-1.25c0-.216.159-.375.375-.375h.875a.75.75 0 0 0 .75-.75.75.75 0 0 0-.75-.75ZM7.75 3a.75.75 0 0 0 0 1.5h9.5a.75.75 0 0 0 0-1.5zm0 6.25a.75.75 0 0 0 0 1.5h9.5a.75.75 0 0 0 0-1.5zm0 6.25a.75.75 0 0 0 0 1.5h9.5a.75.75 0 0 0 0-1.5z\"/>\n</svg>\n",
+            "solid16": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\" aria-hidden=\"true\" data-slot=\"icon\">\n  <path d=\"M2.5 5.875a.5.5 0 0 0-.5.5v3.25a.5.5 0 0 0 .5.5h1.25c.684 0 1.25-.566 1.25-1.25V8.75c0-.291-.144-.536-.314-.75.17-.214.314-.459.314-.75v-.125c0-.684-.566-1.25-1.25-1.25Zm.5 1h.75c.144 0 .25.106.25.25v.125c0 .144-.106.25-.25.25H3ZM3 8.5h.75c.144 0 .25.106.25.25v.125c0 .144-.106.25-.25.25H3ZM3.5 1C2.679 1 2 1.679 2 2.5v2.125a.625.625 0 0 0 .625.625.625.625 0 0 0 .625-.625v-.5h.5v.5a.625.625 0 0 0 .625.625A.625.625 0 0 0 5 4.625V2.5C5 1.68 4.32 1 3.5 1Zm0 1.25a.24.24 0 0 1 .25.248.625.625 0 0 0 0 .002v.375h-.5V2.5a.24.24 0 0 1 .25-.25zm-1.5 11c0 .96.79 1.75 1.75 1.75h.625A.625.625 0 0 0 5 14.375a.625.625 0 0 0-.625-.625H3.75a.49.49 0 0 1-.5-.5v-.75c0-.284.216-.5.5-.5h.625A.625.625 0 0 0 5 11.375a.625.625 0 0 0-.625-.625H3.75c-.96 0-1.75.79-1.75 1.75ZM7.25 2a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5zm0 5.25a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 0-1.5zm-.75 6a.75.75 0 0 1 .75-.75h6a.75.75 0 0 1 0 1.5h-6a.75.75 0 0 1-.75-.75Z\"/>\n</svg>\n"
+          }
+        }
+      ]
+    },
+    {
+      "iconset": "Sidekickicons",
+      "version": "0.15.0",
+      "date": "2026-01-13",
+      "url": "https://github.com/ndri/sidekickicons/blob/main/CHANGELOG.md#0150---2026-01-13",
+      "first": false,
+      "notes": [
+        {
+          "section": "Added",
+          "text": "Add new icons (`face-meh`, `arrow-bottom-left-on-square`)",
+          "nested": false
+        }
+      ],
+      "added": ["arrow-bottom-left-on-square", "face-meh"],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": []
+    },
+    {
+      "iconset": "Sidekickicons",
+      "version": "0.14.0",
+      "date": "2025-07-24",
+      "url": "https://github.com/ndri/sidekickicons/blob/main/CHANGELOG.md#0140---2025-07-24",
+      "first": false,
+      "notes": [
+        {
+          "section": "Added",
+          "text": "Add new icons (`arrow-path-single-clockwise`, `arrow-path-single-counter-clockwise`, `archive-box-arrow-up`)",
+          "nested": false
+        },
+        {
+          "section": "Changed",
+          "text": "Fix centering of `radial-rays` solid24 icon",
+          "nested": false
+        }
+      ],
+      "added": [
+        "archive-box-arrow-up",
+        "arrow-path-single-clockwise",
+        "arrow-path-single-counterclockwise"
+      ],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": [
+        {
+          "name": "radial-rays",
+          "types": ["solid24"],
+          "visible": true,
+          "notes": ["Fix centering of `radial-rays` solid24 icon"],
+          "before": {
+            "solid24": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\" data-slot=\"icon\">\n  <path d=\"M11.75 2a.75.75 0 0 0-.75.75v3.5a.75.75 0 0 0 .75.75.75.75 0 0 0 .75-.75v-3.5a.75.75 0 0 0-.75-.75ZM5.387 4.637a.75.75 0 0 0-.532.218.75.75 0 0 0 0 1.061L7.33 8.391a.75.75 0 0 0 1.06 0 .75.75 0 0 0 0-1.06L5.917 4.854a.75.75 0 0 0-.53-.218zm12.726 0a.75.75 0 0 0-.529.218L15.109 7.33a.75.75 0 0 0 0 1.06.75.75 0 0 0 1.06 0l2.476-2.474a.75.75 0 0 0 0-1.06.75.75 0 0 0-.532-.22zM2.75 11a.75.75 0 0 0-.75.75.75.75 0 0 0 .75.75h3.5a.75.75 0 0 0 .75-.75.75.75 0 0 0-.75-.75Zm14.5 0a.75.75 0 0 0-.75.75.75.75 0 0 0 .75.75h3.5a.75.75 0 0 0 .75-.75.75.75 0 0 0-.75-.75Zm-9.389 3.889a.75.75 0 0 0-.53.22l-2.476 2.475a.75.75 0 0 0 0 1.06.75.75 0 0 0 1.061 0l2.475-2.474a.75.75 0 0 0 0-1.06.75.75 0 0 0-.53-.221zm7.778 0a.75.75 0 0 0-.53.22.75.75 0 0 0 0 1.06l2.475 2.476a.75.75 0 0 0 1.06 0 .75.75 0 0 0 0-1.061l-2.474-2.475a.75.75 0 0 0-.531-.22zM11.75 16.5a.75.75 0 0 0-.75.75v3.5a.75.75 0 0 0 .75.75.75.75 0 0 0 .75-.75v-3.5a.75.75 0 0 0-.75-.75Z\"/>\n</svg>\n"
+          }
+        }
+      ]
+    },
+    {
+      "iconset": "Sidekickicons",
+      "version": "0.13.0",
+      "date": "2025-05-24",
+      "url": "https://github.com/ndri/sidekickicons/blob/main/CHANGELOG.md#0130---2025-05-24",
+      "first": false,
+      "notes": [
+        {
+          "section": "Added",
+          "text": "Add new icons (`dots-3x3`, `dots-2x2`, `radial-rays`, `circle-dashed`)",
+          "nested": false
+        },
+        {
+          "section": "Changed",
+          "text": "Made `dots-3x2` and `dots-2x3` icons more consistent with other dot icons",
+          "nested": false
+        }
+      ],
+      "added": ["circle-dashed", "dots-2x2", "dots-3x3", "radial-rays"],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": [
+        {
+          "name": "dots-2x3",
+          "types": ["outline24", "solid24", "solid20", "solid16"],
+          "visible": true,
+          "notes": [
+            "Made `dots-3x2` and `dots-2x3` icons more consistent with other dot icons"
+          ],
+          "before": {
+            "outline24": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" aria-hidden=\"true\" data-slot=\"icon\" fill=\"none\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M9.25 19a.75.75 0 0 1-.75.75.75.75 0 0 1-.75-.75.75.75 0 0 1 .75-.75.75.75 0 0 1 .75.75Zm.75 0a1.5 1.5 0 0 1-1.5 1.5A1.5 1.5 0 0 1 7 19a1.5 1.5 0 0 1 1.5-1.5A1.5 1.5 0 0 1 10 19Zm6.25-7a.75.75 0 0 1-.75.75.75.75 0 0 1-.75-.75.75.75 0 0 1 .75-.75.75.75 0 0 1 .75.75Zm.75 0a1.5 1.5 0 0 1-1.5 1.5A1.5 1.5 0 0 1 14 12a1.5 1.5 0 0 1 1.5-1.5A1.5 1.5 0 0 1 17 12Zm-7.75 0a.75.75 0 0 1-.75.75.75.75 0 0 1-.75-.75.75.75 0 0 1 .75-.75.75.75 0 0 1 .75.75zm.75 0a1.5 1.5 0 0 1-1.5 1.5A1.5 1.5 0 0 1 7 12a1.5 1.5 0 0 1 1.5-1.5A1.5 1.5 0 0 1 10 12Zm6.25-7a.75.75 0 0 1-.75.75.75.75 0 0 1-.75-.75.75.75 0 0 1 .75-.75.75.75 0 0 1 .75.75ZM17 5a1.5 1.5 0 0 1-1.5 1.5A1.5 1.5 0 0 1 14 5a1.5 1.5 0 0 1 1.5-1.5A1.5 1.5 0 0 1 17 5ZM9.25 5a.75.75 0 0 1-.75.75.75.75 0 0 1-.75-.75.75.75 0 0 1 .75-.75.75.75 0 0 1 .75.75ZM10 5a1.5 1.5 0 0 1-1.5 1.5A1.5 1.5 0 0 1 7 5a1.5 1.5 0 0 1 1.5-1.5A1.5 1.5 0 0 1 10 5Zm6.25 14a.75.75 0 0 1-.75.75.75.75 0 0 1-.75-.75.75.75 0 0 1 .75-.75.75.75 0 0 1 .75.75Zm.75 0a1.5 1.5 0 0 1-1.5 1.5A1.5 1.5 0 0 1 14 19a1.5 1.5 0 0 1 1.5-1.5A1.5 1.5 0 0 1 17 19Z\"/>\n</svg>\n",
+            "solid24": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\" data-slot=\"icon\">\n  <path d=\"M8.5 2.75C7.27 2.75 6.25 3.77 6.25 5S7.27 7.25 8.5 7.25 10.75 6.23 10.75 5 9.73 2.75 8.5 2.75Zm7 0c-1.23 0-2.25 1.02-2.25 2.25s1.02 2.25 2.25 2.25S17.75 6.23 17.75 5s-1.02-2.25-2.25-2.25zm-7 7c-1.23 0-2.25 1.02-2.25 2.25s1.02 2.25 2.25 2.25 2.25-1.02 2.25-2.25S9.73 9.75 8.5 9.75zm7 0c-1.23 0-2.25 1.02-2.25 2.25s1.02 2.25 2.25 2.25 2.25-1.02 2.25-2.25-1.02-2.25-2.25-2.25zm-7 7c-1.23 0-2.25 1.02-2.25 2.25s1.02 2.25 2.25 2.25 2.25-1.02 2.25-2.25-1.02-2.25-2.25-2.25zm7 0c-1.23 0-2.25 1.02-2.25 2.25s1.02 2.25 2.25 2.25 2.25-1.02 2.25-2.25-1.02-2.25-2.25-2.25z\"/>\n</svg>\n",
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\" data-slot=\"icon\">\n  <path d=\"M7.25 3c-.956 0-1.75.794-1.75 1.75S6.294 6.5 7.25 6.5 9 5.706 9 4.75 8.206 3 7.25 3Zm5.5 0C11.794 3 11 3.794 11 4.75s.794 1.75 1.75 1.75 1.75-.794 1.75-1.75S13.706 3 12.75 3Zm-5.5 5.25c-.956 0-1.75.794-1.75 1.75s.794 1.75 1.75 1.75S9 10.956 9 10s-.794-1.75-1.75-1.75Zm5.5 0c-.956 0-1.75.794-1.75 1.75s.794 1.75 1.75 1.75 1.75-.794 1.75-1.75-.794-1.75-1.75-1.75zm-5.5 5.25c-.956 0-1.75.794-1.75 1.75S6.294 17 7.25 17 9 16.206 9 15.25s-.794-1.75-1.75-1.75Zm5.5 0c-.956 0-1.75.794-1.75 1.75S11.794 17 12.75 17s1.75-.794 1.75-1.75-.794-1.75-1.75-1.75z\"/>\n</svg>\n",
+            "solid16": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\" aria-hidden=\"true\" data-slot=\"icon\">\n  <path d=\"M5.5 2C4.68 2 4 2.68 4 3.5S4.68 5 5.5 5 7 4.32 7 3.5 6.32 2 5.5 2Zm5 0C9.68 2 9 2.68 9 3.5S9.68 5 10.5 5 12 4.32 12 3.5 11.32 2 10.5 2Zm-5 4.5C4.68 6.5 4 7.18 4 8s.68 1.5 1.5 1.5S7 8.82 7 8s-.68-1.5-1.5-1.5Zm5 0C9.68 6.5 9 7.18 9 8s.68 1.5 1.5 1.5S12 8.82 12 8s-.68-1.5-1.5-1.5Zm-5 4.5c-.82 0-1.5.68-1.5 1.5S4.68 14 5.5 14 7 13.32 7 12.5 6.32 11 5.5 11Zm5 0c-.82 0-1.5.68-1.5 1.5s.68 1.5 1.5 1.5 1.5-.68 1.5-1.5-.68-1.5-1.5-1.5Z\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "dots-3x2",
+          "types": ["outline24", "solid24", "solid20", "solid16"],
+          "visible": true,
+          "notes": [
+            "Made `dots-3x2` and `dots-2x3` icons more consistent with other dot icons"
+          ],
+          "before": {
+            "outline24": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" aria-hidden=\"true\" data-slot=\"icon\" fill=\"none\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5 9.25a.75.75 0 0 1-.75-.75.75.75 0 0 1 .75-.75.75.75 0 0 1 .75.75.75.75 0 0 1-.75.75zM5 10a1.5 1.5 0 0 1-1.5-1.5A1.5 1.5 0 0 1 5 7a1.5 1.5 0 0 1 1.5 1.5A1.5 1.5 0 0 1 5 10zm7 6.25a.75.75 0 0 1-.75-.75.75.75 0 0 1 .75-.75.75.75 0 0 1 .75.75.75.75 0 0 1-.75.75Zm0 .75a1.5 1.5 0 0 1-1.5-1.5A1.5 1.5 0 0 1 12 14a1.5 1.5 0 0 1 1.5 1.5A1.5 1.5 0 0 1 12 17Zm0-7.75a.75.75 0 0 1-.75-.75.75.75 0 0 1 .75-.75.75.75 0 0 1 .75.75.75.75 0 0 1-.75.75zm0 .75a1.5 1.5 0 0 1-1.5-1.5A1.5 1.5 0 0 1 12 7a1.5 1.5 0 0 1 1.5 1.5A1.5 1.5 0 0 1 12 10Zm7 6.25a.75.75 0 0 1-.75-.75.75.75 0 0 1 .75-.75.75.75 0 0 1 .75.75.75.75 0 0 1-.75.75Zm0 .75a1.5 1.5 0 0 1-1.5-1.5A1.5 1.5 0 0 1 19 14a1.5 1.5 0 0 1 1.5 1.5A1.5 1.5 0 0 1 19 17Zm0-7.75a.75.75 0 0 1-.75-.75.75.75 0 0 1 .75-.75.75.75 0 0 1 .75.75.75.75 0 0 1-.75.75Zm0 .75a1.5 1.5 0 0 1-1.5-1.5A1.5 1.5 0 0 1 19 7a1.5 1.5 0 0 1 1.5 1.5A1.5 1.5 0 0 1 19 10ZM5 16.25a.75.75 0 0 1-.75-.75.75.75 0 0 1 .75-.75.75.75 0 0 1 .75.75.75.75 0 0 1-.75.75zM5 17a1.5 1.5 0 0 1-1.5-1.5A1.5 1.5 0 0 1 5 14a1.5 1.5 0 0 1 1.5 1.5A1.5 1.5 0 0 1 5 17z\"/>\n</svg>\n",
+            "solid24": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\" data-slot=\"icon\">\n  <path d=\"M21.25 8.5c0-1.23-1.02-2.25-2.25-2.25s-2.25 1.02-2.25 2.25 1.02 2.25 2.25 2.25 2.25-1.02 2.25-2.25zm0 7c0-1.23-1.02-2.25-2.25-2.25s-2.25 1.02-2.25 2.25 1.02 2.25 2.25 2.25 2.25-1.02 2.25-2.25zm-7-7c0-1.23-1.02-2.25-2.25-2.25S9.75 7.27 9.75 8.5s1.02 2.25 2.25 2.25 2.25-1.02 2.25-2.25zm0 7c0-1.23-1.02-2.25-2.25-2.25s-2.25 1.02-2.25 2.25 1.02 2.25 2.25 2.25 2.25-1.02 2.25-2.25zm-7-7c0-1.23-1.02-2.25-2.25-2.25S2.75 7.27 2.75 8.5 3.77 10.75 5 10.75 7.25 9.73 7.25 8.5zm0 7c0-1.23-1.02-2.25-2.25-2.25s-2.25 1.02-2.25 2.25S3.77 17.75 5 17.75s2.25-1.02 2.25-2.25z\"/>\n</svg>\n",
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\" data-slot=\"icon\">\n  <path d=\"M17 7.25c0-.956-.794-1.75-1.75-1.75s-1.75.794-1.75 1.75S14.294 9 15.25 9 17 8.206 17 7.25Zm0 5.5c0-.956-.794-1.75-1.75-1.75s-1.75.794-1.75 1.75.794 1.75 1.75 1.75S17 13.706 17 12.75zm-5.25-5.5c0-.956-.794-1.75-1.75-1.75s-1.75.794-1.75 1.75S9.044 9 10 9s1.75-.794 1.75-1.75Zm0 5.5c0-.956-.794-1.75-1.75-1.75s-1.75.794-1.75 1.75.794 1.75 1.75 1.75 1.75-.794 1.75-1.75zM6.5 7.25c0-.956-.794-1.75-1.75-1.75S3 6.294 3 7.25 3.794 9 4.75 9 6.5 8.206 6.5 7.25Zm0 5.5c0-.956-.794-1.75-1.75-1.75S3 11.794 3 12.75s.794 1.75 1.75 1.75 1.75-.794 1.75-1.75z\"/>\n</svg>\n",
+            "solid16": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"currentColor\" aria-hidden=\"true\" data-slot=\"icon\">\n  <path d=\"M14 5.5c0-.82-.68-1.5-1.5-1.5S11 4.68 11 5.5 11.68 7 12.5 7 14 6.32 14 5.5Zm0 5c0-.82-.68-1.5-1.5-1.5s-1.5.68-1.5 1.5.68 1.5 1.5 1.5 1.5-.68 1.5-1.5Zm-4.5-5C9.5 4.68 8.82 4 8 4s-1.5.68-1.5 1.5S7.18 7 8 7s1.5-.68 1.5-1.5Zm0 5C9.5 9.68 8.82 9 8 9s-1.5.68-1.5 1.5S7.18 12 8 12s1.5-.68 1.5-1.5ZM5 5.5C5 4.68 4.32 4 3.5 4S2 4.68 2 5.5 2.68 7 3.5 7 5 6.32 5 5.5Zm0 5C5 9.68 4.32 9 3.5 9S2 9.68 2 10.5 2.68 12 3.5 12 5 11.32 5 10.5Z\"/>\n</svg>\n"
+          }
+        }
+      ]
+    },
+    {
+      "iconset": "Sidekickicons",
+      "version": "0.12.0",
+      "date": "2025-01-26",
+      "url": "https://github.com/ndri/sidekickicons/blob/main/CHANGELOG.md#0120---2025-01-26",
+      "first": false,
+      "notes": [
+        {
+          "section": "Added",
+          "text": "Add new icons (`dice`, `arrows-crossing`, `gamepad`, `robot`)",
+          "nested": false
+        }
+      ],
+      "added": ["arrows-crossing", "dice", "gamepad", "robot"],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": []
+    },
+    {
+      "iconset": "Sidekickicons",
+      "version": "0.11.0",
+      "date": "2025-01-13",
+      "url": "https://github.com/ndri/sidekickicons/blob/main/CHANGELOG.md#0110---2025-01-13",
+      "first": false,
+      "notes": [
+        {
+          "section": "Added",
+          "text": "Add new icons (`circle`, `triangle`, `square`, `badge`)",
+          "nested": false
+        }
+      ],
+      "added": ["badge", "circle", "square", "triangle"],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": []
+    },
+    {
+      "iconset": "Sidekickicons",
+      "version": "0.10.0",
+      "date": "2025-01-11",
+      "url": "https://github.com/ndri/sidekickicons/blob/main/CHANGELOG.md#0100---2025-01-11",
+      "first": false,
+      "notes": [
+        {
+          "section": "Added",
+          "text": "Add new icons (`bars-3-bottom-center`, `lettered-list`, `checklist-boxes`, `pilcrow`, `photo-plus`)",
+          "nested": false
+        }
+      ],
+      "added": [
+        "bars-3-bottom-center",
+        "checklist-boxes",
+        "lettered-list",
+        "photo-plus",
+        "pilcrow"
+      ],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": []
+    },
+    {
+      "iconset": "Sidekickicons",
+      "version": "0.9.0",
+      "date": "2025-01-05",
+      "url": "https://github.com/ndri/sidekickicons/blob/main/CHANGELOG.md#090---2025-01-05",
+      "first": false,
+      "notes": [
+        {
+          "section": "Added",
+          "text": "Add new icons (`password`, `password-pencil`, `check-double`, `computer-laptop`)",
+          "nested": false
+        },
+        {
+          "section": "Changed",
+          "text": "Specify the license and attribution for Heroicons and Sidekickicons separately",
+          "nested": false
+        }
+      ],
+      "added": ["check-double", "computer-laptop", "password", "password-pencil"],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": []
+    },
+    {
+      "iconset": "Sidekickicons",
+      "version": "0.8.0",
+      "date": "2024-12-28",
+      "url": "https://github.com/ndri/sidekickicons/blob/main/CHANGELOG.md#080---2024-12-28",
+      "first": false,
+      "notes": [
+        {
+          "section": "Added",
+          "text": "Add new icons (`checklist`, `indent`, `outdent`, `blockquote`, `quotation-mark`)",
+          "nested": false
+        }
+      ],
+      "added": ["blockquote", "checklist", "indent", "outdent", "quotation-mark"],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": []
+    },
+    {
+      "iconset": "Sidekickicons",
+      "version": "0.7.0",
+      "date": "2024-12-03",
+      "url": "https://github.com/ndri/sidekickicons/blob/main/CHANGELOG.md#070---2024-12-03",
+      "first": false,
+      "notes": [
+        {
+          "section": "Added",
+          "text": "Add new icons (`lock-semi-open`, `dots-2x3`, `dots-3x2`, `face-smile-plus`)",
+          "nested": false
+        },
+        {
+          "section": "Changed",
+          "text": "Add support for React 19",
+          "nested": false
+        }
+      ],
+      "added": ["dots-2x3", "dots-3x2", "face-smile-plus", "lock-semi-open"],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": []
+    },
+    {
+      "iconset": "Sidekickicons",
+      "version": "0.6.0",
+      "date": "2024-11-30",
+      "url": "https://github.com/ndri/sidekickicons/blob/main/CHANGELOG.md#060---2024-11-30",
+      "first": false,
+      "notes": [
+        {
+          "section": "Added",
+          "text": "Add new icons (`h4`, `h5`, `h6`, `heading`)",
+          "nested": false
+        },
+        {
+          "section": "Changed",
+          "text": "Add `stroke-linecap=\"round\"` and `stroke-linejoin=\"round\"` to `pin-slash` icon",
+          "nested": false
+        }
+      ],
+      "added": ["h4", "h5", "h6", "heading"],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": [
+        {
+          "name": "pin-slash",
+          "types": ["outline24"],
+          "visible": true,
+          "notes": [
+            "Add `stroke-linecap=\"round\"` and `stroke-linejoin=\"round\"` to `pin-slash` icon"
+          ],
+          "before": {
+            "outline24": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" aria-hidden=\"true\" data-slot=\"icon\" fill=\"none\">\n  <path d=\"m3 3 18 18M9 15l-6 6m10.853-3.149c-.225.419-.514.81-.853 1.149l-8-8c.34-.34.73-.628 1.149-.853m4.351.353v0L15 6v0l-1-1 2-2 5 5-2 2-1-1-4.5 4.5v0\"/>\n</svg>\n"
+          }
+        }
+      ]
+    },
+    {
+      "iconset": "Heroicons",
+      "version": "2.2.0",
+      "date": "2024-11-18",
+      "url": "https://github.com/tailwindlabs/heroicons/blob/master/CHANGELOG.md#220---2024-11-18",
+      "first": false,
+      "notes": [
+        {
+          "section": "Added",
+          "text": "Add React 19 support",
+          "nested": false
+        },
+        {
+          "section": "Fixed",
+          "text": "Removed unnecessary clipping path from `solid/arrow-left-circle`",
+          "nested": false
+        }
+      ],
+      "added": [],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": [
+        {
+          "name": "arrow-left-circle",
+          "types": ["solid20"],
+          "visible": false,
+          "notes": ["Removed unnecessary clipping path from `solid/arrow-left-circle`"],
+          "before": {}
+        }
+      ]
+    },
+    {
+      "iconset": "Sidekickicons",
+      "version": "0.5.0",
+      "date": "2024-11-10",
+      "url": "https://github.com/ndri/sidekickicons/blob/main/CHANGELOG.md#050---2024-11-10",
+      "first": false,
+      "notes": [
+        {
+          "section": "Added",
+          "text": "Add new icons (`pin`, `pin-slash`)",
+          "nested": false
+        }
+      ],
+      "added": ["pin", "pin-slash"],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": []
+    },
+    {
+      "iconset": "Sidekickicons",
+      "version": "0.4.0",
+      "date": "2024-11-08",
+      "url": "https://github.com/ndri/sidekickicons/blob/main/CHANGELOG.md#040---2024-11-08",
+      "first": false,
+      "notes": [
+        {
+          "section": "Added",
+          "text": "Add new icons (`chevron-left-right`, `chevron-right-left`, `view-split`, `cookie`)",
+          "nested": false
+        },
+        {
+          "section": "Changed",
+          "text": "Remove `xml:space=\"preserve\"` from SVG-s",
+          "nested": false
+        },
+        {
+          "section": "Changed",
+          "text": "Remove duplicate `stroke-linecap=\"round\"` and `stroke-linejoin=\"round\"` from SVG-s",
+          "nested": false
+        },
+        {
+          "section": "Changed",
+          "text": "Link to the app to browse the icons in the README",
+          "nested": false
+        }
+      ],
+      "added": ["chevron-left-right", "chevron-right-left", "cookie", "view-split"],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": []
+    },
+    {
+      "iconset": "Sidekickicons",
+      "version": "0.3.0",
+      "date": "2024-10-30",
+      "url": "https://github.com/ndri/sidekickicons/blob/main/CHANGELOG.md#030---2024-10-30",
+      "first": false,
+      "notes": [
+        {
+          "section": "Added",
+          "text": "Add new icons (`chevron-down-up`, `floppy-disk`, `sidebar-left`, `sidebar-right`, `shield`, `arc-third`)",
+          "nested": false
+        }
+      ],
+      "added": [
+        "arc-third",
+        "chevron-down-up",
+        "floppy-disk",
+        "shield",
+        "sidebar-left",
+        "sidebar-right"
+      ],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": []
+    },
+    {
+      "iconset": "Sidekickicons",
+      "version": "0.2.0",
+      "date": "2024-10-28",
+      "url": "https://github.com/ndri/sidekickicons/blob/main/CHANGELOG.md#020---2024-10-28",
+      "first": false,
+      "notes": [
+        {
+          "section": "Added",
+          "text": "Add new icons (`headphones`, `headphones-slash`, `microphone-slash`)",
+          "nested": false
+        },
+        {
+          "section": "Added",
+          "text": "Add usage guides for React and Vue",
+          "nested": false
+        }
+      ],
+      "added": ["headphones", "headphones-slash", "microphone-slash"],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": []
+    },
+    {
+      "iconset": "Sidekickicons",
+      "version": "0.1.0",
+      "date": "2024-10-27",
+      "url": "https://github.com/ndri/sidekickicons/blob/main/CHANGELOG.md#010---2024-10-27",
+      "first": true,
+      "notes": [
+        {
+          "section": "Changed",
+          "text": "Rename Heroicons to Sidekickicons",
+          "nested": false
+        },
+        {
+          "section": "Removed",
+          "text": "All Heroicons",
+          "nested": false
+        },
+        {
+          "section": "Added",
+          "text": "Add first icons (`arrow-path-clock`, `compass`, `crown`, `mask`)",
+          "nested": false
+        }
+      ],
+      "added": ["arrow-path-clock", "compass", "crown", "mask"],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": []
+    },
+    {
+      "iconset": "Heroicons",
+      "version": "2.1.5",
+      "date": "2024-07-10",
+      "url": "https://github.com/tailwindlabs/heroicons/blob/master/CHANGELOG.md#215---2024-07-10",
+      "first": false,
+      "notes": [
+        {
+          "section": "Added",
+          "text": "Add new icons (`arrow-turn-*`, `bold`, `calendar-date-range`, `divide`, `document-currency-*`, `equals`, `h1`, `h2`, `h3`, `italic`, `link-slash`, `numbered-list`, `percent-badge`, `slash`, `strikethrough`, `underline`)",
+          "nested": false
+        }
+      ],
+      "added": [
+        "arrow-turn-down-left",
+        "arrow-turn-down-right",
+        "arrow-turn-left-down",
+        "arrow-turn-left-up",
+        "arrow-turn-right-down",
+        "arrow-turn-right-up",
+        "arrow-turn-up-left",
+        "arrow-turn-up-right",
+        "bold",
+        "calendar-date-range",
+        "divide",
+        "document-currency-bangladeshi",
+        "document-currency-dollar",
+        "document-currency-euro",
+        "document-currency-pound",
+        "document-currency-rupee",
+        "document-currency-yen",
+        "equals",
+        "h1",
+        "h2",
+        "h3",
+        "italic",
+        "link-slash",
+        "numbered-list",
+        "percent-badge",
+        "slash",
+        "strikethrough",
+        "underline"
+      ],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": []
+    },
+    {
+      "iconset": "Heroicons",
+      "version": "2.1.1",
+      "date": "2023-12-18",
+      "url": "https://github.com/tailwindlabs/heroicons/blob/master/CHANGELOG.md#211---2023-12-18",
+      "first": false,
+      "notes": [
+        {
+          "section": "Fixed",
+          "text": "Fixed chevrons in mini set",
+          "nested": false
+        }
+      ],
+      "added": [],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": [
+        {
+          "name": "chevron-double-down",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": ["Fixed chevrons in mini set"],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\" data-slot=\"icon\">\n  <path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M5.75 5.5 10 9.75l4.25-4.25m-8.5 5L10 14.75l4.25-4.25\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "chevron-double-left",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": ["Fixed chevrons in mini set"],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\" data-slot=\"icon\">\n  <path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M14.5 5.75 10.25 10l4.25 4.25m-5-8.5L5.25 10l4.25 4.25\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "chevron-double-right",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": ["Fixed chevrons in mini set"],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\" data-slot=\"icon\">\n  <path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M5.5 5.75 9.75 10 5.5 14.25m5-8.5L14.75 10l-4.25 4.25\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "chevron-double-up",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": ["Fixed chevrons in mini set"],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\" data-slot=\"icon\">\n  <path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M5.75 14.5 10 10.25l4.25 4.25m-8.5-5L10 5.25l4.25 4.25\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "chevron-down",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": ["Fixed chevrons in mini set"],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\" data-slot=\"icon\">\n  <path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M14.25 8.75 10 13 5.75 8.75\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "chevron-left",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": ["Fixed chevrons in mini set"],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\" data-slot=\"icon\">\n  <path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M11.25 14.25 7 10l4.25-4.25\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "chevron-right",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": ["Fixed chevrons in mini set"],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\" data-slot=\"icon\">\n  <path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M8.75 5.75 13 10l-4.25 4.25\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "chevron-up-down",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": ["Fixed chevrons in mini set"],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\" data-slot=\"icon\">\n  <path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M6.75 7.25 10 4l3.25 3.25M13.25 12.75 10 16l-3.25-3.25\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "chevron-up",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": ["Fixed chevrons in mini set"],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\" data-slot=\"icon\">\n  <path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M5.75 11.25 10 7l4.25 4.25\"/>\n</svg>\n"
+          }
+        }
+      ]
+    },
+    {
+      "iconset": "Heroicons",
+      "version": "2.1.0",
+      "date": "2023-12-18",
+      "url": "https://github.com/tailwindlabs/heroicons/blob/master/CHANGELOG.md#210---2023-12-18",
+      "first": false,
+      "notes": [
+        {
+          "section": "Added",
+          "text": "Added micro icon set",
+          "nested": false
+        },
+        {
+          "section": "Added",
+          "text": "Rebuilt some icons for better clarity",
+          "nested": false
+        }
+      ],
+      "added": [
+        "arrow-left-end-on-rectangle",
+        "arrow-left-start-on-rectangle",
+        "arrow-right-end-on-rectangle",
+        "arrow-right-start-on-rectangle"
+      ],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {
+        "solid16": [
+          "academic-cap",
+          "adjustments-horizontal",
+          "adjustments-vertical",
+          "archive-box-arrow-down",
+          "archive-box-x-mark",
+          "archive-box",
+          "arrow-down-circle",
+          "arrow-down-left",
+          "arrow-down-on-square-stack",
+          "arrow-down-on-square",
+          "arrow-down-right",
+          "arrow-down-tray",
+          "arrow-down",
+          "arrow-left-circle",
+          "arrow-left",
+          "arrow-long-down",
+          "arrow-long-left",
+          "arrow-long-right",
+          "arrow-long-up",
+          "arrow-path-rounded-square",
+          "arrow-path",
+          "arrow-right-circle",
+          "arrow-right",
+          "arrow-top-right-on-square",
+          "arrow-trending-down",
+          "arrow-trending-up",
+          "arrow-up-circle",
+          "arrow-up-left",
+          "arrow-up-on-square-stack",
+          "arrow-up-on-square",
+          "arrow-up-right",
+          "arrow-up-tray",
+          "arrow-up",
+          "arrow-uturn-down",
+          "arrow-uturn-left",
+          "arrow-uturn-right",
+          "arrow-uturn-up",
+          "arrows-pointing-in",
+          "arrows-pointing-out",
+          "arrows-right-left",
+          "arrows-up-down",
+          "at-symbol",
+          "backspace",
+          "backward",
+          "banknotes",
+          "bars-2",
+          "bars-3-bottom-left",
+          "bars-3-bottom-right",
+          "bars-3-center-left",
+          "bars-3",
+          "bars-4",
+          "bars-arrow-down",
+          "bars-arrow-up",
+          "battery-0",
+          "battery-100",
+          "battery-50",
+          "beaker",
+          "bell-alert",
+          "bell-slash",
+          "bell-snooze",
+          "bell",
+          "bolt-slash",
+          "bolt",
+          "book-open",
+          "bookmark-slash",
+          "bookmark-square",
+          "bookmark",
+          "briefcase",
+          "bug-ant",
+          "building-library",
+          "building-office-2",
+          "building-office",
+          "building-storefront",
+          "cake",
+          "calculator",
+          "calendar-days",
+          "calendar",
+          "camera",
+          "chart-bar-square",
+          "chart-bar",
+          "chart-pie",
+          "chat-bubble-bottom-center-text",
+          "chat-bubble-bottom-center",
+          "chat-bubble-left-ellipsis",
+          "chat-bubble-left-right",
+          "chat-bubble-left",
+          "chat-bubble-oval-left-ellipsis",
+          "chat-bubble-oval-left",
+          "check-badge",
+          "check-circle",
+          "check",
+          "chevron-double-down",
+          "chevron-double-left",
+          "chevron-double-right",
+          "chevron-double-up",
+          "chevron-down",
+          "chevron-left",
+          "chevron-right",
+          "chevron-up-down",
+          "chevron-up",
+          "circle-stack",
+          "clipboard-document-check",
+          "clipboard-document-list",
+          "clipboard-document",
+          "clipboard",
+          "clock",
+          "cloud-arrow-down",
+          "cloud-arrow-up",
+          "cloud",
+          "code-bracket-square",
+          "code-bracket",
+          "cog-6-tooth",
+          "cog-8-tooth",
+          "cog",
+          "command-line",
+          "computer-desktop",
+          "cpu-chip",
+          "credit-card",
+          "cube-transparent",
+          "cube",
+          "currency-bangladeshi",
+          "currency-dollar",
+          "currency-euro",
+          "currency-pound",
+          "currency-rupee",
+          "currency-yen",
+          "cursor-arrow-rays",
+          "cursor-arrow-ripple",
+          "device-phone-mobile",
+          "device-tablet",
+          "document-arrow-down",
+          "document-arrow-up",
+          "document-chart-bar",
+          "document-check",
+          "document-duplicate",
+          "document-magnifying-glass",
+          "document-minus",
+          "document-plus",
+          "document-text",
+          "document",
+          "ellipsis-horizontal-circle",
+          "ellipsis-horizontal",
+          "ellipsis-vertical",
+          "envelope-open",
+          "envelope",
+          "exclamation-circle",
+          "exclamation-triangle",
+          "eye-dropper",
+          "eye-slash",
+          "eye",
+          "face-frown",
+          "face-smile",
+          "film",
+          "finger-print",
+          "fire",
+          "flag",
+          "folder-arrow-down",
+          "folder-minus",
+          "folder-open",
+          "folder-plus",
+          "folder",
+          "forward",
+          "funnel",
+          "gif",
+          "gift-top",
+          "gift",
+          "globe-alt",
+          "globe-americas",
+          "globe-asia-australia",
+          "globe-europe-africa",
+          "hand-raised",
+          "hand-thumb-down",
+          "hand-thumb-up",
+          "hashtag",
+          "heart",
+          "home-modern",
+          "home",
+          "identification",
+          "inbox-arrow-down",
+          "inbox-stack",
+          "inbox",
+          "information-circle",
+          "key",
+          "language",
+          "lifebuoy",
+          "light-bulb",
+          "link",
+          "list-bullet",
+          "lock-closed",
+          "lock-open",
+          "magnifying-glass-circle",
+          "magnifying-glass-minus",
+          "magnifying-glass-plus",
+          "magnifying-glass",
+          "map-pin",
+          "map",
+          "megaphone",
+          "microphone",
+          "minus-circle",
+          "minus",
+          "moon",
+          "musical-note",
+          "newspaper",
+          "no-symbol",
+          "paint-brush",
+          "paper-airplane",
+          "paper-clip",
+          "pause-circle",
+          "pause",
+          "pencil-square",
+          "pencil",
+          "phone-arrow-down-left",
+          "phone-arrow-up-right",
+          "phone-x-mark",
+          "phone",
+          "photo",
+          "play-circle",
+          "play-pause",
+          "play",
+          "plus-circle",
+          "plus",
+          "power",
+          "presentation-chart-bar",
+          "presentation-chart-line",
+          "printer",
+          "puzzle-piece",
+          "qr-code",
+          "question-mark-circle",
+          "queue-list",
+          "radio",
+          "receipt-percent",
+          "receipt-refund",
+          "rectangle-group",
+          "rectangle-stack",
+          "rocket-launch",
+          "rss",
+          "scale",
+          "scissors",
+          "server-stack",
+          "server",
+          "share",
+          "shield-check",
+          "shield-exclamation",
+          "shopping-bag",
+          "shopping-cart",
+          "signal-slash",
+          "signal",
+          "sparkles",
+          "speaker-wave",
+          "speaker-x-mark",
+          "square-2-stack",
+          "square-3-stack-3d",
+          "squares-2x2",
+          "squares-plus",
+          "star",
+          "stop-circle",
+          "stop",
+          "sun",
+          "swatch",
+          "table-cells",
+          "tag",
+          "ticket",
+          "trash",
+          "trophy",
+          "truck",
+          "tv",
+          "user-circle",
+          "user-group",
+          "user-minus",
+          "user-plus",
+          "user",
+          "users",
+          "variable",
+          "video-camera-slash",
+          "video-camera",
+          "view-columns",
+          "viewfinder-circle",
+          "wallet",
+          "wifi",
+          "window",
+          "wrench-screwdriver",
+          "wrench",
+          "x-circle",
+          "x-mark"
+        ]
+      },
+      "changed": [
+        {
+          "name": "chevron-double-down",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": ["Rebuilt some icons for better clarity"],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M14.77 4.21a.75.75 0 01.02 1.06l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 011.08-1.04L10 8.168l3.71-3.938a.75.75 0 011.06-.02zm0 6a.75.75 0 01.02 1.06l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 111.08-1.04L10 14.168l3.71-3.938a.75.75 0 011.06-.02z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "chevron-double-left",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": ["Rebuilt some icons for better clarity"],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M15.79 14.77a.75.75 0 01-1.06.02l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 111.04 1.08L11.832 10l3.938 3.71a.75.75 0 01.02 1.06zm-6 0a.75.75 0 01-1.06.02l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 111.04 1.08L5.832 10l3.938 3.71a.75.75 0 01.02 1.06z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "chevron-double-right",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": ["Rebuilt some icons for better clarity"],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M10.21 14.77a.75.75 0 01.02-1.06L14.168 10 10.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z\" clip-rule=\"evenodd\"/>\n  <path fill-rule=\"evenodd\" d=\"M4.21 14.77a.75.75 0 01.02-1.06L8.168 10 4.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "chevron-double-up",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": ["Rebuilt some icons for better clarity"],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M5.23 15.79a.75.75 0 01-.02-1.06l4.25-4.5a.75.75 0 011.08 0l4.25 4.5a.75.75 0 11-1.08 1.04L10 11.832 6.29 15.77a.75.75 0 01-1.06.02zm0-6a.75.75 0 01-.02-1.06l4.25-4.5a.75.75 0 011.08 0l4.25 4.5a.75.75 0 11-1.08 1.04L10 5.832 6.29 9.77a.75.75 0 01-1.06.02z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "chevron-down",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": ["Rebuilt some icons for better clarity"],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "chevron-left",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": ["Rebuilt some icons for better clarity"],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "chevron-right",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": ["Rebuilt some icons for better clarity"],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "chevron-up-down",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": ["Rebuilt some icons for better clarity"],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M10 3a.75.75 0 01.55.24l3.25 3.5a.75.75 0 11-1.1 1.02L10 4.852 7.3 7.76a.75.75 0 01-1.1-1.02l3.25-3.5A.75.75 0 0110 3zm-3.76 9.2a.75.75 0 011.06.04l2.7 2.908 2.7-2.908a.75.75 0 111.1 1.02l-3.25 3.5a.75.75 0 01-1.1 0l-3.25-3.5a.75.75 0 01.04-1.06z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "chevron-up",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": ["Rebuilt some icons for better clarity"],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M14.77 12.79a.75.75 0 01-1.06-.02L10 8.832 6.29 12.77a.75.75 0 11-1.08-1.04l4.25-4.5a.75.75 0 011.08 0l4.25 4.5a.75.75 0 01-.02 1.06z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "hand-thumb-down",
+          "types": ["outline24", "solid24"],
+          "visible": true,
+          "notes": ["Rebuilt some icons for better clarity"],
+          "before": {
+            "outline24": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" aria-hidden=\"true\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M7.5 15h2.25m8.024-9.75c.011.05.028.1.052.148.591 1.2.924 2.55.924 3.977a8.96 8.96 0 01-.999 4.125m.023-8.25c-.076-.365.183-.75.575-.75h.908c.889 0 1.713.518 1.972 1.368.339 1.11.521 2.287.521 3.507 0 1.553-.295 3.036-.831 4.398C20.613 14.547 19.833 15 19 15h-1.053c-.472 0-.745-.556-.5-.96a8.95 8.95 0 00.303-.54m.023-8.25H16.48a4.5 4.5 0 01-1.423-.23l-3.114-1.04a4.5 4.5 0 00-1.423-.23H6.504c-.618 0-1.217.247-1.605.729A11.95 11.95 0 002.25 12c0 .434.023.863.068 1.285C2.427 14.306 3.346 15 4.372 15h3.126c.618 0 .991.724.725 1.282A7.471 7.471 0 007.5 19.5a2.25 2.25 0 002.25 2.25.75.75 0 00.75-.75v-.633c0-.573.11-1.14.322-1.672.304-.76.93-1.33 1.653-1.715a9.04 9.04 0 002.86-2.4c.498-.634 1.226-1.08 2.032-1.08h.384\"/>\n</svg>\n",
+            "solid24": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path d=\"M15.73 5.25h1.035A7.465 7.465 0 0118 9.375a7.465 7.465 0 01-1.235 4.125h-.148c-.806 0-1.534.446-2.031 1.08a9.04 9.04 0 01-2.861 2.4c-.723.384-1.35.956-1.653 1.715a4.498 4.498 0 00-.322 1.672V21a.75.75 0 01-.75.75 2.25 2.25 0 01-2.25-2.25c0-1.152.26-2.243.723-3.218C7.74 15.724 7.366 15 6.748 15H3.622c-1.026 0-1.945-.694-2.054-1.715A12.134 12.134 0 011.5 12c0-2.848.992-5.464 2.649-7.521.388-.482.987-.729 1.605-.729H9.77a4.5 4.5 0 011.423.23l3.114 1.04a4.5 4.5 0 001.423.23zM21.669 13.773c.536-1.362.831-2.845.831-4.398 0-1.22-.182-2.398-.52-3.507-.26-.85-1.084-1.368-1.973-1.368H19.1c-.445 0-.72.498-.523.898.591 1.2.924 2.55.924 3.977a8.959 8.959 0 01-1.302 4.666c-.245.403.028.959.5.959h1.053c.832 0 1.612-.453 1.918-1.227z\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "hand-thumb-up",
+          "types": ["outline24", "solid24"],
+          "visible": true,
+          "notes": ["Rebuilt some icons for better clarity"],
+          "before": {
+            "outline24": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" aria-hidden=\"true\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.203 4.167 9.75 5 9.75h1.053c.472 0 .745.556.5.96a8.958 8.958 0 00-1.302 4.665c0 1.194.232 2.333.654 3.375z\"/>\n</svg>\n",
+            "solid24": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path d=\"M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "receipt-percent",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": ["Rebuilt some icons for better clarity"],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M4.93 1.31a41.401 41.401 0 0110.14 0C16.194 1.45 17 2.414 17 3.517V18.25a.75.75 0 01-1.075.676l-2.8-1.344-2.8 1.344a.75.75 0 01-.65 0l-2.8-1.344-2.8 1.344A.75.75 0 013 18.25V3.517c0-1.103.806-2.068 1.93-2.207zm8.85 5.97a.75.75 0 00-1.06-1.06l-6.5 6.5a.75.75 0 101.06 1.06l6.5-6.5zM9 8a1 1 0 11-2 0 1 1 0 012 0zm3 5a1 1 0 100-2 1 1 0 000 2z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "receipt-refund",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": ["Rebuilt some icons for better clarity"],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M4.93 1.31a41.401 41.401 0 0110.14 0C16.194 1.45 17 2.414 17 3.517V18.25a.75.75 0 01-1.075.676l-2.8-1.344-2.8 1.344a.75.75 0 01-.65 0l-2.8-1.344-2.8 1.344A.75.75 0 013 18.25V3.517c0-1.103.806-2.068 1.93-2.207zm4.822 4.997a.75.75 0 10-1.004-1.114l-2.5 2.25a.75.75 0 000 1.114l2.5 2.25a.75.75 0 001.004-1.114L8.704 8.75h1.921a1.875 1.875 0 010 3.75.75.75 0 000 1.5 3.375 3.375 0 100-6.75h-1.92l1.047-.943z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "speaker-wave",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": ["Rebuilt some icons for better clarity"],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path d=\"M10 3.75a.75.75 0 00-1.264-.546L4.703 7H3.167a.75.75 0 00-.7.48A6.985 6.985 0 002 10c0 .887.165 1.737.468 2.52.111.29.39.48.7.48h1.535l4.033 3.796A.75.75 0 0010 16.25V3.75zM15.95 5.05a.75.75 0 00-1.06 1.061 5.5 5.5 0 010 7.778.75.75 0 001.06 1.06 7 7 0 000-9.899z\"/>\n  <path d=\"M13.829 7.172a.75.75 0 00-1.061 1.06 2.5 2.5 0 010 3.536.75.75 0 001.06 1.06 4 4 0 000-5.656z\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "speaker-x-mark",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": ["Rebuilt some icons for better clarity"],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path d=\"M9.547 3.062A.75.75 0 0110 3.75v12.5a.75.75 0 01-1.264.546L4.703 13H3.167a.75.75 0 01-.7-.48A6.985 6.985 0 012 10c0-.887.165-1.737.468-2.52a.75.75 0 01.7-.48h1.535l4.033-3.796a.75.75 0 01.811-.142zM13.28 7.22a.75.75 0 10-1.06 1.06L13.94 10l-1.72 1.72a.75.75 0 001.06 1.06L15 11.06l1.72 1.72a.75.75 0 101.06-1.06L16.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L15 8.94l-1.72-1.72z\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "tag",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": ["Rebuilt some icons for better clarity"],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M5.5 3A2.5 2.5 0 003 5.5v2.879a2.5 2.5 0 00.732 1.767l6.5 6.5a2.5 2.5 0 003.536 0l2.878-2.878a2.5 2.5 0 000-3.536l-6.5-6.5A2.5 2.5 0 008.38 3H5.5zM6 7a1 1 0 100-2 1 1 0 000 2z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "ticket",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": ["Rebuilt some icons for better clarity"],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M13 3v1.27a.75.75 0 001.5 0V3h2.25A2.25 2.25 0 0119 5.25v2.628a.75.75 0 01-.5.707 1.5 1.5 0 000 2.83c.3.106.5.39.5.707v2.628A2.25 2.25 0 0116.75 17H14.5v-1.27a.75.75 0 00-1.5 0V17H3.25A2.25 2.25 0 011 14.75v-2.628c0-.318.2-.601.5-.707a1.5 1.5 0 000-2.83.75.75 0 01-.5-.707V5.25A2.25 2.25 0 013.25 3H13zm1.5 4.396a.75.75 0 00-1.5 0v1.042a.75.75 0 001.5 0V7.396zm0 4.167a.75.75 0 00-1.5 0v1.041a.75.75 0 001.5 0v-1.041zM6 10.75a.75.75 0 01.75-.75h3.5a.75.75 0 010 1.5h-3.5a.75.75 0 01-.75-.75zm0 2.5a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "user-plus",
+          "types": ["outline24", "solid24", "solid20"],
+          "visible": true,
+          "notes": ["Rebuilt some icons for better clarity"],
+          "before": {
+            "outline24": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" aria-hidden=\"true\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M19 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z\"/>\n</svg>\n",
+            "solid24": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path d=\"M6.25 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM3.25 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM19.75 7.5a.75.75 0 00-1.5 0v2.25H16a.75.75 0 000 1.5h2.25v2.25a.75.75 0 001.5 0v-2.25H22a.75.75 0 000-1.5h-2.25V7.5z\"/>\n</svg>\n",
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path d=\"M11 5a3 3 0 11-6 0 3 3 0 016 0zM2.615 16.428a1.224 1.224 0 01-.569-1.175 6.002 6.002 0 0111.908 0c.058.467-.172.92-.57 1.174A9.953 9.953 0 018 18a9.953 9.953 0 01-5.385-1.572zM16.25 5.75a.75.75 0 00-1.5 0v2h-2a.75.75 0 000 1.5h2v2a.75.75 0 001.5 0v-2h2a.75.75 0 000-1.5h-2v-2z\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "video-camera-slash",
+          "types": ["solid24"],
+          "visible": true,
+          "notes": ["Rebuilt some icons for better clarity"],
+          "before": {
+            "solid24": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path d=\"M3.53 2.47a.75.75 0 00-1.06 1.06l18 18a.75.75 0 101.06-1.06l-18-18zM22.5 17.69c0 .471-.202.86-.504 1.124l-4.746-4.746V7.939l2.69-2.689c.944-.945 2.56-.276 2.56 1.06v11.38zM15.75 7.5v5.068L7.682 4.5h5.068a3 3 0 013 3zM1.5 7.5c0-.782.3-1.494.79-2.028l12.846 12.846A2.995 2.995 0 0112.75 19.5H4.5a3 3 0 01-3-3v-9z\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "window",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": ["Rebuilt some icons for better clarity"],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M3.25 3A2.25 2.25 0 001 5.25v9.5A2.25 2.25 0 003.25 17h13.5A2.25 2.25 0 0019 14.75v-9.5A2.25 2.25 0 0016.75 3H3.25zM2.5 9v5.75c0 .414.336.75.75.75h13.5a.75.75 0 00.75-.75V9h-15zM4 5.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V6a.75.75 0 00-.75-.75H4zM6.25 6A.75.75 0 017 5.25h.01a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75H7a.75.75 0 01-.75-.75V6zM10 5.25a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75h.01a.75.75 0 00.75-.75V6a.75.75 0 00-.75-.75H10z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        }
+      ]
+    },
+    {
+      "iconset": "Heroicons",
+      "version": "2.0.13",
+      "date": "2022-11-02",
+      "url": "https://github.com/tailwindlabs/heroicons/blob/master/CHANGELOG.md#2013---2022-11-02",
+      "first": false,
+      "notes": [
+        {
+          "section": "Fixed",
+          "text": "Fix `minus` icon alignment ([0a88242](https://github.com/tailwindlabs/heroicons/commit/0a88242ffddbd79177b8cd4cf954d3a54be121a6))",
+          "nested": false
+        }
+      ],
+      "added": [],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": [
+        {
+          "name": "minus",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": [
+            "Fix `minus` icon alignment ([0a88242](https://github.com/tailwindlabs/heroicons/commit/0a88242ffddbd79177b8cd4cf954d3a54be121a6))"
+          ],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M3 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H3.75A.75.75 0 013 10z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        }
+      ]
+    },
+    {
+      "iconset": "Heroicons",
+      "version": "2.0.12",
+      "date": "2022-10-05",
+      "url": "https://github.com/tailwindlabs/heroicons/blob/master/CHANGELOG.md#2012---2022-10-05",
+      "first": false,
+      "notes": [
+        {
+          "section": "Fixed",
+          "text": "Add `title` and `titleId` props to the React types",
+          "nested": false
+        },
+        {
+          "section": "Fixed",
+          "text": "Fix `information-circle` icon alignment",
+          "nested": false
+        }
+      ],
+      "added": [],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": [
+        {
+          "name": "information-circle",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": ["Fix `information-circle` icon alignment"],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M19 10.5a8.5 8.5 0 11-17 0 8.5 8.5 0 0117 0zM8.25 9.75A.75.75 0 019 9h.253a1.75 1.75 0 011.709 2.13l-.46 2.066a.25.25 0 00.245.304H11a.75.75 0 010 1.5h-.253a1.75 1.75 0 01-1.709-2.13l.46-2.066a.25.25 0 00-.245-.304H9a.75.75 0 01-.75-.75zM10 7a1 1 0 100-2 1 1 0 000 2z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        }
+      ]
+    },
+    {
+      "iconset": "Heroicons",
+      "version": "2.0.11",
+      "date": "2022-09-12",
+      "url": "https://github.com/tailwindlabs/heroicons/blob/master/CHANGELOG.md#2011---2022-09-12",
+      "first": false,
+      "notes": [
+        {
+          "section": "Added",
+          "text": "Add new icons (`bug-ant`, `eye-dropper`, `pause-circle`, `play-circle`, `power`, `rocket-launch`, `square-2-stack-3d`, `stop-circle`, `trophy`, `tv`, `viewfinder-circle`, `window`)",
+          "nested": false
+        }
+      ],
+      "added": [
+        "bug-ant",
+        "eye-dropper",
+        "pause-circle",
+        "play-circle",
+        "power",
+        "rocket-launch",
+        "square-3-stack-3d",
+        "stop-circle",
+        "trophy",
+        "tv",
+        "viewfinder-circle",
+        "window"
+      ],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": []
+    },
+    {
+      "iconset": "Heroicons",
+      "version": "2.0.10",
+      "date": "2022-08-30",
+      "url": "https://github.com/tailwindlabs/heroicons/blob/master/CHANGELOG.md#2010---2022-08-30",
+      "first": false,
+      "notes": [],
+      "added": [],
+      "removed": ["exclaimation-triangle"],
+      "renamed": [],
+      "newStyles": {},
+      "changed": [
+        {
+          "name": "arrow-path-rounded-square",
+          "types": ["outline24", "solid24", "solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "outline24": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" aria-hidden=\"true\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M4.5 12c0-1.232.046-2.453.138-3.662a4.006 4.006 0 013.7-3.7 48.678 48.678 0 017.324 0 4.006 4.006 0 013.7 3.7c.017.22.032.441.046.662M4.5 12l-3-3m3 3l3-3m12 3c0 1.232-.046 2.453-.138 3.662a4.006 4.006 0 01-3.7 3.7 48.657 48.657 0 01-7.324 0 4.006 4.006 0 01-3.7-3.7c-.017-.22-.032-.441-.046-.662M19.5 12l-3 3m3-3l3 3\"/>\n</svg>\n",
+            "solid24": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M12 5.25c-1.213 0-2.415.046-3.605.135a3.256 3.256 0 00-3.01 3.01c-.044.583-.077 1.17-.1 1.759L6.97 8.47a.75.75 0 011.06 1.06l-3 3a.75.75 0 01-1.06 0l-3-3a.75.75 0 011.06-1.06l1.752 1.751c.023-.65.06-1.296.108-1.939A4.756 4.756 0 018.282 3.89a49.423 49.423 0 017.436 0 4.756 4.756 0 014.392 4.392c.017.224.032.447.046.672a.75.75 0 01-1.497.092 48.187 48.187 0 00-.044-.651 3.256 3.256 0 00-3.01-3.01A47.926 47.926 0 0012 5.25zm6.97 6.22a.75.75 0 011.06 0l3 3a.75.75 0 11-1.06 1.06l-1.752-1.751a49.25 49.25 0 01-.108 1.939 4.756 4.756 0 01-4.392 4.392 49.412 49.412 0 01-7.436 0 4.756 4.756 0 01-4.392-4.392 49.112 49.112 0 01-.046-.672.75.75 0 111.497-.092c.013.217.028.434.044.651a3.256 3.256 0 003.01 3.01 47.951 47.951 0 007.21 0 3.256 3.256 0 003.01-3.01c.044-.583.077-1.17.1-1.759L17.03 15.53a.75.75 0 11-1.06-1.06l3-3z\" clip-rule=\"evenodd\"/>\n</svg>\n",
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M10 4.5c-1.215 0-2.417.055-3.604.162a.68.68 0 00-.615.597 39.78 39.78 0 00-.25 3.15l1.689-1.69A.75.75 0 118.28 7.78l-2.999 3a.75.75 0 01-1.06 0l-3.001-3a.75.75 0 011.06-1.06l1.748 1.747c.042-1.141.13-2.27.264-3.386a2.18 2.18 0 011.97-1.913 41.51 41.51 0 017.477 0 2.18 2.18 0 011.969 1.913c.064.534.117 1.07.16 1.61a.75.75 0 01-1.495.12 39.518 39.518 0 00-.154-1.552.68.68 0 00-.615-.597A40.013 40.013 0 0010 4.5zm4.719 4.72a.75.75 0 011.06 0l3.001 3a.75.75 0 11-1.06 1.06l-1.748-1.747a41.309 41.309 0 01-.264 3.386 2.18 2.18 0 01-1.97 1.913 41.534 41.534 0 01-7.477 0 2.18 2.18 0 01-1.969-1.913 41.176 41.176 0 01-.16-1.61.75.75 0 011.495-.12c.041.52.093 1.037.154 1.552a.68.68 0 00.615.597 40.012 40.012 0 007.208 0 .68.68 0 00.615-.597c.124-1.038.208-2.088.25-3.15l-1.689 1.69a.75.75 0 01-1.06-1.061l2.999-3z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "exclamation-triangle",
+          "types": ["outline24", "solid24", "solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "outline24": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" aria-hidden=\"true\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M12 10.5v3.75m-9.303 3.376C1.83 19.126 2.914 21 4.645 21h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 4.88c-.866-1.501-3.032-1.501-3.898 0L2.697 17.626zM12 17.25h.007v.008H12v-.008z\"/>\n</svg>\n",
+            "solid24": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M9.401 4.504c1.155-2.001 4.043-2.001 5.197 0l7.355 12.747c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 4.504zM12 9.75a.75.75 0 01.75.75v3.75a.75.75 0 01-1.5 0V10.5a.75.75 0 01.75-.75zM12 18a.75.75 0 100-1.5.75.75 0 000 1.5z\" clip-rule=\"evenodd\"/>\n</svg>\n",
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M8.485 3.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 3.495zM10 6a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 6zm0 9a1 1 0 100-2 1 1 0 000 2z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        }
+      ]
+    },
+    {
+      "iconset": "Heroicons",
+      "version": "2.0.9",
+      "date": "2022-08-30",
+      "url": "https://github.com/tailwindlabs/heroicons/blob/master/CHANGELOG.md#209---2022-08-30",
+      "first": false,
+      "notes": [],
+      "added": [
+        "arrow-path-rounded-square",
+        "arrow-small-down",
+        "arrow-small-left",
+        "arrow-small-right",
+        "arrow-small-up",
+        "battery-0",
+        "battery-100",
+        "battery-50",
+        "cube-transparent",
+        "currency-bangladeshi",
+        "exclaimation-triangle",
+        "minus-small",
+        "paint-brush",
+        "plus-small",
+        "variable",
+        "wallet"
+      ],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": [
+        {
+          "name": "arrow-path",
+          "types": ["outline24", "solid24", "solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "outline24": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" aria-hidden=\"true\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M4.5 12c0-1.232.046-2.453.138-3.662a4.006 4.006 0 013.7-3.7 48.678 48.678 0 017.324 0 4.006 4.006 0 013.7 3.7c.017.22.032.441.046.662M4.5 12l-3-3m3 3l3-3m12 3c0 1.232-.046 2.453-.138 3.662a4.006 4.006 0 01-3.7 3.7 48.657 48.657 0 01-7.324 0 4.006 4.006 0 01-3.7-3.7c-.017-.22-.032-.441-.046-.662M19.5 12l-3 3m3-3l3 3\"/>\n</svg>\n",
+            "solid24": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M12 5.25c-1.213 0-2.415.046-3.605.135a3.256 3.256 0 00-3.01 3.01c-.044.583-.077 1.17-.1 1.759L6.97 8.47a.75.75 0 011.06 1.06l-3 3a.75.75 0 01-1.06 0l-3-3a.75.75 0 011.06-1.06l1.752 1.751c.023-.65.06-1.296.108-1.939A4.756 4.756 0 018.282 3.89a49.423 49.423 0 017.436 0 4.756 4.756 0 014.392 4.392c.017.224.032.447.046.672a.75.75 0 01-1.497.092 48.187 48.187 0 00-.044-.651 3.256 3.256 0 00-3.01-3.01A47.926 47.926 0 0012 5.25zm6.97 6.22a.75.75 0 011.06 0l3 3a.75.75 0 11-1.06 1.06l-1.752-1.751a49.25 49.25 0 01-.108 1.939 4.756 4.756 0 01-4.392 4.392 49.412 49.412 0 01-7.436 0 4.756 4.756 0 01-4.392-4.392 49.112 49.112 0 01-.046-.672.75.75 0 111.497-.092c.013.217.028.434.044.651a3.256 3.256 0 003.01 3.01 47.951 47.951 0 007.21 0 3.256 3.256 0 003.01-3.01c.044-.583.077-1.17.1-1.759L17.03 15.53a.75.75 0 11-1.06-1.06l3-3z\" clip-rule=\"evenodd\"/>\n</svg>\n",
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M10 4.5c-1.215 0-2.417.055-3.604.162a.68.68 0 00-.615.597 39.78 39.78 0 00-.25 3.15l1.689-1.69A.75.75 0 118.28 7.78l-2.999 3a.75.75 0 01-1.06 0l-3.001-3a.75.75 0 011.06-1.06l1.748 1.747c.042-1.141.13-2.27.264-3.386a2.18 2.18 0 011.97-1.913 41.51 41.51 0 017.477 0 2.18 2.18 0 011.969 1.913c.064.534.117 1.07.16 1.61a.75.75 0 01-1.495.12 39.518 39.518 0 00-.154-1.552.68.68 0 00-.615-.597A40.013 40.013 0 0010 4.5zm4.719 4.72a.75.75 0 011.06 0l3.001 3a.75.75 0 11-1.06 1.06l-1.748-1.747a41.309 41.309 0 01-.264 3.386 2.18 2.18 0 01-1.97 1.913 41.534 41.534 0 01-7.477 0 2.18 2.18 0 01-1.969-1.913 41.176 41.176 0 01-.16-1.61.75.75 0 011.495-.12c.041.52.093 1.037.154 1.552a.68.68 0 00.615.597 40.012 40.012 0 007.208 0 .68.68 0 00.615-.597c.124-1.038.208-2.088.25-3.15l-1.689 1.69a.75.75 0 01-1.06-1.061l2.999-3z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "bookmark-slash",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path d=\"M3 18.25V6.182l12.577 12.577L10 16.082l-5.925 2.844A.75.75 0 013 18.25zM17 3.517v10.301L4.568 1.386c.116-.035.237-.06.362-.076a41.401 41.401 0 0110.14 0C16.194 1.45 17 2.414 17 3.517zM3.28 2.22a.75.75 0 00-1.06 1.06l14.5 14.5a.75.75 0 101.06-1.06L3.28 2.22z\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "bookmark",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M10 1c-1.716 0-3.408.106-5.07.31C3.806 1.45 3 2.414 3 3.517V18.25a.75.75 0 001.075.676L10 16.082l5.925 2.844A.75.75 0 0017 18.25V3.517c0-1.103-.806-2.068-1.93-2.207A41.403 41.403 0 0010 1z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "table-cells",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M1 4.25A2.25 2.25 0 013.25 2h13.5A2.25 2.25 0 0119 4.25v11.51a2.25 2.25 0 01-2.25 2.25H11.5c-.072 0-.143-.003-.214-.01H8.714c-.07.007-.142.01-.214.01H3.25A2.25 2.25 0 011 15.76V4.25zm8.25 11.51v-.625a.75.75 0 00-.75-.75H3.25a.75.75 0 00-.75.75v.615c0 .414.336.75.75.75h5.373a.75.75 0 00.627-.74zm1.5 0a.75.75 0 00.627.74h5.373a.75.75 0 00.75-.75v-.615a.75.75 0 00-.75-.75H11.5a.75.75 0 00-.75.75v.625zm6.75-3.63v-.625a.75.75 0 00-.75-.75H11.5a.75.75 0 00-.75.75v.625c0 .414.336.75.75.75h5.25a.75.75 0 00.75-.75zm-8.25 0v-.625a.75.75 0 00-.75-.75H3.25a.75.75 0 00-.75.75v.625c0 .414.336.75.75.75H8.5a.75.75 0 00.75-.75zM17.5 8.5v-.625a.75.75 0 00-.75-.75H11.5a.75.75 0 00-.75.75V8.5c0 .414.336.75.75.75h5.25a.75.75 0 00.75-.75zm-8.25 0v-.625a.75.75 0 00-.75-.75H3.25a.75.75 0 00-.75.75V8.5c0 .414.336.75.75.75H8.5a.75.75 0 00.75-.75z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "view-columns",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M14 18h2.75A2.25 2.25 0 0019 15.75V4.25A2.25 2.25 0 0016.75 2H14v16zM12.5 2h-5v16h5V2zM3.25 2H6v16H3.25A2.25 2.25 0 011 15.75V4.25A2.25 2.25 0 013.25 2z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        }
+      ]
+    },
+    {
+      "iconset": "Heroicons",
+      "version": "2.0.8",
+      "date": "2022-08-26",
+      "url": "https://github.com/tailwindlabs/heroicons/blob/master/CHANGELOG.md#208---2022-08-26",
+      "first": false,
+      "notes": [],
+      "added": ["user-minus"],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": [
+        {
+          "name": "arrow-down-left",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M16.78 3.22a.75.75 0 00-1.06 0L4.5 14.44V6.75a.75.75 0 00-1.5 0v9.5c0 .414.336.75.75.75h9.5a.75.75 0 000-1.5H5.56L16.78 4.28a.75.75 0 000-1.06z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "arrow-down-right",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path d=\"M4.28 3.22a.75.75 0 00-1.06 1.06L14.44 15.5H6.75a.75.75 0 000 1.5h9.5a.747.747 0 00.75-.75v-9.5a.75.75 0 00-1.5 0v7.69L4.28 3.22z\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "arrow-down",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M10 2a.75.75 0 01.75.75v12.638l4.96-5.158a.75.75 0 111.08 1.04l-6.25 6.5a.75.75 0 01-1.08 0l-6.25-6.5a.75.75 0 111.08-1.04l4.96 5.158V2.75A.75.75 0 0110 2z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "arrow-left",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M18 10a.75.75 0 01-.75.75H4.612l5.158 4.96a.75.75 0 11-1.04 1.08l-6.5-6.25a.75.75 0 010-1.08l6.5-6.25a.75.75 0 111.04 1.08L4.612 9.25H17.25A.75.75 0 0118 10z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "arrow-right",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M2 10a.75.75 0 01.75-.75h12.638L10.23 4.29a.75.75 0 111.04-1.08l6.5 6.25a.75.75 0 010 1.08l-6.5 6.25a.75.75 0 11-1.04-1.08l5.158-4.96H2.75A.75.75 0 012 10z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "arrow-up-left",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M16.78 16.78a.75.75 0 01-1.06 0L4.5 5.56v7.69a.75.75 0 01-1.5 0v-9.5A.75.75 0 013.75 3h9.5a.75.75 0 010 1.5H5.56l11.22 11.22a.75.75 0 010 1.06z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "arrow-up-right",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M3.22 16.78a.75.75 0 001.06 0L15.5 5.56v7.69a.75.75 0 001.5 0v-9.5a.75.75 0 00-.75-.75h-9.5a.75.75 0 000 1.5h7.69L3.22 15.72a.75.75 0 000 1.06z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "arrow-up",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M10 18a.75.75 0 01-.75-.75V4.612L4.29 9.77a.75.75 0 01-1.08-1.04l6.25-6.5a.75.75 0 011.08 0l6.25 6.5a.75.75 0 11-1.08 1.04l-4.96-5.158V17.25A.75.75 0 0110 18z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "check",
+          "types": ["outline24", "solid24"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "outline24": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" aria-hidden=\"true\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M3 13.5l6.75 6.75L21 4.5\"/>\n</svg>\n",
+            "solid24": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M21.436 3.89a.75.75 0 01.174 1.046l-11.25 15.75a.75.75 0 01-1.14.094l-6.75-6.75a.75.75 0 011.06-1.06l6.124 6.124L20.39 4.064a.75.75 0 011.046-.174z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "hand-thumb-down",
+          "types": ["outline24", "solid24"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "outline24": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" aria-hidden=\"true\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M7.498 14.25H4.372c-1.026 0-1.945-.694-2.054-1.715a12.137 12.137 0 01-.068-1.285c0-2.848.992-5.464 2.649-7.521C5.287 3.247 5.886 3 6.504 3h4.016a4.5 4.5 0 011.423.23l3.114 1.04a4.5 4.5 0 001.423.23h1.294M7.498 14.25c.618 0 .991.724.725 1.282A7.471 7.471 0 007.5 18.75 2.25 2.25 0 009.75 21a.75.75 0 00.75-.75v-.633c0-.573.11-1.14.322-1.672.304-.76.93-1.33 1.653-1.715a9.04 9.04 0 002.86-2.4c.498-.634 1.226-1.08 2.032-1.08h.384m-10.253 1.5H9.7m8.075-9.75c.01.05.027.1.05.148.593 1.2.925 2.55.925 3.977 0 1.487-.36 2.89-.999 4.125m.023-8.25c-.076-.365.183-.75.575-.75h.908c.889 0 1.713.518 1.972 1.368.339 1.11.521 2.287.521 3.507 0 1.553-.295 3.036-.831 4.398-.306.774-1.086 1.227-1.918 1.227h-1.053c-.472 0-.745-.556-.5-.96a8.95 8.95 0 00.303-.54\"/>\n</svg>\n",
+            "solid24": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path d=\"M15.73 4.5h1.035A7.465 7.465 0 0118 8.625a7.465 7.465 0 01-1.235 4.125h-.148c-.806 0-1.534.446-2.031 1.08a9.04 9.04 0 01-2.861 2.4c-.723.384-1.35.956-1.653 1.715a4.499 4.499 0 00-.322 1.672v.633A.75.75 0 019 21a2.25 2.25 0 01-2.25-2.25c0-1.152.26-2.243.723-3.218.266-.558-.107-1.282-.725-1.282H3.622c-1.026 0-1.945-.694-2.054-1.715A12.137 12.137 0 011.5 11.25c0-2.848.992-5.464 2.649-7.521C4.537 3.247 5.136 3 5.754 3H9.77a4.5 4.5 0 011.423.23l3.114 1.04a4.5 4.5 0 001.423.23zM21.669 13.023c.536-1.362.831-2.845.831-4.398 0-1.22-.182-2.398-.52-3.507-.26-.85-1.084-1.368-1.973-1.368H19.1c-.445 0-.72.498-.523.898.591 1.2.924 2.55.924 3.977a8.958 8.958 0 01-1.302 4.666c-.245.403.028.959.5.959h1.053c.832 0 1.612-.453 1.918-1.227z\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "hand-thumb-up",
+          "types": ["outline24", "solid24"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "outline24": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" aria-hidden=\"true\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5.383 12.25c.806 0 1.533-.446 2.031-1.08a9.04 9.04 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V4.75A.75.75 0 0113 4a2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282m0 0h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H12.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H4.654m10.598-9.75H13M4.654 20.5c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368A12 12 0 011 17.125c0-1.553.295-3.036.831-4.398.306-.774 1.086-1.227 1.918-1.227h1.053c.472 0 .745.556.5.96A8.958 8.958 0 004 17.124c0 1.194.232 2.333.654 3.375z\"/>\n</svg>\n",
+            "solid24": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path d=\"M7.493 19.5c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 16.125c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3.75A.75.75 0 0115 3a2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 11.727a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507C2.28 20.482 3.105 21 3.994 21H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "heart",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path d=\"M9.693 17.934l-.003-.001-.006-.003-.021-.01a8.112 8.112 0 01-.355-.172 20.748 20.748 0 01-3.917-2.592C3.266 13.361 1 10.608 1 7a5 5 0 019-3 5 5 0 019 3c0 3.608-2.266 6.361-4.39 8.156a20.745 20.745 0 01-4.196 2.729 7.809 7.809 0 01-.077.035l-.021.01-.006.003-.002.001a.766.766 0 01-.615 0z\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "minus",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "pencil-square",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M5.433 13.916l1.262-3.154a4 4 0 01.885-1.343L14.5 2.5a2.121 2.121 0 113 3l-6.92 6.919c-.383.383-.84.684-1.343.885l-3.154 1.262a.5.5 0 01-.65-.65zM2.5 5.75c0-.69.56-1.25 1.25-1.25H10A.75.75 0 0010 3H3.75A2.75 2.75 0 001 5.75v10.5A2.75 2.75 0 003.75 19h10.5A2.75 2.75 0 0017 16.25V10a.75.75 0 00-1.5 0v6.25c0 .69-.56 1.25-1.25 1.25H3.75c-.69 0-1.25-.56-1.25-1.25V5.75z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "plus",
+          "types": ["outline24", "solid24"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "outline24": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" aria-hidden=\"true\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M12 5v14m7-7H5\"/>\n</svg>\n",
+            "solid24": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M12 4.25a.75.75 0 01.75.75v6.25H19a.75.75 0 010 1.5h-6.25V19a.75.75 0 01-1.5 0v-6.25H5a.75.75 0 010-1.5h6.25V5a.75.75 0 01.75-.75z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "tag",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M4.5 2A2.5 2.5 0 002 4.5v2.879a2.5 2.5 0 00.732 1.767l7.5 7.5a2.5 2.5 0 003.536 0l2.878-2.878a2.5 2.5 0 000-3.536l-7.5-7.5A2.5 2.5 0 007.38 2H4.5zM5 6a1 1 0 100-2 1 1 0 000 2z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "user-plus",
+          "types": ["outline24", "solid24", "solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "outline24": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" aria-hidden=\"true\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM3 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 019.374 21c-2.331 0-4.512-.645-6.374-1.766z\"/>\n</svg>\n",
+            "solid24": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path d=\"M5.25 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM2.25 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM18.75 7.5a.75.75 0 00-1.5 0v2.25H15a.75.75 0 000 1.5h2.25v2.25a.75.75 0 001.5 0v-2.25H21a.75.75 0 000-1.5h-2.25V7.5z\"/>\n</svg>\n",
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path d=\"M10 5a3 3 0 11-6 0 3 3 0 016 0zM1.615 16.428a1.224 1.224 0 01-.569-1.175 6.002 6.002 0 0111.908 0c.058.467-.172.92-.57 1.174A9.953 9.953 0 017 18a9.953 9.953 0 01-5.385-1.572zM16.25 5.75a.75.75 0 00-1.5 0v2h-2a.75.75 0 000 1.5h2v2a.75.75 0 001.5 0v-2h2a.75.75 0 000-1.5h-2v-2z\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "x-mark",
+          "types": ["outline24", "solid24", "solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "outline24": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" aria-hidden=\"true\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M4.5 19.5l15-15m-15 0l15 15\"/>\n</svg>\n",
+            "solid24": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M3.97 3.97a.75.75 0 011.06 0L12 10.94l6.97-6.97a.75.75 0 111.06 1.06L13.06 12l6.97 6.97a.75.75 0 11-1.06 1.06L12 13.06l-6.97 6.97a.75.75 0 01-1.06-1.06L10.94 12 3.97 5.03a.75.75 0 010-1.06z\" clip-rule=\"evenodd\"/>\n</svg>\n",
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M4.28 3.22a.75.75 0 00-1.06 1.06L8.94 10l-5.72 5.72a.75.75 0 101.06 1.06L10 11.06l5.72 5.72a.75.75 0 101.06-1.06L11.06 10l5.72-5.72a.75.75 0 00-1.06-1.06L10 8.94 4.28 3.22z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        }
+      ]
+    },
+    {
+      "iconset": "Heroicons",
+      "version": "2.0.7",
+      "date": "2022-08-25",
+      "url": "https://github.com/tailwindlabs/heroicons/blob/master/CHANGELOG.md#207---2022-08-25",
+      "first": false,
+      "notes": [],
+      "added": [],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": [
+        {
+          "name": "hand-thumb-down",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path d=\"M18.905 11.75a1.25 1.25 0 11-2.5 0v-7.5a1.25 1.25 0 012.5 0v7.5zM8.905 16v1.3c0 .268-.14.526-.395.607A2 2 0 015.905 16c0-.995.182-1.948.514-2.826.204-.54-.166-1.174-.744-1.174h-2.52c-1.243 0-2.261-1.01-2.146-2.247.193-2.08.651-4.082 1.341-5.974C2.752 2.678 3.833 2 5.005 2h3.192a3 3 0 011.341.317l2.734 1.366A3 3 0 0013.613 4h1.292v7h-.963c-.685 0-1.258.482-1.612 1.068a4.01 4.01 0 01-2.166 1.73c-.432.143-.853.386-1.011.814-.16.432-.248.9-.248 1.388z\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "hand-thumb-up",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path d=\"M1 9.25a1.25 1.25 0 112.5 0v7.5a1.25 1.25 0 11-2.5 0v-7.5zM11 4V2.7c0-.268.14-.526.395-.607A2 2 0 0114 4c0 .995-.182 1.948-.514 2.826-.204.54.166 1.174.744 1.174h2.52c1.243 0 2.261 1.01 2.146 2.247a23.864 23.864 0 01-1.341 5.974C17.153 17.323 16.072 18 14.9 18h-3.192a3 3 0 01-1.341-.317l-2.734-1.366A3 3 0 006.292 16H5V9h.963c.685 0 1.258-.483 1.612-1.068a4.011 4.011 0 012.166-1.73c.432-.143.853-.386 1.011-.814.16-.432.248-.9.248-1.388z\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "minus",
+          "types": ["outline24", "solid24"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "outline24": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" aria-hidden=\"true\">\n  <path stroke-linecap=\"round\" d=\"M3 12h18\"/>\n</svg>\n",
+            "solid24": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M2.25 12a.75.75 0 01.75-.75h18a.75.75 0 010 1.5H3a.75.75 0 01-.75-.75z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "plus",
+          "types": ["outline24", "solid24"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "outline24": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" aria-hidden=\"true\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M12 3v18m9-9H3\"/>\n</svg>\n",
+            "solid24": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M12 2.25a.75.75 0 01.75.75v8.25H21a.75.75 0 010 1.5h-8.25V21a.75.75 0 01-1.5 0v-8.25H3a.75.75 0 010-1.5h8.25V3a.75.75 0 01.75-.75z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        }
+      ]
+    },
+    {
+      "iconset": "Heroicons",
+      "version": "2.0.6",
+      "date": "2022-08-25",
+      "url": "https://github.com/tailwindlabs/heroicons/blob/master/CHANGELOG.md#206---2022-08-25",
+      "first": false,
+      "notes": [],
+      "added": [],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": [
+        {
+          "name": "chevron-double-down",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M16.77 3.21a.75.75 0 01.02 1.06l-6.25 6.5a.75.75 0 01-1.08 0l-6.25-6.5a.75.75 0 011.08-1.04L10 9.168l5.71-5.938a.75.75 0 011.06-.02zm0 6a.75.75 0 01.02 1.06l-6.25 6.5a.75.75 0 01-1.08 0l-6.25-6.5a.75.75 0 111.08-1.04L10 15.168l5.71-5.938a.75.75 0 011.06-.02z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "chevron-double-left",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M16.79 16.77a.75.75 0 01-1.06.02l-6.5-6.25a.75.75 0 010-1.08l6.5-6.25a.75.75 0 111.04 1.08L10.832 10l5.938 5.71a.75.75 0 01.02 1.06zm-6 0a.75.75 0 01-1.06.02l-6.5-6.25a.75.75 0 010-1.08l6.5-6.25a.75.75 0 111.04 1.08L4.832 10l5.938 5.71a.75.75 0 01.02 1.06z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "chevron-double-right",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M9.21 16.77a.75.75 0 01.02-1.06L15.168 10 9.23 4.29a.75.75 0 011.04-1.08l6.5 6.25a.75.75 0 010 1.08l-6.5 6.25a.75.75 0 01-1.06-.02z\" clip-rule=\"evenodd\"/>\n  <path fill-rule=\"evenodd\" d=\"M3.21 16.77a.75.75 0 01.02-1.06L9.168 10 3.23 4.29a.75.75 0 111.04-1.08l6.5 6.25a.75.75 0 010 1.08l-6.5 6.25a.75.75 0 01-1.06-.02z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "chevron-double-up",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M3.23 16.79a.75.75 0 01-.02-1.06l6.25-6.5a.75.75 0 011.08 0l6.25 6.5a.75.75 0 11-1.08 1.04L10 10.832 4.29 16.77a.75.75 0 01-1.06.02zm0-6a.75.75 0 01-.02-1.06l6.25-6.5a.75.75 0 011.08 0l6.25 6.5a.75.75 0 11-1.08 1.04L10 4.832 4.29 10.77a.75.75 0 01-1.06.02z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "chevron-down",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M3.23 6.21a.75.75 0 011.06.02L10 12.168l5.71-5.938a.75.75 0 111.08 1.04l-6.25 6.5a.75.75 0 01-1.08 0l-6.25-6.5a.75.75 0 01.02-1.06z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "chevron-left",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M13.79 3.23a.75.75 0 01-.02 1.06L7.832 10l5.938 5.71a.75.75 0 11-1.04 1.08l-6.5-6.25a.75.75 0 010-1.08l6.5-6.25a.75.75 0 011.06.02z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "chevron-right",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M6.21 16.77a.75.75 0 01.02-1.06L12.168 10 6.23 4.29a.75.75 0 111.04-1.08l6.5 6.25a.75.75 0 010 1.08l-6.5 6.25a.75.75 0 01-1.06-.02z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "chevron-up",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M16.77 13.79a.75.75 0 01-1.06-.02L10 7.832 4.29 13.77a.75.75 0 11-1.08-1.04l6.25-6.5a.75.75 0 011.08 0l6.25 6.5a.75.75 0 01-.02 1.06z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "funnel",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M3.244 1.554A41.277 41.277 0 0110 1c2.3 0 4.558.19 6.756.554A1.49 1.49 0 0118 3.027V4.63a2.25 2.25 0 01-.659 1.59l-4.121 4.122a.75.75 0 00-.22.53v2.779a3 3 0 01-1.158 2.368L8.21 18.842A.75.75 0 017 18.25v-7.379a.75.75 0 00-.22-.53L2.66 6.22A2.25 2.25 0 012 4.629V3.027a1.49 1.49 0 011.244-1.473z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "minus",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "plus",
+          "types": ["solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M10.75 2.75a.75.75 0 00-1.5 0v6.5h-6.5a.75.75 0 000 1.5h6.5v6.5a.75.75 0 001.5 0v-6.5h6.5a.75.75 0 000-1.5h-6.5v-6.5z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        }
+      ]
+    },
+    {
+      "iconset": "Heroicons",
+      "version": "2.0.5",
+      "date": "2022-08-25",
+      "url": "https://github.com/tailwindlabs/heroicons/blob/master/CHANGELOG.md#205---2022-08-25",
+      "first": false,
+      "notes": [],
+      "added": [],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": [
+        {
+          "name": "check-badge",
+          "types": ["outline24", "solid24", "solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "outline24": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" aria-hidden=\"true\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M14.563 9.75a12.014 12.014 0 00-3.427 5.136L9 12.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z\"/>\n</svg>\n",
+            "solid24": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M12 2.25a4.49 4.49 0 00-3.397 1.549 4.49 4.49 0 00-3.497 1.307 4.49 4.49 0 00-1.307 3.497A4.49 4.49 0 002.25 12c0 1.357.6 2.573 1.548 3.397a4.491 4.491 0 001.307 3.498A4.49 4.49 0 008.603 20.2 4.49 4.49 0 0012 21.75a4.49 4.49 0 003.397-1.549 4.491 4.491 0 003.497-1.307 4.491 4.491 0 001.307-3.497A4.49 4.49 0 0021.75 12a4.49 4.49 0 00-1.548-3.397 4.491 4.491 0 00-1.307-3.497 4.49 4.49 0 00-3.498-1.307A4.49 4.49 0 0012 2.25zm3.059 8.062a.75.75 0 10-.993-1.124 12.785 12.785 0 00-3.209 4.358L9.53 12.22a.75.75 0 00-1.06 1.06l2.135 2.136a.75.75 0 001.24-.289 11.264 11.264 0 013.214-4.815z\" clip-rule=\"evenodd\"/>\n</svg>\n",
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M18 10a3 3 0 01-1.597 2.652 3 3 0 01-3.75 3.751 3 3 0 01-5.305 0 3 3 0 01-3.751-3.75 3 3 0 010-5.305 3 3 0 013.75-3.751 3 3 0 015.305 0 3 3 0 013.751 3.75A3 3 0 0118 10zm-4.234-1.991a.75.75 0 10-1.036-1.085 25.112 25.112 0 00-3.928 4.817L7.28 10.22a.75.75 0 10-1.06 1.06l2.2 2.201a.75.75 0 001.181-.157 23.602 23.602 0 014.165-5.315z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "check-circle",
+          "types": ["outline24", "solid24", "solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "outline24": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" aria-hidden=\"true\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M14.563 9.75a12.014 12.014 0 00-3.427 5.136L9 12.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z\"/>\n</svg>\n",
+            "solid24": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm3.059 8.062a.75.75 0 10-.993-1.124 12.785 12.785 0 00-3.209 4.358L9.53 12.22a.75.75 0 00-1.06 1.06l2.135 2.136a.75.75 0 001.24-.289 11.264 11.264 0 013.214-4.815z\" clip-rule=\"evenodd\"/>\n</svg>\n",
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M10 18a8 8 0 100-16 8 8 0 000 16zm3.766-9.991a.75.75 0 10-1.036-1.085 25.112 25.112 0 00-3.928 4.817L7.28 10.22a.75.75 0 10-1.06 1.06l2.2 2.201a.75.75 0 001.181-.157 23.602 23.602 0 014.165-5.315z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "check",
+          "types": ["outline24", "solid24", "solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "outline24": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" aria-hidden=\"true\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M3 13.5l6.785 6.785A48.1 48.1 0 0121 4.143\"/>\n</svg>\n",
+            "solid24": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M21.545 3.627a.75.75 0 01-.03 1.06 47.349 47.349 0 00-11.04 15.89.75.75 0 01-1.22.238L2.47 14.03a.75.75 0 111.06-1.06l6.008 6.007A48.87 48.87 0 0120.484 3.598a.75.75 0 011.06.029z\" clip-rule=\"evenodd\"/>\n</svg>\n",
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M17.776 3.294c.296.29.3.765.01 1.061a39.55 39.55 0 00-8.35 12.672.75.75 0 01-1.224.246L2.22 11.281a.75.75 0 111.06-1.061l5.208 5.207a41.072 41.072 0 018.227-12.122.75.75 0 011.061-.01z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "clipboard-document-check",
+          "types": ["outline24", "solid24", "solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "outline24": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" aria-hidden=\"true\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M15.75 18.75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-4.776 8.45a12.008 12.008 0 00-3.114 4.85L7.5 15.376m3.85-11.54c-.065.21-.1.433-.1.664v0c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v0a2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z\"/>\n</svg>\n",
+            "solid24": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M4.875 7.5C3.839 7.5 3 8.34 3 9.375v11.25c0 1.035.84 1.875 1.875 1.875h9.75c1.036 0 1.875-.84 1.875-1.875V9.375c0-1.036-.84-1.875-1.875-1.875h-9.75zm8.016 5.33a.75.75 0 10-1.032-1.089 12.778 12.778 0 00-2.877 4.055l-.952-.951a.75.75 0 00-1.06 1.06l1.76 1.761a.75.75 0 001.24-.289 11.258 11.258 0 012.92-4.547z\" clip-rule=\"evenodd\"/>\n  <path fill-rule=\"evenodd\" d=\"M11.248 6H7.502c.052-1.46 1.16-2.706 2.662-2.831.224-.019.448-.036.673-.051A3 3 0 0113.5 1.5H15a3 3 0 012.663 1.618c.225.015.45.032.673.05C19.876 3.298 21 4.604 21 6.109v9.642a3 3 0 01-3 3V9.375A3.375 3.375 0 0014.63 6H11.248zM12 4.5A1.5 1.5 0 0113.5 3H15a1.5 1.5 0 011.5 1.5H12z\" clip-rule=\"evenodd\"/>\n</svg>\n",
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M15.988 3.012A2.25 2.25 0 0118 5.25v6.5A2.25 2.25 0 0115.75 14H13.5V7A2.5 2.5 0 0011 4.5H8.128a2.252 2.252 0 011.884-1.488A2.25 2.25 0 0112.25 1h1.5a2.25 2.25 0 012.238 2.012zM11.5 3.25a.75.75 0 01.75-.75h1.5a.75.75 0 01.75.75v.25h-3v-.25z\" clip-rule=\"evenodd\"/>\n  <path fill-rule=\"evenodd\" d=\"M2 7a1 1 0 011-1h8a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V7zm8.003 2.193a.75.75 0 01.053 1.06 23.578 23.578 0 00-2.955 4.07.75.75 0 01-1.18.158l-1.701-1.7a.75.75 0 011.06-1.061l1.022 1.021a25.093 25.093 0 012.641-3.494.75.75 0 011.06-.054z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "document-check",
+          "types": ["outline24", "solid24", "solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "outline24": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" aria-hidden=\"true\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25M14.563 12a12.014 12.014 0 00-3.427 5.136L9 15m1.5-12.75H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z\"/>\n</svg>\n",
+            "solid24": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M5.625 1.5H9a3.75 3.75 0 013.75 3.75v1.875c0 1.036.84 1.875 1.875 1.875H16.5a3.75 3.75 0 013.75 3.75v7.875c0 1.035-.84 1.875-1.875 1.875H5.625a1.875 1.875 0 01-1.875-1.875V3.375c0-1.036.84-1.875 1.875-1.875zm9.434 11.812a.75.75 0 10-.993-1.124 12.785 12.785 0 00-3.209 4.358L9.53 15.22a.75.75 0 00-1.06 1.06l2.135 2.136a.75.75 0 001.24-.289 11.264 11.264 0 013.214-4.815z\" clip-rule=\"evenodd\"/>\n  <path d=\"M14.25 5.25a5.23 5.23 0 00-1.279-3.434 9.768 9.768 0 016.963 6.963A5.23 5.23 0 0016.5 7.5h-1.875a.375.375 0 01-.375-.375V5.25z\"/>\n</svg>\n",
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M4.5 2A1.5 1.5 0 003 3.5v13A1.5 1.5 0 004.5 18h11a1.5 1.5 0 001.5-1.5V7.621a1.5 1.5 0 00-.44-1.06l-4.12-4.122A1.5 1.5 0 0011.378 2H4.5zm8.556 7.252a.75.75 0 10-1.112-1.005 25.094 25.094 0 00-2.642 3.494L8.28 10.72a.75.75 0 00-1.06 1.06l1.7 1.701a.75.75 0 001.181-.157 23.581 23.581 0 012.955-4.072z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "shield-check",
+          "types": ["outline24", "solid24", "solid20"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "outline24": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" aria-hidden=\"true\">\n  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M14.563 9.75a12.014 12.014 0 00-3.427 5.136L9 12.75m3-10.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.249-8.25-3.286z\"/>\n</svg>\n",
+            "solid24": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M12.516 2.17a.75.75 0 00-1.032 0 11.209 11.209 0 01-7.877 3.08.75.75 0 00-.722.515A12.74 12.74 0 002.25 9.75c0 5.942 4.064 10.933 9.563 12.348a.749.749 0 00.374 0c5.499-1.415 9.563-6.406 9.563-12.348 0-1.39-.223-2.73-.635-3.985a.75.75 0 00-.722-.516l-.143.001c-2.996 0-5.717-1.17-7.734-3.08zm2.543 8.142a.75.75 0 10-.993-1.124 12.785 12.785 0 00-3.209 4.358L9.53 12.22a.75.75 0 00-1.06 1.06l2.135 2.136a.75.75 0 001.24-.289 11.264 11.264 0 013.214-4.815z\" clip-rule=\"evenodd\"/>\n</svg>\n",
+            "solid20": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 20 20\" fill=\"currentColor\" aria-hidden=\"true\">\n  <path fill-rule=\"evenodd\" d=\"M9.661 2.237a.532.532 0 01.678 0 11.947 11.947 0 007.078 2.75.5.5 0 01.479.425c.069.52.104 1.05.104 1.589 0 5.162-3.26 9.563-7.834 11.256a.48.48 0 01-.332 0C5.26 16.564 2 12.163 2 7c0-.538.035-1.069.104-1.588a.5.5 0 01.48-.426 11.947 11.947 0 007.077-2.75zm4.105 5.772a.75.75 0 00-1.036-1.085 25.113 25.113 0 00-3.928 4.817L7.28 10.22a.75.75 0 00-1.06 1.06l2.2 2.201a.75.75 0 001.181-.157 23.603 23.603 0 014.165-5.315z\" clip-rule=\"evenodd\"/>\n</svg>\n"
+          }
+        }
+      ]
+    },
+    {
+      "iconset": "Heroicons",
+      "version": "2.0.4",
+      "date": "2022-08-24",
+      "url": "https://github.com/tailwindlabs/heroicons/blob/master/CHANGELOG.md#204---2022-08-24",
+      "first": false,
+      "notes": [],
+      "added": [],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": [
+        {
+          "name": "bars-arrow-down",
+          "types": ["outline24"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "outline24": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" aria-hidden=\"true\">\n  <path fill=\"currentColor\" d=\"M3 3.75a.75.75 0 000 1.5v-1.5zm14.25 1.5a.75.75 0 000-1.5v1.5zM3 8.25a.75.75 0 000 1.5v-1.5zm9.75 1.5a.75.75 0 000-1.5v1.5zm-9.75 3a.75.75 0 000 1.5v-1.5zm9.75 1.5a.75.75 0 000-1.5v1.5zm8.78 3.53a.75.75 0 10-1.06-1.06l1.06 1.06zM17.25 21l-.53.53a.75.75 0 001.06 0l-.53-.53zm-3.22-4.28a.75.75 0 10-1.06 1.06l1.06-1.06zM18 9a.75.75 0 00-1.5 0H18zM3 5.25h14.25v-1.5H3v1.5zm0 4.5h9.75v-1.5H3v1.5zm0 4.5h9.75v-1.5H3v1.5zm17.47 2.47l-3.75 3.75 1.06 1.06 3.75-3.75-1.06-1.06zm-2.69 3.75l-3.75-3.75-1.06 1.06 3.75 3.75 1.06-1.06zM16.5 9v12H18V9h-1.5z\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "bars-arrow-up",
+          "types": ["outline24"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "outline24": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" aria-hidden=\"true\">\n  <path fill=\"currentColor\" d=\"M3 3.75a.75.75 0 000 1.5v-1.5zm14.25 1.5a.75.75 0 000-1.5v1.5zM3 8.25a.75.75 0 000 1.5v-1.5zm9.75 1.5a.75.75 0 000-1.5v1.5zm-9.75 3a.75.75 0 000 1.5v-1.5zm5.25 1.5a.75.75 0 000-1.5v1.5zm4.72-2.03a.75.75 0 101.06 1.06l-1.06-1.06zM17.25 9l.53-.53a.75.75 0 00-1.06 0l.53.53zm3.22 4.28a.75.75 0 101.06-1.06l-1.06 1.06zM16.5 21a.75.75 0 001.5 0h-1.5zM3 5.25h14.25v-1.5H3v1.5zm0 4.5h9.75v-1.5H3v1.5zm0 4.5h5.25v-1.5H3v1.5zm11.03-.97l3.75-3.75-1.06-1.06-3.75 3.75 1.06 1.06zm2.69-3.75l3.75 3.75 1.06-1.06-3.75-3.75-1.06 1.06zM18 21V9h-1.5v12H18z\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "chevron-up-down",
+          "types": ["outline24"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "outline24": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" aria-hidden=\"true\">\n  <path fill=\"currentColor\" d=\"M16.28 15.53a.75.75 0 10-1.06-1.06l1.06 1.06zM12 18.75l-.53.53a.75.75 0 001.06 0l-.53-.53zm-3.22-4.28a.75.75 0 00-1.06 1.06l1.06-1.06zm-1.06-6a.75.75 0 001.06 1.06L7.72 8.47zM12 5.25l.53-.53a.75.75 0 00-1.06 0l.53.53zm3.22 4.28a.75.75 0 101.06-1.06l-1.06 1.06zm0 4.94l-3.75 3.75 1.06 1.06 3.75-3.75-1.06-1.06zm-2.69 3.75l-3.75-3.75-1.06 1.06 3.75 3.75 1.06-1.06zM8.78 9.53l3.75-3.75-1.06-1.06-3.75 3.75 1.06 1.06zm2.69-3.75l3.75 3.75 1.06-1.06-3.75-3.75-1.06 1.06z\"/>\n</svg>\n"
+          }
+        },
+        {
+          "name": "rss",
+          "types": ["outline24"],
+          "visible": true,
+          "notes": [],
+          "before": {
+            "outline24": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" aria-hidden=\"true\">\n  <path fill=\"currentColor\" d=\"M4.5 3.75a.75.75 0 000 1.5v-1.5zM18.75 19.5a.75.75 0 001.5 0h-1.5zm-6.75 0a.75.75 0 001.5 0H12zm-7.5-9a.75.75 0 000 1.5v-1.5zm.75 8.25h-1.5a1.5 1.5 0 001.5 1.5v-1.5zm0 0v-1.5a1.5 1.5 0 00-1.5 1.5h1.5zm0 0h1.5a1.5 1.5 0 00-1.5-1.5v1.5zm0 0v1.5a1.5 1.5 0 001.5-1.5h-1.5zm0-13.5c7.456 0 13.5 6.044 13.5 13.5h1.5c0-8.284-6.716-15-15-15v1.5zm-.75 0h.75v-1.5H4.5v1.5zM20.25 19.5v-.75h-1.5v.75h1.5zm-15-7.5A6.75 6.75 0 0112 18.75h1.5a8.25 8.25 0 00-8.25-8.25V12zm8.25 7.5v-.75H12v.75h1.5zm-9-7.5h.75v-1.5H4.5V12z\"/>\n</svg>\n"
+          }
+        }
+      ]
+    },
+    {
+      "iconset": "Heroicons",
+      "version": "2.0.3",
+      "date": "2022-08-24",
+      "url": "https://github.com/tailwindlabs/heroicons/blob/master/CHANGELOG.md#203---2022-08-24",
+      "first": false,
+      "notes": [
+        {
+          "section": "Added",
+          "text": "Add missing icons from v1 (`bars-arrow-down`,`bars-arrow-up`,`chevron-up-down`, `rss`)",
+          "nested": false
+        },
+        {
+          "section": "Fixed",
+          "text": "Fix inconsistent naming for 'code-bracket' icons (#756)",
+          "nested": false
+        }
+      ],
+      "added": ["bars-arrow-down", "bars-arrow-up", "chevron-up-down", "rss"],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {
+        "solid24": ["code-bracket-square", "code-bracket"]
+      },
+      "changed": []
+    },
+    {
+      "iconset": "Heroicons",
+      "version": "2.0.2",
+      "date": "2022-08-24",
+      "url": "https://github.com/tailwindlabs/heroicons/blob/master/CHANGELOG.md#202---2022-08-24",
+      "first": false,
+      "notes": [
+        {
+          "section": "Fixed",
+          "text": "Fix typo in `exclamation-*` icons (#735)",
+          "nested": false
+        }
+      ],
+      "added": [],
+      "removed": [],
+      "renamed": [
+        {
+          "from": "exclaimation-circle",
+          "to": "exclamation-circle"
+        },
+        {
+          "from": "exclaimation-triangle",
+          "to": "exclamation-triangle"
+        }
+      ],
+      "newStyles": {},
+      "changed": []
+    },
+    {
+      "iconset": "Heroicons",
+      "version": "2.0.0",
+      "date": "2022-08-23",
+      "url": "https://github.com/tailwindlabs/heroicons/blob/master/CHANGELOG.md#200---2022-08-23",
+      "first": true,
+      "notes": [
+        {
+          "section": "Added",
+          "text": "Completely new icon set, checkout the [release notes](https://github.com/tailwindlabs/heroicons/releases/tag/v2.0.0) for more info.",
+          "nested": false
+        }
+      ],
+      "added": [
+        "academic-cap",
+        "adjustments-horizontal",
+        "adjustments-vertical",
+        "archive-box",
+        "archive-box-arrow-down",
+        "archive-box-x-mark",
+        "arrow-down",
+        "arrow-down-circle",
+        "arrow-down-left",
+        "arrow-down-on-square",
+        "arrow-down-on-square-stack",
+        "arrow-down-right",
+        "arrow-down-tray",
+        "arrow-left",
+        "arrow-left-circle",
+        "arrow-left-on-rectangle",
+        "arrow-long-down",
+        "arrow-long-left",
+        "arrow-long-right",
+        "arrow-long-up",
+        "arrow-path",
+        "arrow-right",
+        "arrow-right-circle",
+        "arrow-right-on-rectangle",
+        "arrow-top-right-on-square",
+        "arrow-trending-down",
+        "arrow-trending-up",
+        "arrow-up",
+        "arrow-up-circle",
+        "arrow-up-left",
+        "arrow-up-on-square",
+        "arrow-up-on-square-stack",
+        "arrow-up-right",
+        "arrow-up-tray",
+        "arrow-uturn-down",
+        "arrow-uturn-left",
+        "arrow-uturn-right",
+        "arrow-uturn-up",
+        "arrows-pointing-in",
+        "arrows-pointing-out",
+        "arrows-right-left",
+        "arrows-up-down",
+        "at-symbol",
+        "backspace",
+        "backward",
+        "banknotes",
+        "bars-2",
+        "bars-3",
+        "bars-3-bottom-left",
+        "bars-3-bottom-right",
+        "bars-3-center-left",
+        "bars-4",
+        "beaker",
+        "bell",
+        "bell-alert",
+        "bell-slash",
+        "bell-snooze",
+        "bolt",
+        "bolt-slash",
+        "book-open",
+        "bookmark",
+        "bookmark-slash",
+        "bookmark-square",
+        "briefcase",
+        "building-library",
+        "building-office",
+        "building-office-2",
+        "building-storefront",
+        "cake",
+        "calculator",
+        "calendar",
+        "calendar-days",
+        "camera",
+        "chart-bar",
+        "chart-bar-square",
+        "chart-pie",
+        "chat-bubble-bottom-center",
+        "chat-bubble-bottom-center-text",
+        "chat-bubble-left",
+        "chat-bubble-left-ellipsis",
+        "chat-bubble-left-right",
+        "chat-bubble-oval-left",
+        "chat-bubble-oval-left-ellipsis",
+        "check",
+        "check-badge",
+        "check-circle",
+        "chevron-double-down",
+        "chevron-double-left",
+        "chevron-double-right",
+        "chevron-double-up",
+        "chevron-down",
+        "chevron-left",
+        "chevron-right",
+        "chevron-up",
+        "circle-stack",
+        "clipboard",
+        "clipboard-document",
+        "clipboard-document-check",
+        "clipboard-document-list",
+        "clock",
+        "cloud",
+        "cloud-arrow-down",
+        "cloud-arrow-up",
+        "code-bracket",
+        "code-bracket-square",
+        "cog",
+        "cog-6-tooth",
+        "cog-8-tooth",
+        "command-line",
+        "computer-desktop",
+        "cpu-chip",
+        "credit-card",
+        "cube",
+        "currency-dollar",
+        "currency-euro",
+        "currency-pound",
+        "currency-rupee",
+        "currency-yen",
+        "cursor-arrow-rays",
+        "cursor-arrow-ripple",
+        "device-phone-mobile",
+        "device-tablet",
+        "document",
+        "document-arrow-down",
+        "document-arrow-up",
+        "document-chart-bar",
+        "document-check",
+        "document-duplicate",
+        "document-magnifying-glass",
+        "document-minus",
+        "document-plus",
+        "document-text",
+        "ellipsis-horizontal",
+        "ellipsis-horizontal-circle",
+        "ellipsis-vertical",
+        "envelope",
+        "envelope-open",
+        "exclaimation-circle",
+        "exclaimation-triangle",
+        "eye",
+        "eye-slash",
+        "face-frown",
+        "face-smile",
+        "film",
+        "finger-print",
+        "fire",
+        "flag",
+        "folder",
+        "folder-arrow-down",
+        "folder-minus",
+        "folder-open",
+        "folder-plus",
+        "forward",
+        "funnel",
+        "gif",
+        "gift",
+        "gift-top",
+        "globe-alt",
+        "globe-americas",
+        "globe-asia-australia",
+        "globe-europe-africa",
+        "hand-raised",
+        "hand-thumb-down",
+        "hand-thumb-up",
+        "hashtag",
+        "heart",
+        "home",
+        "home-modern",
+        "identification",
+        "inbox",
+        "inbox-arrow-down",
+        "inbox-stack",
+        "information-circle",
+        "key",
+        "language",
+        "lifebuoy",
+        "light-bulb",
+        "link",
+        "list-bullet",
+        "lock-closed",
+        "lock-open",
+        "magnifying-glass",
+        "magnifying-glass-circle",
+        "magnifying-glass-minus",
+        "magnifying-glass-plus",
+        "map",
+        "map-pin",
+        "megaphone",
+        "microphone",
+        "minus",
+        "minus-circle",
+        "moon",
+        "musical-note",
+        "newspaper",
+        "no-symbol",
+        "paper-airplane",
+        "paper-clip",
+        "pause",
+        "pencil",
+        "pencil-square",
+        "phone",
+        "phone-arrow-down-left",
+        "phone-arrow-up-right",
+        "phone-x-mark",
+        "photo",
+        "play",
+        "play-pause",
+        "plus",
+        "plus-circle",
+        "presentation-chart-bar",
+        "presentation-chart-line",
+        "printer",
+        "puzzle-piece",
+        "qr-code",
+        "question-mark-circle",
+        "queue-list",
+        "radio",
+        "receipt-percent",
+        "receipt-refund",
+        "rectangle-group",
+        "rectangle-stack",
+        "scale",
+        "scissors",
+        "server",
+        "server-stack",
+        "share",
+        "shield-check",
+        "shield-exclamation",
+        "shopping-bag",
+        "shopping-cart",
+        "signal",
+        "signal-slash",
+        "sparkles",
+        "speaker-wave",
+        "speaker-x-mark",
+        "square-2-stack",
+        "squares-2x2",
+        "squares-plus",
+        "star",
+        "stop",
+        "sun",
+        "swatch",
+        "table-cells",
+        "tag",
+        "ticket",
+        "trash",
+        "truck",
+        "user",
+        "user-circle",
+        "user-group",
+        "user-plus",
+        "users",
+        "video-camera",
+        "video-camera-slash",
+        "view-columns",
+        "wifi",
+        "wrench",
+        "wrench-screwdriver",
+        "x-circle",
+        "x-mark"
+      ],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": []
+    }
+  ]
+}
