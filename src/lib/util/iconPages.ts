@@ -9,6 +9,10 @@ export function iconPagePath(kebabName: string) {
   return `/icons/${kebabName}`;
 }
 
+export function iconShareImagePath(kebabName: string) {
+  return `/og/icons/${kebabName}.png`;
+}
+
 // "arrow-path-clock" -> "Arrow Path Clock", "h4" -> "H4"
 export function iconTitle(kebabName: string) {
   return kebabName

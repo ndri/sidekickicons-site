@@ -18,6 +18,8 @@
     "prismjs": "^1.30.0"
   },
   "devDependencies": {
+    "@fontsource/inter": "5.3.0",
+    "@resvg/resvg-js": "2.6.2",
     "@sidekickicons/svelte": "^0.19.0",
     "@sveltejs/adapter-static": "^4.0.1",
     "@sveltejs/kit": "^2.70.3",
@@ -26,11 +28,14 @@
     "@tailwindcss/vite": "^4.3.3",
     "@types/js-beautify": "^1.14.3",
     "@types/node": "^24.19.2",
+    "@types/pngjs": "^6.0.5",
     "@types/prismjs": "^1.26.6",
     "heroicons": "^2.2.0",
+    "pngjs": "7.0.0",
     "prettier": "^3.9.10",
     "prettier-plugin-svelte": "^4.1.1",
     "prettier-plugin-tailwindcss": "^0.8.1",
+    "satori": "0.62.0",
     "svelte": "^5.57.2",
     "svelte-check": "^4.7.7",
     "tailwindcss": "^4.3.3",

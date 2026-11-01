@@ -26,6 +26,7 @@
     iconExampleText,
     iconMetaDescription,
     iconPagePath,
+    iconShareImagePath,
     iconTitle,
   } from "$lib/util/iconPages";
   import { urlState } from "$lib/util/urlState.svelte";
@@ -64,6 +65,10 @@
   title="{title} icon · {icon.iconset} for React, Vue & Svelte"
   description={iconMetaDescription(icon)}
   path={iconPagePath(icon.kebabName)}
+  image={{
+    path: iconShareImagePath(icon.kebabName),
+    alt: `The ${title} icon from ${icon.iconset} in outline, solid, mini and micro styles`,
+  }}
 />
 
 <div class="flex flex-col items-center">
