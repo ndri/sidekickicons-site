@@ -3,6 +3,7 @@
   import type { FullHeroicon, HeroiconType, IconCodeType, IconSize } from "../types";
   import { allIconSizeClasses, iconCodeFunctions } from "../util/constants";
   import { svgWithClass } from "../util/code";
+  import { copyIconEvent } from "../util/analytics";
   import CopyButton from "./CopyButton.svelte";
   import Button from "./Button.svelte";
 
@@ -94,7 +95,10 @@
       role="menu"
       aria-label="{name} icon options"
     >
-      <CopyButton textToCopy={codeToCopy} />
+      <CopyButton
+        textToCopy={codeToCopy}
+        event={copyIconEvent(fullHeroicon, type, codeType, "grid")}
+      />
       <Button
         text="Info"
         Icon={InformationCircleIcon}

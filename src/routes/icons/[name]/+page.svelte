@@ -152,6 +152,7 @@
         type={selectedType.value}
         codeType={selectedCodeType.value}
         setCodeType={(value) => (selectedCodeType.value = value)}
+        from="icon page"
       />
     </section>
 

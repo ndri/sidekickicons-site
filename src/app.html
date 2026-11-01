@@ -46,7 +46,14 @@
       data-api="/api/event"
       src="/js/script.js"
     ></script>
-    <script defer src="/u/s.js" data-website-id="63886b7d-776d-436a-ac01-3c778c281a55"></script>
+    <!-- data-exclude-search: the search box and filters rewrite the query string as you
+         type, which Umami would otherwise count as a pageview each time -->
+    <script
+      defer
+      src="/u/s.js"
+      data-website-id="63886b7d-776d-436a-ac01-3c778c281a55"
+      data-exclude-search="true"
+    ></script>
     %sveltekit.head%
   </head>
   <body

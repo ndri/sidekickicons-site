@@ -85,6 +85,7 @@
           type={selectedType.value}
           codeType={selectedCodeType.value}
           setCodeType={(value) => (selectedCodeType.value = value)}
+          from="dialog"
         />
       </div>
       <div class="mt-5 sm:mt-6 sm:grid sm:grid-flow-row-dense sm:grid-cols-2 sm:gap-3">

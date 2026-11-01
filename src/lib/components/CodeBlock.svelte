@@ -3,9 +3,22 @@
   import "prismjs/components/prism-jsx";
   import "prismjs/components/prism-bash";
   import "$lib/prism-themes.css";
+  import type { AnalyticsEvent } from "../util/analytics";
   import CopyButton from "./CopyButton.svelte";
 
-  let { code, language }: { code: string; language: string } = $props();
+  let {
+    code,
+    language,
+    event,
+  }: { code: string; language: string; event?: AnalyticsEvent } = $props();
+
+  // Every bash block is an install command, so copying one counts as an install
+  const copyEvent = $derived(
+    event ??
+      (language === "bash"
+        ? { name: "install-copy", data: { command: code } }
+        : undefined),
+  );
 
   const highlightedCode = $derived(
     Prism.highlight(code, Prism.languages[language], language),
@@ -23,6 +36,6 @@
   <div
     class="absolute bottom-1 right-1 top-1 flex flex-row items-start gap-1 opacity-0 group-focus-within/code:opacity-100 group-hover/code:opacity-100 group-focus/code:opacity-100"
   >
-    <CopyButton textToCopy={code} />
+    <CopyButton textToCopy={code} event={copyEvent} />
   </div>
 </div>

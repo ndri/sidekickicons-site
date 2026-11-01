@@ -23,6 +23,7 @@
   import IconDetailsDialog from "./IconDetailsDialog.svelte";
   import EmptyState from "./EmptyState.svelte";
   import Button from "./Button.svelte";
+  import { track } from "../util/analytics";
 
   const DEFAULT_ICON_COUNT = 36;
 
@@ -67,6 +68,21 @@
   const filteredIcons = $derived(
     showingAllIconsets ? search(icons, searchQuery.value) : iconsetMatches,
   );
+
+  // A search is tracked once typing has stopped for 1.5 seconds. Searches with no
+  // results in the chosen iconset show which icons people look for but don't find.
+  $effect(() => {
+    const query = searchQuery.value.trim();
+    if (!query) return;
+    const data = {
+      query: query.slice(0, 100),
+      results: filteredIcons.length,
+      iconset: selectedIconSet.value,
+      foundInIconset: !showingAllIconsets,
+    };
+    const timeout = setTimeout(() => track({ name: "search", data }), 1500);
+    return () => clearTimeout(timeout);
+  });
 
   const slicedIcons = $derived(
     showAll ? filteredIcons : filteredIcons.slice(0, DEFAULT_ICON_COUNT),
@@ -133,7 +149,13 @@
         {fullHeroicon}
         size={selectedSize.value}
         codeType={selectedCodeType.value}
-        openDialog={() => (openIconKey.value = fullHeroicon.kebabName)}
+        openDialog={() => {
+          openIconKey.value = fullHeroicon.kebabName;
+          track({
+            name: "icon-details",
+            data: { icon: fullHeroicon.kebabName, iconset: fullHeroicon.iconset },
+          });
+        }}
       />
     {:else}
       <EmptyState searchQuery={searchQuery.value} />

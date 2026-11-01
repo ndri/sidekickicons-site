@@ -14,6 +14,7 @@
     iconVuePlusImportCode,
     iconsetInstallCode,
   } from "../util/code";
+  import { copyIconEvent } from "../util/analytics";
   import ButtonSelect from "./ButtonSelect.svelte";
   import CodeBlock from "./CodeBlock.svelte";
 
@@ -22,12 +23,16 @@
     type,
     codeType,
     setCodeType,
+    from,
   }: {
     fullHeroicon: FullHeroicon;
     type: HeroiconType;
     codeType: IconCodeType;
     setCodeType: (codeType: IconCodeType) => void;
+    from: "dialog" | "icon page";
   } = $props();
+
+  const event = $derived(copyIconEvent(fullHeroicon, type, codeType, from));
 
   const prettySvgCode = $derived(iconSvgCode(fullHeroicon, type));
   const prettyJsxCode = $derived(iconSvgToJsx(prettySvgCode));
@@ -60,7 +65,7 @@
     The Svelte components have a default size, so you only need a size class to change
     it.
   </div>
-  <CodeBlock {code} language="jsx" />
+  <CodeBlock {code} language="jsx" {event} />
 {/snippet}
 
 {#snippet reactNativeNotes(code: string)}
@@ -74,7 +79,7 @@
     <code>npx expo install react-native-svg</code> instead. Icons take
     <code>size</code> and <code>color</code> props.
   </div>
-  <CodeBlock {code} language="jsx" />
+  <CodeBlock {code} language="jsx" {event} />
 {/snippet}
 
 <div class="flex w-full flex-col gap-2">
@@ -85,21 +90,21 @@
     values={codeTypes}
   />
   {#if codeType === "SVG"}
-    <CodeBlock code={prettySvgCode} language="svg" />
+    <CodeBlock code={prettySvgCode} language="svg" {event} />
   {:else if codeType === "JSX"}
-    <CodeBlock code={prettyJsxCode} language="jsx" />
+    <CodeBlock code={prettyJsxCode} language="jsx" {event} />
   {:else if codeType === "React"}
     {@render installCode("react")}
-    <CodeBlock code={reactCode} language="jsx" />
+    <CodeBlock code={reactCode} language="jsx" {event} />
   {:else if codeType === "React + import"}
     {@render installCode("react")}
-    <CodeBlock code={reactPlusImportCode} language="jsx" />
+    <CodeBlock code={reactPlusImportCode} language="jsx" {event} />
   {:else if codeType === "Vue"}
     {@render installCode("vue")}
-    <CodeBlock code={vueCode} language="jsx" />
+    <CodeBlock code={vueCode} language="jsx" {event} />
   {:else if codeType === "Vue + import"}
     {@render installCode("vue")}
-    <CodeBlock code={vuePlusImportCode} language="jsx" />
+    <CodeBlock code={vuePlusImportCode} language="jsx" {event} />
   {:else if codeType === "Svelte"}
     {@render svelteNotes(svelteCode)}
   {:else if codeType === "Svelte + import"}
