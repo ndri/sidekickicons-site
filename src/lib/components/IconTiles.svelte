@@ -13,7 +13,7 @@
   {#each icons as icon (icon.kebabName)}
     <a
       href={iconPagePath(icon.kebabName)}
-      class="flex min-h-28 flex-col items-center justify-center gap-2 rounded-lg bg-slate-50 p-4 text-center hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-600 dark:bg-slate-800 dark:hover:bg-slate-700"
+      class="flex min-h-28 flex-col items-center justify-center gap-2 rounded-lg bg-slate-50 p-4 text-center hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-indigo-600 focus-visible:outline-solid dark:bg-slate-800 dark:hover:bg-slate-700"
     >
       {@html svgWithClass(icon.svg, "size-6 text-slate-700 dark:text-slate-100")}
       <span class="max-w-full truncate text-xs text-slate-500 dark:text-slate-400">

@@ -51,7 +51,7 @@
       <div class="col-span-2 flex flex-col gap-3 md:col-span-1">
         <a
           href="/"
-          class="flex items-center gap-2 self-start rounded-sm font-bold focus:outline-none focus-visible:outline-2 focus-visible:outline-indigo-600"
+          class="flex items-center gap-2 self-start rounded-xs font-bold focus:outline-hidden focus-visible:outline-2 focus-visible:outline-indigo-600"
         >
           <ShieldIcon class="text-indigo-600" />
           <span>+</span>
@@ -74,7 +74,7 @@
                   href={link.href}
                   target={external ? "_blank" : "_self"}
                   rel={external ? "noopener noreferrer" : ""}
-                  class="inline-flex items-center gap-0.5 rounded-sm text-slate-600 hover:text-slate-900 focus:outline-none focus-visible:outline-2 focus-visible:outline-indigo-600 dark:text-slate-400 dark:hover:text-white"
+                  class="inline-flex items-center gap-0.5 rounded-xs text-slate-600 hover:text-slate-900 focus:outline-hidden focus-visible:outline-2 focus-visible:outline-indigo-600 dark:text-slate-400 dark:hover:text-white"
                 >
                   {link.text}
                   {#if external}

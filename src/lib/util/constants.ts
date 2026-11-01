@@ -60,7 +60,7 @@ export const iconSizeClasses: Record<HeroiconType, string> = {
 export const iconSizeClasses15x: Record<HeroiconType, string> = {
   outline24: "size-9",
   solid24: "size-9",
-  solid20: "size-[1.875rem]",
+  solid20: "size-7.5",
   solid16: "size-6",
 } as const;
 

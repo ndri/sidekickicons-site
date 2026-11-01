@@ -29,12 +29,12 @@
   class="group/code relative w-full overflow-hidden rounded-md ring-1 ring-slate-200 dark:ring-slate-700"
 >
   <pre
-    class="language-{language} flex-grow rounded-md"
+    class="language-{language} grow rounded-md"
     style="font-size: 0.75rem; margin: 0; padding-top: 0.75rem; padding-bottom: 0.75rem"><code
       class="language-{language}">{@html highlightedCode}</code
     ></pre>
   <div
-    class="absolute bottom-1 right-1 top-1 flex flex-row items-start gap-1 opacity-0 group-focus-within/code:opacity-100 group-hover/code:opacity-100 group-focus/code:opacity-100"
+    class="absolute top-1 right-1 bottom-1 flex flex-row items-start gap-1 opacity-0 group-focus-within/code:opacity-100 group-hover/code:opacity-100 group-focus/code:opacity-100"
   >
     <CopyButton textToCopy={code} event={copyEvent} />
   </div>

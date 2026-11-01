@@ -7,7 +7,7 @@
 
 {#if dismissed.value !== "true"}
   <div
-    class="flex items-center gap-4 rounded-xl border border-amber-200 bg-amber-50 p-3 text-amber-900 dark:border-amber-900 dark:bg-amber-950 dark:text-amber-100 [[data-clanker-view-dismissed]_&]:hidden"
+    class="flex items-center gap-4 rounded-xl border border-amber-200 bg-amber-50 p-3 text-amber-900 in-data-clanker-view-dismissed:hidden dark:border-amber-900 dark:bg-amber-950 dark:text-amber-100"
   >
     <img src="/clankerview.svg" alt="ClankerView logo" width="64" height="64" />
     <div class="flex grow flex-col gap-4 sm:flex-row sm:items-center">

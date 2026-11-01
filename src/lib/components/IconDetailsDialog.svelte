@@ -42,7 +42,7 @@
 <!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_noninteractive_element_interactions -->
 <dialog
   bind:this={dialog}
-  class="fixed inset-0 z-50 m-0 h-screen max-h-none w-screen max-w-none overflow-y-auto bg-transparent p-0 outline-none backdrop:bg-slate-500 backdrop:bg-opacity-75 dark:backdrop:bg-slate-900 dark:backdrop:bg-opacity-80"
+  class="fixed inset-0 z-50 m-0 h-screen max-h-none w-screen max-w-none overflow-y-auto bg-transparent p-0 outline-hidden backdrop:bg-slate-500/75 dark:backdrop:bg-slate-900/80"
   aria-labelledby="icon-details-title"
   oncancel={(e) => {
     e.preventDefault();
@@ -58,7 +58,7 @@
       tabindex="-1"
       in:fly={{ y: 16, duration: 300 }}
       out:fade={{ duration: 200 }}
-      class="relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-slate-800 shadow-xl outline-none transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6 dark:bg-slate-800 dark:text-slate-100"
+      class="relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-slate-800 shadow-xl outline-hidden transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6 dark:bg-slate-800 dark:text-slate-100"
     >
       <div class="flex flex-col items-center gap-6">
         <h3 id="icon-details-title" class="text-center text-lg font-semibold">

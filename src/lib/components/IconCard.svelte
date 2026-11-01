@@ -62,7 +62,7 @@
   onmouseleave={() => (expanded = false)}
 >
   <button
-    class="col-span-full row-span-full rounded-lg bg-slate-50 p-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-600 dark:bg-slate-800"
+    class="col-span-full row-span-full rounded-lg bg-slate-50 p-4 focus-visible:outline-2 focus-visible:outline-indigo-600 focus-visible:outline-solid dark:bg-slate-800"
     aria-expanded={expanded}
     aria-haspopup="true"
     aria-label="{name} icon options"

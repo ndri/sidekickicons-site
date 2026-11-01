@@ -75,8 +75,8 @@ import { SparklesIcon } from "@sidekickicons/react-native/24/outline";`;
           >@sidekickicons/react-native</code
         >
         has all {data.heroiconCount} Heroicons plus {data.sidekickiconCount} Sidekickicons
-        as React Native components. They're drawn with react-native-svg, so they work on
-        iOS, Android and the web with react-native-web.
+        as React Native components. They're drawn with react-native-svg, so they work on iOS,
+        Android and the web with react-native-web.
       </p>
       <div>
         <Button
@@ -95,8 +95,8 @@ import { SparklesIcon } from "@sidekickicons/react-native/24/outline";`;
       />
       <p class="text-sm text-slate-600 dark:text-slate-300">
         In an Expo app, install react-native-svg with
-        <code class="font-mono">npx expo install react-native-svg</code> instead, so its
-        version matches your SDK.
+        <code class="font-mono">npx expo install react-native-svg</code> instead, so its version
+        matches your SDK.
       </p>
     </section>
 

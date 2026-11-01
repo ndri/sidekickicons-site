@@ -28,7 +28,7 @@
         onchange={() => setSelectedValue(value)}
       />
       <span
-        class="rounded-lg px-2 py-1 text-sm font-medium text-slate-600 hover:text-slate-400 peer-checked:bg-indigo-50 peer-checked:text-indigo-800 peer-focus-visible:ring-2 peer-focus-visible:ring-indigo-600 dark:text-slate-400 dark:hover:text-slate-500 dark:peer-checked:bg-indigo-900 dark:peer-checked:text-slate-100"
+        class="rounded-lg px-2 py-1 text-sm font-medium text-slate-600 peer-checked:bg-indigo-50 peer-checked:text-indigo-800 peer-focus-visible:ring-2 peer-focus-visible:ring-indigo-600 hover:text-slate-400 dark:text-slate-400 dark:peer-checked:bg-indigo-900 dark:peer-checked:text-slate-100 dark:hover:text-slate-500"
       >
         {labels ? labels[value] : value}
       </span>

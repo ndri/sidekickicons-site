@@ -26,7 +26,7 @@
   >
     <a
       href="/"
-      class="flex items-center gap-2 rounded-sm font-bold focus:outline-none focus-visible:outline-2 focus-visible:outline-indigo-600 sm:text-lg"
+      class="flex items-center gap-2 rounded-xs font-bold focus:outline-hidden focus-visible:outline-2 focus-visible:outline-indigo-600 sm:text-lg"
     >
       <ShieldIcon class="text-indigo-600" />
       <span>heroicons</span>

@@ -27,8 +27,8 @@
       <p>
         Heroicons is a great icon set, but it hasn't added new icons since version
         2.2.0, and plenty of common icons were never part of it. Sidekickicons fills
-        {data.sidekickiconCount} of those gaps in the same style, so they sit right next
-        to Heroicons in your UI.
+        {data.sidekickiconCount} of those gaps in the same style, so they sit right next to
+        Heroicons in your UI.
       </p>
       <ul class="flex list-disc flex-col gap-1 pl-5 text-slate-600 dark:text-slate-300">
         <li>

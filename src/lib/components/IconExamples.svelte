@@ -38,7 +38,7 @@
   >
     <button
       type="button"
-      class="inline-flex items-center gap-x-1.5 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 active:bg-indigo-700"
+      class="inline-flex items-center gap-x-1.5 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 focus-visible:outline-solid active:bg-indigo-700"
     >
       {@html icon("solid20", "-ml-0.5 size-5")}
       {text.button}
@@ -51,7 +51,7 @@
   >
     <button
       type="button"
-      class="group inline-flex items-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 active:bg-slate-200 dark:bg-slate-900 dark:text-slate-100 dark:ring-slate-700 dark:hover:bg-slate-700 dark:active:bg-slate-600"
+      class="group inline-flex items-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-slate-900 shadow-xs ring-1 ring-slate-300 ring-inset hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 focus-visible:outline-solid active:bg-slate-200 dark:bg-slate-900 dark:text-slate-100 dark:ring-slate-700 dark:hover:bg-slate-700 dark:active:bg-slate-600"
     >
       {@html icon(
         "solid20",
@@ -68,7 +68,7 @@
     <span class="flex items-center gap-2">
       <button
         type="button"
-        class="rounded-full bg-indigo-600 p-2 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 active:bg-indigo-700"
+        class="rounded-full bg-indigo-600 p-2 text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 focus-visible:outline-solid active:bg-indigo-700"
         aria-label={text.button}
       >
         {@html icon("solid20", "size-5")}
@@ -76,7 +76,7 @@
       <button
         type="button"
         class={[
-          "rounded-md p-1.5 ring-1 ring-inset focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600",
+          "rounded-md p-1.5 ring-1 ring-inset focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 focus-visible:outline-solid",
           toggled
             ? "bg-indigo-50 text-indigo-600 ring-indigo-200 dark:bg-indigo-900 dark:text-indigo-200 dark:ring-indigo-700"
             : "text-slate-500 ring-slate-300 hover:bg-slate-100 hover:text-slate-600 dark:text-slate-400 dark:ring-slate-700 dark:hover:bg-slate-700 dark:hover:text-slate-300",
@@ -104,7 +104,7 @@
       <input
         type="text"
         placeholder="{text.input}…"
-        class="block w-full rounded-md border-0 bg-white py-1.5 pl-10 pr-3 text-sm/6 text-slate-900 ring-1 ring-inset ring-slate-300 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 dark:bg-slate-900 dark:text-slate-100 dark:ring-slate-700"
+        class="block w-full rounded-md border-0 bg-white py-1.5 pr-3 pl-10 text-sm/6 text-slate-900 ring-1 ring-slate-300 ring-inset placeholder:text-slate-400 focus:ring-2 focus:ring-indigo-600 focus:ring-inset dark:bg-slate-900 dark:text-slate-100 dark:ring-slate-700"
       />
     </label>
     {@render example("Input · Mini")}
@@ -124,7 +124,7 @@
         <button
           type="button"
           class={[
-            "group flex items-center gap-x-3 rounded-md p-2 text-left text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-600",
+            "group flex items-center gap-x-3 rounded-md p-2 text-left text-sm font-semibold focus-visible:outline-2 focus-visible:outline-indigo-600 focus-visible:outline-solid",
             active
               ? "bg-white text-indigo-600 dark:bg-slate-900 dark:text-indigo-400"
               : "text-slate-700 hover:bg-white hover:text-indigo-600 dark:text-slate-300 dark:hover:bg-slate-900 dark:hover:text-indigo-400",
@@ -153,7 +153,7 @@
   >
     <span class="flex flex-wrap items-center justify-center gap-2">
       <span
-        class="inline-flex items-center gap-x-1 rounded-full bg-indigo-50 px-2 py-1 text-xs font-medium text-indigo-700 ring-1 ring-inset ring-indigo-700/10 dark:bg-indigo-900 dark:text-indigo-100 dark:ring-indigo-400/20"
+        class="inline-flex items-center gap-x-1 rounded-full bg-indigo-50 px-2 py-1 text-xs font-medium text-indigo-700 ring-1 ring-indigo-700/10 ring-inset dark:bg-indigo-900 dark:text-indigo-100 dark:ring-indigo-400/20"
       >
         {@html icon("solid16", "size-4")}
         {text.badge}

@@ -46,7 +46,7 @@
   <a
     href={iconPagePath(link.kebabName)}
     {rel}
-    class="group inline-flex items-center gap-x-1.5 rounded-md bg-white px-2 py-1 font-medium text-slate-700 shadow-sm ring-1 ring-inset ring-slate-300 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-600 dark:bg-slate-800 dark:text-slate-200 dark:ring-slate-700 dark:hover:bg-slate-700"
+    class="group inline-flex items-center gap-x-1.5 rounded-md bg-white px-2 py-1 font-medium text-slate-700 shadow-xs ring-1 ring-slate-300 ring-inset hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-indigo-600 focus-visible:outline-solid dark:bg-slate-800 dark:text-slate-200 dark:ring-slate-700 dark:hover:bg-slate-700"
     aria-label="{rel === 'prev' ? 'Previous' : 'Next'} icon: {link.kebabName}"
   >
     {#if rel === "prev"}
@@ -124,7 +124,7 @@
                 onchange={() => (selectedType.value = type)}
               />
               <span
-                class="flex h-full flex-col items-center gap-3 rounded-lg bg-slate-50 p-6 ring-inset hover:bg-slate-100 peer-checked:ring-2 peer-checked:ring-indigo-600 peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-indigo-600 dark:bg-slate-800 dark:hover:bg-slate-700 dark:peer-checked:ring-indigo-400"
+                class="flex h-full flex-col items-center gap-3 rounded-lg bg-slate-50 p-6 ring-inset peer-checked:ring-2 peer-checked:ring-indigo-600 peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-indigo-600 peer-focus-visible:outline-solid hover:bg-slate-100 dark:bg-slate-800 dark:peer-checked:ring-indigo-400 dark:hover:bg-slate-700"
               >
                 <span class="flex h-12 items-center">
                   {@html svgWithClass(
@@ -170,7 +170,7 @@
           {#each data.related as related (related.kebabName)}
             <a
               href={iconPagePath(related.kebabName)}
-              class="flex min-h-28 flex-col items-center justify-center rounded-lg bg-slate-50 p-4 hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-600 dark:bg-slate-800 dark:hover:bg-slate-700"
+              class="flex min-h-28 flex-col items-center justify-center rounded-lg bg-slate-50 p-4 hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-indigo-600 focus-visible:outline-solid dark:bg-slate-800 dark:hover:bg-slate-700"
             >
               {@html svgWithClass(
                 related.svg,

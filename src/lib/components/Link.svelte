@@ -17,7 +17,7 @@
   {href}
   target={newTab ? "_blank" : "_self"}
   rel={newTab ? "noopener noreferrer" : ""}
-  class="inline-flex items-center gap-0.5 rounded-sm text-indigo-700 hover:text-indigo-500 focus:outline-none focus-visible:outline-2 focus-visible:outline-indigo-600 dark:text-indigo-400"
+  class="inline-flex items-center gap-0.5 rounded-xs text-indigo-700 hover:text-indigo-500 focus:outline-hidden focus-visible:outline-2 focus-visible:outline-indigo-600 dark:text-indigo-400"
 >
   {@render children()}
   {#if newTab}
