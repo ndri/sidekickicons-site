@@ -9,16 +9,16 @@ import { iconTitle } from "../util/iconPages";
 
 // Share images (og:image) for the icon pages, rendered at build time: satori lays the
 // image out and turns text into paths, resvg turns that into a PNG. Same look as
-// static/opengraph-image.png: white, slate text, indigo accents.
+// static/opengraph-image.png: white, slate text, indigo accents (Tailwind 4's colors).
 
 export const shareImageSize = { width: 1200, height: 630 };
 
 const colors = {
-  text: "#1e293b", // slate-800
-  muted: "#64748b", // slate-500
-  icon: "#334155", // slate-700
+  text: "#1d293d", // slate-800
+  muted: "#62748e", // slate-500
+  icon: "#314158", // slate-700
   tile: "#f1f5f9", // slate-100
-  accent: "#4f46e5", // indigo-600
+  accent: "#4f39f6", // indigo-600
 };
 
 const fontFile = (weight: number) =>
