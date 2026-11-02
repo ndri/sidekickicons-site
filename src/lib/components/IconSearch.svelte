@@ -69,6 +69,20 @@
     showingAllIconsets ? search(icons, searchQuery.value) : iconsetMatches,
   );
 
+  // When it does find some, a note under the results says how many more the other
+  // iconset has, so they aren't missed
+  const otherIconset = $derived(
+    selectedIconSet.value === "Heroicons" ? "Sidekickicons" : "Heroicons",
+  );
+  const otherIconsetMatchCount = $derived(
+    searchQuery.value && selectedIconSet.value !== "All" && !showingAllIconsets
+      ? search(
+          icons.filter((icon) => icon.iconset !== selectedIconSet.value),
+          searchQuery.value,
+        ).length
+      : 0,
+  );
+
   // A search is tracked once typing has stopped for 1.5 seconds. Searches with no
   // results in the chosen iconset show which icons people look for but don't find.
   $effect(() => {
@@ -171,6 +185,24 @@
       />
     {/if}
   </div>
+  {#if otherIconsetMatchCount}
+    <div
+      class="-mt-2 flex flex-col items-center gap-3 text-center text-sm text-slate-500 dark:text-slate-400"
+    >
+      <p>
+        {otherIconsetMatchCount} more
+        {otherIconsetMatchCount === 1 ? "icon" : "icons"} in {otherIconset} match
+        <span class="font-semibold text-slate-700 dark:text-slate-200"
+          >{searchQuery.value}</span
+        >.
+      </p>
+      <Button
+        text="Show results from all icons"
+        style="light"
+        onclick={() => (selectedIconSet.value = "All")}
+      />
+    </div>
+  {/if}
   {#if openIcon}
     <IconDetailsDialog
       fullHeroicon={openIcon}
