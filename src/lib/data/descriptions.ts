@@ -381,4 +381,38 @@ export const sidekickiconDescriptions: Record<string, { description: string }> =
     description:
       "A battery three quarters full, for charge levels between half and full.",
   },
+  bluetooth: {
+    description:
+      "The Bluetooth symbol, for wireless connections, pairing devices and Bluetooth settings.",
+  },
+  leaf: {
+    description:
+      "A leaf, for nature, plants, eco-friendly and vegan options, and sustainability.",
+  },
+  gauge: {
+    description:
+      "A gauge with a needle, for speed, performance, dashboards and usage levels.",
+  },
+  "git-branch": {
+    description:
+      "A line with a branch splitting off it, for git branches, versions and forks.",
+  },
+  headset: {
+    description:
+      "Headphones with a microphone, for customer support, calls and voice chat.",
+  },
+  pill: {
+    description: "A capsule, for medicine, health, prescriptions and pharmacies.",
+  },
+  "forward-bar": {
+    description:
+      "Two arrows and a bar pointing right, for skipping to the next track in a media player.",
+  },
+  "backward-bar": {
+    description:
+      "A bar and two arrows pointing left, for going back to the previous track in a media player.",
+  },
+  anchor: {
+    description: "A ship's anchor, for sailing, boats, marinas and anchor links.",
+  },
 };

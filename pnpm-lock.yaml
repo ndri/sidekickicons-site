@@ -28,8 +28,8 @@ importers:
         specifier: 2.6.2
         version: 2.6.2
       '@sidekickicons/svelte':
-        specifier: ^0.19.0
-        version: 0.19.0(svelte@5.57.3(@typescript-eslint/types@8.12.2))
+        specifier: ^0.20.0
+        version: 0.20.0(svelte@5.57.3(@typescript-eslint/types@8.12.2))
       '@sveltejs/adapter-static':
         specifier: ^4.0.1
         version: 4.0.1(@sveltejs/kit@2.70.3(@sveltejs/vite-plugin-svelte@6.2.4(svelte@5.57.3(@typescript-eslint/types@8.12.2))(vite@7.3.7(@types/node@24.19.2)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.6.0)))(svelte@5.57.3(@typescript-eslint/types@8.12.2))(typescript@5.9.3)(vite@7.3.7(@types/node@24.19.2)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.6.0)))
@@ -506,8 +506,8 @@ packages:
     engines: {node: '>= 8.0.0'}
     hasBin: true
 
-  '@sidekickicons/svelte@0.19.0':
-    resolution: {integrity: sha512-hYHFtvJ5JHOuZmMbCUgDcLThshlFNDTYq7H1+y7x+C9WwLgjUjEsoHUMRtCxIyc/Dx4NRhsLbavCq7tAAdW/0w==}
+  '@sidekickicons/svelte@0.20.0':
+    resolution: {integrity: sha512-puKWdZnBXuOuCaDyUs3sETIho/Ga8C28daV0q/HFmzaWS6q5vFPE7vG3AUC8ffMqZUwkcJtI48xxtUwzr+c0tA==}
     peerDependencies:
       svelte: ^5.19.0
 
@@ -1720,7 +1720,7 @@ snapshots:
       fflate: 0.7.3
       string.prototype.codepointat: 0.2.1
 
-  '@sidekickicons/svelte@0.19.0(svelte@5.57.3(@typescript-eslint/types@8.12.2))':
+  '@sidekickicons/svelte@0.20.0(svelte@5.57.3(@typescript-eslint/types@8.12.2))':
     dependencies:
       svelte: 5.57.3(@typescript-eslint/types@8.12.2)
 

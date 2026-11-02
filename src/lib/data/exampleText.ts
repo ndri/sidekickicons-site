@@ -121,6 +121,15 @@ export const exampleText: Record<string, ExampleText> = {
   "circle-half-full": ["Auto theme", "Contrast", "System", "Appearance"],
   "battery-25": ["Save power", "Battery level", "25%", "Battery"],
   "battery-75": ["Charge", "Battery level", "75%", "Battery"],
+  bluetooth: ["Pair device", "Search devices", "Connected", "Devices"],
+  leaf: ["Go green", "Search plants", "Eco-friendly", "Sustainability"],
+  gauge: ["Run speed test", "Speed limit", "Fast", "Performance"],
+  "git-branch": ["New branch", "Branch name", "main", "Branches"],
+  headset: ["Contact support", "Describe your issue", "Support", "Help center"],
+  pill: ["Add medication", "Medication name", "Prescription", "Health"],
+  "forward-bar": ["Next track", "Search songs", "Up next", "Player"],
+  "backward-bar": ["Previous track", "Search songs", "Previous", "Player"],
+  anchor: ["Set anchor", "Harbour name", "Docked", "Marinas"],
 
   // Heroicons
   "academic-cap": ["Graduate", "Enter alma mater", "Undergraduate", "Education"],

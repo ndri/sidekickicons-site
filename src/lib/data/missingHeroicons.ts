@@ -30,10 +30,13 @@ export const sidekickiconGroups: { title: string; icons: string[] }[] = [
     title: "Calls and media",
     icons: [
       "arrows-crossing",
+      "backward-bar",
       "camera-rotate",
       "crop",
+      "forward-bar",
       "headphones",
       "headphones-slash",
+      "headset",
       "microphone-slash",
       "photo-plus",
       "video-camera-arrow-down-left",
@@ -109,7 +112,7 @@ export const sidekickiconGroups: { title: string; icons: string[] }[] = [
   },
   {
     title: "Numbers and ratings",
-    icons: ["infinity", "percent", "star-half"],
+    icons: ["gauge", "infinity", "percent", "star-half"],
   },
   {
     title: "Gender symbols",
@@ -118,6 +121,8 @@ export const sidekickiconGroups: { title: string; icons: string[] }[] = [
   {
     title: "Everyday objects",
     icons: [
+      "anchor",
+      "bluetooth",
       "coffee",
       "compass",
       "computer-laptop",
@@ -128,7 +133,10 @@ export const sidekickiconGroups: { title: string; icons: string[] }[] = [
       "face-smile-plus",
       "floppy-disk",
       "gamepad",
+      "git-branch",
       "keyboard",
+      "leaf",
+      "pill",
       "pin",
       "pin-slash",
       "robot",
@@ -164,6 +172,8 @@ export const heroiconsPairings: Record<string, string> = {
   shield: "Heroicons only has shields with a symbol inside",
   "computer-laptop": "Goes with Heroicons' computer-desktop",
   "face-meh": "Between Heroicons' face-smile and face-frown",
+  "forward-bar": "Goes with Heroicons' forward and play",
+  "backward-bar": "Goes with Heroicons' backward and play",
   "arrow-curve-up-left": "A curved version of Heroicons' arrow-turn-up-left",
   "arrow-curve-up-right": "A curved version of Heroicons' arrow-turn-up-right",
   "arrow-curve-down-left": "A curved version of Heroicons' arrow-turn-down-left",
@@ -194,6 +204,11 @@ export const heroiconsRequests: Record<
   percent: { votes: 8, discussions: [420, 684] },
   infinity: { votes: 7, discussions: [435, 1308] },
   keyboard: { votes: 31, discussions: [418, 525] },
+  bluetooth: { votes: 26, discussions: [625, 520] },
+  leaf: { votes: 16, discussions: [453, 444] },
+  gauge: { votes: 14, discussions: [816, 897, 1364] },
+  "git-branch": { votes: 12, discussions: [350, 374] },
+  pill: { votes: 5, discussions: [892] },
   "gender-male": { votes: 17, discussions: [724, 1402] },
   "gender-female": { votes: 17, discussions: [724, 1402] },
   "gender-trans": { votes: 17, discussions: [724, 1402] },
@@ -205,12 +220,14 @@ export const heroiconsRequests: Record<
   crop: { votes: 6, discussions: [990] },
 };
 
-// The top of the Sidekickicons roadmap
+// The most requested icons left on the Sidekickicons roadmap, with their votes
 export const comingNext: { name: string; votes: number }[] = [
-  { name: "leaf", votes: 16 },
-  { name: "gauge", votes: 14 },
-  { name: "git-branch", votes: 12 },
-  { name: "pill", votes: 5 },
+  { name: "car", votes: 72 },
+  { name: "fork-knife", votes: 31 },
+  { name: "wheelchair", votes: 21 },
+  { name: "brain", votes: 19 },
+  { name: "ethernet", votes: 17 },
+  { name: "handshake", votes: 12 },
 ];
 
 export const heroiconsDiscussionUrl = (number: number) =>
