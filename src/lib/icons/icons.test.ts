@@ -41,6 +41,18 @@ test("SVG code includes the size class", () => {
   expect(iconSvgCode(crown, "solid16")).toContain('class="size-4"');
 });
 
+// The code relies on the package's own formatting instead of a formatter
+test("SVG code is indented, one element per line", () => {
+  for (const icon of icons) {
+    for (const type of iconTypes) {
+      const lines = iconSvgCode(icon, type).split("\n");
+      expect(lines[0], `${icon.kebabName} ${type}`).toMatch(/^<svg [^>]*>$/);
+      expect(lines.at(-1)).toBe("</svg>");
+      for (const line of lines.slice(1, -1)) expect(line).toMatch(/^  <\w.* \/>$/);
+    }
+  }
+});
+
 test("React Native code uses the package that includes Heroicons", () => {
   const academicCap = icons.find((icon) => icon.kebabName === "academic-cap")!;
   expect(iconReactNativePlusImportCode(academicCap, "solid20")).toBe(

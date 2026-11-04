@@ -1,15 +1,15 @@
 import type { Framework, FullHeroicon, Heroicon, HeroiconType } from "../types";
 import { iconSizeClasses, iconDirectories } from "./constants";
-import beautify from "js-beautify";
 
 export function svgWithClass(svg: Heroicon, className: string) {
   return svg.replace(/^<svg([^>]*)>/, `<svg$1 class="${className}">`);
 }
 
 export function iconSvgCode(fullHeroicon: FullHeroicon, type: HeroiconType) {
+  // The package's SVGs are already indented, so only the self-closing tags need the
+  // space before "/>" that formatters add
   const svgCode = svgWithClass(fullHeroicon[type], iconSizeClasses[type]);
-  const prettySvgCode = beautify.html(svgCode, { indent_size: 2 });
-  return prettySvgCode;
+  return svgCode.replaceAll('"/>', '" />');
 }
 
 export function iconSvgToJsx(svg: string) {

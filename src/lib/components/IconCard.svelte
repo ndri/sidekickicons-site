@@ -64,7 +64,6 @@
   <button
     class="col-span-full row-span-full rounded-lg bg-slate-50 p-4 focus-visible:outline-2 focus-visible:outline-indigo-600 focus-visible:outline-solid dark:bg-slate-800"
     aria-expanded={expanded}
-    aria-haspopup="true"
     aria-label="{name} icon options"
     onkeydown={(e) => {
       if (e.key === "Enter" || e.key === " ") {
@@ -92,7 +91,7 @@
   {#if expanded}
     <div
       class="z-10 col-start-1 col-end-2 row-start-1 row-end-2 flex flex-col justify-center gap-1 p-4"
-      role="menu"
+      role="group"
       aria-label="{name} icon options"
     >
       <CopyButton

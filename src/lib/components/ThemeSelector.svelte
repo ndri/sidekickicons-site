@@ -25,14 +25,13 @@
     } else if (theme.value === "Dark") {
       setDarkTheme(root);
     } else {
-      const systemPrefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)",
-      ).matches;
-      if (systemPrefersDark) {
-        setDarkTheme(root);
-      } else {
-        setLightTheme(root);
-      }
+      // System follows the OS, including when it changes while the page is open
+      const systemDark = window.matchMedia("(prefers-color-scheme: dark)");
+      const apply = () =>
+        systemDark.matches ? setDarkTheme(root) : setLightTheme(root);
+      apply();
+      systemDark.addEventListener("change", apply);
+      return () => systemDark.removeEventListener("change", apply);
     }
   });
 </script>

@@ -8,8 +8,14 @@
 
   let copied = $state(false);
 
-  function copyText() {
-    navigator.clipboard.writeText(textToCopy);
+  // Only a copy that worked says so and counts. The clipboard can be blocked, for
+  // example in an iframe or without permission.
+  async function copyText() {
+    try {
+      await navigator.clipboard.writeText(textToCopy);
+    } catch {
+      return;
+    }
     if (event) track(event);
     copied = true;
     setTimeout(() => (copied = false), 1337);
