@@ -4,14 +4,13 @@
     ChevronLeftIcon,
     ChevronRightIcon,
   } from "@sidekickicons/svelte/16/solid";
-  import { ArrowDownTrayIcon } from "@sidekickicons/svelte/20/solid";
-  import Button from "$lib/components/Button.svelte";
   import Footer from "$lib/components/Footer.svelte";
   import Header from "$lib/components/Header.svelte";
   import PageMeta from "$lib/components/PageMeta.svelte";
   import Link from "$lib/components/Link.svelte";
   import IconInfoList from "$lib/components/IconInfoList.svelte";
   import IconCode from "$lib/components/IconCode.svelte";
+  import IconPreview from "$lib/components/IconPreview.svelte";
   import IconHistory from "$lib/components/IconHistory.svelte";
   import IconExamples from "$lib/components/IconExamples.svelte";
   import IconLinkList from "$lib/components/IconLinkList.svelte";
@@ -36,7 +35,6 @@
     siteUrl,
   } from "$lib/util/iconPages";
   import { svgPath } from "$lib/util/llms";
-  import { track } from "$lib/util/analytics";
   import { urlState } from "$lib/util/urlState.svelte";
   import { heroiconsDiscussionUrl } from "$lib/data/missingHeroicons";
 
@@ -165,27 +163,12 @@
     </div>
 
     <section class="flex flex-col gap-4">
-      <div class="flex flex-wrap items-center justify-between gap-2">
-        <h2 class="text-lg font-semibold">Code</h2>
-        <Button
-          text="Download {iconTypeNames[selectedType.value].toLowerCase()} SVG"
-          Icon={ArrowDownTrayIcon}
-          style="light"
-          href={svgPath(icon.kebabName, selectedType.value)}
-          download="{icon.kebabName}-{iconTypeNames[
-            selectedType.value
-          ].toLowerCase()}.svg"
-          onclick={() =>
-            track({
-              name: "download",
-              data: {
-                icon: icon.kebabName,
-                iconset: icon.iconset,
-                style: iconTypeNames[selectedType.value],
-              },
-            })}
-        />
-      </div>
+      <h2 class="text-lg font-semibold">Download</h2>
+      <IconPreview {icon} type={selectedType.value} />
+    </section>
+
+    <section class="flex flex-col gap-4">
+      <h2 class="text-lg font-semibold">Code</h2>
       <IconCode
         fullHeroicon={icon}
         type={selectedType.value}
