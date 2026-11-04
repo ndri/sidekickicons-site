@@ -37,7 +37,7 @@ test("renames are followed back to the old name", () => {
   expect(events.find((event) => event.kind === "renamed")).toMatchObject({
     from: "exclaimation-triangle",
   });
-  expect(events.at(-1)).toMatchObject({ kind: "added", release: { version: "2.0.0" } });
+  expect(events[0]).toMatchObject({ kind: "added", release: { version: "2.0.0" } });
 });
 
 test("changelog lines become text, code and links", () => {

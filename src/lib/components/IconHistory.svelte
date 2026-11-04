@@ -6,7 +6,8 @@
   import IconRedraw from "./IconRedraw.svelte";
   import Link from "./Link.svelte";
 
-  // What happened to an icon in each release, newest first
+  // What happened to an icon in each release, oldest first, on a line that ends at the
+  // last one
   let { events }: { events: HistoryEvent[] } = $props();
 
   // ["solid20", "solid16"] -> "Mini and micro"
@@ -26,9 +27,16 @@
   >
 {/snippet}
 
-<ol class="flex flex-col gap-6 border-l border-slate-200 pl-6 dark:border-slate-700">
+<ol class="flex flex-col gap-6 pl-6">
   {#each events as event, i (i)}
     <li class="relative flex flex-col gap-2">
+      {#if i < events.length - 1}
+        <!-- From this dot's centre to the next one's, across the gap between items -->
+        <span
+          class="absolute top-[0.6875rem] -bottom-[2.1875rem] -left-6 w-px bg-slate-200 dark:bg-slate-700"
+          aria-hidden="true"
+        ></span>
+      {/if}
       <span
         class="absolute top-1.5 -left-[1.8rem] size-2.5 rounded-full bg-indigo-600 ring-4 ring-white dark:bg-indigo-400 dark:ring-slate-900"
         aria-hidden="true"

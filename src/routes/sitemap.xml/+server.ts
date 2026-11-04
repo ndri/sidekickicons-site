@@ -51,7 +51,7 @@ const pages = [
   ...icons.map((icon) => ({
     path: iconPagePath(icon.kebabName),
     // The icon's newest release event: added, renamed, redrawn or a new style
-    lastModified: latest(iconPagesUpdated, iconHistory(icon)[0].release.date),
+    lastModified: latest(iconPagesUpdated, iconHistory(icon).at(-1)!.release.date),
     changeFrequency: "monthly",
     priority: icon.iconset === "Sidekickicons" ? 0.7 : 0.5,
   })),

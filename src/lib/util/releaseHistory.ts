@@ -74,7 +74,7 @@ const info = ({ iconset, version, date, url, first }: Release): ReleaseInfo => (
   first,
 });
 
-// Everything that happened to an icon, newest first
+// Everything that happened to an icon, oldest first
 export function iconHistory(icon: FullHeroicon): HistoryEvent[] {
   // Oldest first, following renames back to the icon's earlier names
   const own = releases
@@ -126,7 +126,7 @@ export function iconHistory(icon: FullHeroicon): HistoryEvent[] {
     );
   });
 
-  return events.toReversed();
+  return events;
 }
 
 // A changelog line as text, code and links, for rendering without {@html}
