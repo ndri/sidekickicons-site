@@ -130,6 +130,15 @@ export const exampleText: Record<string, ExampleText> = {
   "forward-bar": ["Next track", "Search songs", "Up next", "Player"],
   "backward-bar": ["Previous track", "Search songs", "Previous", "Player"],
   anchor: ["Set anchor", "Harbour name", "Docked", "Marinas"],
+  "arrow-uturn-left-down": ["Undo", "Edit text", "Undone", "History"],
+  "arrow-uturn-right-down": ["Redo", "Edit text", "Redone", "History"],
+  "battery-charging": ["Charge now", "Battery level", "Charging", "Power"],
+  "folder-x-mark": ["Delete folder", "Folder name", "Folder deleted", "Folders"],
+  "chart-line-up": ["View growth", "Search metrics", "Up 12%", "Analytics"],
+  "chart-line-down": ["View losses", "Search metrics", "Down 8%", "Analytics"],
+  hammer: ["Build", "Project name", "Under construction", "Tools"],
+  dumbbell: ["Start workout", "Search exercises", "Workout done", "Fitness"],
+  "face-id": ["Sign in with Face ID", "Device name", "Face ID on", "Security"],
 
   // Heroicons
   "academic-cap": ["Graduate", "Enter alma mater", "Undergraduate", "Education"],

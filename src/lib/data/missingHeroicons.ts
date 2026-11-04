@@ -61,6 +61,8 @@ export const sidekickiconGroups: { title: string; icons: string[] }[] = [
       "arrow-path-single-clockwise",
       "arrow-path-single-counterclockwise",
       "arrow-uturn-down-right",
+      "arrow-uturn-left-down",
+      "arrow-uturn-right-down",
       "arrow-uturn-up-left",
       "chevron-down-up",
       "chevron-left-right",
@@ -74,6 +76,7 @@ export const sidekickiconGroups: { title: string; icons: string[] }[] = [
       "arc-third",
       "battery-25",
       "battery-75",
+      "battery-charging",
       "check-double",
       "check-square",
       "circle-dashed",
@@ -99,6 +102,7 @@ export const sidekickiconGroups: { title: string; icons: string[] }[] = [
     title: "Security and privacy",
     icons: [
       "cookie",
+      "face-id",
       "lock-semi-open",
       "mask",
       "password",
@@ -112,7 +116,14 @@ export const sidekickiconGroups: { title: string; icons: string[] }[] = [
   },
   {
     title: "Numbers and ratings",
-    icons: ["gauge", "infinity", "percent", "star-half"],
+    icons: [
+      "chart-line-down",
+      "chart-line-up",
+      "gauge",
+      "infinity",
+      "percent",
+      "star-half",
+    ],
   },
   {
     title: "Gender symbols",
@@ -129,11 +140,14 @@ export const sidekickiconGroups: { title: string; icons: string[] }[] = [
       "crosshair",
       "crown",
       "dice",
+      "dumbbell",
       "face-meh",
       "face-smile-plus",
       "floppy-disk",
+      "folder-x-mark",
       "gamepad",
       "git-branch",
+      "hammer",
       "keyboard",
       "leaf",
       "pill",
@@ -186,6 +200,12 @@ export const heroiconsPairings: Record<string, string> = {
   "corners-pointing-in": "Goes with Heroicons' arrows-pointing-in",
   "battery-25": "Between Heroicons' battery-0 and battery-50",
   "battery-75": "Between Heroicons' battery-50 and battery-100",
+  "battery-charging": "Goes with Heroicons' battery-0, battery-50 and battery-100",
+  "arrow-uturn-left-down": "A vertical flip of Heroicons' arrow-uturn-left",
+  "arrow-uturn-right-down": "A vertical flip of Heroicons' arrow-uturn-right",
+  "folder-x-mark": "Goes with Heroicons' folder-plus and folder-minus",
+  "chart-line-up": "Heroicons' arrow-trending-up as a chart with axes",
+  "chart-line-down": "Heroicons' arrow-trending-down as a chart with axes",
 };
 
 // Votes on Heroicons' own GitHub discussions asking for the icon, from the Sidekickicons

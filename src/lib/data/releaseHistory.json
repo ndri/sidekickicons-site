@@ -2,6 +2,35 @@
   "releases": [
     {
       "iconset": "Sidekickicons",
+      "version": "0.21.0",
+      "date": "2026-11-04",
+      "url": "https://github.com/ndri/sidekickicons/blob/main/CHANGELOG.md#0210---2026-11-04",
+      "first": false,
+      "notes": [
+        {
+          "section": "Added",
+          "text": "Add new icons (`arrow-uturn-left-down`, `arrow-uturn-right-down`, `battery-charging`, `folder-x-mark`, `chart-line-up`, `chart-line-down`, `hammer`, `dumbbell`, `face-id`)",
+          "nested": false
+        }
+      ],
+      "added": [
+        "arrow-uturn-left-down",
+        "arrow-uturn-right-down",
+        "battery-charging",
+        "chart-line-down",
+        "chart-line-up",
+        "dumbbell",
+        "face-id",
+        "folder-x-mark",
+        "hammer"
+      ],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": []
+    },
+    {
+      "iconset": "Sidekickicons",
       "version": "0.20.0",
       "date": "2026-11-02",
       "url": "https://github.com/ndri/sidekickicons/blob/main/CHANGELOG.md#0200---2026-11-02",

@@ -415,4 +415,37 @@ export const sidekickiconDescriptions: Record<string, { description: string }> =
   anchor: {
     description: "A ship's anchor, for sailing, boats, marinas and anchor links.",
   },
+  "arrow-uturn-left-down": {
+    description:
+      "A U-turn arrow curving down to the left, for undo, going back or returning to a previous step.",
+  },
+  "arrow-uturn-right-down": {
+    description:
+      "A U-turn arrow curving down to the right, for redo, going forward or repeating a step.",
+  },
+  "battery-charging": {
+    description: "A battery with a lightning bolt, for charging and power status.",
+  },
+  "folder-x-mark": {
+    description:
+      "A folder with an X, for deleting or closing folders and missing or empty folders.",
+  },
+  "chart-line-up": {
+    description:
+      "A line chart going up, with axes, for growth, gains and rising trends.",
+  },
+  "chart-line-down": {
+    description:
+      "A line chart going down, with axes, for losses, declines and falling trends.",
+  },
+  hammer: {
+    description: "A hammer, for tools, building, repairs and maintenance.",
+  },
+  dumbbell: {
+    description: "A dumbbell, for fitness, workouts, gyms and strength training.",
+  },
+  "face-id": {
+    description:
+      "A face inside scanning corners, for Face ID, facial recognition and biometric sign-in.",
+  },
 };
