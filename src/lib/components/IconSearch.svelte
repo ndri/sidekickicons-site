@@ -1,6 +1,5 @@
 <script lang="ts">
   import icons from "../icons/allicons";
-  import { matchSorter } from "match-sorter";
   import IconCard from "./IconCard.svelte";
   import type {
     HeroiconType,
@@ -16,7 +15,7 @@
   } from "../util/constants";
   import SearchInput from "./SearchInput.svelte";
   import ButtonSelect from "./ButtonSelect.svelte";
-  import { dashesToSpaces } from "../util/util";
+  import { searchIcons as search } from "../util/search";
   import { urlState } from "../util/urlState.svelte";
   import VerticalRule from "./VerticalRule.svelte";
   import DropdownSelect from "./DropdownSelect.svelte";
@@ -51,11 +50,6 @@
         icon.iconset === selectedIconSet.value || selectedIconSet.value === "All",
     ),
   );
-  const search = (list: typeof icons, query: string) =>
-    matchSorter(list, dashesToSpaces(query), {
-      keys: [(icon) => dashesToSpaces(icon.kebabName), "keywords"],
-    });
-
   const iconsetMatches = $derived(
     searchQuery.value ? search(iconsetIcons, searchQuery.value) : iconsetIcons,
   );

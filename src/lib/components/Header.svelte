@@ -1,6 +1,7 @@
 <script lang="ts">
   import { MaskIcon } from "@sidekickicons/svelte/24/solid";
   import { ShieldIcon } from "@sidekickicons/svelte/24/outline";
+  import HeaderSearch from "./HeaderSearch.svelte";
   import ThemeSelector from "./ThemeSelector.svelte";
   import Link from "./Link.svelte";
 
@@ -21,12 +22,13 @@
 {/snippet}
 
 {#if compact}
+  <!-- Narrow screens: the theme selector, then the logo, then search, each on its own row -->
   <header
-    class="flex w-full max-w-7xl flex-wrap-reverse items-center justify-between gap-4 px-4 pt-8 sm:px-8"
+    class="flex w-full max-w-7xl flex-wrap items-center gap-4 px-4 pt-8 sm:px-8 md:flex-nowrap"
   >
     <a
       href="/"
-      class="flex items-center gap-2 rounded-xs font-bold focus:outline-hidden focus-visible:outline-2 focus-visible:outline-indigo-600 sm:text-lg"
+      class="order-2 flex items-center gap-2 rounded-xs font-bold focus:outline-hidden focus-visible:outline-2 focus-visible:outline-indigo-600 sm:text-lg md:order-1"
     >
       <ShieldIcon class="text-indigo-600" />
       <span>heroicons</span>
@@ -34,8 +36,10 @@
       <MaskIcon class="text-indigo-600" />
       <span>sidekickicons</span>
     </a>
-    <!-- Wraps above the logo on narrow screens -->
-    <div class="ml-auto">
+    <div class="order-3 w-full md:order-2 md:ml-auto md:max-w-64 md:flex-1">
+      <HeaderSearch />
+    </div>
+    <div class="order-1 flex w-full shrink-0 justify-end md:order-3 md:w-auto">
       <ThemeSelector />
     </div>
   </header>

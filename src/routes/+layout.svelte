@@ -16,9 +16,23 @@
     if (link.origin === window.location.origin) return;
     track({ name: "outbound", data: { link: link.href.slice(0, 300) } });
   }
+
+  // "/" or Cmd/Ctrl+K focuses the page's search, unless the user is typing somewhere
+  function focusSearch(event: KeyboardEvent) {
+    const commandK = event.key === "k" && (event.metaKey || event.ctrlKey);
+    if (event.key !== "/" && !commandK) return;
+    const target = event.target as HTMLElement;
+    if (!commandK && target.closest("input, textarea, select, [contenteditable]"))
+      return;
+    // Not behind an open dialog
+    const search = document.getElementById("search");
+    if (!search || document.querySelector("dialog[open]")) return;
+    event.preventDefault();
+    search.focus();
+  }
 </script>
 
-<svelte:window onpopstate={syncUrlState} />
+<svelte:window onpopstate={syncUrlState} onkeydown={focusSearch} />
 <svelte:document onclick={trackOutboundLink} onauxclick={trackOutboundLink} />
 
 {@render children()}

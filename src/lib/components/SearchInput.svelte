@@ -25,12 +25,17 @@
       type="text"
       autocomplete="off"
       {placeholder}
-      class="dark:placeholder-text-slate-400 block w-full rounded-md border-0 px-10 py-1.5 text-slate-900 ring-1 ring-slate-300 ring-inset placeholder:text-slate-400 focus:ring-2 focus:ring-indigo-600 focus:ring-inset sm:text-sm/6 dark:bg-slate-800 dark:text-slate-100 dark:ring-slate-700"
+      class="peer dark:placeholder-text-slate-400 block w-full rounded-md border-0 px-10 py-1.5 text-slate-900 ring-1 ring-slate-300 ring-inset placeholder:text-slate-400 focus:ring-2 focus:ring-indigo-600 focus:ring-inset sm:text-sm/6 dark:bg-slate-800 dark:text-slate-100 dark:ring-slate-700"
       value={searchQuery}
       oninput={(e) => setSearchQuery(e.currentTarget.value)}
       maxlength={32}
     />
-    {#if searchQuery}
+    {#if !searchQuery}
+      <kbd
+        class="pointer-events-none absolute inset-y-0 right-2 my-auto hidden h-5 items-center rounded-sm border border-slate-300 px-1.5 font-sans text-xs text-slate-400 peer-focus:hidden sm:flex dark:border-slate-600"
+        >/</kbd
+      >
+    {:else}
       <button
         class="absolute inset-y-0 right-0 flex items-center rounded-md px-3 text-slate-400 hover:text-slate-500 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-indigo-600 dark:text-slate-100 dark:hover:text-slate-200"
         onclick={() => setSearchQuery("")}
