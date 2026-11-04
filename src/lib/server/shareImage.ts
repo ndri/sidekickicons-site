@@ -7,9 +7,9 @@ import type { FullHeroicon, Heroicon, HeroiconType } from "../types";
 import { iconTypeNames, iconTypes } from "../util/constants";
 import { iconTitle } from "../util/iconPages";
 
-// Share images (og:image) for the icon pages, rendered at build time: satori lays the
-// image out and turns text into paths, resvg turns that into a PNG. Same look as
-// static/opengraph-image.png: white, slate text, indigo accents (Tailwind 4's colors).
+// Share images (og:image), rendered at build time: satori lays the image out and turns
+// text into paths, resvg turns that into a PNG. The site's look: white, slate text, indigo
+// accents (Tailwind 4's colors).
 
 export const shareImageSize = { width: 1200, height: 630 };
 
@@ -19,6 +19,7 @@ const colors = {
   icon: "#314158", // slate-700
   tile: "#f1f5f9", // slate-100
   accent: "#4f39f6", // indigo-600
+  link: "#432dd7", // indigo-700
 };
 
 const fontFile = (weight: number) =>
@@ -98,19 +99,74 @@ function titleSize(title: string) {
   return 72;
 }
 
-export async function iconShareImage(fullHeroicon: FullHeroicon) {
-  const title = `${iconTitle(fullHeroicon.kebabName)} icon`;
-  const element = div(
+// A full-size element, with its content placed absolutely: satori adds padding on top of
+// a 100% size
+const canvas = (children: Element[]) =>
+  div(
     {
       width: "100%",
       height: "100%",
-      // satori adds padding on top of a 100% size, so the content is placed absolutely
       position: "relative",
       backgroundColor: "#ffffff",
       color: colors.text,
       fontFamily: "Inter",
     },
-    [
+    children,
+  );
+
+async function render(element: Element) {
+  // satori's element type expects React nodes; plain objects with type and props work
+  const svg = await satori(element as never, { ...shareImageSize, fonts });
+  // satori has turned the text into paths, so resvg needs no fonts
+  return new Resvg(svg, {
+    fitTo: { mode: "width", value: shareImageSize.width },
+    font: { loadSystemFonts: false },
+  })
+    .render()
+    .asPng();
+}
+
+// The share image of every other page: the homepage's header
+export function defaultShareImage() {
+  return render(
+    canvas([
+      div(
+        {
+          position: "absolute",
+          left: 0,
+          right: 0,
+          top: 0,
+          bottom: 0,
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: 40,
+        },
+        [
+          div({ alignItems: "center", gap: 28, fontSize: 52, fontWeight: 700 }, [
+            iconImage(icon("shield").outline24, 72, colors.accent),
+            div({}, "heroicons"),
+            div({ margin: "0 8px" }, "+"),
+            iconImage(icon("mask").solid24, 72, colors.accent),
+            div({}, "sidekickicons"),
+          ]),
+          div({ fontSize: 26, color: colors.muted, whiteSpace: "pre" }, [
+            div({}, "Browse "),
+            div({ color: colors.link }, "your favourite icons"),
+            div({}, " and "),
+            div({ color: colors.link }, "their fanmade companions"),
+            div({}, "."),
+          ]),
+        ],
+      ),
+    ]),
+  );
+}
+
+export async function iconShareImage(fullHeroicon: FullHeroicon) {
+  const title = `${iconTitle(fullHeroicon.kebabName)} icon`;
+  return render(
+    canvas([
       div(
         {
           position: "absolute",
@@ -153,16 +209,6 @@ export async function iconShareImage(fullHeroicon: FullHeroicon) {
         ],
       ),
       logo(),
-    ],
+    ]),
   );
-
-  // satori's element type expects React nodes; plain objects with type and props work
-  const svg = await satori(element as never, { ...shareImageSize, fonts });
-  // satori has turned the text into paths, so resvg needs no fonts
-  return new Resvg(svg, {
-    fitTo: { mode: "width", value: shareImageSize.width },
-    font: { loadSystemFonts: false },
-  })
-    .render()
-    .asPng();
 }
