@@ -31,18 +31,24 @@
 
   const allResultsPath = $derived(`/?q=${encodeURIComponent(query.trim())}`);
 
+  // Tracked like the homepage search, once typing has stopped for 1.5 seconds, so
+  // searches people give up on count too
+  $effect(() => {
+    const trimmed = query.trim();
+    if (!trimmed || !icons.length) return;
+    const data = {
+      query: trimmed.slice(0, 100),
+      results: matches.length,
+      iconset: "All",
+      foundInIconset: true,
+      from: "header",
+    };
+    const timeout = setTimeout(() => track({ name: "search", data }), 1500);
+    return () => clearTimeout(timeout);
+  });
+
   function choose(index: number) {
     const icon = results[index];
-    track({
-      name: "search",
-      data: {
-        query: query.trim().slice(0, 100),
-        results: matches.length,
-        iconset: "All",
-        foundInIconset: true,
-        from: "header",
-      },
-    });
     open = false;
     goto(icon ? iconPagePath(icon.kebabName) : allResultsPath);
     query = "";

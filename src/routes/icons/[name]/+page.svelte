@@ -163,11 +163,6 @@
     </div>
 
     <section class="flex flex-col gap-4">
-      <h2 class="text-lg font-semibold">Download</h2>
-      <IconPreview {icon} type={selectedType.value} />
-    </section>
-
-    <section class="flex flex-col gap-4">
       <h2 class="text-lg font-semibold">Code</h2>
       <IconCode
         fullHeroicon={icon}
@@ -176,6 +171,11 @@
         setCodeType={(value) => (selectedCodeType.value = value)}
         from="icon page"
       />
+    </section>
+
+    <section class="flex flex-col gap-4">
+      <h2 class="text-lg font-semibold">Download</h2>
+      <IconPreview {icon} type={selectedType.value} />
     </section>
 
     <section class="flex flex-col gap-4">

@@ -79,9 +79,12 @@
 
   // A search is tracked once typing has stopped for 1.5 seconds. Searches with no
   // results in the chosen iconset show which icons people look for but don't find.
+  // Only typed searches count: one arriving in the URL, from the header search or a
+  // shared link, was tracked where it was typed or isn't a new search.
+  let typed = $state(false);
   $effect(() => {
     const query = searchQuery.value.trim();
-    if (!query) return;
+    if (!query || !typed) return;
     const data = {
       query: query.slice(0, 100),
       results: filteredIcons.length,
@@ -104,7 +107,10 @@
   <div class="sticky top-0 z-20 flex flex-col gap-2 bg-white py-2 dark:bg-slate-900">
     <SearchInput
       searchQuery={searchQuery.value}
-      setSearchQuery={(query) => (searchQuery.value = query)}
+      setSearchQuery={(query) => {
+        typed = true;
+        searchQuery.value = query;
+      }}
       placeholder="Search all icons..."
     />
     <div

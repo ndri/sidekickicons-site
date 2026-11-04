@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { ArrowDownTrayIcon } from "@sidekickicons/svelte/20/solid";
+  import { ArrowDownTrayIcon, EyeDropperIcon } from "@sidekickicons/svelte/20/solid";
   import type { FullHeroicon, HeroiconType } from "../types";
   import { track } from "../util/analytics";
   import { iconTypeNames } from "../util/constants";
@@ -43,6 +43,20 @@
   let customColor = $state("#0ea5e9");
   let background = $state<Background>("None");
   const isCustom = $derived(!presetColors.some((preset) => preset.value === color));
+
+  // The hex field shows the chosen color, and sets it once what's typed is a color.
+  // While it isn't, the field keeps what's typed and the color stays as it was.
+  const hexValue = $derived(color === "currentColor" ? "" : color);
+  function setHex(text: string) {
+    const hex = text.trim().replace(/^#?/, "#").toLowerCase();
+    if (!/^#([0-9a-f]{3}|[0-9a-f]{6})$/.test(hex)) return;
+    const long =
+      hex.length === 4
+        ? "#" + [...hex.slice(1)].map((digit) => digit + digit).join("")
+        : hex;
+    customColor = long;
+    color = long;
+  }
 
   // The color the default shows as, in the preview and in PNGs
   const shownColor = $derived(
@@ -147,12 +161,12 @@
         {/each}
         <!-- Selected when the color isn't a preset -->
         <label
-          class="relative flex size-8 cursor-pointer items-center justify-center overflow-hidden rounded-full ring-1 ring-slate-300 has-focus-visible:outline-2 has-focus-visible:outline-offset-4 has-focus-visible:outline-indigo-600 dark:ring-slate-600 dark:ring-offset-slate-900 {isCustom
+          class="relative flex size-8 cursor-pointer items-center justify-center overflow-hidden rounded-full bg-white text-slate-600 ring-1 ring-slate-300 hover:bg-slate-100 has-focus-visible:outline-2 has-focus-visible:outline-offset-4 has-focus-visible:outline-indigo-600 dark:bg-slate-800 dark:text-slate-300 dark:ring-slate-600 dark:ring-offset-slate-900 dark:hover:bg-slate-700 {isCustom
             ? 'ring-2 ring-indigo-600 ring-offset-2 dark:ring-indigo-400'
             : ''}"
-          style:background-color={customColor}
-          title="Custom color"
+          title="Pick a color"
         >
+          <EyeDropperIcon class="size-4" />
           <input
             type="color"
             class="absolute inset-0 cursor-pointer opacity-0"
@@ -161,9 +175,22 @@
               customColor = event.currentTarget.value;
               color = customColor;
             }}
-            aria-label="Custom color"
+            aria-label="Pick a color"
           />
         </label>
+        <label for="preview-hex" class="sr-only">Hex color</label>
+        <input
+          id="preview-hex"
+          type="text"
+          autocomplete="off"
+          spellcheck="false"
+          maxlength={7}
+          placeholder="#000000"
+          class="font-mono block w-24 rounded-md border-0 py-1 text-sm text-slate-900 shadow-xs ring-1 ring-slate-300 ring-inset placeholder:text-slate-400 focus:ring-2 focus:ring-indigo-600 focus:ring-inset dark:bg-slate-800 dark:text-slate-100 dark:ring-slate-700"
+          value={hexValue}
+          oninput={(event) => setHex(event.currentTarget.value)}
+          onblur={(event) => (event.currentTarget.value = hexValue)}
+        />
       </div>
       <p class="text-xs text-slate-500 dark:text-slate-400">
         Default keeps <code>currentColor</code> in the SVG, so it takes the color of the text
