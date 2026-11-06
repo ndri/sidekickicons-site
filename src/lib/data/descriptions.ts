@@ -448,4 +448,34 @@ export const sidekickiconDescriptions: Record<string, { description: string }> =
     description:
       "A face inside scanning corners, for Face ID, facial recognition and biometric sign-in.",
   },
+  barrier: {
+    description:
+      "A striped construction barrier on two legs, for roadworks, maintenance and pages under construction.",
+  },
+  cc: {
+    description:
+      "CC in a rounded rectangle, for closed captions and subtitles on video.",
+  },
+  ad: {
+    description:
+      "AD in a rounded rectangle, for ads, sponsored content and ad settings.",
+  },
+  plug: {
+    description:
+      "A two-pin power plug with its cable, for power, plugging in and connections.",
+  },
+  usb: {
+    description: "The USB symbol, for USB devices, ports, cables and connections.",
+  },
+  stethoscope: {
+    description: "A stethoscope, for doctors, checkups, health and healthcare.",
+  },
+  "fork-knife": {
+    description:
+      "A fork and a knife side by side, for restaurants, food, meals and dining.",
+  },
+  car: {
+    description:
+      "A car from the side, for driving, transport, rides, parking and car rentals.",
+  },
 };

@@ -29,9 +29,11 @@ export const sidekickiconGroups: { title: string; icons: string[] }[] = [
   {
     title: "Calls and media",
     icons: [
+      "ad",
       "arrows-crossing",
       "backward-bar",
       "camera-rotate",
+      "cc",
       "crop",
       "forward-bar",
       "headphones",
@@ -133,7 +135,9 @@ export const sidekickiconGroups: { title: string; icons: string[] }[] = [
     title: "Everyday objects",
     icons: [
       "anchor",
+      "barrier",
       "bluetooth",
+      "car",
       "coffee",
       "compass",
       "computer-laptop",
@@ -145,6 +149,7 @@ export const sidekickiconGroups: { title: string; icons: string[] }[] = [
       "face-smile-plus",
       "floppy-disk",
       "folder-x-mark",
+      "fork-knife",
       "gamepad",
       "git-branch",
       "hammer",
@@ -153,9 +158,12 @@ export const sidekickiconGroups: { title: string; icons: string[] }[] = [
       "pill",
       "pin",
       "pin-slash",
+      "plug",
       "robot",
       "snowflake",
+      "stethoscope",
       "target",
+      "usb",
     ],
   },
 ];
@@ -206,6 +214,8 @@ export const heroiconsPairings: Record<string, string> = {
   "folder-x-mark": "Goes with Heroicons' folder-plus and folder-minus",
   "chart-line-up": "Heroicons' arrow-trending-up as a chart with axes",
   "chart-line-down": "Heroicons' arrow-trending-down as a chart with axes",
+  cc: "Matches Heroicons' gif",
+  ad: "Matches Heroicons' gif",
 };
 
 // Votes on Heroicons' own GitHub discussions asking for the icon, from the Sidekickicons
@@ -238,12 +248,17 @@ export const heroiconsRequests: Record<
   crosshair: { votes: 7, discussions: [344] },
   hourglass: { votes: 6, discussions: [408] },
   crop: { votes: 6, discussions: [990] },
+  car: { votes: 72, discussions: [400, 443, 687] },
+  "fork-knife": { votes: 31, discussions: [826, 465] },
+  plug: { votes: 8, discussions: [955, 1414] },
+  usb: { votes: 4, discussions: [955] },
+  stethoscope: { votes: 5, discussions: [429, 1317] },
+  cc: { votes: 3, discussions: [567] },
+  barrier: { votes: 2, discussions: [460] },
 };
 
 // The most requested icons left on the Sidekickicons roadmap, with their votes
 export const comingNext: { name: string; votes: number }[] = [
-  { name: "car", votes: 72 },
-  { name: "fork-knife", votes: 31 },
   { name: "wheelchair", votes: 21 },
   { name: "brain", votes: 19 },
   { name: "ethernet", votes: 17 },

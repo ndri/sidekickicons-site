@@ -139,6 +139,19 @@ export const exampleText: Record<string, ExampleText> = {
   hammer: ["Build", "Project name", "Under construction", "Tools"],
   dumbbell: ["Start workout", "Search exercises", "Workout done", "Fitness"],
   "face-id": ["Sign in with Face ID", "Device name", "Face ID on", "Security"],
+  barrier: ["Report roadworks", "Search sites", "Under construction", "Construction"],
+  cc: ["Turn on captions", "Caption language", "Captions on", "Subtitles"],
+  ad: ["Create ad", "Campaign name", "Sponsored", "Ads"],
+  plug: ["Connect", "Device name", "Plugged in", "Power"],
+  usb: ["Connect device", "Device name", "USB connected", "Devices"],
+  stethoscope: ["Book a checkup", "Search doctors", "Checkup done", "Health"],
+  "fork-knife": [
+    "Reserve a table",
+    "Search restaurants",
+    "Table booked",
+    "Restaurants",
+  ],
+  car: ["Book a ride", "Pickup address", "Car arriving", "Rides"],
 
   // Heroicons
   "academic-cap": ["Graduate", "Enter alma mater", "Undergraduate", "Education"],

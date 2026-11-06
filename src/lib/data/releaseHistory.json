@@ -2,6 +2,34 @@
   "releases": [
     {
       "iconset": "Sidekickicons",
+      "version": "0.22.0",
+      "date": "2026-11-05",
+      "url": "https://github.com/ndri/sidekickicons/blob/main/CHANGELOG.md#0220---2026-11-05",
+      "first": false,
+      "notes": [
+        {
+          "section": "Added",
+          "text": "Add new icons (`barrier`, `cc`, `ad`, `plug`, `usb`, `stethoscope`, `fork-knife`, `car`)",
+          "nested": false
+        }
+      ],
+      "added": [
+        "ad",
+        "barrier",
+        "car",
+        "cc",
+        "fork-knife",
+        "plug",
+        "stethoscope",
+        "usb"
+      ],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": []
+    },
+    {
+      "iconset": "Sidekickicons",
       "version": "0.21.0",
       "date": "2026-11-04",
       "url": "https://github.com/ndri/sidekickicons/blob/main/CHANGELOG.md#0210---2026-11-04",
