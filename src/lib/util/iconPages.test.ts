@@ -40,6 +40,25 @@ test("related icons share keywords or name parts", () => {
   expect(relatedIcons(icon("arrow-down"), icons).length).toBe(12);
 });
 
+const relatedNames = (name: string) =>
+  relatedIcons(icon(name), icons).map((icon) => icon.kebabName);
+
+test("icons of the same object come before icons with the same modifier", () => {
+  const related = relatedNames("cloud-check");
+  expect(related.indexOf("cloud-plus")).toBeLessThan(related.indexOf("folder-check"));
+});
+
+test("keywords many icons share don't make icons related", () => {
+  // "menu", as in a restaurant's, is a keyword of the bars and ellipsis icons too
+  expect(relatedNames("fork-knife")).not.toContain("bars-3");
+});
+
+test("a single shared keyword only fills in when there are few strong matches", () => {
+  // "busy" means a full calendar on one and a loading spinner on the other
+  expect(relatedNames("calendar-x-mark")).not.toContain("arc-third");
+  expect(relatedNames("car")).toContain("truck");
+});
+
 test("every icon has example text, and every example text belongs to an icon", () => {
   const names = new Set(icons.map((icon) => icon.kebabName));
   for (const name of Object.keys(exampleText)) expect(names.has(name), name).toBe(true);

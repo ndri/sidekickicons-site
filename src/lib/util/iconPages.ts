@@ -57,29 +57,48 @@ export function iconMetaDescription(icon: FullHeroicon) {
   return `${iconTitle(icon.kebabName)} icon (${icon.componentName}) for React, Vue, Svelte, React Native and SVG, ${packages}. ${iconDescription(icon)}`;
 }
 
-// Icons that share keywords or name parts with the given icon, best matches first
+// Icons that share keywords or name parts with the given icon, best matches first.
+// The object an icon shows, the first part of its name, counts most: cloud-check is closer
+// to cloud-plus than to folder-check. A shared keyword counts more the fewer icons have
+// it, so a rare one like "medical" links icons and a common one like "menu" barely does.
+const MIN_STRONG = 4;
+
 export function relatedIcons(icon: FullHeroicon, icons: FullHeroicon[], count = 12) {
   const keywords = new Set(icon.keywords);
-  const nameParts = icon.kebabName.split("-");
-  const firstNamePart = nameParts[0];
+  const [object, ...modifiers] = icon.kebabName.split("-");
 
-  return icons
+  const iconsWithKeyword = new Map<string, number>();
+  for (const other of icons)
+    for (const keyword of new Set(other.keywords))
+      iconsWithKeyword.set(keyword, (iconsWithKeyword.get(keyword) ?? 0) + 1);
+  const keywordScore = (keyword: string) =>
+    2 * Math.min(1, 3 / iconsWithKeyword.get(keyword)!);
+
+  const scored = icons
     .filter((other) => other.kebabName !== icon.kebabName)
     .map((other) => {
-      const otherParts = other.kebabName.split("-");
-      const sharedKeywords = other.keywords.filter((k) => keywords.has(k)).length;
-      const sharedNameParts = otherParts.filter((part) =>
-        nameParts.includes(part),
+      const [otherObject, ...otherModifiers] = other.kebabName.split("-");
+      const sameObject = otherObject === object ? 5 : 0;
+      const sharedModifiers = otherModifiers.filter((part) =>
+        modifiers.includes(part),
       ).length;
-      const sameFirstPart = otherParts[0] === firstNamePart ? 1 : 0;
-      return { other, score: sharedKeywords * 2 + sharedNameParts + sameFirstPart };
+      const sharedKeywords = [...new Set(other.keywords)]
+        .filter((keyword) => keywords.has(keyword))
+        .reduce((sum, keyword) => sum + keywordScore(keyword), 0);
+      return { other, score: sameObject + sharedModifiers + sharedKeywords };
     })
-    .filter(({ score }) => score > 0)
     .sort(
       (a, b) => b.score - a.score || a.other.kebabName.localeCompare(b.other.kebabName),
-    )
-    .slice(0, count)
-    .map(({ other }) => other);
+    );
+
+  // A strong match shows the same object, or shares more than one keyword or name part. A
+  // weak one shares a single keyword, which can mean something else on the other icon
+  // ("auto" on car and circle-half-full), so weak matches only fill in when there are fewer
+  // than MIN_STRONG strong ones.
+  const strong = scored.filter(({ score }) => score > 2);
+  const weak = scored.filter(({ score }) => score >= 1 && score <= 2);
+  const related = strong.length >= MIN_STRONG ? strong : [...strong, ...weak];
+  return related.slice(0, count).map(({ other }) => other);
 }
 
 const iconAuthors = authors as Record<string, { author: string; authorLink: string }>;
