@@ -1188,7 +1188,7 @@ export const heroiconKeywords = {
   ],
   "arrow-trending-down": ["analytics", "decrease"],
   "arrow-trending-up": ["analytics", "increase"],
-  "arrow-turn-down-left": ["enter", "return", "reply", "submit", "direction"],
+  "arrow-turn-down-left": ["enter", "return", "submit", "direction"],
   "arrow-turn-down-right": ["direction", "turn", "route", "indent"],
   "arrow-turn-left-down": ["direction", "turn", "route"],
   "arrow-turn-left-up": ["direction", "turn", "route"],
