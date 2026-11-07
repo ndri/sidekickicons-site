@@ -478,4 +478,142 @@ export const sidekickiconDescriptions: Record<string, { description: string }> =
     description:
       "A car from the side, for driving, transport, rides, parking and car rentals.",
   },
+  "calendar-plus": {
+    description:
+      "A calendar with a plus, for adding events, scheduling and new bookings.",
+  },
+  "calendar-minus": {
+    description:
+      "A calendar with a minus, for removing events and cancelling bookings.",
+  },
+  "calendar-check": {
+    description:
+      "A calendar with a check mark, for confirmed events, bookings and attendance.",
+  },
+  "calendar-x-mark": {
+    description:
+      "A calendar with an X, for cancelled events, declined invites and unavailable dates.",
+  },
+  "calendar-arrow-path": {
+    description:
+      "A calendar with circling arrows, for recurring events, rescheduling and syncing calendars.",
+  },
+  "calendar-exclamation": {
+    description:
+      "A calendar with an exclamation mark, for scheduling conflicts, overdue dates and event warnings.",
+  },
+  "user-check": {
+    description:
+      "A person with a check mark, for verified users, accepted invites and approved members.",
+  },
+  "user-x-mark": {
+    description:
+      "A person with an X, for removing members, declined invites and blocked users.",
+  },
+  "user-exclamation": {
+    description:
+      "A person with an exclamation mark, for account warnings, reported users and missing profile details.",
+  },
+  "document-x-mark": {
+    description:
+      "A document with an X, for deleting or closing files, rejected files and failed uploads.",
+  },
+  "document-exclamation": {
+    description:
+      "A document with an exclamation mark, for file errors, missing information and documents that need attention.",
+  },
+  "document-arrow-path": {
+    description:
+      "A document with circling arrows, for syncing, converting and restoring files and document versions.",
+  },
+  "folder-check": {
+    description: "A folder with a check mark, for synced, shared or approved folders.",
+  },
+  "folder-arrow-up": {
+    description:
+      "A folder with an arrow pointing up, for uploading folders and exporting files.",
+  },
+  "folder-exclamation": {
+    description:
+      "A folder with an exclamation mark, for folder errors, sync problems and folders that need attention.",
+  },
+  "folder-arrow-path": {
+    description:
+      "A folder with circling arrows, for syncing, refreshing and restoring folders.",
+  },
+  "cloud-check": {
+    description: "A cloud with a check mark, for synced, saved and backed-up files.",
+  },
+  "cloud-slash": {
+    description:
+      "A cloud with a slash through it, for offline mode, sync turned off and no connection.",
+  },
+  "cloud-x-mark": {
+    description:
+      "A cloud with an X, for failed uploads, sync errors and deleting files from the cloud.",
+  },
+  "cloud-plus": {
+    description: "A cloud with a plus, for adding files or accounts to cloud storage.",
+  },
+  "cloud-exclamation": {
+    description:
+      "A cloud with an exclamation mark, for sync warnings, full storage and cloud errors.",
+  },
+  "cloud-arrow-path": {
+    description:
+      "A cloud with circling arrows, for syncing, refreshing and restoring from the cloud.",
+  },
+  "trash-arrow-up": {
+    description: "A trash can with an arrow pointing up, for restoring deleted items.",
+  },
+  "trash-x-mark": {
+    description:
+      "A trash can with an X, for deleting permanently and emptying the trash.",
+  },
+  "bookmark-plus": {
+    description: "A bookmark with a plus, for saving and adding bookmarks.",
+  },
+  "bookmark-check": {
+    description:
+      "A bookmark with a check mark, for saved items and finished reading lists.",
+  },
+  "bookmark-x-mark": {
+    description: "A bookmark with an X, for removing bookmarks and unsaving items.",
+  },
+  "shield-x-mark": {
+    description:
+      "A shield with an X, for failed security checks, threats and unprotected devices.",
+  },
+  "shield-plus": {
+    description:
+      "A shield with a plus, for adding protection, insurance and health cover.",
+  },
+  "wifi-slash": {
+    description:
+      "Wi-Fi waves with a slash through them, for no internet, offline mode and Wi-Fi turned off.",
+  },
+  "camera-slash": {
+    description:
+      "A camera with a slash through it, for the camera turned off, no photos allowed and blocked camera access.",
+  },
+  "photo-slash": {
+    description:
+      "A picture with a slash through it, for broken or missing images and images turned off.",
+  },
+  "computer-desktop-slash": {
+    description:
+      "A monitor with a slash through it, for stopping screen sharing, display off and no signal.",
+  },
+  "map-pin-slash": {
+    description:
+      "A map pin with a slash through it, for location turned off, hidden location and places not found.",
+  },
+  "heart-slash": {
+    description:
+      "A heart with a slash through it, for unliking, removing favorites and disliking.",
+  },
+  "star-slash": {
+    description:
+      "A star with a slash through it, for removing ratings, unstarring and unfavoriting.",
+  },
 };
