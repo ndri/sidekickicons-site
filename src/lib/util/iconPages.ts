@@ -61,7 +61,7 @@ export function iconMetaDescription(icon: FullHeroicon) {
 // The object an icon shows, the first part of its name, counts most: cloud-check is closer
 // to cloud-plus than to folder-check. A shared keyword counts more the fewer icons have
 // it, so a rare one like "medical" links icons and a common one like "menu" barely does.
-const MIN_STRONG = 4;
+const MIN_STRONG = 3;
 
 export function relatedIcons(icon: FullHeroicon, icons: FullHeroicon[], count = 12) {
   const keywords = new Set(icon.keywords);

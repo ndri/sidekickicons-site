@@ -57,6 +57,15 @@ test("a single shared keyword only fills in when there are few strong matches", 
   // "busy" means a full calendar on one and a loading spinner on the other
   expect(relatedNames("calendar-x-mark")).not.toContain("arc-third");
   expect(relatedNames("car")).toContain("truck");
+  // "auto", "hot" and "tip" mean something else on these
+  expect(relatedNames("car")).not.toContain("circle-half-full");
+  expect(relatedNames("coffee")).not.toContain("fire");
+  expect(relatedNames("coffee")).not.toContain("light-bulb");
+});
+
+test("every icon has related icons", () => {
+  for (const other of icons)
+    expect(relatedIcons(other, icons).length, other.kebabName).toBeGreaterThan(0);
 });
 
 test("every icon has example text, and every example text belongs to an icon", () => {
