@@ -4,9 +4,25 @@
   import DescriptionList from "./DescriptionList.svelte";
   import Link from "./Link.svelte";
   import authorsData from "../data/authors.json";
+  import { keywordMatchRanges, type SearchGroup } from "../util/search";
+  import Highlighted from "./Highlighted.svelte";
 
-  let { fullHeroicon, type }: { fullHeroicon: FullHeroicon; type: HeroiconType } =
-    $props();
+  let {
+    fullHeroicon,
+    type,
+    query = "",
+    group,
+  }: {
+    fullHeroicon: FullHeroicon;
+    type: HeroiconType;
+    // A search to highlight in the keywords
+    query?: string;
+    group?: SearchGroup;
+  } = $props();
+
+  const keywordRanges = $derived(
+    keywordMatchRanges(fullHeroicon.keywords, query, group),
+  );
 
   // Get author data if available
   const authorInfo = $derived(
@@ -15,6 +31,13 @@
     ],
   );
 </script>
+
+{#snippet keywords()}
+  {#each fullHeroicon.keywords as keyword, i (keyword)}{#if i > 0}{", "}{/if}<Highlighted
+      text={keyword}
+      ranges={keywordRanges[i]}
+    />{/each}
+{/snippet}
 
 {#snippet author()}
   <Link href={authorInfo.authorLink} newTab>{authorInfo.author}</Link>
@@ -26,7 +49,7 @@
     ["Component", fullHeroicon.componentName],
     ["Intended size", iconTypeExplanations[type]],
     ["Iconset", fullHeroicon.iconset],
-    ["Keywords", fullHeroicon.keywords.join(", ")],
+    ["Keywords", keywords],
     ...(authorInfo ? [["Author", author] as [string, typeof author]] : []),
   ]}
 />

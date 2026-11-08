@@ -108,3 +108,79 @@ export function searchIconsGrouped(list: readonly FullHeroicon[], query: string)
 
 export const searchIcons = (list: readonly FullHeroicon[], query: string) =>
   searchIconsGrouped(list, query).map(({ icon }) => icon);
+
+export type Range = [start: number, end: number];
+
+// The parts of a name or keyword to highlight for a search: the whole search where it
+// appears, else the initials it spells, else (when `loose`) its letters in order. Dashes count
+// as spaces, and a British spelling also tries its American one.
+export function matchRanges(
+  text: string,
+  query: string,
+  { loose = true } = {},
+): Range[] {
+  const haystack = dashesToSpaces(text).toLowerCase();
+  const raw = dashesToSpaces(query).toLowerCase().trim();
+  if (!raw) return [];
+  const candidates = [...new Set([raw, americanSpelling(raw)])];
+
+  for (const candidate of candidates) {
+    const start = haystack.indexOf(candidate);
+    if (start >= 0) return [[start, start + candidate.length]];
+  }
+
+  const letters = raw.replace(/ /g, "");
+  const wordStarts = [...haystack.matchAll(/\S+/g)].map((word) => word.index!);
+  if (letters.length > 1 && letters.length <= wordStarts.length) {
+    const initials = wordStarts.map((i) => haystack[i]).join("");
+    const at = initials.indexOf(letters);
+    if (at >= 0)
+      return wordStarts.slice(at, at + letters.length).map((i): Range => [i, i + 1]);
+  }
+
+  if (!loose) return [];
+  for (const candidate of candidates) {
+    const ranges: Range[] = [];
+    let from = 0;
+    for (const letter of candidate.replace(/ /g, "")) {
+      const i = haystack.indexOf(letter, from);
+      if (i < 0) break;
+      const last = ranges.at(-1);
+      if (last && last[1] === i) last[1] = i + 1;
+      else ranges.push([i, i + 1]);
+      from = i + 1;
+    }
+    if (
+      from > 0 &&
+      ranges.reduce((sum, [s, e]) => sum + e - s, 0) ===
+        candidate.replace(/ /g, "").length
+    )
+      return ranges;
+  }
+  return [];
+}
+
+// Highlights for an icon's name. Loose letters only show when the icon was found by a loose
+// match on its name, not in the name of an icon found through a keyword.
+export const nameMatchRanges = (name: string, query: string, group?: SearchGroup) =>
+  matchRanges(name, query, { loose: group === "name" });
+
+// Highlights for each of an icon's keywords: every keyword the search appears in, or, for an
+// icon found by a loose keyword match, the letters of the first keyword that matches loosely
+export function keywordMatchRanges(
+  keywords: readonly string[],
+  query: string,
+  group?: SearchGroup,
+) {
+  const direct = keywords.map((keyword) =>
+    matchRanges(keyword, query, { loose: false }),
+  );
+  if (group !== "keyword" || direct.some((ranges) => ranges.length)) return direct;
+  let found = false;
+  return keywords.map((keyword) => {
+    if (found) return [];
+    const ranges = matchRanges(keyword, query);
+    found = ranges.length > 0;
+    return ranges;
+  });
+}

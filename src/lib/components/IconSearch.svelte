@@ -195,6 +195,8 @@
         {fullHeroicon}
         size={selectedSize.value}
         codeType={selectedCodeType.value}
+        query={searchQuery.value}
+        group={groupOf.get(fullHeroicon)}
         openDialog={() => {
           openIconKey.value = fullHeroicon.kebabName;
           track({
@@ -238,6 +240,8 @@
   {#if openIcon}
     <IconDetailsDialog
       fullHeroicon={openIcon}
+      query={searchQuery.value}
+      group={groupOf.get(openIcon)}
       closeDialog={() => (openIconKey.value = "")}
     />
   {/if}

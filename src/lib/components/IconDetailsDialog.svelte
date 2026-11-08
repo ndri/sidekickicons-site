@@ -15,13 +15,20 @@
   import Button from "./Button.svelte";
   import IconInfoList from "./IconInfoList.svelte";
   import IconCode from "./IconCode.svelte";
+  import Highlighted from "./Highlighted.svelte";
+  import { nameMatchRanges, type SearchGroup } from "../util/search";
 
   let {
     fullHeroicon,
     closeDialog,
+    query = "",
+    group,
   }: {
     fullHeroicon: FullHeroicon;
     closeDialog: () => void;
+    // The search the dialog was opened from, highlighted in the name and keywords
+    query?: string;
+    group?: SearchGroup;
   } = $props();
 
   const selectedType = urlState<HeroiconType>("type", { defaultValue: "outline24" });
@@ -62,7 +69,10 @@
     >
       <div class="flex flex-col items-center gap-6">
         <h3 id="icon-details-title" class="text-center text-lg font-semibold">
-          {fullHeroicon.kebabName}
+          <Highlighted
+            text={fullHeroicon.kebabName}
+            ranges={nameMatchRanges(fullHeroicon.kebabName, query, group)}
+          />
         </h3>
         <div
           class="flex h-36 w-36 items-center justify-center rounded-md border border-slate-200 dark:border-slate-700"
@@ -79,7 +89,7 @@
           values={iconTypes}
           labels={iconTypeNames}
         />
-        <IconInfoList {fullHeroicon} type={selectedType.value} />
+        <IconInfoList {fullHeroicon} type={selectedType.value} {query} {group} />
         <IconCode
           {fullHeroicon}
           type={selectedType.value}

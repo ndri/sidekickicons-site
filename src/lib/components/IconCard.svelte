@@ -4,7 +4,9 @@
   import { allIconSizeClasses, iconCodeFunctions } from "../util/constants";
   import { svgWithClass } from "../util/code";
   import { copyIconEvent } from "../util/analytics";
+  import { nameMatchRanges, type SearchGroup } from "../util/search";
   import CopyButton from "./CopyButton.svelte";
+  import Highlighted from "./Highlighted.svelte";
   import Button from "./Button.svelte";
 
   let {
@@ -13,12 +15,18 @@
     size,
     codeType,
     openDialog,
+    query = "",
+    group,
   }: {
     type: HeroiconType;
     fullHeroicon: FullHeroicon;
     size: IconSize;
     codeType: IconCodeType;
     openDialog: () => void;
+    // The search, whose matching part of the name is highlighted
+    query?: string;
+    // Which group of search results the icon is in
+    group?: SearchGroup;
   } = $props();
 
   let expanded = $state(false);
@@ -84,7 +92,7 @@
         class="mt-2 max-w-full truncate text-xs text-slate-500 dark:text-slate-400"
         title={name}
       >
-        {name}
+        <Highlighted text={name} ranges={nameMatchRanges(name, query, group)} />
       </p>
     </div>
   </button>

@@ -5,7 +5,8 @@
   import { track } from "../util/analytics";
   import { svgWithClass } from "../util/code";
   import { iconPagePath } from "../util/iconPages";
-  import { searchIcons } from "../util/search";
+  import { nameMatchRanges, searchIconsGrouped } from "../util/search";
+  import Highlighted from "./Highlighted.svelte";
 
   // Search from any page: the best matches open their icon page, and the last option
   // opens the full search on the homepage. The icons load on first focus, so pages that
@@ -18,7 +19,9 @@
   let open = $state(false);
   let activeIndex = $state(0);
 
-  const matches = $derived(query.trim() ? searchIcons(icons, query.trim()) : []);
+  const grouped = $derived(query.trim() ? searchIconsGrouped(icons, query.trim()) : []);
+  const matches = $derived(grouped.map(({ icon }) => icon));
+  const groupOf = $derived(new Map(grouped.map(({ icon, group }) => [icon, group])));
   const results = $derived(matches.slice(0, MAX_RESULTS));
   // The icons, then "See all results"
   const optionCount = $derived(results.length + 1);
@@ -134,7 +137,12 @@
             icon.outline24,
             "size-5 shrink-0 text-slate-700 dark:text-slate-200",
           )}
-          <span class="truncate">{icon.kebabName}</span>
+          <span class="truncate"
+            ><Highlighted
+              text={icon.kebabName}
+              ranges={nameMatchRanges(icon.kebabName, query, groupOf.get(icon))}
+            /></span
+          >
           <span class="ml-auto shrink-0 text-xs text-slate-500 dark:text-slate-400"
             >{icon.iconset}</span
           >
