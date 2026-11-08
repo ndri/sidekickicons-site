@@ -1194,7 +1194,7 @@ export const heroiconKeywords = {
   "arrow-turn-left-up": ["direction", "turn", "route"],
   "arrow-turn-right-down": ["direction", "turn", "route"],
   "arrow-turn-right-up": ["direction", "turn", "route"],
-  "arrow-turn-up-left": ["direction", "turn", "route"],
+  "arrow-turn-up-left": ["reply", "back", "direction", "turn", "route"],
   "arrow-turn-up-right": ["direction", "turn", "route"],
   "arrow-up": ["direction", "north", "ascend", "scroll to top"],
   "arrow-up-circle": ["upload", "direction", "north", "scroll to top"],
