@@ -1,4 +1,4 @@
-import { matchSorter } from "match-sorter";
+import { matchSorter, rankings } from "match-sorter";
 import type { FullHeroicon } from "../types";
 import { dashesToSpaces } from "./util";
 
@@ -64,8 +64,28 @@ function termsFor(icon: FullHeroicon) {
   return terms;
 }
 
-// Icons matching a search by name or keyword, best matches first
-export const searchIcons = (list: readonly FullHeroicon[], query: string) =>
-  matchSorter(list, americanSpelling(dashesToSpaces(query)), {
+// Icons matching a search by name or keyword, in three groups: direct matches on the name
+// or a keyword (exact, starts with, contains), then loose matches on the name (acronyms and
+// letters in order, like "trsh" for trash), then loose matches on a keyword only. Within a
+// group, closer matches come first and name matches beat keyword matches.
+export function searchIcons(list: readonly FullHeroicon[], query: string) {
+  const value = americanSpelling(dashesToSpaces(query));
+  const nameMatches = (icon: FullHeroicon) =>
+    matchSorter([termsFor(icon).name], value).length > 0;
+  const group = ({ item, rank }: { item: FullHeroicon; rank: number }) =>
+    rank >= rankings.CONTAINS ? 0 : nameMatches(item) ? 1 : 2;
+
+  return matchSorter(list, value, {
     keys: [(icon) => termsFor(icon).name, (icon) => termsFor(icon).keywords],
+    sorter: (ranked) => {
+      const groups = new Map(ranked.map((match) => [match, group(match)]));
+      return ranked.sort(
+        (a, b) =>
+          groups.get(a)! - groups.get(b)! ||
+          b.rank - a.rank ||
+          a.keyIndex - b.keyIndex ||
+          String(a.rankedValue).localeCompare(String(b.rankedValue)),
+      );
+    },
   });
+}

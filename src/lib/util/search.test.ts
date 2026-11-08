@@ -37,3 +37,18 @@ test("spellings are changed inside longer queries", () => {
   expect(americanSpelling("organise travelling")).toBe("organize traveling");
   expect(americanSpelling("grey dialogue centre")).toBe("gray dialog center");
 });
+
+test("direct matches come first, then loose name matches, then loose keyword matches", () => {
+  const results = names("heart");
+  expect(results.slice(0, 2)).toEqual(["heart", "heart-slash"]);
+  // battery-75 only matches "heart" loosely through a keyword, so it comes after the
+  // icons whose names match loosely
+  expect(results.indexOf("battery-75")).toBeGreaterThan(
+    results.indexOf("phone-arrow-up-right"),
+  );
+  expect(names("trsh").slice(0, 3)).toEqual([
+    "trash",
+    "trash-arrow-up",
+    "trash-x-mark",
+  ]);
+});
