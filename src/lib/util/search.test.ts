@@ -1,6 +1,6 @@
 import { expect, test } from "vitest";
 import icons from "../icons/allicons";
-import { americanSpelling, searchIcons } from "./search";
+import { americanSpelling, searchIcons, searchIconsGrouped } from "./search";
 
 const names = (query: string) =>
   searchIcons(icons, query).map((icon) => icon.kebabName);
@@ -51,4 +51,12 @@ test("direct matches come first, then loose name matches, then loose keyword mat
     "trash-arrow-up",
     "trash-x-mark",
   ]);
+});
+
+test("each result says which group it's in", () => {
+  const groups = searchIconsGrouped(icons, "heart").map(({ group }) => group);
+  expect(groups).toEqual(["direct", "direct", "name", "name", "keyword"]);
+  expect(new Set(searchIconsGrouped(icons, "cloud").map(({ group }) => group))).toEqual(
+    new Set(["direct"]),
+  );
 });

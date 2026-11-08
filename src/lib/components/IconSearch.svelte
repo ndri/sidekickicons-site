@@ -15,7 +15,12 @@
   } from "../util/constants";
   import SearchInput from "./SearchInput.svelte";
   import ButtonSelect from "./ButtonSelect.svelte";
-  import { searchIcons as search } from "../util/search";
+  import {
+    searchGroupTitles,
+    searchIcons as search,
+    searchIconsGrouped,
+    type SearchGroup,
+  } from "../util/search";
   import { urlState } from "../util/urlState.svelte";
   import VerticalRule from "./VerticalRule.svelte";
   import DropdownSelect from "./DropdownSelect.svelte";
@@ -50,18 +55,31 @@
         icon.iconset === selectedIconSet.value || selectedIconSet.value === "All",
     ),
   );
-  const iconsetMatches = $derived(
-    searchQuery.value ? search(iconsetIcons, searchQuery.value) : iconsetIcons,
+  const iconsetResults = $derived(
+    searchQuery.value ? searchIconsGrouped(iconsetIcons, searchQuery.value) : null,
   );
 
   // When a search in one iconset finds nothing, show matches from all icons instead,
   // with a note above them. The iconset filter itself stays as it is.
   const showingAllIconsets = $derived(
-    !iconsetMatches.length && !!searchQuery.value && selectedIconSet.value !== "All",
+    !!iconsetResults && !iconsetResults.length && selectedIconSet.value !== "All",
+  );
+  const results = $derived(
+    showingAllIconsets ? searchIconsGrouped(icons, searchQuery.value) : iconsetResults,
   );
   const filteredIcons = $derived(
-    showingAllIconsets ? search(icons, searchQuery.value) : iconsetMatches,
+    results ? results.map(({ icon }) => icon) : iconsetIcons,
   );
+
+  // A search's results get group titles when they fall into more than one group
+  const groupOf = $derived(new Map(results?.map(({ icon, group }) => [icon, group])));
+  const groupCounts = $derived(
+    (results ?? []).reduce(
+      (counts, { group }) => counts.set(group, (counts.get(group) ?? 0) + 1),
+      new Map<SearchGroup, number>(),
+    ),
+  );
+  const showGroupTitles = $derived(groupCounts.size > 1);
 
   // When it does find some, a note under the results says how many more the other
   // iconset has, so they aren't missed
@@ -157,7 +175,21 @@
   <div
     class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
   >
-    {#each slicedIcons as fullHeroicon (fullHeroicon.kebabName)}
+    {#each slicedIcons as fullHeroicon, i (fullHeroicon.kebabName)}
+      {@const group = groupOf.get(fullHeroicon)}
+      {#if showGroupTitles && group && group !== groupOf.get(slicedIcons[i - 1])}
+        <h2
+          class="col-span-full flex items-baseline gap-2 text-sm font-semibold text-slate-700 dark:text-slate-200 {i >
+          0
+            ? 'mt-4'
+            : ''}"
+        >
+          {searchGroupTitles[group]}
+          <span class="font-normal text-slate-500 dark:text-slate-400"
+            >{groupCounts.get(group)}</span
+          >
+        </h2>
+      {/if}
       <IconCard
         type={selectedType.value}
         {fullHeroicon}

@@ -64,28 +64,47 @@ function termsFor(icon: FullHeroicon) {
   return terms;
 }
 
+export type SearchGroup = "direct" | "name" | "keyword";
+
+// Titles for the groups, shown when a search has more than one
+export const searchGroupTitles: Record<SearchGroup, string> = {
+  direct: "Best matches",
+  name: "Similar names",
+  keyword: "Similar keywords",
+};
+
+const groupOrder: SearchGroup[] = ["direct", "name", "keyword"];
+
 // Icons matching a search by name or keyword, in three groups: direct matches on the name
 // or a keyword (exact, starts with, contains), then loose matches on the name (acronyms and
 // letters in order, like "trsh" for trash), then loose matches on a keyword only. Within a
 // group, closer matches come first and name matches beat keyword matches.
-export function searchIcons(list: readonly FullHeroicon[], query: string) {
+export function searchIconsGrouped(list: readonly FullHeroicon[], query: string) {
   const value = americanSpelling(dashesToSpaces(query));
   const nameMatches = (icon: FullHeroicon) =>
     matchSorter([termsFor(icon).name], value).length > 0;
-  const group = ({ item, rank }: { item: FullHeroicon; rank: number }) =>
-    rank >= rankings.CONTAINS ? 0 : nameMatches(item) ? 1 : 2;
+  const groups = new Map<FullHeroicon, SearchGroup>();
 
-  return matchSorter(list, value, {
+  const icons = matchSorter(list, value, {
     keys: [(icon) => termsFor(icon).name, (icon) => termsFor(icon).keywords],
     sorter: (ranked) => {
-      const groups = new Map(ranked.map((match) => [match, group(match)]));
+      for (const { item, rank } of ranked)
+        groups.set(
+          item,
+          rank >= rankings.CONTAINS ? "direct" : nameMatches(item) ? "name" : "keyword",
+        );
+      const order = (icon: FullHeroicon) => groupOrder.indexOf(groups.get(icon)!);
       return ranked.sort(
         (a, b) =>
-          groups.get(a)! - groups.get(b)! ||
+          order(a.item) - order(b.item) ||
           b.rank - a.rank ||
           a.keyIndex - b.keyIndex ||
           String(a.rankedValue).localeCompare(String(b.rankedValue)),
       );
     },
   });
+  return icons.map((icon) => ({ icon, group: groups.get(icon)! }));
 }
+
+export const searchIcons = (list: readonly FullHeroicon[], query: string) =>
+  searchIconsGrouped(list, query).map(({ icon }) => icon);
