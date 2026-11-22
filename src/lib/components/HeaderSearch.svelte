@@ -5,7 +5,7 @@
   import { track } from "../util/analytics";
   import { svgWithClass } from "../util/code";
   import { iconPagePath } from "../util/iconPages";
-  import { nameMatchRanges, searchIconsGrouped } from "../util/search";
+  import { nameMatchRanges, searchIconsGrouped, suggestSearches } from "../util/search";
   import Highlighted from "./Highlighted.svelte";
 
   // Search from any page: the best matches open their icon page, and the last option
@@ -20,8 +20,17 @@
   let activeIndex = $state(0);
 
   const grouped = $derived(query.trim() ? searchIconsGrouped(icons, query.trim()) : []);
-  const matches = $derived(grouped.map(({ icon }) => icon));
-  const groupOf = $derived(new Map(grouped.map(({ icon, group }) => [icon, group])));
+  // A search that finds nothing shows the results for the name or keyword it's most
+  // likely a typo of, like the homepage
+  const suggestion = $derived(
+    query.trim() && icons.length && !grouped.length
+      ? suggestSearches(icons, query.trim()).at(0)
+      : undefined,
+  );
+  const shown = $derived(suggestion ? searchIconsGrouped(icons, suggestion) : grouped);
+  const shownQuery = $derived(suggestion ?? query);
+  const matches = $derived(shown.map(({ icon }) => icon));
+  const groupOf = $derived(new Map(shown.map(({ icon, group }) => [icon, group])));
   const results = $derived(matches.slice(0, MAX_RESULTS));
   // The icons, then "See all results"
   const optionCount = $derived(results.length + 1);
@@ -41,10 +50,11 @@
     if (!trimmed || !icons.length) return;
     const data = {
       query: trimmed.slice(0, 100),
-      results: matches.length,
+      results: grouped.length,
       iconset: "All",
       foundInIconset: true,
       from: "header",
+      ...(suggestion ? { suggestion } : {}),
     };
     const timeout = setTimeout(() => track({ name: "search", data }), 1500);
     return () => clearTimeout(timeout);
@@ -115,9 +125,20 @@
     <ul
       id="header-search-results"
       role="listbox"
-      aria-label="Icons"
+      aria-label={suggestion ? `Icons matching ${suggestion}` : "Icons"}
       class="absolute right-0 z-30 mt-2 w-full min-w-80 overflow-hidden rounded-md bg-white py-1 shadow-lg ring-1 ring-slate-200 dark:bg-slate-800 dark:ring-slate-700"
     >
+      {#if suggestion}
+        <li
+          role="none"
+          class="px-3 pt-1 pb-2 text-xs text-slate-500 dark:text-slate-400"
+        >
+          No icons match "{query.trim()}". Showing results for
+          <span class="font-semibold text-slate-700 dark:text-slate-200"
+            >{suggestion}</span
+          >.
+        </li>
+      {/if}
       {#each results as icon, i (icon.kebabName)}
         <!-- The input keeps focus and handles the keyboard, so options only need clicks -->
         <!-- svelte-ignore a11y_click_events_have_key_events -->
@@ -140,7 +161,7 @@
           <span class="truncate"
             ><Highlighted
               text={icon.kebabName}
-              ranges={nameMatchRanges(icon.kebabName, query, groupOf.get(icon))}
+              ranges={nameMatchRanges(icon.kebabName, shownQuery, groupOf.get(icon))}
             /></span
           >
           <span class="ml-auto shrink-0 text-xs text-slate-500 dark:text-slate-400"

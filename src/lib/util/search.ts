@@ -184,3 +184,72 @@ export function keywordMatchRanges(
     return ranges;
   });
 }
+
+// How many letters a search can get wrong and still be corrected: none for short words,
+// where almost anything is one letter away from something
+const allowedTypos = (length: number) =>
+  length < 4 ? 0 : length < 6 ? 1 : length < 9 ? 2 : 3;
+
+// Letters to change, add, remove or swap with a neighbour to turn one text into the other,
+// or `max + 1` once it's clear it takes more than `max`
+function typoDistance(a: string, b: string, max: number) {
+  if (Math.abs(a.length - b.length) > max) return max + 1;
+  let before = Array.from({ length: b.length + 1 }, (_, j) => j);
+  let previous = before;
+  for (let i = 1; i <= a.length; i++) {
+    const row = [i];
+    let best = i;
+    for (let j = 1; j <= b.length; j++) {
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+      let value = Math.min(previous[j] + 1, row[j - 1] + 1, previous[j - 1] + cost);
+      if (i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1])
+        value = Math.min(value, before[j - 2] + 1);
+      row.push(value);
+      best = Math.min(best, value);
+    }
+    if (best > max) return max + 1;
+    before = previous;
+    previous = row;
+  }
+  return previous[b.length];
+}
+
+// Every name, name word, keyword and keyword word, with how many icons have it
+const vocabularies = new WeakMap<readonly FullHeroicon[], Map<string, number>>();
+function vocabularyFor(list: readonly FullHeroicon[]) {
+  let vocabulary = vocabularies.get(list);
+  if (!vocabulary) {
+    vocabulary = new Map();
+    for (const icon of list) {
+      const { name, keywords } = termsFor(icon);
+      const terms = new Set(
+        [name, ...keywords].flatMap((term) => [term, ...term.split(" ")]),
+      );
+      for (const term of terms)
+        if (term.length > 1) vocabulary.set(term, (vocabulary.get(term) ?? 0) + 1);
+    }
+    vocabularies.set(list, vocabulary);
+  }
+  return vocabulary;
+}
+
+// For a search that finds nothing, the names and keywords it's most likely a typo of
+// ("badgr" for badge), closest first and then the ones more icons have
+export function suggestSearches(
+  list: readonly FullHeroicon[],
+  query: string,
+  count = 3,
+) {
+  const value = americanSpelling(dashesToSpaces(query)).trim();
+  const max = allowedTypos(value.length);
+  if (!max) return [];
+  return [...vocabularyFor(list)]
+    .map(([term, icons]) => ({ term, icons, distance: typoDistance(value, term, max) }))
+    .filter(({ distance }) => distance <= max)
+    .sort(
+      (a, b) =>
+        a.distance - b.distance || b.icons - a.icons || a.term.localeCompare(b.term),
+    )
+    .slice(0, count)
+    .map(({ term }) => term);
+}

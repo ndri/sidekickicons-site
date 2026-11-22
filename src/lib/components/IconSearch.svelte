@@ -19,6 +19,7 @@
     searchGroupTitles,
     searchIcons as search,
     searchIconsGrouped,
+    suggestSearches,
     type SearchGroup,
   } from "../util/search";
   import { urlState } from "../util/urlState.svelte";
@@ -67,14 +68,32 @@
   const results = $derived(
     showingAllIconsets ? searchIconsGrouped(icons, searchQuery.value) : iconsetResults,
   );
+
+  // A search with no direct matches is probably a typo. When it finds nothing at all, the
+  // results for the closest name or keyword show instead; when it only finds loose
+  // matches, those stay and the closest names and keywords are offered above them.
+  const suggestions = $derived(
+    results && !results.some(({ group }) => group === "direct")
+      ? suggestSearches(icons, searchQuery.value)
+      : [],
+  );
+  const suggestion = $derived(results?.length ? undefined : suggestions.at(0));
+  const shownResults = $derived(
+    suggestion ? searchIconsGrouped(icons, suggestion) : results,
+  );
+  // The search the shown icons match, for highlighting
+  const shownQuery = $derived(suggestion ?? searchQuery.value);
+
   const filteredIcons = $derived(
-    results ? results.map(({ icon }) => icon) : iconsetIcons,
+    shownResults ? shownResults.map(({ icon }) => icon) : iconsetIcons,
   );
 
   // A search's results get group titles when they fall into more than one group
-  const groupOf = $derived(new Map(results?.map(({ icon, group }) => [icon, group])));
+  const groupOf = $derived(
+    new Map(shownResults?.map(({ icon, group }) => [icon, group])),
+  );
   const groupCounts = $derived(
-    (results ?? []).reduce(
+    (shownResults ?? []).reduce(
       (counts, { group }) => counts.set(group, (counts.get(group) ?? 0) + 1),
       new Map<SearchGroup, number>(),
     ),
@@ -105,9 +124,10 @@
     if (!query || !typed) return;
     const data = {
       query: query.slice(0, 100),
-      results: filteredIcons.length,
+      results: results?.length ?? 0,
       iconset: selectedIconSet.value,
       foundInIconset: !showingAllIconsets,
+      ...(suggestions.length ? { suggestion: suggestions[0] } : {}),
     };
     const timeout = setTimeout(() => track({ name: "search", data }), 1500);
     return () => clearTimeout(timeout);
@@ -164,7 +184,31 @@
       />
     </div>
   </div>
-  {#if showingAllIconsets && filteredIcons.length}
+  {#snippet term(text: string)}
+    <span class="font-semibold text-slate-700 dark:text-slate-200">{text}</span>
+  {/snippet}
+  {#snippet searchFor(terms: string[])}
+    {#each terms as other, i (other)}
+      {#if i > 0}{" or "}{/if}<button
+        type="button"
+        class="rounded-xs font-semibold text-indigo-700 hover:text-indigo-500 focus:outline-hidden focus-visible:outline-2 focus-visible:outline-indigo-600 dark:text-indigo-400"
+        onclick={() => (searchQuery.value = other)}>{other}</button
+      >
+    {/each}
+  {/snippet}
+  {#if suggestion}
+    <p class="-mb-2 text-center text-sm text-slate-500 dark:text-slate-400">
+      No icons match {@render term(searchQuery.value)}. Showing results for
+      {@render term(suggestion)}.
+      {#if suggestions.length > 1}
+        Or try {@render searchFor(suggestions.slice(1))}.
+      {/if}
+    </p>
+  {:else if suggestions.length}
+    <p class="-mb-2 text-center text-sm text-slate-500 dark:text-slate-400">
+      Did you mean {@render searchFor(suggestions)}?
+    </p>
+  {:else if showingAllIconsets && filteredIcons.length}
     <p class="-mb-2 text-center text-sm text-slate-500 dark:text-slate-400">
       No {selectedIconSet.value} match
       <span class="font-semibold text-slate-700 dark:text-slate-200"
@@ -195,7 +239,7 @@
         {fullHeroicon}
         size={selectedSize.value}
         codeType={selectedCodeType.value}
-        query={searchQuery.value}
+        query={shownQuery}
         group={groupOf.get(fullHeroicon)}
         openDialog={() => {
           openIconKey.value = fullHeroicon.kebabName;
@@ -240,7 +284,7 @@
   {#if openIcon}
     <IconDetailsDialog
       fullHeroicon={openIcon}
-      query={searchQuery.value}
+      query={shownQuery}
       group={groupOf.get(openIcon)}
       closeDialog={() => (openIconKey.value = "")}
     />

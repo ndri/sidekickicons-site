@@ -7,6 +7,7 @@ import {
   nameMatchRanges,
   searchIcons,
   searchIconsGrouped,
+  suggestSearches,
 } from "./search";
 
 const names = (query: string) =>
@@ -108,4 +109,25 @@ test("loose letters only show where the loose match happened", () => {
   ]);
   expect(keywordMatchRanges(keywords, "pwr", "direct")).toEqual([[], [], []]);
   expect(keywordMatchRanges(keywords, "pwr", "keyword")[0]).not.toEqual([]);
+});
+
+test("a search with no direct matches suggests the names and keywords it's a typo of", () => {
+  for (const [typo, meant] of [
+    ["badgr", "badge"],
+    ["closekj", "close"],
+    ["calender", "calendar"],
+    ["keybaord", "keyboard"],
+    ["usr chck", "user check"],
+  ]) {
+    const direct = searchIconsGrouped(icons, typo).filter(
+      ({ group }) => group === "direct",
+    );
+    expect(direct, typo).toEqual([]);
+    expect(suggestSearches(icons, typo)[0], typo).toBe(meant);
+  }
+});
+
+test("short or unrecognisable searches get no suggestions", () => {
+  expect(suggestSearches(icons, "bel")).toEqual([]);
+  expect(suggestSearches(icons, "xyzqw")).toEqual([]);
 });
