@@ -616,4 +616,32 @@ export const sidekickiconDescriptions: Record<string, { description: string }> =
     description:
       "A star with a slash through it, for removing ratings, unstarring and unfavoriting.",
   },
+  "skip-forward": {
+    description:
+      "A play triangle with a bar at its tip, for skipping to the next track, episode or chapter.",
+  },
+  "skip-backward": {
+    description:
+      "A play triangle pointing back with a bar at its tip, for going back to the previous track, episode or chapter.",
+  },
+  "step-forward": {
+    description:
+      "A bar with a play triangle after it, for stepping forward one frame or one step at a time.",
+  },
+  "step-backward": {
+    description:
+      "A play triangle pointing back with a bar behind it, for stepping back one frame or one step at a time.",
+  },
+  "plug-slash": {
+    description:
+      "A plug with a slash through it, for unplugged devices, no power and disconnected services.",
+  },
+  bicycle: {
+    description:
+      "A bicycle from the side, for cycling, bike rides, commuting and bike rentals.",
+  },
+  handshake: {
+    description:
+      "Two hands shaking, for deals, agreements, partnerships and welcoming people.",
+  },
 };

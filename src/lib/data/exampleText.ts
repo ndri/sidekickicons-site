@@ -208,6 +208,13 @@ export const exampleText: Record<string, ExampleText> = {
   "map-pin-slash": ["Turn on location", "Search places", "Location off", "Privacy"],
   "heart-slash": ["Unlike", "Search favorites", "Removed", "Favorites"],
   "star-slash": ["Unstar", "Search starred items", "Unstarred", "Starred"],
+  "skip-forward": ["Next track", "Search songs", "Up next", "Player"],
+  "skip-backward": ["Previous track", "Search songs", "Previous", "Player"],
+  "step-forward": ["Next frame", "Timecode", "Frame 241", "Editor"],
+  "step-backward": ["Previous frame", "Timecode", "Frame 240", "Editor"],
+  "plug-slash": ["Reconnect", "Device name", "Unplugged", "Devices"],
+  bicycle: ["Rent a bike", "Pickup station", "Ride started", "Rides"],
+  handshake: ["Accept deal", "Partner name", "Deal signed", "Partners"],
 
   // Heroicons
   "academic-cap": ["Graduate", "Enter alma mater", "Undergraduate", "Education"],

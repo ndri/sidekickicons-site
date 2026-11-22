@@ -44,6 +44,10 @@ export const sidekickiconGroups: { title: string; icons: string[] }[] = [
       "microphone-slash",
       "photo-plus",
       "photo-slash",
+      "skip-backward",
+      "skip-forward",
+      "step-backward",
+      "step-forward",
       "video-camera-arrow-down-left",
       "video-camera-arrow-up-right",
       "video-camera-x-mark",
@@ -188,6 +192,7 @@ export const sidekickiconGroups: { title: string; icons: string[] }[] = [
     icons: [
       "anchor",
       "barrier",
+      "bicycle",
       "bluetooth",
       "car",
       "coffee",
@@ -203,12 +208,14 @@ export const sidekickiconGroups: { title: string; icons: string[] }[] = [
       "gamepad",
       "git-branch",
       "hammer",
+      "handshake",
       "keyboard",
       "leaf",
       "pill",
       "pin",
       "pin-slash",
       "plug",
+      "plug-slash",
       "robot",
       "snowflake",
       "stethoscope",
@@ -307,6 +314,11 @@ export const heroiconsPairings: Record<string, string> = {
   "map-pin-slash": "Goes with Heroicons' map-pin",
   "heart-slash": "Goes with Heroicons' heart",
   "star-slash": "Goes with Heroicons' star",
+  "skip-forward": "Goes with Heroicons' play and forward",
+  "skip-backward": "Goes with Heroicons' play and backward",
+  "step-forward": "Goes with Heroicons' play and pause",
+  "step-backward": "Goes with Heroicons' play and pause",
+  "plug-slash": "Goes with Heroicons' bolt-slash",
 };
 
 // Votes on Heroicons' own GitHub discussions asking for the icon, from the Sidekickicons
@@ -352,6 +364,8 @@ export const heroiconsRequests: Record<
   "calendar-x-mark": { votes: 4, discussions: [1414] },
   "computer-desktop-slash": { votes: 6, discussions: [879] },
   "photo-slash": { votes: 2, discussions: [1047] },
+  bicycle: { votes: 61, discussions: [400, 443] },
+  handshake: { votes: 4, discussions: [442] },
 };
 
 // The most requested icons left on the Sidekickicons roadmap, with their votes
@@ -359,7 +373,6 @@ export const comingNext: { name: string; votes: number }[] = [
   { name: "wheelchair", votes: 21 },
   { name: "brain", votes: 19 },
   { name: "ethernet", votes: 17 },
-  { name: "handshake", votes: 12 },
 ];
 
 export const heroiconsDiscussionUrl = (number: number) =>

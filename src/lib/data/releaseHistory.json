@@ -2,6 +2,38 @@
   "releases": [
     {
       "iconset": "Sidekickicons",
+      "version": "0.24.0",
+      "date": "2026-11-22",
+      "url": "https://github.com/ndri/sidekickicons/blob/main/CHANGELOG.md#0240---2026-11-22",
+      "first": false,
+      "notes": [
+        {
+          "section": "Added",
+          "text": "Add new icons (`bicycle`, `plug-slash`, `handshake`, `skip-forward`, `skip-backward`, `step-forward`, `step-backward`)",
+          "nested": false
+        },
+        {
+          "section": "Fixed",
+          "text": "Declare `@types/react` as an optional peer dependency of `@sidekickicons/react` and `@sidekickicons/react-native`, so their types resolve when packages are installed outside the project, as with pnpm's global virtual store",
+          "nested": false
+        }
+      ],
+      "added": [
+        "bicycle",
+        "handshake",
+        "plug-slash",
+        "skip-backward",
+        "skip-forward",
+        "step-backward",
+        "step-forward"
+      ],
+      "removed": [],
+      "renamed": [],
+      "newStyles": {},
+      "changed": []
+    },
+    {
+      "iconset": "Sidekickicons",
       "version": "0.23.0",
       "date": "2026-11-07",
       "url": "https://github.com/ndri/sidekickicons/blob/main/CHANGELOG.md#0230---2026-11-07",
